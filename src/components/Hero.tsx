@@ -39,7 +39,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 w-full h-full bg-cover bg-center"
         style={{
-          backgroundImage: `url('/lovable-uploads/eb697f11-6418-4d33-82da-0298c2d70c59.png')`,
+          backgroundImage: `url('/lovable-uploads/ce578125-8b8c-4e37-88b3-3e3644af1932.png')`,
           transform: `translateY(${scrollY * 0.1}px)`,
         }}
       />
