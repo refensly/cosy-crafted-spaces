@@ -66,7 +66,7 @@ const Header = () => {
           </button>
           
           <Button 
-            className="bg-transparent text-white font-bold uppercase border-2 border-white hover:bg-white/10 transition-all duration-300"
+            className="bg-transparent text-white font-bold uppercase border border-neutral-light hover:bg-white/10 transition-all duration-300"
             onClick={() => scrollToSection('contact-form')}
           >
             Let's build yours
