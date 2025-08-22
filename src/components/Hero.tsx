@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 // Using new door textures
 const doorLeft = '/lovable-uploads/beb3b349-e1f2-4c72-b827-28476d36aa64.png';
-const doorRight = '/lovable-uploads/a7a24549-ebfa-4a06-a01e-d6da3937dc76.png';
+const doorRight = '/lovable-uploads/da415d47-cdb5-4382-b7ef-81a8f5538b67.png';
 const Hero = () => {
   const [panelsOpened, setPanelsOpened] = useState(false);
   const [scrollY, setScrollY] = useState(0);
@@ -57,12 +57,12 @@ const Hero = () => {
       
       {/* Right Door Panel */}
       <div 
-        className="absolute top-0 left-0 w-1/2 h-full bg-center z-10"
+        className="absolute top-0 right-0 w-1/2 h-full bg-center z-10"
         style={{
           backgroundImage: `url(${doorRight})`,
           backgroundSize: '25%',
           backgroundRepeat: 'no-repeat',
-          transform: `translateX(calc(-50% + 150px - ${scrollY * 0.3}px))`,
+          transform: `translateX(calc(50% - 150px + ${scrollY * 0.3}px))`,
         }}
       />
       
