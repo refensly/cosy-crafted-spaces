@@ -88,10 +88,10 @@ const Hero = () => {
             
             {/* Secondary CTAs */}
             <div className="flex gap-4 justify-center mt-6">
-              <Button variant="outline" className="border-accent-primary text-white hover:bg-accent-primary/10 px-8 py-4 text-lg">
+              <Button variant="outline" className="border-accent-primary text-white hover:bg-accent-primary/10 px-12 py-6 text-xl">
                 INQUIRE
               </Button>
-              <Button variant="outline" className="border-accent-primary text-white hover:bg-accent-primary/10 px-8 py-4 text-lg">
+              <Button variant="outline" className="border-accent-primary text-white hover:bg-accent-primary/10 px-12 py-6 text-xl">
                 BROWSE
               </Button>
             </div>
