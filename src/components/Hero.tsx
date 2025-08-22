@@ -50,7 +50,8 @@ const Hero = () => {
             <div className="text-[96px]">Furniture from Dublin</div>
           </h1>
           <p className="text-xl md:text-2xl text-text-secondary mb-12 max-w-2xl mx-auto leading-relaxed">
-            Ideal for presents, interior and cozy spaces. Made out of natural materials.
+            <div>Ideal for presents, interior and cozy spaces.</div>
+            <div>Made out of natural materials.</div>
           </p>
           <Button className="btn-primary text-lg px-10 py-5" onClick={scrollToContact}>
             Let's build yours
