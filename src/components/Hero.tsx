@@ -112,7 +112,7 @@ const Hero = () => {
       
       {/* Scroll indicator */}
       <div className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-30 ${animationsStarted ? 'animate-fade-up animation-delay-2000' : 'opacity-0'}`}>
-        <div className="w-8 h-8 border-2 border-accent-primary rounded-full flex items-center justify-center">
+        <div className="w-8 h-8 border-2 border-accent-primary rounded-full flex items-center justify-center animate-bounce">
           <div className="w-1 h-3 bg-accent-primary rounded-full"></div>
         </div>
       </div>
