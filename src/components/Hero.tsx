@@ -40,7 +40,6 @@ const Hero = () => {
         className="absolute inset-0 w-full h-full bg-cover bg-center"
         style={{
           backgroundImage: `url('/lovable-uploads/c4fcdc3d-d20a-418c-8bf5-ea3ddb9af8fb.png')`,
-          transform: `translateY(${scrollY * 0.1}px)`,
           filter: 'brightness(0.7)',
         }}
       />
