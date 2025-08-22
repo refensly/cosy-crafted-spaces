@@ -86,7 +86,7 @@ const Hero = () => {
           
           {/* Unique Badge */}
           <div className={`mb-8 ${animationsStarted ? 'animate-fade-up animation-delay-1300' : 'opacity-0'}`}>
-            <span className="text-white font-heading font-bold tracking-wider text-[50px]">Unique.</span>
+            <span className="text-white font-heading font-bold tracking-wider text-[32px]">Unique.</span>
           </div>
           
           {/* Primary CTA */}
