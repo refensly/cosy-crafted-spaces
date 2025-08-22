@@ -55,7 +55,7 @@ const Hero = () => {
           backgroundImage: `url(${doorRight})`,
           backgroundSize: '50%',
           backgroundRepeat: 'no-repeat',
-          transform: `translateX(calc(-50% + ${panelsOpened ? '150px' : '75px'} - ${scrollY * 0.3}px)) scaleX(-1)`
+          transform: `translateX(calc(-50% + ${panelsOpened ? '150px' : '120px'} - ${scrollY * 0.3}px)) scaleX(-1)`
         }} 
       />
       
@@ -66,7 +66,7 @@ const Hero = () => {
           backgroundImage: `url(${doorRight})`,
           backgroundSize: '50%',
           backgroundRepeat: 'no-repeat',
-          transform: `translateX(calc(50% - ${panelsOpened ? '150px' : '75px'} + ${scrollY * 0.3}px))`
+          transform: `translateX(calc(50% - ${panelsOpened ? '150px' : '120px'} + ${scrollY * 0.3}px))`
         }} 
       />
       
