@@ -82,7 +82,7 @@ const Hero = () => {
           
           {/* Primary CTA */}
           <div className="space-y-4">
-            <Button className="btn-primary text-2xl font-extrabold px-16 py-12 bg-transparent text-white uppercase border-2 border-white hover:bg-white/10 transition-all duration-300 ease-in-out shadow-xl shadow-white/40" style={{boxShadow: '0 0 30px rgba(255, 255, 255, 0.4)'}} onClick={scrollToContact}>
+            <Button className="btn-primary text-2xl font-bold px-16 py-12 bg-transparent text-white uppercase border-2 border-white hover:bg-white/10 transition-all duration-300 ease-in-out shadow-xl shadow-white/40" style={{boxShadow: '0 0 30px rgba(255, 255, 255, 0.4)'}} onClick={scrollToContact}>
               GET FREE CONSULTATION NOW
             </Button>
             
