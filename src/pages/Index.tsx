@@ -135,6 +135,71 @@ const Index = () => {
         </div>
       </section>
 
+      {/* New Section: Handmade Quality Examples */}
+      <section className="section-padding bg-bg-main">
+        <div className="container mx-auto px-6">
+          <ScrollReveal>
+            <h2 className="font-heading font-bold text-text-primary text-center mb-4">
+              How does it look?
+            </h2>
+            <p className="text-xl text-text-secondary text-center mb-16 max-w-3xl mx-auto">
+              "What is it really beautiful? Do I want this at home?"
+            </p>
+          </ScrollReveal>
+          
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {[
+              {
+                title: "Interior Shot",
+                image: projAbbeyImg,
+                description: "See how pieces fit in real spaces"
+              },
+              {
+                title: "Details",
+                image: projSummitImg,
+                description: "Close-up craftsmanship and finishing"
+              },
+              {
+                title: "Handmade Quality",
+                image: projFindlatersImg,
+                description: "Premium materials and construction"
+              }
+            ].map((example, index) => (
+              <ScrollReveal key={index} delay={index * 100}>
+                <div className="premium-card group cursor-pointer">
+                  <div className="relative overflow-hidden rounded-lg mb-4">
+                    <img 
+                      src={example.image} 
+                      alt={example.title}
+                      className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-bg-main/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                      <span className="text-text-primary font-semibold">View details</span>
+                    </div>
+                  </div>
+                  <h3 className="font-heading font-bold text-text-primary mb-2">
+                    {example.title}
+                  </h3>
+                  <p className="text-text-secondary">{example.description}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          <ScrollReveal>
+            <div className="bg-bg-section-alt rounded-xl p-8 text-center">
+              <h3 className="font-heading font-bold text-text-primary mb-4">
+                Producing
+              </h3>
+              <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+                Each piece goes through careful planning, selection of premium materials, 
+                and meticulous handcrafting to ensure it meets our quality standards.
+              </p>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* Section 3: Capabilities */}
       <section id="work" className="section-padding bg-bg-main">
         <div className="container mx-auto px-6">
