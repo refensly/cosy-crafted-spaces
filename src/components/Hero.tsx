@@ -83,7 +83,7 @@ const Hero = () => {
           </h1>
           <p className="text-xl md:text-2xl text-text-secondary mb-8 max-w-2xl mx-auto leading-relaxed">
             <div className="font-body font-normal text-white">Ideal for presents, interior and cozy spaces.</div>
-            <div>Made out of natural materials.</div>
+            <div className="text-white">Made out of natural materials.</div>
           </p>
           
           {/* Unique Badge */}
