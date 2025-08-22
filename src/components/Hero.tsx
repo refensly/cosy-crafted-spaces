@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import doorLeft from '@/assets/door-left.png';
-import doorRight from '@/assets/door-right.png';
+// Using new door textures
+const doorLeft = '/lovable-uploads/7d21c713-cdad-4d1f-9ee1-3dd805eba00e.png';
+const doorRight = '/lovable-uploads/b36377c3-f394-4abe-bc79-1fe663724638.png';
 const Hero = () => {
   const [panelsOpened, setPanelsOpened] = useState(false);
   const [scrollY, setScrollY] = useState(0);
