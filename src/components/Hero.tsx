@@ -50,7 +50,7 @@ const Hero = () => {
         style={{
           backgroundImage: `url(${doorLeft})`,
           backgroundSize: '200%',
-          transform: `translateX(calc(-50% + 250px - ${scrollY * 0.3}px))`,
+          transform: `translateX(calc(-50% + 350px - ${scrollY * 0.3}px))`,
         }}
       />
       
