@@ -65,7 +65,7 @@ const Hero = () => {
       
       {/* Center Content */}
       <div className="relative z-30 min-h-screen flex items-center justify-center px-6">
-        <div className="text-center max-w-4xl mx-auto">
+        <div className="text-center max-w-6xl mx-auto">
           <h1 className="font-grifter text-text-primary mb-6 leading-tight">
             <div className="text-[120px]">Unique Handmade</div>
             <div className="text-[120px] px-16">Furniture from Dublin</div>
