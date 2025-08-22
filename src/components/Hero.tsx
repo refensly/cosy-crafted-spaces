@@ -38,7 +38,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 w-full h-full bg-cover bg-center"
         style={{
-          backgroundImage: `url('/lovable-uploads/29e986e6-5b8b-46c7-892a-e9179a674bf5.png')`,
+          backgroundImage: `url('/lovable-uploads/c4fcdc3d-d20a-418c-8bf5-ea3ddb9af8fb.png')`,
           transform: `translateY(${scrollY * 0.1}px)`,
         }}
       />
@@ -48,7 +48,7 @@ const Hero = () => {
         className="absolute top-0 left-0 w-1/2 h-full bg-cover bg-center z-10"
         style={{
           backgroundImage: `url(${doorLeft})`,
-          transform: `translateX(-${scrollY * 0.3}px)`,
+          transform: `translateX(calc(-50% + 300px - ${scrollY * 0.3}px))`,
         }}
       />
       
@@ -57,7 +57,7 @@ const Hero = () => {
         className="absolute top-0 right-0 w-1/2 h-full bg-cover bg-center z-10"
         style={{
           backgroundImage: `url(${doorRight})`,
-          transform: `translateX(${scrollY * 0.3}px)`,
+          transform: `translateX(calc(50% - 300px + ${scrollY * 0.3}px))`,
         }}
       />
       
