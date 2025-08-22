@@ -123,14 +123,14 @@ const Index = () => {
       </section>
 
       {/* New Section: Handmade Quality Examples */}
-      <section className="pt-8 pb-24 bg-bg-main">
+      <section className="pt-24 pb-24 bg-bg-main">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="font-heading font-bold text-text-primary text-center mb-4">Every piece begins where mass production ends</h2>
+            <h2 className="font-heading font-bold text-text-primary text-center mb-12">Every piece begins where mass production ends</h2>
             
           </ScrollReveal>
           
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
             {[{
             title: "Interior Shot",
             image: projAbbeyImg,
