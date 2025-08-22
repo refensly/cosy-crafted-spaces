@@ -92,7 +92,7 @@ const Hero = () => {
           {/* Primary CTA */}
           <div className="space-y-4">
             <div className={animationsStarted ? 'animate-fade-up animation-delay-1500' : 'opacity-0'}>
-              <Button className="btn-primary text-2xl font-bold px-16 py-12 bg-transparent text-white uppercase border-2 border-white hover:bg-white/10 transition-all duration-300 ease-in-out shadow-xl shadow-white/40 hover-scale" style={{boxShadow: '0 0 30px rgba(255, 255, 255, 0.4)'}} onClick={scrollToContact}>
+              <Button className="btn-primary text-2xl font-bold px-16 py-12 bg-transparent text-white uppercase border-2 border-white hover:bg-white/10 transition-all duration-300 ease-in-out shadow-xl hover-scale" style={{boxShadow: '0 0 30px hsl(39 54% 45% / 0.6)'}} onClick={scrollToContact}>
                 GET FREE CONSULTATION NOW
               </Button>
             </div>
