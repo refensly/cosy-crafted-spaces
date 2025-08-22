@@ -35,7 +35,7 @@ const Hero = () => {
   return <section className="relative min-h-screen bg-bg-main overflow-hidden">
       {/* Bar Background */}
       <div className="absolute inset-0 w-full h-full bg-cover bg-center" style={{
-      backgroundImage: `url('/lovable-uploads/ce578125-8b8c-4e37-88b3-3e3644af1932.png')`,
+      backgroundImage: `url('/lovable-uploads/7928fc98-36e8-4b94-bd48-06681d62fc6f.png')`,
       transform: `translateY(${scrollY * 0.1}px)`
     }} />
       
