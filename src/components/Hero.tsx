@@ -45,9 +45,9 @@ const Hero = () => {
       {/* Center Content */}
       <div className="relative z-10 min-h-screen flex items-center justify-center px-6">
         <div className="text-center max-w-4xl mx-auto">
-          <h1 className="font-grifter text-text-primary mb-6 leading-tight text-6xl md:text-7xl">
-            <div>Unique Handmade</div>
-            <div>Furniture from Dublin</div>
+          <h1 className="font-grifter text-text-primary mb-6 leading-tight">
+            <div className="text-[96px]">Unique Handmade</div>
+            <div className="text-6xl md:text-7xl">Furniture from Dublin</div>
           </h1>
           <p className="text-xl md:text-2xl text-text-secondary mb-12 max-w-2xl mx-auto leading-relaxed">
             Ideal for presents, interior and cozy spaces. Made out of natural materials.
