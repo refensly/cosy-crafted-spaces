@@ -2,8 +2,6 @@ import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import doorLeft from '@/assets/door-left.png';
 import doorRight from '@/assets/door-right.png';
-import leavesOverlay from '@/assets/leaves-overlay.png';
-import branchesOverlay from '@/assets/branches-overlay.png';
 const Hero = () => {
   const [panelsOpened, setPanelsOpened] = useState(false);
   const [scrollY, setScrollY] = useState(0);
@@ -36,9 +34,18 @@ const Hero = () => {
     });
   };
   return <section className="relative min-h-screen bg-bg-main overflow-hidden">
+      {/* Bar Background */}
+      <div 
+        className="absolute inset-0 w-full h-full bg-cover bg-center"
+        style={{
+          backgroundImage: `url('/lovable-uploads/29e986e6-5b8b-46c7-892a-e9179a674bf5.png')`,
+          transform: `translateY(${scrollY * 0.1}px)`,
+        }}
+      />
+      
       {/* Left Door Panel */}
       <div 
-        className="absolute top-0 left-0 w-1/2 h-full bg-cover bg-center"
+        className="absolute top-0 left-0 w-1/2 h-full bg-cover bg-center z-10"
         style={{
           backgroundImage: `url(${doorLeft})`,
           transform: `translateX(-${scrollY * 0.3}px)`,
@@ -47,41 +54,23 @@ const Hero = () => {
       
       {/* Right Door Panel */}
       <div 
-        className="absolute top-0 right-0 w-1/2 h-full bg-cover bg-center"
+        className="absolute top-0 right-0 w-1/2 h-full bg-cover bg-center z-10"
         style={{
           backgroundImage: `url(${doorRight})`,
           transform: `translateX(${scrollY * 0.3}px)`,
         }}
       />
       
-      {/* Leaves Overlay - Left Side */}
-      <div 
-        className="absolute top-0 left-0 w-1/2 h-full bg-cover bg-center pointer-events-none opacity-80"
-        style={{
-          backgroundImage: `url(${leavesOverlay})`,
-          transform: `translateX(-${scrollY * 0.2}px)`,
-        }}
-      />
-      
-      {/* Branches Overlay - Right Side */}
-      <div 
-        className="absolute top-0 right-0 w-1/2 h-full bg-cover bg-center pointer-events-none opacity-80"
-        style={{
-          backgroundImage: `url(${branchesOverlay})`,
-          transform: `translateX(${scrollY * 0.2}px)`,
-        }}
-      />
-      
       {/* Center gradient overlay for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-black/30 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-black/30 to-transparent z-20" />
       
       {/* Brand Name */}
-      <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-20">
+      <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-30">
         <div className="text-text-primary font-body text-lg tracking-wide">Tiny Outdoor Spaces</div>
       </div>
       
       {/* Center Content */}
-      <div className="relative z-10 min-h-screen flex items-center justify-center px-6">
+      <div className="relative z-30 min-h-screen flex items-center justify-center px-6">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="font-grifter text-text-primary mb-6 leading-tight">
             <div className="text-[96px]">Unique Handmade</div>
@@ -117,7 +106,7 @@ const Hero = () => {
       </div>
       
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-30">
         <div className="w-8 h-8 border-2 border-accent-primary rounded-full flex items-center justify-center">
           <div className="w-1 h-3 bg-accent-primary rounded-full"></div>
         </div>
