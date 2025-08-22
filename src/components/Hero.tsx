@@ -47,7 +47,7 @@ const Hero = () => {
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="font-heading font-bold text-text-primary mb-6 leading-tight">Unique Handmade Furniture from Dublin</h1>
           <p className="text-xl md:text-2xl text-text-secondary mb-12 max-w-2xl mx-auto leading-relaxed">
-            Custom furniture & outdoor spaces, made in Ireland. One creation at a time.
+            Ideal for presents, interior and cozy spaces. Made out of natural materials.
           </p>
           <Button className="btn-primary text-lg px-10 py-5" onClick={scrollToContact}>
             Let's build yours
