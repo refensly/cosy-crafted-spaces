@@ -99,10 +99,10 @@ const Hero = () => {
             
             {/* Secondary CTAs */}
             <div className={`flex gap-4 justify-center mt-6 ${animationsStarted ? 'animate-fade-up animation-delay-1700' : 'opacity-0'}`}>
-              <Button variant="outline" className="border-accent-primary text-white hover:bg-accent-primary/10 px-12 py-6 text-xl hover-scale">
+              <Button variant="outline" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 px-12 py-6 text-xl transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25">
                 INQUIRE
               </Button>
-              <Button variant="outline" className="border-accent-primary text-white hover:bg-accent-primary/10 px-12 py-6 text-xl hover-scale">
+              <Button variant="outline" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 px-12 py-6 text-xl transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25">
                 BROWSE
               </Button>
             </div>
