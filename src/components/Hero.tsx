@@ -77,7 +77,7 @@ const Hero = () => {
           
           {/* Unique Badge */}
           <div className="mb-8">
-            <span className="text-white font-heading font-bold tracking-wider text-[30px]">Unique.</span>
+            <span className="text-white font-heading font-bold tracking-wider text-[50px]">Unique.</span>
           </div>
           
           {/* Primary CTA */}
