@@ -78,9 +78,9 @@ export default {
         }
       },
       fontFamily: {
-        'heading': ['Bebas Neue', 'var(--font-heading)', 'sans-serif'],
+        'heading': ['Anton', 'var(--font-heading)', 'sans-serif'],
         'body': ['Montserrat', 'var(--font-body)', 'sans-serif'],
-        'grifter': ['Bebas Neue', 'sans-serif'],
+        'grifter': ['Anton', 'sans-serif'],
       },
       borderRadius: {
         lg: 'var(--radius)',
