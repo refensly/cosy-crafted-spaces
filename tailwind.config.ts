@@ -78,9 +78,9 @@ export default {
         }
       },
       fontFamily: {
-        'heading': ['Anton', 'var(--font-heading)', 'sans-serif'],
+        'heading': ['Oswald', 'var(--font-heading)', 'sans-serif'],
         'body': ['Montserrat', 'var(--font-body)', 'sans-serif'],
-        'grifter': ['Anton', 'sans-serif'],
+        'grifter': ['Oswald', 'sans-serif'],
       },
       borderRadius: {
         lg: 'var(--radius)',
