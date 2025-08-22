@@ -71,7 +71,7 @@ const Hero = () => {
             <div className="text-[120px] px-16">Furniture from Dublin</div>
           </h1>
           <p className="text-xl md:text-2xl text-text-secondary mb-8 max-w-2xl mx-auto leading-relaxed">
-            <div className="font-body font-bold text-white">Ideal for presents, interior and cozy spaces.</div>
+            <div className="font-body font-normal text-white">Ideal for presents, interior and cozy spaces.</div>
             <div className="text-white">Made out of natural materials.</div>
           </p>
           
