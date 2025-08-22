@@ -119,7 +119,48 @@
     opacity: 1;
     transform: translateY(0);
   }
+
+  /* Animation Delays */
+  .animation-delay-500 {
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+  }
   
+  .animation-delay-700 {
+    animation-delay: 0.7s;
+    animation-fill-mode: forwards;
+  }
+  
+  .animation-delay-900 {
+    animation-delay: 0.9s;
+    animation-fill-mode: forwards;
+  }
+  
+  .animation-delay-1100 {
+    animation-delay: 1.1s;
+    animation-fill-mode: forwards;
+  }
+  
+  .animation-delay-1300 {
+    animation-delay: 1.3s;
+    animation-fill-mode: forwards;
+  }
+  
+  .animation-delay-1500 {
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+  }
+  
+  .animation-delay-1700 {
+    animation-delay: 1.7s;
+    animation-fill-mode: forwards;
+  }
+  
+  .animation-delay-2000 {
+    animation-delay: 2.0s;
+    animation-fill-mode: forwards;
+  }
+
   /* Hero Parallax Panels */
   .hero-panel {
     transition: var(--transition-hero);
@@ -145,6 +186,11 @@
     @apply border border-accent-hover text-foreground px-8 py-4 rounded-lg font-semibold;
     @apply hover:bg-secondary transition-all duration-200;
     @apply focus:outline-none focus:ring-2 focus:ring-accent-focus;
+  }
+
+  /* Hover Scale Animation */
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
   }
   
   /* Card Styles */
