@@ -104,6 +104,14 @@ export default {
             height: '0'
           }
         },
+        'fade-in': {
+          '0%': {
+            opacity: '0'
+          },
+          '100%': {
+            opacity: '1'
+          }
+        },
         'fade-up': {
           '0%': {
             opacity: '0',
@@ -126,6 +134,7 @@ export default {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'fade-in': 'fade-in 0.5s ease-out',
         'fade-up': 'fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1)',
         'slide-left': 'slide-left 0.7s ease-out forwards',
         'slide-right': 'slide-right 0.7s ease-out forwards'

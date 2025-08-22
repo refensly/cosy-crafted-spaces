@@ -41,7 +41,7 @@ const Hero = () => {
       block: 'start'
     });
   };
-  return <section className="relative min-h-screen bg-bg-main overflow-hidden">
+  return <section className="relative min-h-screen bg-bg-main overflow-hidden animate-fade-in" style={{animationDuration: '0.5s'}}>
       {/* Bar Background */}
       <div className="absolute inset-0 w-full h-full bg-cover bg-center" style={{
       backgroundImage: `url('/lovable-uploads/7928fc98-36e8-4b94-bd48-06681d62fc6f.png')`,
