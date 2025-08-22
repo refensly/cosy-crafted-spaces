@@ -136,7 +136,7 @@ const Index = () => {
       </section>
 
       {/* New Section: Handmade Quality Examples */}
-      <section className="section-padding bg-bg-main">
+      <section className="pt-8 pb-24 bg-bg-main">
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <h2 className="font-heading font-bold text-text-primary text-center mb-4">
