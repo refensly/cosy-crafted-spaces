@@ -51,7 +51,7 @@ const Hero = () => {
           backgroundImage: `url(${doorLeft})`,
           backgroundSize: '300%',
           backgroundRepeat: 'no-repeat',
-          transform: `translateX(calc(0% - ${scrollY * 0.3}px))`,
+          transform: `translateX(calc(15% - ${scrollY * 0.3}px))`,
         }}
       />
       
