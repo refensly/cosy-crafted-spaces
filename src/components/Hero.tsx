@@ -57,12 +57,12 @@ const Hero = () => {
       
       {/* Right Door Panel */}
       <div 
-        className="absolute top-0 right-0 w-1/2 h-full bg-center z-10"
+        className="absolute top-0 left-0 w-1/2 h-full bg-center z-10"
         style={{
           backgroundImage: `url(${doorRight})`,
           backgroundSize: '40%',
           backgroundRepeat: 'no-repeat',
-          transform: `translateX(calc(50% - 75px + ${scrollY * 0.3}px))`,
+          transform: `translateX(calc(-50% + 75px - ${scrollY * 0.3}px))`,
         }}
       />
       
