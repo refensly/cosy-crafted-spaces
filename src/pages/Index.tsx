@@ -188,7 +188,7 @@ const Index = () => {
               <h3 className="font-heading font-bold text-text-primary mb-4">
                 Producing
               </h3>
-              <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+              <p className="text-lg text-text-secondary max-w-4xl mx-auto">
                 Each piece goes through careful planning, selection of premium materials, 
                 and meticulous handcrafting to ensure it meets our quality standards.
               </p>
