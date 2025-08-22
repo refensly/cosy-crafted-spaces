@@ -49,7 +49,7 @@ const Hero = () => {
         className="absolute top-0 left-0 w-1/2 h-full bg-center z-10"
         style={{
           backgroundImage: `url(${doorLeft})`,
-          backgroundSize: '150%',
+          backgroundSize: '120%',
           backgroundRepeat: 'no-repeat',
           transform: `translateX(calc(25% - ${scrollY * 0.3}px))`,
         }}
