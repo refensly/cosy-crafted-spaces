@@ -49,26 +49,20 @@ const Hero = () => {
     }} />
       
       {/* Left Door Panel (duplicated from right) */}
-      <div 
-        className="absolute top-0 left-0 w-1/2 h-full bg-center z-10 transition-all duration-1000 ease-out" 
-        style={{
-          backgroundImage: `url(${doorRight})`,
-          backgroundSize: '50%',
-          backgroundRepeat: 'no-repeat',
-          transform: `translateX(calc(-50% + ${panelsOpened ? '150px' : '120px'} - ${scrollY * 0.3}px)) scaleX(-1)`
-        }} 
-      />
+      <div className="absolute top-0 left-0 w-1/2 h-full bg-center z-10" style={{
+      backgroundImage: `url(${doorRight})`,
+      backgroundSize: '50%',
+      backgroundRepeat: 'no-repeat',
+      transform: `translateX(calc(-50% + 150px - ${scrollY * 0.3}px)) scaleX(-1)`
+    }} />
       
       {/* Right Door Panel */}
-      <div 
-        className="absolute top-0 right-0 w-1/2 h-full bg-center z-10 transition-all duration-1000 ease-out" 
-        style={{
-          backgroundImage: `url(${doorRight})`,
-          backgroundSize: '50%',
-          backgroundRepeat: 'no-repeat',
-          transform: `translateX(calc(50% - ${panelsOpened ? '150px' : '120px'} + ${scrollY * 0.3}px))`
-        }} 
-      />
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-center z-10" style={{
+      backgroundImage: `url(${doorRight})`,
+      backgroundSize: '50%',
+      backgroundRepeat: 'no-repeat',
+      transform: `translateX(calc(50% - 150px + ${scrollY * 0.3}px))`
+    }} />
       
       {/* Center gradient overlay for text readability */}
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-black/30 to-transparent z-20" />
