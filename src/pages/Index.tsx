@@ -304,6 +304,9 @@ const Index = () => {
                   {index < processSteps.length - 1 && (
                     <div className="hidden md:block w-full h-px bg-accent-primary/30 mt-8"></div>
                   )}
+                  {index === processSteps.length - 1 && (
+                    <div className="hidden md:block w-full h-px bg-accent-primary/30 mt-8"></div>
+                  )}
                 </div>
               </ScrollReveal>
             ))}
