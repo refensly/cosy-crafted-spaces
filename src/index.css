@@ -1,96 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Tiny Outdoor Spaces - Premium Design System */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Main Backgrounds */
+    --bg-main: 210 9% 6%;              /* #0F1111 */
+    --bg-section-alt: 135 14% 11%;      /* #17221B */
+    --bg-section-alt-2: 135 20% 15%;    /* #1F2E26 */
+    
+    /* Text Colors */
+    --text-primary: 0 0% 100%;          /* #FFFFFF */
+    --text-secondary: 0 0% 81%;         /* #CFCFCF */
+    --text-muted: 120 5% 64%;           /* #9FA8A3 */
+    
+    /* Bronze/Wood Accents */
+    --accent-primary: 39 54% 45%;       /* #B07C35 */
+    --accent-hover: 39 42% 39%;         /* #8C6A3E */
+    --accent-focus: 39 35% 54%;         /* #A88F6B */
+    
+    /* Neutrals */
+    --neutral-warm: 39 24% 75%;         /* #BFB5A0 */
+    --neutral-light: 46 13% 85%;        /* #D9D7CA */
+    
+    /* Green Accents */
+    --green-dark: 78 22% 29%;           /* #4A593D */
+    --green-light: 75 24% 59%;          /* #A8B27E */
+    
+    /* Semantic tokens */
+    --background: var(--bg-main);
+    --foreground: var(--text-primary);
+    --card: var(--bg-section-alt);
+    --card-foreground: var(--text-primary);
+    --primary: var(--accent-primary);
+    --primary-foreground: var(--bg-main);
+    --secondary: var(--bg-section-alt-2);
+    --secondary-foreground: var(--text-primary);
+    --muted: var(--text-muted);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--accent-focus);
+    --accent-foreground: var(--text-primary);
+    --border: var(--accent-hover);
+    --input: var(--neutral-warm);
+    --ring: var(--accent-focus);
+    --radius: 0.625rem;
+    
+    /* Typography */
+    --font-heading: 'Montserrat', sans-serif; /* Grifter Bold fallback */
+    --font-body: 'Montserrat', sans-serif;
+    
+    /* Shadows */
+    --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.2);
+    --shadow-elevated: 0 8px 40px rgba(0, 0, 0, 0.3);
+    --shadow-glow: 0 0 20px rgba(176, 124, 53, 0.2);
+    
+    /* Transitions */
+    --transition-smooth: all 250ms cubic-bezier(0.22, 1, 0.36, 1);
+    --transition-hero: all 700ms ease-out;
   }
+}
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-body;
+    font-family: var(--font-body);
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+  
+  h1 {
+    @apply text-6xl md:text-7xl lg:text-8xl;
+  }
+  
+  h2 {
+    @apply text-4xl md:text-5xl;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  p {
+    @apply text-lg;
+  }
+  
+  .caption {
+    @apply text-sm;
+  }
+}
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+@layer components {
+  /* Scroll Reveal Animation */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: var(--transition-smooth);
+  }
+  
+  .scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Hero Parallax Panels */
+  .hero-panel {
+    transition: var(--transition-hero);
+  }
+  
+  .hero-panel.opened {
+    transform: translateX(var(--panel-offset, 0));
+  }
+  
+  /* Custom Button Styles */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold;
+    @apply hover:bg-accent-hover transition-all duration-200;
+    @apply focus:outline-none focus:ring-2 focus:ring-accent-focus;
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .btn-primary:hover {
+    box-shadow: var(--shadow-glow), var(--shadow-elevated);
+  }
+  
+  .btn-secondary {
+    @apply border border-accent-hover text-foreground px-8 py-4 rounded-lg font-semibold;
+    @apply hover:bg-secondary transition-all duration-200;
+    @apply focus:outline-none focus:ring-2 focus:ring-accent-focus;
+  }
+  
+  /* Card Styles */
+  .premium-card {
+    @apply bg-card rounded-xl p-6;
+    @apply transition-all duration-200;
+    box-shadow: var(--shadow-card);
+  }
+  
+  .premium-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-elevated);
+  }
+  
+  /* Form Styles */
+  .form-field {
+    @apply w-full px-4 py-3 rounded-lg border-none;
+    background: hsl(var(--input) / 0.12);
+    color: hsl(var(--text-primary));
+  }
+  
+  .form-field::placeholder {
+    color: hsl(var(--muted));
+  }
+  
+  .form-field:focus {
+    @apply outline-none ring-2;
+    ring-color: hsl(var(--accent-focus));
+  }
+  
+  /* Section Spacing */
+  .section-padding {
+    @apply py-24 lg:py-32;
+  }
+  
+  /* Divider Line */
+  .brass-divider {
+    @apply w-full h-px;
+    background: hsl(var(--accent-primary));
   }
 }
 
