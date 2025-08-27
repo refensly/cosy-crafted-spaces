@@ -365,11 +365,11 @@ const Index = () => {
         {/* Project Modal */}
         {selectedProject && (
           <div 
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md"
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fade-in"
             onClick={handleCloseModal}
           >
             <div 
-              className="bg-gray-900 rounded-2xl max-w-4xl max-h-[80vh] w-full overflow-hidden shadow-2xl border border-gray-700/50 relative"
+              className="bg-gray-900 rounded-2xl max-w-4xl max-h-[80vh] w-full overflow-hidden shadow-2xl border border-gray-700/50 relative animate-scale-in"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close Button */}
