@@ -146,14 +146,26 @@ const Index = () => {
     description: "Complete outdoor living solutions"
   }];
   const projects = [{
-    title: "The Summit Inn — Custom Bar Design and Production",
-    image: projSummitImg
+    id: 'summit-inn-recent',
+    title: "The Summit Inn", 
+    subtitle: "Custom Bar Design and Production",
+    caption: "Premium walnut bar with brass fixtures and custom lighting design",
+    image: projSummitImg,
+    images: ['summit1.jpg', 'summit2.jpg', 'summit3.jpg', 'summit4.jpg']
   }, {
-    title: "The Abbey Tavern — Walnut Backlit Bar",
-    image: projAbbeyImg
+    id: 'abbey-tavern-recent',
+    title: "The Abbey Tavern", 
+    subtitle: "Walnut Backlit Bar",
+    caption: "Sophisticated backlit bar featuring rich walnut wood and integrated LED lighting",
+    image: projAbbeyImg,
+    images: ['abbey1.jpg', 'abbey2.jpg', 'abbey3.jpg']
   }, {
-    title: "Findlaters — Interior Shelving in Solid Oak",
-    image: projFindlatersImg
+    id: 'findlaters-recent',
+    title: "Findlaters", 
+    subtitle: "Interior Shelving in Solid Oak",
+    caption: "Custom solid oak shelving system with precision joinery and natural finish",
+    image: projFindlatersImg,
+    images: ['findlaters1.jpg', 'findlaters2.jpg', 'findlaters3.jpg', 'findlaters4.jpg']
   }];
   const processSteps = [{
     number: "1",
@@ -489,15 +501,20 @@ const Index = () => {
             </h2>
           </ScrollReveal>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => <ScrollReveal key={index} delay={index * 100}>
-                <div className="premium-card group cursor-pointer">
+            {projects.map((project, index) => (
+              <ScrollReveal key={index} delay={index * 100}>
+                <div 
+                  className="premium-card group cursor-pointer"
+                  onClick={() => handleProjectClick(project)}
+                >
                   <div className="relative overflow-hidden rounded-lg">
                     <img src={project.image} alt={project.title} className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-bg-main/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                       <div className="p-6">
-                        <h3 className="font-heading font-bold text-text-primary mb-2">
+                        <h3 className="font-heading font-bold text-text-primary mb-1">
                           {project.title}
                         </h3>
+                        <p className="text-text-secondary text-sm mb-3">{project.subtitle}</p>
                         <Button variant="outline" size="sm" className="btn-secondary">
                           View Project
                         </Button>
@@ -505,7 +522,8 @@ const Index = () => {
                     </div>
                   </div>
                 </div>
-              </ScrollReveal>)}
+              </ScrollReveal>
+            ))}
           </div>
         </div>
       </section>
