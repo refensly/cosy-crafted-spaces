@@ -80,7 +80,7 @@ const Hero = () => {
             <div className={`text-[120px] px-16 ${animationsStarted ? 'animate-fade-up animation-delay-900' : 'opacity-0'}`}>Furniture from Dublin</div>
           </h1>
           <p className={`text-xl md:text-2xl text-text-secondary mb-8 max-w-2xl mx-auto leading-relaxed ${animationsStarted ? 'animate-fade-up animation-delay-1100' : 'opacity-0'}`}>
-            <div className="font-body font-normal text-white">Ideal for presents, interior and cozy spaces.</div>
+            <div className="font-body font-normal text-white">Ideal for Presents, Interior and Cozy Spaces.</div>
             <div className="text-white">Made out of natural materials.</div>
           </p>
           
