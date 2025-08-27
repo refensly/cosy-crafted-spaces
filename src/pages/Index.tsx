@@ -52,10 +52,6 @@ const Index = () => {
     title: "Custom Pieces",
     image: capOutdoorImg,
     description: "Complete outdoor living solutions"
-  }, {
-    title: "Custom Furniture",
-    image: capFurnitureImg,
-    description: "Bespoke furniture pieces"
   }];
   const projects = [{
     title: "The Summit Inn — Custom Bar Design and Production",
