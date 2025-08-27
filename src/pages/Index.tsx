@@ -259,7 +259,9 @@ const Index = () => {
       </section>
 
       {/* Section 3: Interactive Portfolio */}
-      <section id="work" className="section-padding relative overflow-hidden bg-bg-portfolio">
+      <section id="work" className="section-padding relative overflow-hidden">
+        {/* Deep dark background with subtle radial gradient */}
+        <div className="absolute inset-0 w-full h-full bg-gradient-radial from-bg-section-alt via-bg-main to-bg-section-alt-2"></div>
         
         <div className="container mx-auto px-6 relative z-10">
           <ScrollReveal>
@@ -314,14 +316,14 @@ const Index = () => {
                     {/* Accordion Content */}
                     <div className={`transition-all duration-500 ease-in-out overflow-hidden ${
                       expandedCategory === category.id 
-                        ? 'max-h-none opacity-100 mt-8' 
+                        ? 'max-h-[800px] opacity-100 mt-8' 
                         : 'max-h-0 opacity-0'
                     }`}>
                       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {category.projects.map((project, projectIndex) => (
                           <div
                             key={project.id}
-                            className="bg-bg-section-alt/50 rounded-xl overflow-hidden cursor-pointer group hover:bg-bg-section-alt/70 transition-all duration-300 border border-bg-section-alt/30 hover:border-accent-primary/40 hover:shadow-sm hover:shadow-accent-primary/20"
+                            className="bg-bg-section-alt/50 rounded-xl overflow-hidden cursor-pointer group hover:bg-bg-section-alt/70 transition-all duration-300 border border-bg-section-alt/30 hover:border-accent-primary/40"
                             onClick={(e) => {
                               e.stopPropagation();
                               handleProjectClick(project);
@@ -335,10 +337,7 @@ const Index = () => {
                               </div>
                             </div>
                             <div className="p-4">
-                              <h4 className="font-heading font-bold text-text-primary mb-1 group-hover:text-accent-primary transition-colors relative">
-                                {project.title}
-                                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent-primary transition-all duration-300 group-hover:w-full"></div>
-                              </h4>
+                              <h4 className="font-heading font-bold text-text-primary mb-1 group-hover:text-accent-primary transition-colors">{project.title}</h4>
                               <p className="text-text-secondary text-sm">{project.subtitle}</p>
                             </div>
                           </div>

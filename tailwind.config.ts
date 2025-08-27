@@ -48,9 +48,6 @@ export default {
         'green-dark': 'hsl(var(--green-dark))',
         'green-light': 'hsl(var(--green-light))',
         
-        // Portfolio section
-        'bg-portfolio': 'hsl(var(--bg-portfolio))',
-        
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))'
