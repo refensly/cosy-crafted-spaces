@@ -324,9 +324,9 @@ const Index = () => {
                       </div>
                     
                     {/* Accordion Content */}
-                    <div className={`transition-all duration-1000 ease-out overflow-hidden ${
+                    <div className={`transition-all duration-500 ease-in-out overflow-hidden ${
                       expandedCategory === category.id 
-                        ? 'max-h-[2000px] opacity-100 mt-8' 
+                        ? 'max-h-[1500px] opacity-100 mt-8' 
                         : 'max-h-0 opacity-0'
                     }`}>
                       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
