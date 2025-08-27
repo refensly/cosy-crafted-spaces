@@ -31,6 +31,9 @@
     --green-dark: 78 22% 29%;           /* #4A593D */
     --green-light: 75 24% 59%;          /* #A8B27E */
     
+    /* Portfolio Section Background */
+    --bg-portfolio: 186 15% 11%;        /* #101E22 - Deep dark green with cyan undertone */
+    
     /* Semantic tokens */
     --background: var(--bg-main);
     --foreground: var(--text-primary);
