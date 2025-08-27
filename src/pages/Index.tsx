@@ -259,10 +259,19 @@ const Index = () => {
       </section>
 
       {/* Section 3: Interactive Portfolio */}
-      <section id="work" className="section-padding" style={{ background: 'linear-gradient(135deg, #0E1110 0%, #121A17 100%)' }}>
-        <div className="container mx-auto px-6">
+      <section id="work" className="section-padding relative overflow-hidden">
+        {/* Premium textured background */}
+        <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-bg-main via-bg-section-alt to-bg-section-alt-2"></div>
+        <div className="absolute inset-0 w-full h-full opacity-20" style={{
+          backgroundImage: `url('/lovable-uploads/7928fc98-36e8-4b94-bd48-06681d62fc6f.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40"></div>
+        
+        <div className="container mx-auto px-6 relative z-10">
           <ScrollReveal>
-            <h2 className="font-heading font-bold text-white text-center mb-16 text-4xl">
+            <h2 className="font-grifter font-bold text-white text-center mb-20 text-7xl md:text-8xl lg:text-9xl leading-tight tracking-tight">
               What We Create
             </h2>
           </ScrollReveal>
@@ -272,26 +281,43 @@ const Index = () => {
               <div key={category.id} className="w-full">
                 <ScrollReveal delay={categoryIndex * 100}>
                   <div 
-                    className={`bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-sm rounded-2xl p-6 cursor-pointer transition-all duration-300 shadow-lg hover:shadow-xl border border-gray-700/50 ${
-                      expandedCategory === category.id ? 'shadow-2xl border-gray-600/70' : ''
-                    }`}
+                    className={`
+                      relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 ease-out
+                      bg-gradient-to-br from-gray-900/95 via-gray-800/90 to-gray-900/95
+                      backdrop-blur-md border border-gray-700/60 shadow-2xl
+                      hover:shadow-accent-primary/20 hover:shadow-[0_20px_40px_-12px_rgba(197,156,87,0.25)]
+                      hover:border-accent-primary/40 hover:scale-[1.02]
+                      ${expandedCategory === category.id 
+                        ? 'shadow-accent-primary/30 shadow-[0_25px_50px_-12px_rgba(197,156,87,0.35)] border-accent-primary/60 bg-gradient-to-br from-gray-800/98 via-gray-700/90 to-gray-800/98' 
+                        : ''
+                      }
+                    `}
                     onClick={() => handleCategoryClick(category.id)}
                   >
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <h3 className="font-heading font-bold text-white text-2xl mb-2">
-                          {category.title}
-                        </h3>
-                        <p className="text-gray-300 text-lg">{category.description}</p>
+                    {/* Premium inner glow */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.02] to-transparent"></div>
+                    
+                    {/* Active state accent line */}
+                    {expandedCategory === category.id && (
+                      <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-accent-primary to-transparent"></div>
+                    )}
+                    
+                    <div className="relative p-8">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <h3 className="font-heading font-bold text-white text-2xl md:text-3xl mb-3 tracking-tight">
+                            {category.title}
+                          </h3>
+                          <p className="text-gray-300 text-lg font-medium">{category.description}</p>
+                        </div>
+                        <div className={`transform transition-all duration-300 ease-out ${
+                          expandedCategory === category.id ? 'rotate-180 text-accent-primary' : 'text-gray-400'
+                        }`}>
+                          <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </div>
                       </div>
-                      <div className={`transform transition-transform duration-300 ${
-                        expandedCategory === category.id ? 'rotate-180' : ''
-                      }`}>
-                        <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                        </svg>
-                      </div>
-                    </div>
                     
                     {/* Accordion Content */}
                     <div className={`transition-all duration-500 ease-in-out overflow-hidden ${
@@ -324,6 +350,7 @@ const Index = () => {
                         ))}
                       </div>
                     </div>
+                  </div>
                   </div>
                 </ScrollReveal>
               </div>
