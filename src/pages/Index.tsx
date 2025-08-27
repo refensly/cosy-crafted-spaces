@@ -424,7 +424,7 @@ const Index = () => {
                 
                 {/* Image Thumbnails */}
                 {selectedProject.images.length > 1 && (
-                  <div className="flex gap-2 mt-12 justify-center overflow-x-auto pb-4">
+                  <div className="flex gap-2 mt-8 justify-center items-center overflow-x-auto px-4 py-4 min-h-[80px]">
                     {selectedProject.images.map((_, index) => (
                       <button
                         key={index}
