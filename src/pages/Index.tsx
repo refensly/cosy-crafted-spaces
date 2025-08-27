@@ -41,7 +41,7 @@ const Index = () => {
     }, 500);
   };
   const capabilities = [{
-    title: "Bars",
+    title: "Hospitality Spaces",
     image: capBarsImg,
     description: "Custom outdoor bar installations"
   }, {
