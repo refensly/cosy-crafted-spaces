@@ -235,21 +235,21 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {[{
             title: "Interior Shot",
-            image: projAbbeyImg,
+            image: "/lovable-uploads/34739a11-b299-4d2a-8171-96d9cfd4af84.png",
             description: "See how pieces fit in real spaces"
           }, {
             title: "Details",
-            image: projSummitImg,
+            image: "/lovable-uploads/6453ef71-a9e8-4bd2-8867-116646dffc56.png",
             description: "Close-up craftsmanship and finishing"
           }, {
             title: "Handmade Quality",
-            image: projFindlatersImg,
+            image: "/lovable-uploads/34739a11-b299-4d2a-8171-96d9cfd4af84.png",
             description: "Premium materials and construction"
           }].map((example, index) => <ScrollReveal key={index} delay={index * 100}>
                 <div className="text-center">
                   <div className="relative mb-4">
                     <div className="w-full h-64 rounded-lg overflow-hidden shadow-lg">
-                      <img src="/lovable-uploads/34739a11-b299-4d2a-8171-96d9cfd4af84.png" alt="Custom outdoor furniture and lighting installation" className="w-full h-full object-cover transform scale-110" />
+                      <img src={example.image} alt="Custom craftsmanship and interior design" className="w-full h-full object-cover transform scale-110" />
                     </div>
                   </div>
                   <h3 className="font-heading font-bold text-text-primary mb-2 text-lg">
