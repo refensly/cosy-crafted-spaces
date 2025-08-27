@@ -77,6 +77,9 @@ export default {
           foreground: 'hsl(var(--card-foreground))'
         }
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
       fontFamily: {
         'heading': ['Oswald', 'var(--font-heading)', 'sans-serif'],
         'body': ['Montserrat', 'var(--font-body)', 'sans-serif'],

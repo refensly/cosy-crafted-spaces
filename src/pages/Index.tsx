@@ -260,18 +260,12 @@ const Index = () => {
 
       {/* Section 3: Interactive Portfolio */}
       <section id="work" className="section-padding relative overflow-hidden">
-        {/* Premium textured background */}
-        <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-bg-main via-bg-section-alt to-bg-section-alt-2"></div>
-        <div className="absolute inset-0 w-full h-full opacity-20" style={{
-          backgroundImage: `url('/lovable-uploads/7928fc98-36e8-4b94-bd48-06681d62fc6f.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40"></div>
+        {/* Deep dark background with subtle radial gradient */}
+        <div className="absolute inset-0 w-full h-full bg-gradient-radial from-bg-section-alt via-bg-main to-bg-section-alt-2"></div>
         
         <div className="container mx-auto px-6 relative z-10">
           <ScrollReveal>
-            <h2 className="font-grifter font-bold text-white text-center mb-20 text-7xl md:text-8xl lg:text-9xl leading-tight tracking-tight">
+            <h2 className="font-heading font-bold text-text-primary text-center mb-16">
               What We Create
             </h2>
           </ScrollReveal>
@@ -283,12 +277,12 @@ const Index = () => {
                   <div 
                     className={`
                       relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 ease-out
-                      bg-gradient-to-br from-gray-900/95 via-gray-800/90 to-gray-900/95
-                      backdrop-blur-md border border-gray-700/60 shadow-2xl
+                      bg-gradient-to-br from-bg-section-alt-2/95 via-bg-section-alt/90 to-bg-section-alt-2/95
+                      backdrop-blur-md border border-bg-section-alt/60 shadow-2xl
                       hover:shadow-accent-primary/20 hover:shadow-[0_20px_40px_-12px_rgba(197,156,87,0.25)]
-                      hover:border-accent-primary/40 hover:scale-[1.02]
+                      hover:border-accent-primary/40 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-bg-section-alt/98 hover:via-bg-main/90 hover:to-bg-section-alt/98
                       ${expandedCategory === category.id 
-                        ? 'shadow-accent-primary/30 shadow-[0_25px_50px_-12px_rgba(197,156,87,0.35)] border-accent-primary/60 bg-gradient-to-br from-gray-800/98 via-gray-700/90 to-gray-800/98' 
+                        ? 'shadow-accent-primary/30 shadow-[0_25px_50px_-12px_rgba(197,156,87,0.35)] border-accent-primary/60 bg-gradient-to-br from-bg-section-alt/98 via-bg-main/90 to-bg-section-alt/98' 
                         : ''
                       }
                     `}
@@ -329,13 +323,13 @@ const Index = () => {
                         {category.projects.map((project, projectIndex) => (
                           <div
                             key={project.id}
-                            className="bg-gray-800/50 rounded-xl overflow-hidden cursor-pointer group hover:bg-gray-700/50 transition-all duration-300 border border-gray-700/30"
+                            className="bg-bg-section-alt/50 rounded-xl overflow-hidden cursor-pointer group hover:bg-bg-section-alt/70 transition-all duration-300 border border-bg-section-alt/30 hover:border-accent-primary/40"
                             onClick={(e) => {
                               e.stopPropagation();
                               handleProjectClick(project);
                             }}
                           >
-                            <div className="relative h-48 bg-gradient-to-br from-gray-700 to-gray-800 overflow-hidden">
+                            <div className="relative h-48 bg-gradient-to-br from-bg-section-alt-2 to-bg-section-alt overflow-hidden">
                               <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgb3BhY2l0eT0iMC4xIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMSIgZmlsbD0iI2ZmZmZmZiIvPgo8L2c+Cjwvc3ZnPgo=')] opacity-20"></div>
                               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                               <div className="absolute bottom-4 left-4 right-4">
@@ -343,8 +337,8 @@ const Index = () => {
                               </div>
                             </div>
                             <div className="p-4">
-                              <h4 className="font-heading font-bold text-white mb-1">{project.title}</h4>
-                              <p className="text-gray-400 text-sm">{project.subtitle}</p>
+                              <h4 className="font-heading font-bold text-text-primary mb-1 group-hover:text-accent-primary transition-colors">{project.title}</h4>
+                              <p className="text-text-secondary text-sm">{project.subtitle}</p>
                             </div>
                           </div>
                         ))}
