@@ -29,6 +29,7 @@ export default {
         'bg-main': 'hsl(var(--bg-main))',
         'bg-section-alt': 'hsl(var(--bg-section-alt))',
         'bg-section-alt-2': 'hsl(var(--bg-section-alt-2))',
+        'bg-blue-contrast': 'hsl(var(--bg-blue-contrast))',
         
         // Text colors
         'text-primary': 'hsl(var(--text-primary))',

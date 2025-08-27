@@ -259,9 +259,7 @@ const Index = () => {
       </section>
 
       {/* Section 3: Interactive Portfolio */}
-      <section id="work" className="section-padding relative overflow-hidden">
-        {/* Deep dark background with subtle radial gradient */}
-        <div className="absolute inset-0 w-full h-full bg-gradient-radial from-bg-section-alt via-bg-main to-bg-section-alt-2"></div>
+      <section id="work" className="section-padding relative overflow-hidden bg-blue-contrast">
         
         <div className="container mx-auto px-6 relative z-10">
           <ScrollReveal>
@@ -277,12 +275,12 @@ const Index = () => {
                   <div 
                     className={`
                       relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 ease-out
-                      bg-gradient-to-br from-bg-section-alt-2/95 via-bg-section-alt/90 to-bg-section-alt-2/95
+                      bg-gradient-to-br from-bg-section-alt/80 via-bg-section-alt-2/75 to-bg-section-alt/80
                       backdrop-blur-md border border-bg-section-alt/60 shadow-2xl
                       hover:shadow-accent-primary/20 hover:shadow-[0_20px_40px_-12px_rgba(197,156,87,0.25)]
-                      hover:border-accent-primary/40 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-bg-section-alt/98 hover:via-bg-main/90 hover:to-bg-section-alt/98
+                      hover:border-accent-primary/40 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-bg-section-alt-2/85 hover:via-bg-section-alt/80 hover:to-bg-section-alt-2/85
                       ${expandedCategory === category.id 
-                        ? 'shadow-accent-primary/30 shadow-[0_25px_50px_-12px_rgba(197,156,87,0.35)] border-accent-primary/60 bg-gradient-to-br from-bg-section-alt/98 via-bg-main/90 to-bg-section-alt/98' 
+                        ? 'shadow-accent-primary/30 shadow-[0_25px_50px_-12px_rgba(197,156,87,0.35)] border-accent-primary/60 bg-gradient-to-br from-bg-section-alt-2/85 via-bg-section-alt/80 to-bg-section-alt-2/85' 
                         : ''
                       }
                     `}
@@ -316,7 +314,7 @@ const Index = () => {
                     {/* Accordion Content */}
                     <div className={`transition-all duration-500 ease-in-out overflow-hidden ${
                       expandedCategory === category.id 
-                        ? 'max-h-[800px] opacity-100 mt-8' 
+                        ? 'max-h-none opacity-100 mt-8' 
                         : 'max-h-0 opacity-0'
                     }`}>
                       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
