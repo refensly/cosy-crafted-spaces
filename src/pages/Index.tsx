@@ -259,7 +259,7 @@ const Index = () => {
       </section>
 
       {/* Section 3: Interactive Portfolio */}
-      <section id="work" className="section-padding relative overflow-hidden bg-blue-contrast">
+      <section id="work" className="section-padding relative overflow-hidden bg-wood-dark">
         
         <div className="container mx-auto px-6 relative z-10">
           <ScrollReveal>
