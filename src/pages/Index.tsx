@@ -324,10 +324,10 @@ const Index = () => {
                       </div>
                     
                     {/* Accordion Content */}
-                    <div className={`transition-all duration-500 ease-in-out overflow-hidden ${
+                    <div className={`overflow-hidden ${
                       expandedCategory === category.id 
-                        ? 'max-h-none opacity-100 mt-8' 
-                        : 'max-h-0 opacity-0'
+                        ? 'animate-accordion-down mt-8' 
+                        : 'animate-accordion-up'
                     }`}>
                       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {category.projects.map((project, projectIndex) => (
