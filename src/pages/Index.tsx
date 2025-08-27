@@ -36,7 +36,7 @@ const Index = () => {
   const portfolioCategories = [
     {
       id: 'bars-restaurants',
-      title: 'Bars & Restaurants',
+      title: 'Hospitality Spaces',
       description: 'Commercial hospitality spaces',
       projects: [
         { id: 'summit-inn', title: 'The Summit Inn', subtitle: 'Custom bar design and production', caption: 'Premium walnut bar with brass fixtures', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg'] },
