@@ -49,7 +49,7 @@ const Index = () => {
     image: capHomeBarsImg,
     description: "Sophisticated home entertainment spaces"
   }, {
-    title: "Outdoor Spaces",
+    title: "Custom Pieces",
     image: capOutdoorImg,
     description: "Complete outdoor living solutions"
   }, {
