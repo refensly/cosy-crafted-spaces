@@ -183,6 +183,9 @@ const Index = () => {
                 <div className="premium-card group cursor-pointer">
                   <div className="relative overflow-hidden rounded-lg mb-4">
                     <img src={capability.image} alt={capability.title} className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-bg-main/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                      <span className="text-text-primary font-semibold">View examples</span>
+                    </div>
                   </div>
                   <h3 className="font-heading font-bold text-text-primary mb-2">
                     {capability.title}
