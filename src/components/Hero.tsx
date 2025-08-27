@@ -81,7 +81,7 @@ const Hero = () => {
           </h1>
           <p className={`text-xl md:text-2xl text-text-secondary mb-8 max-w-2xl mx-auto leading-relaxed ${animationsStarted ? 'animate-fade-up animation-delay-1100' : 'opacity-0'}`}>
             <div className="font-body font-normal text-white">Ideal for Presents, Interior and Cozy Spaces.</div>
-            <div className="text-white">Made out of natural materials.</div>
+            <div className="text-white">Made Out of Natural Materials.</div>
           </p>
           
           {/* Unique Badge */}
