@@ -215,7 +215,7 @@ const Index = () => {
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <div className="relative">
-                <img src="/lovable-uploads/85b2ef0f-4998-4719-94ef-1a3e9fc8d228.png" alt="Premium custom outdoor furniture and lighting" className="w-full h-96 object-cover rounded-xl" />
+                <img src="/lovable-uploads/11fcac85-5eb5-4170-b6ab-5d8ca77d9335.png" alt="Custom bar interior with warm lighting and wood finishes" className="w-full h-96 object-cover rounded-xl" />
               </div>
             </ScrollReveal>
           </div>
