@@ -383,7 +383,7 @@ const Index = () => {
               </button>
               
               {/* Modal Content */}
-              <div className="p-8 pb-12">
+              <div className="p-8">
                 <h2 className="font-heading font-bold text-white text-3xl mb-2">{selectedProject.title}</h2>
                 <p className="text-gray-300 text-lg mb-8">{selectedProject.caption}</p>
                 
@@ -424,7 +424,7 @@ const Index = () => {
                 
                 {/* Image Thumbnails */}
                 {selectedProject.images.length > 1 && (
-                  <div className="flex gap-2 mt-4 justify-center items-center overflow-x-auto px-4 py-2 min-h-[60px]">
+                  <div className="flex gap-2 mt-4 justify-center items-center overflow-x-auto px-4 pt-2 min-h-[40px]">
                     {selectedProject.images.map((_, index) => (
                       <button
                         key={index}
