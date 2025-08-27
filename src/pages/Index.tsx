@@ -263,7 +263,7 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <h2 className="font-heading font-bold text-white text-center mb-16 text-4xl">
-              What we create
+              What We Create
             </h2>
           </ScrollReveal>
           
