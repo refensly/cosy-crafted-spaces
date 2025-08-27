@@ -249,7 +249,7 @@ const Index = () => {
                 <div className="text-center">
                   <div className="relative mb-4">
                     <div className="w-full h-64 rounded-lg overflow-hidden shadow-lg">
-                      <img src="/lovable-uploads/3304e534-f7f5-46b8-afbc-f278438949e0.png" alt="Custom outdoor furniture and lighting installation" className="w-full h-full object-cover transform scale-110" />
+                      <img src="/lovable-uploads/34739a11-b299-4d2a-8171-96d9cfd4af84.png" alt="Custom outdoor furniture and lighting installation" className="w-full h-full object-cover transform scale-110" />
                     </div>
                   </div>
                   <h3 className="font-heading font-bold text-text-primary mb-2 text-lg">
