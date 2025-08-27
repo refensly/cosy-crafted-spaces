@@ -239,7 +239,7 @@ const Index = () => {
             description: "See how pieces fit in real spaces"
           }, {
             title: "Details",
-            image: "/lovable-uploads/6453ef71-a9e8-4bd2-8867-116646dffc56.png",
+            image: "/lovable-uploads/ba2feee5-480e-4550-bec8-f6f287ebbc25.png",
             description: "Close-up craftsmanship and finishing"
           }, {
             title: "Handmade Quality",
