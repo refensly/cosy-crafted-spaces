@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -28,6 +28,98 @@ const Index = () => {
     message: ''
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
+  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Portfolio data structure
+  const portfolioCategories = [
+    {
+      id: 'bars-restaurants',
+      title: 'Bars & Restaurants',
+      description: 'Commercial hospitality spaces',
+      projects: [
+        { id: 'summit-inn', title: 'The Summit Inn', subtitle: 'Custom bar design and production', caption: 'Premium walnut bar with brass fixtures', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg'] },
+        { id: 'mamo', title: 'MAMO', subtitle: 'Contemporary restaurant interior', caption: 'Modern dining space with custom furnishings', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg', 'placeholder4.jpg'] },
+        { id: 'riverside-bar', title: 'Riverside Bar', subtitle: 'Waterfront bar installation', caption: 'Outdoor-inspired bar design', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg'] },
+        { id: 'peggys', title: 'Peggy\'s St Stephens', subtitle: 'Traditional pub refurbishment', caption: 'Classic Irish pub with modern touches', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg', 'placeholder4.jpg', 'placeholder5.jpg'] },
+        { id: 'casa-clontarf', title: 'Casa Clontarf', subtitle: 'Mediterranean restaurant', caption: 'Warm, inviting dining atmosphere', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg'] },
+        { id: 'green-phone-box', title: 'The Green Phone Box', subtitle: 'Unique themed bar', caption: 'Creative concept bar design', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg'] }
+      ]
+    },
+    {
+      id: 'outdoor-spaces',
+      title: 'Outdoor Spaces',
+      description: 'Gardens, decking, and outdoor living',
+      projects: [
+        { id: 'thormanby-lawns', title: 'Thormanby Lawns', subtitle: 'Landscape garden design', caption: 'Extensive outdoor living space', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg'] },
+        { id: 'pergola-decking', title: 'Pergola Decking', subtitle: 'Covered outdoor area', caption: 'Timber pergola with integrated seating', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg', 'placeholder4.jpg'] },
+        { id: 'howth-decking', title: 'Howth Decking', subtitle: 'Coastal deck installation', caption: 'Weather-resistant decking solution', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg'] },
+        { id: 'raheny-patio', title: 'Raheny Patio', subtitle: 'Stone patio design', caption: 'Natural stone outdoor entertaining area', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg'] },
+        { id: 'decking-2024', title: 'Decking 2024', subtitle: 'Modern deck construction', caption: 'Contemporary outdoor platform', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg', 'placeholder4.jpg'] },
+        { id: 'treehouse', title: 'Children\'s Treehouse', subtitle: 'Custom playground structure', caption: 'Safe and imaginative play space', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg'] },
+        { id: 'raheny-garage', title: 'Raheny Garage', subtitle: 'Garage conversion project', caption: 'Multi-purpose outdoor building', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg'] },
+        { id: 'container-home', title: 'Container Home', subtitle: 'Shipping container conversion', caption: 'Innovative living space solution', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg', 'placeholder4.jpg'] },
+        { id: 'archideo', title: 'Archideo', subtitle: 'Architectural outdoor feature', caption: 'Statement outdoor installation', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg'] }
+      ]
+    },
+    {
+      id: 'custom-pieces',
+      title: 'Custom Pieces',
+      description: 'Bespoke furniture and installations',
+      projects: [
+        { id: 'art-studio', title: 'Art Studio', subtitle: 'Custom studio furniture', caption: 'Tailored workspace solutions', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg'] }
+      ]
+    }
+  ];
+
+  const handleCategoryClick = (categoryId: string) => {
+    setExpandedCategory(expandedCategory === categoryId ? null : categoryId);
+  };
+
+  const handleProjectClick = (project: any) => {
+    setSelectedProject(project);
+    setCurrentImageIndex(0);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedProject(null);
+    setCurrentImageIndex(0);
+  };
+
+  const handlePrevImage = () => {
+    if (selectedProject) {
+      setCurrentImageIndex((prev) => 
+        prev === 0 ? selectedProject.images.length - 1 : prev - 1
+      );
+    }
+  };
+
+  const handleNextImage = () => {
+    if (selectedProject) {
+      setCurrentImageIndex((prev) => 
+        prev === selectedProject.images.length - 1 ? 0 : prev + 1
+      );
+    }
+  };
+
+  // Keyboard navigation for modal
+  useEffect(() => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (selectedProject) {
+        if (e.key === 'Escape') {
+          handleCloseModal();
+        } else if (e.key === 'ArrowLeft') {
+          handlePrevImage();
+        } else if (e.key === 'ArrowRight') {
+          handleNextImage();
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, [selectedProject]);
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -166,31 +258,163 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Section 3: Capabilities */}
-      <section id="work" className="section-padding bg-bg-main">
+      {/* Section 3: Interactive Portfolio */}
+      <section id="work" className="section-padding" style={{ background: 'linear-gradient(135deg, #0E1110 0%, #121A17 100%)' }}>
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="font-heading font-bold text-text-primary text-center mb-16">
+            <h2 className="font-heading font-bold text-white text-center mb-16 text-4xl">
               What we create
             </h2>
           </ScrollReveal>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {capabilities.map((capability, index) => <ScrollReveal key={index} delay={index * 100}>
-                <div className="premium-card group cursor-pointer">
-                  <div className="relative overflow-hidden rounded-lg mb-4">
-                    <img src={capability.image} alt={capability.title} className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" />
-                    <div className="absolute inset-0 bg-bg-main/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <span className="text-text-primary font-semibold">View examples</span>
+          
+          <div className="space-y-4">
+            {portfolioCategories.map((category, categoryIndex) => (
+              <div key={category.id} className="w-full">
+                <ScrollReveal delay={categoryIndex * 100}>
+                  <div 
+                    className={`bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-sm rounded-2xl p-6 cursor-pointer transition-all duration-300 shadow-lg hover:shadow-xl border border-gray-700/50 ${
+                      expandedCategory === category.id ? 'shadow-2xl border-gray-600/70' : ''
+                    }`}
+                    onClick={() => handleCategoryClick(category.id)}
+                  >
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h3 className="font-heading font-bold text-white text-2xl mb-2">
+                          {category.title}
+                        </h3>
+                        <p className="text-gray-300 text-lg">{category.description}</p>
+                      </div>
+                      <div className={`transform transition-transform duration-300 ${
+                        expandedCategory === category.id ? 'rotate-180' : ''
+                      }`}>
+                        <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </div>
+                    </div>
+                    
+                    {/* Accordion Content */}
+                    <div className={`transition-all duration-500 ease-in-out overflow-hidden ${
+                      expandedCategory === category.id 
+                        ? 'max-h-[800px] opacity-100 mt-8' 
+                        : 'max-h-0 opacity-0'
+                    }`}>
+                      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {category.projects.map((project, projectIndex) => (
+                          <div
+                            key={project.id}
+                            className="bg-gray-800/50 rounded-xl overflow-hidden cursor-pointer group hover:bg-gray-700/50 transition-all duration-300 border border-gray-700/30"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleProjectClick(project);
+                            }}
+                          >
+                            <div className="relative h-48 bg-gradient-to-br from-gray-700 to-gray-800 overflow-hidden">
+                              <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgb3BhY2l0eT0iMC4xIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMSIgZmlsbD0iI2ZmZmZmZiIvPgo8L2c+Cjwvc3ZnPgo=')] opacity-20"></div>
+                              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                              <div className="absolute bottom-4 left-4 right-4">
+                                <div className="text-white font-medium text-sm opacity-70">Preview Image</div>
+                              </div>
+                            </div>
+                            <div className="p-4">
+                              <h4 className="font-heading font-bold text-white mb-1">{project.title}</h4>
+                              <p className="text-gray-400 text-sm">{project.subtitle}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                  <h3 className="font-heading font-bold text-text-primary mb-2">
-                    {capability.title}
-                  </h3>
-                  <p className="text-text-secondary">{capability.description}</p>
-                </div>
-              </ScrollReveal>)}
+                </ScrollReveal>
+              </div>
+            ))}
           </div>
         </div>
+        
+        {/* Project Modal */}
+        {selectedProject && (
+          <div 
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md"
+            onClick={handleCloseModal}
+          >
+            <div 
+              className="bg-gray-900 rounded-2xl max-w-4xl max-h-[80vh] w-full overflow-hidden shadow-2xl border border-gray-700/50 relative"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Close Button */}
+              <button
+                onClick={handleCloseModal}
+                className="absolute top-4 right-4 z-10 w-10 h-10 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center text-white transition-colors"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+              
+              {/* Modal Content */}
+              <div className="p-8">
+                <h2 className="font-heading font-bold text-white text-3xl mb-2">{selectedProject.title}</h2>
+                <p className="text-gray-300 text-lg mb-8">{selectedProject.caption}</p>
+                
+                {/* Image Carousel */}
+                <div className="relative">
+                  <div className="aspect-video bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl overflow-hidden relative">
+                    <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgb3BhY2l0eT0iMC4xIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMSIgZmlsbD0iI2ZmZmZmZiIvPgo8L2c+Cjwvc3ZnPgo=')] opacity-20"></div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="text-white text-2xl font-bold mb-2">Image {currentImageIndex + 1} of {selectedProject.images.length}</div>
+                        <div className="text-gray-400">Max size: 1280px wide, object-contain</div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Navigation Arrows */}
+                  {selectedProject.images.length > 1 && (
+                    <>
+                      <button
+                        onClick={handlePrevImage}
+                        className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center text-white transition-colors"
+                      >
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                        </svg>
+                      </button>
+                      <button
+                        onClick={handleNextImage}
+                        className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center text-white transition-colors"
+                      >
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </button>
+                    </>
+                  )}
+                </div>
+                
+                {/* Image Thumbnails */}
+                {selectedProject.images.length > 1 && (
+                  <div className="flex gap-2 mt-4 justify-center overflow-x-auto pb-2">
+                    {selectedProject.images.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentImageIndex(index)}
+                        className={`w-16 h-12 rounded-lg overflow-hidden flex-shrink-0 transition-all ${
+                          currentImageIndex === index 
+                            ? 'ring-2 ring-white/80 opacity-100' 
+                            : 'opacity-60 hover:opacity-80'
+                        }`}
+                      >
+                        <div className="w-full h-full bg-gradient-to-br from-gray-600 to-gray-700 relative">
+                          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgb3BhY2l0eT0iMC4xIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMSIgZmlsbD0iI2ZmZmZmZiIvPgo8L2c+Cjwvc3ZnPgo=')] opacity-30"></div>
+                        </div>
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
       </section>
 
       {/* Section 4: Why Custom > Standard */}
