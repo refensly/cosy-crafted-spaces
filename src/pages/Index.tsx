@@ -234,7 +234,7 @@ const Index = () => {
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {[{
-            title: "Interior Shot",
+            title: "Crafted for Real Spaces",
             image: "/lovable-uploads/34739a11-b299-4d2a-8171-96d9cfd4af84.png",
             description: "See how pieces fit in real spaces"
           }, {
