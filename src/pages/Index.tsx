@@ -463,51 +463,38 @@ const Index = () => {
       {/* Section 4: Why Custom > Standard */}
       <section className="py-16 md:py-20 bg-bg-section-alt">
         <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-            {/* Left: Heading + Persuasive Text */}
+          <div className="max-w-5xl mx-auto">
+            
+            {/* Headline */}
             <ScrollReveal>
-              <div>
-                <h2 className="font-heading font-bold text-text-primary text-3xl lg:text-4xl mb-6">
-                  Why people choose us over mass-production
-                </h2>
-                <p className="text-lg lg:text-xl text-text-secondary leading-relaxed mb-8">
-                  Most furniture today is disposable. We build for decades — each piece unique, crafted in Ireland from premium hardwoods and brass.
-                </p>
-                
-                {/* Feature bullets with icons */}
-                <div className="space-y-4">
-                  {[
-                    { icon: "🔨", text: "Never repeat" },
-                    { icon: "🇮🇪", text: "Made in Ireland" },
-                    { icon: "🌳", text: "Natural materials" },
-                    { icon: "🛡️", text: "Built to last" }
-                  ].map((feature, index) => (
-                    <div key={index} className="flex items-center space-x-3">
-                      <span className="text-lg">{feature.icon}</span>
-                      <span className="text-text-primary font-medium">{feature.text}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              <h2 className="font-heading font-bold text-text-primary text-4xl lg:text-5xl mb-8 text-center">
+                Why choose custom over mass-market
+              </h2>
+            </ScrollReveal>
+            
+            {/* Intro Text */}
+            <ScrollReveal delay={100}>
+              <p className="text-xl lg:text-2xl text-text-secondary leading-relaxed mb-12 text-center max-w-4xl mx-auto">
+                Most furniture today is disposable. We build for decades — each piece unique, designed and crafted in Ireland from premium oak, walnut, and brass.
+              </p>
             </ScrollReveal>
 
-            {/* Right: Comparison Table */}
+            {/* Comparison Table */}
             <ScrollReveal delay={200}>
-              <div className="bg-bg-section-alt-2 rounded-2xl p-8 border border-accent-primary/20 shadow-lg shadow-accent-primary/10">
-                <h3 className="font-heading font-bold text-text-primary text-center mb-8 text-xl">Mass-market vs Custom</h3>
+              <div className="bg-bg-section-alt-2 rounded-2xl p-8 border border-accent-primary/20 shadow-lg shadow-accent-primary/10 mb-12">
                 
                 {/* Table Header */}
                 <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="text-center py-3 rounded-lg bg-bg-main/50">
-                    <span className="text-text-muted font-medium text-sm uppercase tracking-wider">Mass-market</span>
+                  <div className="text-center py-4 rounded-lg bg-bg-main/50">
+                    <span className="text-text-muted font-bold text-lg uppercase tracking-wider">Mass-market</span>
                   </div>
-                  <div className="text-center py-3 rounded-lg bg-gradient-to-r from-accent-primary/20 to-accent-hover/20 border border-accent-primary/40 shadow-md shadow-accent-primary/20">
-                    <span className="text-accent-primary font-bold text-sm uppercase tracking-wider">Custom</span>
+                  <div className="text-center py-4 rounded-lg bg-gradient-to-r from-accent-primary/20 to-accent-hover/20 border border-accent-primary/40 shadow-md shadow-accent-primary/20">
+                    <span className="text-accent-primary font-bold text-lg uppercase tracking-wider">Custom</span>
                   </div>
                 </div>
                 
                 {/* Table Rows */}
-                <div className="space-y-3">
+                <div className="space-y-4">
                   {[
                     { standard: "Same as everyone", custom: "One-of-a-kind design" },
                     { standard: "Machine produced", custom: "Hand crafted" },
@@ -515,26 +502,51 @@ const Index = () => {
                     { standard: "Disposable", custom: "Heirloom quality" },
                     { standard: "Flat-packed", custom: "Installed by craftsmen" }
                   ].map((row, index) => (
-                    <div key={index} className="grid grid-cols-2 gap-4 py-3 border-b border-bg-main/20 last:border-b-0">
-                      <span className="text-text-muted text-sm">{row.standard}</span>
-                      <span className="text-text-primary font-medium text-sm">{row.custom}</span>
+                    <div key={index} className="grid grid-cols-2 gap-4 py-4 border-b border-bg-main/20 last:border-b-0">
+                      <span className="text-text-muted text-base">{row.standard}</span>
+                      <span className="text-text-primary font-semibold text-base bg-accent-primary/5 px-3 py-1 rounded-lg border-l-2 border-accent-primary/40">{row.custom}</span>
                     </div>
                   ))}
                 </div>
-                
-                {/* CTA Button */}
-                <div className="mt-8 text-center">
-                  <Button 
-                    className="bg-bg-section-alt border-2 border-accent-primary text-white font-bold text-lg px-8 py-4 rounded-xl hover:bg-accent-primary/10 hover:border-accent-hover hover:shadow-lg hover:shadow-accent-primary/30 transition-all duration-300 uppercase tracking-wider"
-                    asChild
-                  >
-                    <a href="#contact-form">
-                      TALK TO US ON WHATSAPP
-                    </a>
-                  </Button>
+              </div>
+            </ScrollReveal>
+
+            {/* Benefits Icons Row */}
+            <ScrollReveal delay={300}>
+              <div className="bg-bg-section-alt-2 rounded-2xl p-8 border border-accent-primary/20 shadow-lg shadow-accent-primary/10 mb-12">
+                <div className="grid md:grid-cols-4 gap-8">
+                  {[
+                    { icon: "🔨", title: "Unique every time", subtitle: "Never repeated design" },
+                    { icon: "🇮🇪", title: "Local craftsmanship", subtitle: "Made in Ireland" },
+                    { icon: "🌳", title: "Natural materials", subtitle: "Oak. Walnut. Brass." },
+                    { icon: "🛡️", title: "Built to last", subtitle: "Decades, not years" }
+                  ].map((benefit, index) => (
+                    <div key={index} className="text-center">
+                      <div className="text-4xl mb-3">{benefit.icon}</div>
+                      <h4 className="font-heading font-bold text-text-primary mb-2 text-lg">
+                        {benefit.title}
+                      </h4>
+                      <p className="text-text-secondary text-sm">{benefit.subtitle}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </ScrollReveal>
+
+            {/* CTA Button */}
+            <ScrollReveal delay={400}>
+              <div className="text-center">
+                <Button 
+                  className="bg-bg-section-alt border-2 border-accent-primary text-white font-bold text-xl px-12 py-6 rounded-xl hover:bg-accent-primary/10 hover:border-accent-hover hover:shadow-xl hover:shadow-accent-primary/40 transition-all duration-300 uppercase tracking-wider hover:scale-105"
+                  asChild
+                >
+                  <a href="https://wa.me/353000000000" target="_blank" rel="noopener noreferrer">
+                    Talk to us on WhatsApp
+                  </a>
+                </Button>
+              </div>
+            </ScrollReveal>
+
           </div>
         </div>
       </section>
