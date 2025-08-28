@@ -216,7 +216,7 @@ const Index = () => {
             <ScrollReveal delay={200}>
               <div className="relative">
                 <div className="w-full h-96 rounded-xl overflow-hidden">
-                  <img src="/lovable-uploads/11fcac85-5eb5-4170-b6ab-5d8ca77d9335.png" alt="Custom bar interior with warm lighting and wood finishes" className="w-full h-full object-cover transform scale-125" />
+                  <img src="/lovable-uploads/ea7da7da-0fb2-4c7b-8f87-b1ad11374f9f.png" alt="Custom bar interior with warm lighting and wood finishes" className="w-full h-full object-cover transform scale-125" />
                 </div>
               </div>
             </ScrollReveal>
