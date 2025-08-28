@@ -281,13 +281,16 @@ const Index = () => {
       </section>
 
       {/* Section 3: Interactive Portfolio */}
-      <section id="work" className="py-16 md:py-20 lg:py-24 relative overflow-hidden bg-wood-dark">
+      <section id="work" className="py-20 md:py-24 lg:py-32 relative overflow-hidden bg-deep-green">
         
         <div className="container mx-auto px-8 md:px-12 lg:px-16 relative z-10">
           <ScrollReveal>
-            <h2 className="font-heading font-bold text-text-primary text-center mb-16">
-              What We Create
-            </h2>
+            <div className="text-center mb-20">
+              <h2 className="font-heading font-bold text-text-primary text-center mb-6 text-5xl md:text-6xl">
+                What We Create
+              </h2>
+              <div className="w-24 h-0.5 bg-accent-primary mx-auto"></div>
+            </div>
           </ScrollReveal>
           
           <div className="space-y-4">
@@ -299,10 +302,12 @@ const Index = () => {
                       relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 ease-out
                       bg-gradient-to-br from-bg-section-alt/80 via-bg-section-alt-2/75 to-bg-section-alt/80
                       backdrop-blur-md border border-bg-section-alt/60 shadow-2xl
-                      hover:shadow-accent-primary/20 hover:shadow-[0_20px_40px_-12px_rgba(197,156,87,0.25)]
-                      hover:border-accent-primary/40 hover:scale-[1.02] hover:bg-gradient-to-br hover:from-bg-section-alt-2/85 hover:via-bg-section-alt/80 hover:to-bg-section-alt-2/85
+                      border-b-2 border-b-accent-primary/30 px-10 py-8
+                      hover:shadow-accent-primary/30 hover:shadow-[0_25px_50px_-12px_rgba(197,156,87,0.35)]
+                      hover:border-accent-primary/50 hover:border-b-accent-primary/60 hover:scale-[1.02] 
+                      hover:bg-gradient-to-br hover:from-bg-section-alt-2/90 hover:via-bg-section-alt/85 hover:to-bg-section-alt-2/90
                       ${expandedCategory === category.id 
-                        ? 'shadow-accent-primary/30 shadow-[0_25px_50px_-12px_rgba(197,156,87,0.35)] border-accent-primary/60 bg-gradient-to-br from-bg-section-alt-2/85 via-bg-section-alt/80 to-bg-section-alt-2/85' 
+                        ? 'shadow-accent-primary/40 shadow-[0_30px_60px_-12px_rgba(197,156,87,0.4)] border-accent-primary/70 border-b-accent-primary/80 bg-gradient-to-br from-bg-section-alt-2/90 via-bg-section-alt/85 to-bg-section-alt-2/90' 
                         : ''
                       }
                     `}
@@ -316,7 +321,7 @@ const Index = () => {
                       <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-accent-primary to-transparent"></div>
                     )}
                     
-                    <div className="relative p-8">
+                    <div className="relative px-2 py-4">
                       <div className="flex items-center justify-between">
                         <div>
                           <h3 className="font-heading font-bold text-white text-2xl md:text-3xl mb-3 tracking-tight">
@@ -343,7 +348,7 @@ const Index = () => {
                         {category.projects.map((project, projectIndex) => (
                           <div
                             key={project.id}
-                            className="bg-bg-section-alt/50 rounded-xl overflow-hidden cursor-pointer group hover:bg-bg-section-alt/70 transition-all duration-300 border border-bg-section-alt/30 hover:border-accent-primary/40"
+                            className="bg-bg-section-alt/50 rounded-xl overflow-hidden cursor-pointer group hover:bg-bg-section-alt/75 transition-all duration-300 border border-bg-section-alt/30 hover:border-accent-primary/50 border-b-2 border-b-accent-primary/40 hover:border-b-accent-primary/70 p-1 hover:shadow-lg hover:shadow-accent-primary/20"
                             onClick={(e) => {
                               e.stopPropagation();
                               handleProjectClick(project);
@@ -356,7 +361,7 @@ const Index = () => {
                                 <div className="text-white font-medium text-sm opacity-70">Preview Image</div>
                               </div>
                             </div>
-                            <div className="p-4">
+                            <div className="p-6">
                               <h4 className="font-heading font-bold text-text-primary mb-1 group-hover:text-accent-primary transition-colors">{project.title}</h4>
                               <p className="text-text-secondary text-sm">{project.subtitle}</p>
                             </div>
