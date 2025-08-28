@@ -397,7 +397,7 @@ const Index = () => {
                     <img 
                       src="/lovable-uploads/4194660c-2cb2-400e-9138-2966145f8d91.png" 
                       alt="Custom wooden bar with vertical slat design" 
-                      className="w-full h-full object-cover transform scale-105"
+                      className="w-full h-full object-contain"
                     />
                   </div>
                   
