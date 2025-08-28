@@ -525,7 +525,7 @@ const Index = () => {
                 {/* CTA Button */}
                 <div className="mt-8 text-center">
                   <Button 
-                    className="bg-transparent border-2 border-accent-primary text-white font-bold text-lg px-8 py-4 rounded-xl hover:bg-accent-primary/10 hover:border-accent-hover hover:shadow-lg hover:shadow-accent-primary/30 transition-all duration-300 uppercase tracking-wider"
+                    className="bg-bg-section-alt border-2 border-accent-primary text-white font-bold text-lg px-8 py-4 rounded-xl hover:bg-accent-primary/10 hover:border-accent-hover hover:shadow-lg hover:shadow-accent-primary/30 transition-all duration-300 uppercase tracking-wider"
                     asChild
                   >
                     <a href="#contact-form">
