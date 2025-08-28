@@ -686,7 +686,7 @@ const Index = () => {
             <div className="text-center">
                 <button 
                   onClick={() => scrollToContact()}
-                  className="bg-bg-main border-2 border-accent-primary text-white font-bold text-lg px-12 py-4 rounded-lg hover:bg-accent-primary/10 hover:border-accent-hover hover:shadow-lg hover:shadow-accent-primary/30 transition-all duration-300 uppercase tracking-wider"
+                  className="bg-bg-main border border-accent-primary text-white font-bold text-lg px-12 py-4 rounded-lg hover:bg-accent-primary/10 hover:border-accent-hover hover:shadow-lg hover:shadow-accent-primary/30 transition-all duration-300 uppercase tracking-wider"
                 >
                   Let's build yours →
                 </button>
