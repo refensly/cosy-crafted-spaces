@@ -394,13 +394,11 @@ const Index = () => {
                 {/* Image Carousel */}
                 <div className="relative">
                   <div className="aspect-video bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl overflow-hidden relative">
-                    <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgb3BhY2l0eT0iMC4xIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMSIgZmlsbD0iI2ZmZmZmZiIvPgo8L2c+Cjwvc3ZnPgo=')] opacity-20"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-center">
-                        <div className="text-white text-2xl font-bold mb-2">Image {currentImageIndex + 1} of {selectedProject.images.length}</div>
-                        <div className="text-gray-400">Max size: 1280px wide, object-contain</div>
-                      </div>
-                    </div>
+                    <img 
+                      src="/lovable-uploads/4194660c-2cb2-400e-9138-2966145f8d91.png" 
+                      alt="Custom wooden bar with vertical slat design" 
+                      className="w-full h-full object-cover transform scale-105"
+                    />
                   </div>
                   
                   {/* Navigation Arrows */}
