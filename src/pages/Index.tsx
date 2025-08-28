@@ -727,7 +727,7 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <ScrollReveal>
-              <div className="bg-bg-section-alt-2 rounded-xl p-8">
+              <div className="bg-gray-900 rounded-xl p-8">
                 <h2 className="font-heading font-bold text-text-primary mb-6 text-2xl">
                   Can I customize it for myself?
                 </h2>
