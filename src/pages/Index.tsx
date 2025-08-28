@@ -395,8 +395,8 @@ const Index = () => {
                 <div className="relative">
                   <div className="aspect-video bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl overflow-hidden relative">
                     <img 
-                      src="/lovable-uploads/4194660c-2cb2-400e-9138-2966145f8d91.png" 
-                      alt="Custom wooden bar with vertical slat design" 
+                      src="/lovable-uploads/d3e56680-f7a3-43e1-8796-05a598bf8041.png" 
+                      alt="Custom wooden bar with vertical slat design - different angle" 
                       className="w-full h-full object-contain"
                     />
                   </div>
