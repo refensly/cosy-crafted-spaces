@@ -542,7 +542,7 @@ const Index = () => {
             <ScrollReveal delay={400}>
               <div className="text-center">
                 <Button 
-                  className="bg-bg-section-alt border-2 border-accent-primary text-white font-bold text-xl px-12 py-6 rounded-xl hover:bg-accent-primary/10 hover:border-accent-hover hover:shadow-xl hover:shadow-accent-primary/40 transition-all duration-300 uppercase tracking-wider hover:scale-105"
+                  className="bg-bg-section-alt border border-accent-primary text-white font-bold text-xl px-12 py-6 rounded-xl hover:bg-accent-primary/10 hover:border-accent-hover hover:shadow-xl hover:shadow-accent-primary/40 transition-all duration-300 uppercase tracking-wider hover:scale-105"
                   asChild
                 >
                   <a href="https://wa.me/353000000000" target="_blank" rel="noopener noreferrer">
