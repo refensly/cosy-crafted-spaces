@@ -525,14 +525,11 @@ const Index = () => {
                 {/* CTA Button */}
                 <div className="mt-8 text-center">
                   <Button 
-                    className="btn-primary inline-flex items-center space-x-2 shadow-lg shadow-accent-primary/30 hover:shadow-accent-primary/50 transition-all duration-300"
+                    className="bg-transparent border-2 border-accent-primary text-white font-bold text-lg px-8 py-4 rounded-xl hover:bg-accent-primary/10 hover:border-accent-hover hover:shadow-lg hover:shadow-accent-primary/30 transition-all duration-300 uppercase tracking-wider"
                     asChild
                   >
                     <a href="#contact-form">
-                      <span>Talk to us about your custom build</span>
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
+                      TALK TO US ON WHATSAPP
                     </a>
                   </Button>
                 </div>
