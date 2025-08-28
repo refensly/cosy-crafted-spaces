@@ -344,7 +344,7 @@ const Index = () => {
                             }}
                           >
                             <div className="relative h-48 bg-gradient-to-br from-bg-section-alt-2 to-bg-section-alt overflow-hidden">
-                              <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgb3BhY2l0eT0iMC4xIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMSIgZmlsbD0iI2ZmZmZmZiIvPgo8L2c+Cjwvc3ZnPgo=')] opacity-20"></div>
+                              <img src="/lovable-uploads/dcc4a2bf-e222-4b08-8e4d-72696cf6a3d1.png" alt="Custom wooden bar with vertical slat design" className="w-full h-full object-cover transform scale-110" />
                               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                               <div className="absolute bottom-4 left-4 right-4">
                                 <div className="text-white font-medium text-sm opacity-70">Preview Image</div>
