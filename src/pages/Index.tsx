@@ -437,8 +437,12 @@ const Index = () => {
                             : 'opacity-60 hover:opacity-80'
                         }`}
                       >
-                        <div className="w-full h-full bg-gradient-to-br from-gray-600 to-gray-700 relative">
-                          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgb3BhY2l0eT0iMC4xIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMSIgZmlsbD0iI2ZmZmZmZiIvPgo8L2c+Cjwvc3ZnPgo=')] opacity-30"></div>
+                        <div className="w-full h-full bg-gradient-to-br from-gray-600 to-gray-700 relative overflow-hidden">
+                          <img 
+                            src="/lovable-uploads/4194660c-2cb2-400e-9138-2966145f8d91.png" 
+                            alt="Custom wooden bar thumbnail" 
+                            className="w-full h-full object-cover"
+                          />
                         </div>
                       </button>
                     ))}
