@@ -103,6 +103,12 @@ const Index = () => {
     }
   };
 
+  const scrollToContact = () => {
+    document.getElementById('contact-form')?.scrollIntoView({ 
+      behavior: 'smooth' 
+    });
+  };
+
   // Keyboard navigation for modal
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
@@ -572,56 +578,106 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Section 6: Social Proof */}
+      {/* Reviews Section */}
       <section id="reviews" className="section-padding bg-bg-section-alt-2">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <div className="grid md:grid-cols-3 gap-12 items-center">
-              <div className="relative">
-                <img src={socialProofImg} alt="Happy customers at our custom bar" className="w-full h-64 object-cover rounded-xl" />
-              </div>
-              <div className="md:col-span-2">
-                <div className="text-6xl text-accent-focus mb-4">"</div>
-                <blockquote className="text-xl text-text-primary mb-6 leading-relaxed">
-                  "Absolutely stunning work. The attention to detail and quality of craftsmanship 
-                  exceeded our expectations. This bar is the centerpiece of our venue."
-                </blockquote>
-                <cite className="text-text-secondary font-medium">— The Summit Inn</cite>
+            <h2 className="font-heading font-bold text-text-primary text-center mb-16 text-4xl">
+              What our clients say
+            </h2>
+          </ScrollReveal>
+
+          {/* Hero Review */}
+          <ScrollReveal>
+            <div className="bg-bg-section-alt rounded-2xl p-8 mb-12 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
+              <div className="grid md:grid-cols-5 gap-8 items-center">
+                <div className="md:col-span-2 relative">
+                  <img src={socialProofImg} alt="The Summit Inn custom bar" className="w-full h-64 md:h-80 object-cover rounded-xl" />
+                </div>
+                <div className="md:col-span-3">
+                  <div className="flex items-start mb-4">
+                    <div className="text-5xl text-accent-focus mr-3 leading-none">"</div>
+                    <div className="flex text-accent-primary">
+                      <svg className="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                      </svg>
+                      <svg className="w-5 h-5 fill-current ml-1" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                      </svg>
+                      <svg className="w-5 h-5 fill-current ml-1" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                      </svg>
+                      <svg className="w-5 h-5 fill-current ml-1" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                      </svg>
+                      <svg className="w-5 h-5 fill-current ml-1" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <blockquote className="text-xl text-text-primary mb-6 leading-relaxed">
+                    Absolutely stunning work. The attention to detail and quality of craftsmanship 
+                    exceeded our expectations. This bar is the centerpiece of our venue.
+                  </blockquote>
+                  <cite className="text-text-secondary font-bold text-lg">— The Summit Inn</cite>
+                </div>
               </div>
             </div>
           </ScrollReveal>
-        </div>
-      </section>
 
-      {/* Additional Reviews Block */}
-      <section className="py-12 bg-bg-section-alt-2">
-        <div className="container mx-auto px-6">
-          <ScrollReveal>
-            <h3 className="font-heading font-bold text-text-primary text-center mb-12">Reviews</h3>
-          </ScrollReveal>
-          <div className="grid md:grid-cols-3 gap-8">
+          {/* Grid of Reviews */}
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
             <ScrollReveal delay={100}>
-              <div className="bg-bg-section-alt rounded-xl p-6 text-center">
-                <div className="text-4xl text-accent-focus mb-3">"</div>
-                <p className="text-text-primary mb-4">"Perfect craftsmanship. Built exactly to our specifications and finished beautifully."</p>
-                <cite className="text-text-secondary text-sm font-medium">— Abbey Tavern</cite>
+              <div className="bg-bg-section-alt rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
+                <div className="flex items-center mb-4">
+                  <svg className="w-6 h-6 text-accent-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd"/>
+                  </svg>
+                  <div className="text-2xl text-accent-focus">"</div>
+                </div>
+                <p className="text-text-primary mb-4 leading-relaxed">Perfect craftsmanship. Built exactly to our specifications.</p>
+                <cite className="text-text-secondary font-bold">— Abbey Tavern</cite>
               </div>
             </ScrollReveal>
+            
             <ScrollReveal delay={200}>
-              <div className="bg-bg-section-alt rounded-xl p-6 text-center">
-                <div className="text-4xl text-accent-focus mb-3">"</div>
-                <p className="text-text-primary mb-4">"The quality speaks for itself. Our customers constantly compliment the bar design."</p>
-                <cite className="text-text-secondary text-sm font-medium">— Findlaters</cite>
+              <div className="bg-bg-section-alt rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
+                <div className="flex items-center mb-4">
+                  <svg className="w-6 h-6 text-accent-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd"/>
+                  </svg>
+                  <div className="text-2xl text-accent-focus">"</div>
+                </div>
+                <p className="text-text-primary mb-4 leading-relaxed">Our customers constantly compliment the bar design.</p>
+                <cite className="text-text-secondary font-bold">— Findlaters</cite>
               </div>
             </ScrollReveal>
+            
             <ScrollReveal delay={300}>
-              <div className="bg-bg-section-alt rounded-xl p-6 text-center">
-                <div className="text-4xl text-accent-focus mb-3">"</div>
-                <p className="text-text-primary mb-4">"Exceptional attention to detail. Worth every penny for the unique result."</p>
-                <cite className="text-text-secondary text-sm font-medium">— Private Client</cite>
+              <div className="bg-bg-section-alt rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
+                <div className="flex items-center mb-4">
+                  <svg className="w-6 h-6 text-accent-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd"/>
+                  </svg>
+                  <div className="text-2xl text-accent-focus">"</div>
+                </div>
+                <p className="text-text-primary mb-4 leading-relaxed">Exceptional attention to detail. Worth every penny.</p>
+                <cite className="text-text-secondary font-bold">— Private Client</cite>
               </div>
             </ScrollReveal>
           </div>
+
+          {/* CTA Button */}
+          <ScrollReveal delay={400}>
+            <div className="text-center">
+              <button 
+                onClick={() => scrollToContact()}
+                className="btn-primary hover:bg-accent-primary/90 hover:shadow-lg hover:shadow-accent-primary/25 transition-all duration-300 hover:-translate-y-0.5 px-8 py-4 text-lg font-semibold"
+              >
+                Let's build yours →
+              </button>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
