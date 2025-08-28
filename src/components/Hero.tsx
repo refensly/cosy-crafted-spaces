@@ -73,38 +73,40 @@ const Hero = () => {
       </div>
       
       {/* Center Content */}
-      <div className="relative z-30 min-h-screen flex items-center justify-center px-6">
-        <div className="text-center max-w-none mx-auto px-4">
-          <h1 className={`font-grifter text-text-primary mb-6 leading-tight ${animationsStarted ? 'animate-fade-up animation-delay-500' : 'opacity-0'}`}>
-            <div className={`text-[120px] ${animationsStarted ? 'animate-fade-up animation-delay-700' : 'opacity-0'}`}>Unique Handmade</div>
-            <div className={`text-[120px] px-16 ${animationsStarted ? 'animate-fade-up animation-delay-900' : 'opacity-0'}`}>Furniture from Dublin</div>
+      <div className="relative z-30 min-h-screen flex items-center justify-center px-4 sm:px-6">
+        <div className="text-center max-w-none mx-auto px-2 sm:px-4">
+          <h1 className={`font-grifter text-text-primary mb-4 sm:mb-6 leading-tight ${animationsStarted ? 'animate-fade-up animation-delay-500' : 'opacity-0'}`}>
+            <div className={`text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[120px] ${animationsStarted ? 'animate-fade-up animation-delay-700' : 'opacity-0'}`}>Unique Handmade</div>
+            <div className={`text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[120px] px-2 sm:px-8 md:px-16 ${animationsStarted ? 'animate-fade-up animation-delay-900' : 'opacity-0'}`}>Furniture from Dublin</div>
           </h1>
-          <p className={`text-xl md:text-2xl text-text-secondary mb-8 max-w-2xl mx-auto leading-relaxed ${animationsStarted ? 'animate-fade-up animation-delay-1100' : 'opacity-0'}`}>
+          <p className={`text-lg sm:text-xl md:text-2xl text-text-secondary mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-2 ${animationsStarted ? 'animate-fade-up animation-delay-1100' : 'opacity-0'}`}>
             <div className="font-body font-normal text-white">Handcrafted bars, restaurants, outdoor living spaces and furniture.</div>
             <div className="text-white">Designed once, built to last.</div>
           </p>
           
           {/* Unique Badge */}
-          <div className={`mb-8 ${animationsStarted ? 'animate-fade-up animation-delay-1300' : 'opacity-0'}`}>
-            <span className="text-white font-heading font-bold tracking-wider text-[32px]">Unique.</span>
+          <div className={`mb-6 sm:mb-8 ${animationsStarted ? 'animate-fade-up animation-delay-1300' : 'opacity-0'}`}>
+            <span className="text-white font-heading font-bold tracking-wider text-xl sm:text-2xl md:text-[32px]">Unique.</span>
           </div>
           
           {/* Primary CTA */}
           <div className="space-y-4">
             <div className={animationsStarted ? 'animate-fade-up animation-delay-1500' : 'opacity-0'}>
-              <Button className="btn-primary text-2xl font-bold px-18 py-14 bg-transparent text-white uppercase border-2 border-white hover:bg-white/10 transition-all duration-300 ease-in-out shadow-xl hover-scale" style={{boxShadow: '0 0 30px hsl(39 54% 45% / 0.6)'}} onClick={scrollToContact}>
-                GET FREE CONSULTATION NOW
+              <Button className="btn-primary text-lg sm:text-xl md:text-2xl font-bold px-6 sm:px-12 md:px-18 py-6 sm:py-10 md:py-14 bg-transparent text-white uppercase border-2 border-white hover:bg-white/10 transition-all duration-300 ease-in-out shadow-xl hover-scale w-full sm:w-auto" style={{boxShadow: '0 0 30px hsl(39 54% 45% / 0.6)'}} onClick={scrollToContact}>
+                <span className="block sm:hidden">FREE CONSULTATION</span>
+                <span className="hidden sm:block">GET FREE CONSULTATION NOW</span>
               </Button>
             </div>
             
             {/* Secondary CTAs */}
-            <div className={`flex gap-4 justify-center mt-6 ${animationsStarted ? 'animate-fade-up animation-delay-1700' : 'opacity-0'}`}>
-              <Button variant="outline" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 px-14 py-7 text-xl transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25" onClick={scrollToContact}>
+            <div className={`flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mt-4 sm:mt-6 ${animationsStarted ? 'animate-fade-up animation-delay-1700' : 'opacity-0'}`}>
+              <Button variant="outline" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 px-6 sm:px-10 md:px-14 py-4 sm:py-6 md:py-7 text-lg sm:text-xl transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 w-full sm:w-auto" onClick={scrollToContact}>
                 GET A QUOTE
               </Button>
-              <Button variant="outline" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 px-14 py-7 text-xl transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25" asChild>
+              <Button variant="outline" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 px-6 sm:px-10 md:px-14 py-4 sm:py-6 md:py-7 text-lg sm:text-xl transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 w-full sm:w-auto" asChild>
                 <a href="https://wa.me/353000000000" target="_blank" rel="noopener noreferrer">
-                  TALK TO US ON WHATSAPP
+                  <span className="block sm:hidden">WHATSAPP US</span>
+                  <span className="hidden sm:block">TALK TO US ON WHATSAPP</span>
                 </a>
               </Button>
             </div>
