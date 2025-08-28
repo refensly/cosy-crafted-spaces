@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { useIsMobile } from '@/hooks/use-mobile';
 // Using new door textures
 const doorLeft = '/lovable-uploads/beb3b349-e1f2-4c72-b827-28476d36aa64.png';
 const doorRight = '/lovable-uploads/7e78a817-eeaf-43ab-b44a-2df376f29fef.png';
@@ -7,9 +8,10 @@ const Hero = () => {
   const [panelsOpened, setPanelsOpened] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const [animationsStarted, setAnimationsStarted] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
-    // Trigger the opening animation after component mounts
+    // Trigger the opening animation after component mounts (desktop only)
     const timer = setTimeout(() => {
       setPanelsOpened(true);
     }, 500);
@@ -19,12 +21,14 @@ const Hero = () => {
       setAnimationsStarted(true);
     }, 800);
 
-    // Handle scroll for parallax effects
+    // Handle scroll for parallax effects (desktop only)
     const handleScroll = () => {
-      const scrollPercent = window.scrollY / window.innerHeight * 100;
-      setScrollY(window.scrollY);
-      if (scrollPercent > 5 && !panelsOpened) {
-        setPanelsOpened(true);
+      if (!isMobile) {
+        const scrollPercent = window.scrollY / window.innerHeight * 100;
+        setScrollY(window.scrollY);
+        if (scrollPercent > 5 && !panelsOpened) {
+          setPanelsOpened(true);
+        }
       }
     };
 
@@ -34,35 +38,43 @@ const Hero = () => {
       clearTimeout(animationTimer);
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [panelsOpened]);
+  }, [panelsOpened, isMobile]);
+
   const scrollToContact = () => {
     document.getElementById('contact-form')?.scrollIntoView({
       behavior: 'smooth',
       block: 'start'
     });
   };
-  return <section className="relative min-h-screen bg-bg-main overflow-hidden animate-fade-in" style={{animationDuration: '0.5s'}}>
+
+  return (
+    <section className={`relative ${isMobile ? 'min-h-[80vh]' : 'min-h-screen'} ${isMobile ? 'bg-[#131F1A]' : 'bg-bg-main'} overflow-hidden animate-fade-in`} style={{animationDuration: '0.5s'}}>
       {/* Bar Background */}
       <div className="absolute inset-0 w-full h-full bg-cover bg-center" style={{
-      backgroundImage: `url('/lovable-uploads/7928fc98-36e8-4b94-bd48-06681d62fc6f.png')`,
-      transform: `translateY(${scrollY * 0.1}px)`
-    }} />
+        backgroundImage: `url('/lovable-uploads/7928fc98-36e8-4b94-bd48-06681d62fc6f.png')`,
+        transform: isMobile ? 'none' : `translateY(${scrollY * 0.1}px)`
+      }} />
       
-      {/* Left Door Panel (duplicated from right) */}
-      <div className="absolute top-0 left-0 w-1/2 h-full bg-center z-10" style={{
-      backgroundImage: `url(${doorRight})`,
-      backgroundSize: '50%',
-      backgroundRepeat: 'no-repeat',
-      transform: `translateX(calc(-50% + 150px - ${scrollY * 0.3}px)) scaleX(-1)`
-    }} />
-      
-      {/* Right Door Panel */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-center z-10" style={{
-      backgroundImage: `url(${doorRight})`,
-      backgroundSize: '50%',
-      backgroundRepeat: 'no-repeat',
-      transform: `translateX(calc(50% - 150px + ${scrollY * 0.3}px))`
-    }} />
+      {/* Door Panels - Desktop Only */}
+      {!isMobile && (
+        <>
+          {/* Left Door Panel (duplicated from right) */}
+          <div className="absolute top-0 left-0 w-1/2 h-full bg-center z-10" style={{
+            backgroundImage: `url(${doorRight})`,
+            backgroundSize: '50%',
+            backgroundRepeat: 'no-repeat',
+            transform: `translateX(calc(-50% + 150px - ${scrollY * 0.3}px)) scaleX(-1)`
+          }} />
+          
+          {/* Right Door Panel */}
+          <div className="absolute top-0 right-0 w-1/2 h-full bg-center z-10" style={{
+            backgroundImage: `url(${doorRight})`,
+            backgroundSize: '50%',
+            backgroundRepeat: 'no-repeat',
+            transform: `translateX(calc(50% - 150px + ${scrollY * 0.3}px))`
+          }} />
+        </>
+      )}
       
       {/* Center gradient overlay for text readability */}
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-black/30 to-transparent z-20" />
@@ -73,37 +85,37 @@ const Hero = () => {
       </div>
       
       {/* Center Content */}
-      <div className="relative z-30 min-h-screen flex items-center justify-center px-4 sm:px-6">
+      <div className={`relative z-30 ${isMobile ? 'min-h-[80vh]' : 'min-h-screen'} flex items-center justify-center px-4 sm:px-6 ${isMobile ? 'py-8' : ''}`}>
         <div className="text-center max-w-none mx-auto px-2 sm:px-4">
           <h1 className={`font-grifter text-text-primary mb-4 sm:mb-6 leading-tight ${animationsStarted ? 'animate-fade-up animation-delay-500' : 'opacity-0'}`}>
-            <div className={`text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[120px] ${animationsStarted ? 'animate-fade-up animation-delay-700' : 'opacity-0'}`}>Unique Handmade</div>
-            <div className={`text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[120px] px-2 sm:px-8 md:px-16 ${animationsStarted ? 'animate-fade-up animation-delay-900' : 'opacity-0'}`}>Furniture from Dublin</div>
+            <div className={`${isMobile ? 'text-3xl' : 'text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[120px]'} ${animationsStarted ? 'animate-fade-up animation-delay-700' : 'opacity-0'}`}>Unique Handmade</div>
+            <div className={`${isMobile ? 'text-3xl px-2' : 'text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[120px] px-2 sm:px-8 md:px-16'} ${animationsStarted ? 'animate-fade-up animation-delay-900' : 'opacity-0'}`}>Furniture from Dublin</div>
           </h1>
-          <p className={`text-lg sm:text-xl md:text-2xl text-text-secondary mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-2 ${animationsStarted ? 'animate-fade-up animation-delay-1100' : 'opacity-0'}`}>
+          <p className={`${isMobile ? 'text-base' : 'text-lg sm:text-xl md:text-2xl'} text-text-secondary mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-2 ${animationsStarted ? 'animate-fade-up animation-delay-1100' : 'opacity-0'}`}>
             <div className="font-body font-normal text-white">Handcrafted bars, restaurants, outdoor living spaces and furniture.</div>
             <div className="text-white">Designed once, built to last.</div>
           </p>
           
           {/* Unique Badge */}
           <div className={`mb-6 sm:mb-8 ${animationsStarted ? 'animate-fade-up animation-delay-1300' : 'opacity-0'}`}>
-            <span className="text-white font-heading font-bold tracking-wider text-xl sm:text-2xl md:text-[32px]">Unique.</span>
+            <span className={`text-white font-heading font-bold tracking-wider ${isMobile ? 'text-xl' : 'text-xl sm:text-2xl md:text-[32px]'}`}>Unique.</span>
           </div>
           
           {/* Primary CTA */}
           <div className="space-y-4">
             <div className={animationsStarted ? 'animate-fade-up animation-delay-1500' : 'opacity-0'}>
-              <Button className="btn-primary text-lg sm:text-xl md:text-2xl font-bold px-6 sm:px-12 md:px-18 py-6 sm:py-10 md:py-14 bg-transparent text-white uppercase border-2 border-white hover:bg-white/10 transition-all duration-300 ease-in-out shadow-xl hover-scale w-full sm:w-auto" style={{boxShadow: '0 0 30px hsl(39 54% 45% / 0.6)'}} onClick={scrollToContact}>
+              <Button className={`btn-primary font-bold bg-transparent text-white uppercase border-2 border-white hover:bg-white/10 transition-all duration-300 ease-in-out shadow-xl hover-scale w-full sm:w-auto ${isMobile ? 'text-lg px-8 py-4 min-h-[44px]' : 'text-lg sm:text-xl md:text-2xl px-6 sm:px-12 md:px-18 py-6 sm:py-10 md:py-14'}`} style={{boxShadow: '0 0 30px hsl(39 54% 45% / 0.6)'}} onClick={scrollToContact}>
                 <span className="block sm:hidden">FREE CONSULTATION</span>
                 <span className="hidden sm:block">GET FREE CONSULTATION NOW</span>
               </Button>
             </div>
             
             {/* Secondary CTAs */}
-            <div className={`flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mt-4 sm:mt-6 ${animationsStarted ? 'animate-fade-up animation-delay-1700' : 'opacity-0'}`}>
-              <Button variant="outline" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 px-6 sm:px-10 md:px-14 py-4 sm:py-6 md:py-7 text-lg sm:text-xl transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 w-full sm:w-auto" onClick={scrollToContact}>
+            <div className={`flex flex-col gap-4 justify-center mt-6 ${animationsStarted ? 'animate-fade-up animation-delay-1700' : 'opacity-0'} ${!isMobile ? 'sm:flex-row sm:gap-4 sm:mt-6' : ''}`}>
+              <Button variant="outline" className={`border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 w-full ${isMobile ? 'text-lg px-8 py-4 min-h-[44px]' : 'sm:w-auto px-6 sm:px-10 md:px-14 py-4 sm:py-6 md:py-7 text-lg sm:text-xl'}`} onClick={scrollToContact}>
                 GET A QUOTE
               </Button>
-              <Button variant="outline" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 px-6 sm:px-10 md:px-14 py-4 sm:py-6 md:py-7 text-lg sm:text-xl transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 w-full sm:w-auto" asChild>
+              <Button variant="outline" className={`border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 w-full ${isMobile ? 'text-lg px-8 py-4 min-h-[44px]' : 'sm:w-auto px-6 sm:px-10 md:px-14 py-4 sm:py-6 md:py-7 text-lg sm:text-xl'}`} asChild>
                 <a href="https://wa.me/353000000000" target="_blank" rel="noopener noreferrer">
                   <span className="block sm:hidden">WHATSAPP US</span>
                   <span className="hidden sm:block">TALK TO US ON WHATSAPP</span>
@@ -120,6 +132,7 @@ const Hero = () => {
           <div className="w-1 h-3 bg-white rounded-full"></div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 export default Hero;
