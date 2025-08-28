@@ -160,7 +160,7 @@ const Index = () => {
     images: ['summit1.jpg', 'summit2.jpg', 'summit3.jpg', 'summit4.jpg']
   }, {
     id: 'abbey-tavern-recent',
-    title: "The Abbey Tavern", 
+    title: "The Green Phone Box", 
     subtitle: "Walnut Backlit Bar",
     caption: "Sophisticated backlit bar featuring rich walnut wood and integrated LED lighting",
     image: projAbbeyImg,
