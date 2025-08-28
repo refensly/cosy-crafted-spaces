@@ -167,7 +167,7 @@ const Index = () => {
     images: ['abbey1.jpg', 'abbey2.jpg', 'abbey3.jpg']
   }, {
     id: 'findlaters-recent',
-    title: "Findlaters", 
+    title: "Home Container", 
     subtitle: "Interior Shelving in Solid Oak",
     caption: "Custom solid oak shelving system with precision joinery and natural finish",
     image: projFindlatersImg,
