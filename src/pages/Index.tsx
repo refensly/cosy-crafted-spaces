@@ -165,7 +165,7 @@ const Index = () => {
     subtitle: "Interior Shelving in Solid Oak",
     caption: "Custom solid oak shelving system with precision joinery and natural finish",
     image: projFindlatersImg,
-    images: ['findlaters1.jpg', 'findlaters2.jpg', 'findlaters3.jpg', 'findlaters4.jpg']
+    images: ['/lovable-uploads/4194660c-2cb2-400e-9138-2966145f8d91.png', '/lovable-uploads/d3e56680-f7a3-43e1-8796-05a598bf8041.png', 'findlaters3.jpg', 'findlaters4.jpg']
   }];
   const processSteps = [{
     number: "1",
@@ -395,8 +395,8 @@ const Index = () => {
                 <div className="relative">
                   <div className="aspect-video bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl overflow-hidden relative">
                     <img 
-                      src="/lovable-uploads/d3e56680-f7a3-43e1-8796-05a598bf8041.png" 
-                      alt="Custom wooden bar with vertical slat design - different angle" 
+                      src={selectedProject.images[currentImageIndex]} 
+                      alt={`${selectedProject.title} - Image ${currentImageIndex + 1}`} 
                       className="w-full h-full object-contain"
                     />
                   </div>
@@ -439,8 +439,8 @@ const Index = () => {
                       >
                         <div className="w-full h-full bg-gradient-to-br from-gray-600 to-gray-700 relative overflow-hidden">
                           <img 
-                            src="/lovable-uploads/4194660c-2cb2-400e-9138-2966145f8d91.png" 
-                            alt="Custom wooden bar thumbnail" 
+                            src={selectedProject.images[index]} 
+                            alt={`${selectedProject.title} - Thumbnail ${index + 1}`} 
                             className="w-full h-full object-cover"
                           />
                         </div>
