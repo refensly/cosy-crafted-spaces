@@ -40,7 +40,7 @@ const Index = () => {
       description: 'Commercial hospitality spaces',
       projects: [
         { id: 'summit-inn', title: 'The Summit Inn', subtitle: 'Custom bar design and production', caption: 'Premium walnut bar with brass fixtures', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg'] },
-        { id: 'mamo', title: 'MAMO', subtitle: 'Contemporary restaurant interior', caption: 'Modern dining space with custom furnishings', images: ['/lovable-uploads/4194660c-2cb2-400e-9138-2966145f8d91.png', '/lovable-uploads/ddca6966-25e5-41e9-9940-1476c50da397.png', 'placeholder3.jpg', 'placeholder4.jpg'] },
+        { id: 'mamo', title: 'MAMO', subtitle: 'Contemporary restaurant interior', caption: 'Modern dining space with custom furnishings', images: ['/lovable-uploads/4194660c-2cb2-400e-9138-2966145f8d91.png', '/lovable-uploads/ddca6966-25e5-41e9-9940-1476c50da397.png', '/lovable-uploads/a88b51b7-5c8c-4e84-9ab7-4e700d23eb7b.png', 'placeholder4.jpg'] },
         { id: 'riverside-bar', title: 'Riverside Bar', subtitle: 'Waterfront bar installation', caption: 'Outdoor-inspired bar design', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg'] },
         { id: 'peggys', title: 'Peggy\'s St Stephens', subtitle: 'Traditional pub refurbishment', caption: 'Classic Irish pub with modern touches', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg', 'placeholder4.jpg', 'placeholder5.jpg'] },
         { id: 'casa-clontarf', title: 'Casa Clontarf', subtitle: 'Mediterranean restaurant', caption: 'Warm, inviting dining atmosphere', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg'] },
