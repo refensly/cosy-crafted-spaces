@@ -243,7 +243,7 @@ const Index = () => {
             description: "Close-up craftsmanship and finishing"
           }, {
             title: "Handmade Quality",
-            image: "/lovable-uploads/20ebdcc4-acf9-42c2-8653-b99eebca3c86.png",
+            image: "/lovable-uploads/2cdada7e-0ab2-43b4-9f6e-ea92a4f29f8f.png",
             description: "Premium materials and construction"
           }].map((example, index) => <ScrollReveal key={index} delay={index * 100}>
                 <div className="text-center">
