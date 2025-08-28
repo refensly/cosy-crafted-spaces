@@ -242,7 +242,7 @@ const Index = () => {
             image: "/lovable-uploads/850aebde-49f4-4b54-9e1f-31e3f96d8502.png",
             description: "Close-up craftsmanship and finishing"
           }, {
-            title: "Handmade Quality",
+            title: "One-of-a-Kind Results",
             image: "/lovable-uploads/2cdada7e-0ab2-43b4-9f6e-ea92a4f29f8f.png",
             description: "Premium materials and construction"
           }].map((example, index) => <ScrollReveal key={index} delay={index * 100}>
