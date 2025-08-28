@@ -153,7 +153,7 @@ const Index = () => {
   }];
   const projects = [{
     id: 'summit-inn-recent',
-    title: "The Summit Inn", 
+    title: "Decking", 
     subtitle: "Custom Bar Design and Production",
     caption: "Premium walnut bar with brass fixtures and custom lighting design",
     image: projSummitImg,
