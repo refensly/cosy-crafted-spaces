@@ -455,42 +455,80 @@ const Index = () => {
       </section>
 
       {/* Section 4: Why Custom > Standard */}
-      <section className="section-padding bg-bg-section-alt">
+      <section className="py-16 md:py-20 bg-bg-section-alt">
         <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            {/* Left: Heading + Persuasive Text */}
             <ScrollReveal>
-              <h2 className="font-heading font-bold text-text-primary">
-                Why custom beats standard
-              </h2>
-            </ScrollReveal>
-            <ScrollReveal delay={200}>
-              <div className="space-y-6">
-                {["Never repeat", "Made in Ireland", "Natural materials", "Built to last"].map((feature, index) => <div key={index}>
-                    <div className="flex items-center space-x-4">
-                      <div className="w-2 h-2 bg-accent-primary rounded-full"></div>
-                      <span className="text-lg text-text-primary font-medium">{feature}</span>
-                    </div>
-                    {index < 3 && <div className="brass-divider mt-6"></div>}
-                  </div>)}
+              <div>
+                <h2 className="font-heading font-bold text-text-primary text-3xl lg:text-4xl mb-6">
+                  Why people choose us over mass-production
+                </h2>
+                <p className="text-lg lg:text-xl text-text-secondary leading-relaxed mb-8">
+                  Most furniture today is disposable. We build for decades — each piece unique, crafted in Ireland from premium hardwoods and brass.
+                </p>
                 
-                {/* Comparison table */}
-                <div className="mt-12 bg-bg-section-alt-2 rounded-xl p-6">
-                  <h3 className="font-heading font-bold text-text-primary mb-6">Mass-market vs Custom</h3>
-                  <div className="space-y-4">
-                    {[{
-                    standard: "Same as everyone",
-                    custom: "One-of-a-kind design"
-                  }, {
-                    standard: "Machine produced",
-                    custom: "Hand crafted"
-                  }, {
-                    standard: "Cheap materials",
-                    custom: "Premium oak, walnut, brass"
-                  }].map((row, index) => <div key={index} className="grid grid-cols-2 gap-4 text-sm">
-                        <span className="text-text-muted">{row.standard}</span>
-                        <span className="text-text-primary font-medium">{row.custom}</span>
-                      </div>)}
+                {/* Feature bullets with icons */}
+                <div className="space-y-4">
+                  {[
+                    { icon: "🔨", text: "Never repeat" },
+                    { icon: "🇮🇪", text: "Made in Ireland" },
+                    { icon: "🌳", text: "Natural materials" },
+                    { icon: "🛡️", text: "Built to last" }
+                  ].map((feature, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <span className="text-lg">{feature.icon}</span>
+                      <span className="text-text-primary font-medium">{feature.text}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Right: Comparison Table */}
+            <ScrollReveal delay={200}>
+              <div className="bg-bg-section-alt-2 rounded-2xl p-8 border border-accent-primary/20 shadow-lg shadow-accent-primary/10">
+                <h3 className="font-heading font-bold text-text-primary text-center mb-8 text-xl">Mass-market vs Custom</h3>
+                
+                {/* Table Header */}
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="text-center py-3 rounded-lg bg-bg-main/50">
+                    <span className="text-text-muted font-medium text-sm uppercase tracking-wider">Mass-market</span>
                   </div>
+                  <div className="text-center py-3 rounded-lg bg-gradient-to-r from-accent-primary/20 to-accent-hover/20 border border-accent-primary/40 shadow-md shadow-accent-primary/20">
+                    <span className="text-accent-primary font-bold text-sm uppercase tracking-wider">Custom</span>
+                  </div>
+                </div>
+                
+                {/* Table Rows */}
+                <div className="space-y-3">
+                  {[
+                    { standard: "Same as everyone", custom: "One-of-a-kind design" },
+                    { standard: "Machine produced", custom: "Hand crafted" },
+                    { standard: "Cheap materials", custom: "Premium oak, walnut, brass" },
+                    { standard: "Disposable", custom: "Heirloom quality" },
+                    { standard: "Flat-packed", custom: "Installed by craftsmen" }
+                  ].map((row, index) => (
+                    <div key={index} className="grid grid-cols-2 gap-4 py-3 border-b border-bg-main/20 last:border-b-0">
+                      <span className="text-text-muted text-sm">{row.standard}</span>
+                      <span className="text-text-primary font-medium text-sm">{row.custom}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                {/* CTA Button */}
+                <div className="mt-8 text-center">
+                  <Button 
+                    className="btn-primary inline-flex items-center space-x-2 shadow-lg shadow-accent-primary/30 hover:shadow-accent-primary/50 transition-all duration-300"
+                    asChild
+                  >
+                    <a href="#contact-form">
+                      <span>Talk to us about your custom build</span>
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  </Button>
                 </div>
               </div>
             </ScrollReveal>
