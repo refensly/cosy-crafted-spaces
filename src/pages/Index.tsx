@@ -397,7 +397,7 @@ const Index = () => {
                     <img 
                       src={selectedProject.images[currentImageIndex]} 
                       alt={`${selectedProject.title} - Image ${currentImageIndex + 1}`} 
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transform scale-110"
                     />
                   </div>
                   
