@@ -684,12 +684,12 @@ const Index = () => {
           {/* CTA Button */}
           <ScrollReveal delay={400}>
             <div className="text-center">
-              <button 
-                onClick={() => scrollToContact()}
-                className="btn-primary hover:bg-accent-primary/90 hover:shadow-lg hover:shadow-accent-primary/25 transition-all duration-300 hover:-translate-y-0.5 px-8 py-4 text-lg font-semibold"
-              >
-                Let's build yours →
-              </button>
+                <button 
+                  onClick={() => scrollToContact()}
+                  className="bg-bg-main border-2 border-accent-primary text-white font-bold text-lg px-12 py-4 rounded-lg hover:bg-accent-primary/10 hover:border-accent-hover hover:shadow-lg hover:shadow-accent-primary/30 transition-all duration-300 uppercase tracking-wider"
+                >
+                  Let's build yours →
+                </button>
             </div>
           </ScrollReveal>
         </div>
