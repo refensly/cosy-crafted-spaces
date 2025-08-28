@@ -244,7 +244,7 @@ const Index = () => {
           }, {
             title: "One-of-a-Kind Results",
             image: "/lovable-uploads/2cdada7e-0ab2-43b4-9f6e-ea92a4f29f8f.png",
-            description: "Premium materials and construction"
+            description: "Every build is unique - designed once, never repeated"
           }].map((example, index) => <ScrollReveal key={index} delay={index * 100}>
                 <div className="text-center">
                   <div className="relative mb-4">
