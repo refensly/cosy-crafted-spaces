@@ -236,7 +236,7 @@ const Index = () => {
             {[{
             title: "Crafted for Real Spaces",
             image: "/lovable-uploads/34739a11-b299-4d2a-8171-96d9cfd4af84.png",
-            description: "See how pieces fit in real spaces"
+            description: "See how each project transforms homes, pubs and restaurants"
           }, {
             title: "Built with Precision",
             image: "/lovable-uploads/850aebde-49f4-4b54-9e1f-31e3f96d8502.png",
