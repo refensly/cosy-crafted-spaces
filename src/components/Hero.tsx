@@ -80,8 +80,8 @@ const Hero = () => {
             <div className={`text-[120px] px-16 ${animationsStarted ? 'animate-fade-up animation-delay-900' : 'opacity-0'}`}>Furniture from Dublin</div>
           </h1>
           <p className={`text-xl md:text-2xl text-text-secondary mb-8 max-w-2xl mx-auto leading-relaxed ${animationsStarted ? 'animate-fade-up animation-delay-1100' : 'opacity-0'}`}>
-            <div className="font-body font-normal text-white">Ideal for Presents, Interior and Cozy Spaces.</div>
-            <div className="text-white">Made Out of Natural Materials.</div>
+            <div className="font-body font-normal text-white">Handcrafted bars, restaurants, outdoor living spaces and furniture.</div>
+            <div className="text-white">Designed once, built to last.</div>
           </p>
           
           {/* Unique Badge */}
@@ -92,18 +92,20 @@ const Hero = () => {
           {/* Primary CTA */}
           <div className="space-y-4">
             <div className={animationsStarted ? 'animate-fade-up animation-delay-1500' : 'opacity-0'}>
-              <Button className="btn-primary text-2xl font-bold px-16 py-12 bg-transparent text-white uppercase border-2 border-white hover:bg-white/10 transition-all duration-300 ease-in-out shadow-xl hover-scale" style={{boxShadow: '0 0 30px hsl(39 54% 45% / 0.6)'}} onClick={scrollToContact}>
+              <Button className="btn-primary text-2xl font-bold px-18 py-14 bg-transparent text-white uppercase border-2 border-white hover:bg-white/10 transition-all duration-300 ease-in-out shadow-xl hover-scale" style={{boxShadow: '0 0 30px hsl(39 54% 45% / 0.6)'}} onClick={scrollToContact}>
                 GET FREE CONSULTATION NOW
               </Button>
             </div>
             
             {/* Secondary CTAs */}
             <div className={`flex gap-4 justify-center mt-6 ${animationsStarted ? 'animate-fade-up animation-delay-1700' : 'opacity-0'}`}>
-              <Button variant="outline" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 px-12 py-6 text-xl transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25">
-                INQUIRE
+              <Button variant="outline" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 px-14 py-7 text-xl transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25" onClick={scrollToContact}>
+                GET A QUOTE
               </Button>
-              <Button variant="outline" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 px-12 py-6 text-xl transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25">
-                BROWSE
+              <Button variant="outline" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 px-14 py-7 text-xl transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25" asChild>
+                <a href="https://wa.me/353000000000" target="_blank" rel="noopener noreferrer">
+                  TALK TO US ON WHATSAPP
+                </a>
               </Button>
             </div>
           </div>

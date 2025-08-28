@@ -170,19 +170,19 @@ const Index = () => {
   const processSteps = [{
     number: "1",
     title: "Consultation",
-    description: "We discuss your vision"
+    description: "Share your idea"
   }, {
     number: "2",
     title: "Design",
     description: "Custom plans created"
   }, {
     number: "3",
-    title: "Production",
-    description: "Crafted by hand"
+    title: "Crafting",
+    description: "Built by hand, premium materials"
   }, {
     number: "4",
     title: "Installation",
-    description: "Professional setup"
+    description: "Delivered and fitted by us"
   }];
   return <div className="min-h-screen">
       <Header />
@@ -195,14 +195,14 @@ const Index = () => {
             <ScrollReveal>
               <div>
                 <h2 className="font-heading font-bold text-text-primary mb-6">
-                  Not another IKEA look.
+                  Not another mass-production look
                 </h2>
                 <p className="text-xl text-text-secondary mb-8 leading-relaxed">
-                  If you want something no one else has — we design and build it for you. 
+                  If you want something nobody else has, we design and build it for you. 
                   Premium materials, made locally.
                 </p>
                 <div className="space-y-4">
-                  {["One-of-a-kind, never repeat", "Natural materials & premium finish", "Designed for your exact space"].map((item, index) => <div key={index} className="flex items-center space-x-3">
+                  {["One-of-a-kind design (never repeated)", "Premium hardwoods & brass", "Built in Ireland, built to last"].map((item, index) => <div key={index} className="flex items-center space-x-3">
                       <div className="w-5 h-5 rounded-full bg-accent-primary flex items-center justify-center">
                         <svg className="w-3 h-3 text-bg-main" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -228,7 +228,7 @@ const Index = () => {
       <section className="pt-24 pb-24 bg-bg-main">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="font-heading font-bold text-text-primary text-center mb-12">Every piece begins where mass production ends</h2>
+            <h2 className="font-heading font-bold text-text-primary text-center mb-12">Our Promise</h2>
             
           </ScrollReveal>
           
@@ -236,15 +236,15 @@ const Index = () => {
             {[{
             title: "Crafted for Real Spaces",
             image: "/lovable-uploads/34739a11-b299-4d2a-8171-96d9cfd4af84.png",
-            description: "See how each project transforms homes, pubs and restaurants"
+            description: "Every project transforms pubs, homes, and outdoor living areas"
           }, {
             title: "Built with Precision",
             image: "/lovable-uploads/850aebde-49f4-4b54-9e1f-31e3f96d8502.png",
-            description: "Close-up details of joinery, finishing, and material quality"
+            description: "Joinery details, finishing, and premium materials"
           }, {
             title: "One-of-a-Kind Results",
             image: "/lovable-uploads/2cdada7e-0ab2-43b4-9f6e-ea92a4f29f8f.png",
-            description: "Every build is unique - designed once, never repeated"
+            description: "Never repeated, always designed for your exact space"
           }].map((example, index) => <ScrollReveal key={index} delay={index * 100}>
                 <div className="text-center">
                   <div className="relative mb-4">
@@ -555,6 +555,84 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Additional Reviews Block */}
+      <section className="py-12 bg-bg-section-alt-2">
+        <div className="container mx-auto px-6">
+          <ScrollReveal>
+            <h3 className="font-heading font-bold text-text-primary text-center mb-12">Reviews</h3>
+          </ScrollReveal>
+          <div className="grid md:grid-cols-3 gap-8">
+            <ScrollReveal delay={100}>
+              <div className="bg-bg-section-alt rounded-xl p-6 text-center">
+                <div className="text-4xl text-accent-focus mb-3">"</div>
+                <p className="text-text-primary mb-4">"Perfect craftsmanship. Built exactly to our specifications and finished beautifully."</p>
+                <cite className="text-text-secondary text-sm font-medium">— Abbey Tavern</cite>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={200}>
+              <div className="bg-bg-section-alt rounded-xl p-6 text-center">
+                <div className="text-4xl text-accent-focus mb-3">"</div>
+                <p className="text-text-primary mb-4">"The quality speaks for itself. Our customers constantly compliment the bar design."</p>
+                <cite className="text-text-secondary text-sm font-medium">— Findlaters</cite>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={300}>
+              <div className="bg-bg-section-alt rounded-xl p-6 text-center">
+                <div className="text-4xl text-accent-focus mb-3">"</div>
+                <p className="text-text-primary mb-4">"Exceptional attention to detail. Worth every penny for the unique result."</p>
+                <cite className="text-text-secondary text-sm font-medium">— Private Client</cite>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* New Section: What We Build */}
+      <section className="section-padding bg-bg-main">
+        <div className="container mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <ScrollReveal>
+              <div>
+                <h2 className="font-heading font-bold text-text-primary mb-6">
+                  What We Build
+                </h2>
+                <p className="text-xl text-text-secondary mb-8 leading-relaxed">
+                  From full pub interiors to outdoor kitchens, from custom bars to one-off furniture — 
+                  we design and craft everything to fit your exact space.
+                </p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={200}>
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60 rounded-xl"></div>
+                <div className="absolute inset-0 border border-accent-primary/30 rounded-xl"></div>
+                <img src={makerImg} alt="Craftsman working in workshop" className="w-full h-96 object-cover rounded-xl" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl"></div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* New Section: FAQ */}
+      <section className="section-padding bg-bg-section-alt">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <ScrollReveal>
+              <div className="bg-bg-section-alt-2 rounded-xl p-8">
+                <h2 className="font-heading font-bold text-text-primary mb-6 text-2xl">
+                  Can I customize it for myself?
+                </h2>
+                <p className="text-xl text-text-secondary leading-relaxed">
+                  Yes. Every build starts with your vision. Size, finish, details — everything can be 
+                  tailored for your space.
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* Section 7: Process */}
       <section id="process" className="section-padding bg-bg-section-alt relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -568,16 +646,16 @@ const Index = () => {
           </ScrollReveal>
           <div className="grid md:grid-cols-4 gap-8">
             {processSteps.map((step, index) => <ScrollReveal key={index} delay={index * 150}>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-accent-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-heading font-bold text-bg-main">
+                <div className="text-center bg-bg-section-alt-2/50 rounded-xl p-6 border border-accent-primary/20 hover:border-accent-primary/40 transition-all duration-300">
+                  <div className="w-20 h-20 bg-gradient-to-br from-accent-primary to-accent-hover rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-accent-primary/30">
+                    <span className="text-3xl font-heading font-bold text-bg-main">
                       {step.number}
                     </span>
                   </div>
-                  <h3 className="font-heading font-bold text-text-primary mb-2">
+                  <h3 className="font-heading font-bold text-text-primary mb-3 text-xl">
                     {step.title}
                   </h3>
-                  <p className="text-text-secondary">{step.description}</p>
+                  <p className="text-text-secondary text-lg">{step.description}</p>
                   {index < processSteps.length - 1 && <div className="hidden md:block w-full h-px bg-accent-primary/30 mt-8"></div>}
                   {index === processSteps.length - 1 && <div className="hidden md:block w-full h-px bg-accent-primary/30 mt-8"></div>}
                 </div>
@@ -592,8 +670,10 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal>
               <div className="relative">
-                <div className="absolute inset-0 border-2 border-accent-hover rounded-xl transform rotate-1"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-transparent to-black/30 rounded-xl"></div>
+                <div className="absolute inset-0 border-2 border-accent-primary/40 rounded-xl transform rotate-1 shadow-lg shadow-accent-primary/20"></div>
                 <img src={makerImg} alt="Craftsman in workshop" className="relative w-full h-96 object-cover rounded-xl" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent rounded-xl"></div>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={200}>
@@ -602,13 +682,8 @@ const Index = () => {
                   Who I am
                 </h2>
                 <p className="text-xl text-text-secondary mb-8 leading-relaxed">
-                  One person behind every piece. I take one project at a time to keep the quality absolute.
+                  Every project is built by me, one at a time. I work with walnut, oak and brass to create unique pieces that never repeat. Quality and detail are my signature.
                 </p>
-                <div className="space-y-3">
-                  <p className="text-text-primary">
-                    <span className="font-semibold">Materials I love:</span> walnut, oak, brass. Oil finish.
-                  </p>
-                </div>
               </div>
             </ScrollReveal>
           </div>
