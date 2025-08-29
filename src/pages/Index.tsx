@@ -33,79 +33,142 @@ const Index = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   // Portfolio data structure
-  const portfolioCategories = [
-    {
-      id: 'bars-restaurants',
-      title: 'Hospitality Spaces',
-      description: 'Commercial hospitality spaces',
-      projects: [
-        { id: 'summit-inn', title: 'The Summit Inn', subtitle: 'Custom bar design and production', caption: 'Premium walnut bar with brass fixtures', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg'] },
-        { id: 'mamo', title: 'MAMO', subtitle: 'Contemporary restaurant interior', caption: 'Modern dining space with custom furnishings', images: ['/lovable-uploads/4194660c-2cb2-400e-9138-2966145f8d91.png', '/lovable-uploads/ddca6966-25e5-41e9-9940-1476c50da397.png', '/lovable-uploads/a88b51b7-5c8c-4e84-9ab7-4e700d23eb7b.png', '/lovable-uploads/6a00bfd9-433a-4ea1-bfd0-8913bd788a7c.png'] },
-        { id: 'riverside-bar', title: 'Riverside Bar', subtitle: 'Waterfront bar installation', caption: 'Outdoor-inspired bar design', images: ['/lovable-uploads/127596f6-fadd-499b-884d-f7c8612bfebc.png', '/lovable-uploads/e334f14c-67e6-4dd6-80de-7000223b1205.png', '/lovable-uploads/f44659e3-6590-44eb-95ef-745c93fc744a.png'] },
-        { id: 'peggys', title: 'Peggy\'s St Stephens', subtitle: 'Traditional pub refurbishment', caption: 'Classic Irish pub with modern touches', images: ['/lovable-uploads/127596f6-fadd-499b-884d-f7c8612bfebc.png', 'placeholder2.jpg', 'placeholder3.jpg', 'placeholder4.jpg', 'placeholder5.jpg'] },
-        { id: 'casa-clontarf', title: 'Casa Clontarf', subtitle: 'Mediterranean restaurant', caption: 'Warm, inviting dining atmosphere', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg'] },
-        { id: 'green-phone-box', title: 'The Green Phone Box', subtitle: 'Unique themed bar', caption: 'Creative concept bar design', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg'] }
-      ]
-    },
-    {
-      id: 'outdoor-spaces',
-      title: 'Outdoor Spaces',
-      description: 'Gardens, decking, and outdoor living',
-      projects: [
-        { id: 'thormanby-lawns', title: 'Thormanby Lawns', subtitle: 'Landscape garden design', caption: 'Extensive outdoor living space', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg'] },
-        { id: 'pergola-decking', title: 'Pergola Decking', subtitle: 'Covered outdoor area', caption: 'Timber pergola with integrated seating', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg', 'placeholder4.jpg'] },
-        { id: 'howth-decking', title: 'Howth Decking', subtitle: 'Coastal deck installation', caption: 'Weather-resistant decking solution', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg'] },
-        { id: 'raheny-patio', title: 'Raheny Patio', subtitle: 'Stone patio design', caption: 'Natural stone outdoor entertaining area', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg'] },
-        { id: 'decking-2024', title: 'Decking 2024', subtitle: 'Modern deck construction', caption: 'Contemporary outdoor platform', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg', 'placeholder4.jpg'] },
-        { id: 'treehouse', title: 'Children\'s Treehouse', subtitle: 'Custom playground structure', caption: 'Safe and imaginative play space', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg'] },
-        { id: 'raheny-garage', title: 'Raheny Garage', subtitle: 'Garage conversion project', caption: 'Multi-purpose outdoor building', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg'] },
-        { id: 'container-home', title: 'Container Home', subtitle: 'Shipping container conversion', caption: 'Innovative living space solution', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg', 'placeholder4.jpg'] },
-        { id: 'archideo', title: 'Archideo', subtitle: 'Architectural outdoor feature', caption: 'Statement outdoor installation', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg'] }
-      ]
-    },
-    {
-      id: 'custom-pieces',
-      title: 'Custom Pieces',
-      description: 'Bespoke furniture and installations',
-      projects: [
-        { id: 'art-studio', title: 'Art Studio', subtitle: 'Custom studio furniture', caption: 'Tailored workspace solutions', images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg'] }
-      ]
-    }
-  ];
-
+  const portfolioCategories = [{
+    id: 'bars-restaurants',
+    title: 'Hospitality Spaces',
+    description: 'Commercial hospitality spaces',
+    projects: [{
+      id: 'summit-inn',
+      title: 'The Summit Inn',
+      subtitle: 'Custom bar design and production',
+      caption: 'Premium walnut bar with brass fixtures',
+      images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg']
+    }, {
+      id: 'mamo',
+      title: 'MAMO',
+      subtitle: 'Contemporary restaurant interior',
+      caption: 'Modern dining space with custom furnishings',
+      images: ['/lovable-uploads/4194660c-2cb2-400e-9138-2966145f8d91.png', '/lovable-uploads/ddca6966-25e5-41e9-9940-1476c50da397.png', '/lovable-uploads/a88b51b7-5c8c-4e84-9ab7-4e700d23eb7b.png', '/lovable-uploads/6a00bfd9-433a-4ea1-bfd0-8913bd788a7c.png']
+    }, {
+      id: 'riverside-bar',
+      title: 'Riverside Bar',
+      subtitle: 'Waterfront bar installation',
+      caption: 'Outdoor-inspired bar design',
+      images: ['/lovable-uploads/127596f6-fadd-499b-884d-f7c8612bfebc.png', '/lovable-uploads/e334f14c-67e6-4dd6-80de-7000223b1205.png', '/lovable-uploads/f44659e3-6590-44eb-95ef-745c93fc744a.png']
+    }, {
+      id: 'peggys',
+      title: 'Peggy\'s St Stephens',
+      subtitle: 'Traditional pub refurbishment',
+      caption: 'Classic Irish pub with modern touches',
+      images: ['/lovable-uploads/127596f6-fadd-499b-884d-f7c8612bfebc.png', 'placeholder2.jpg', 'placeholder3.jpg', 'placeholder4.jpg', 'placeholder5.jpg']
+    }, {
+      id: 'casa-clontarf',
+      title: 'Casa Clontarf',
+      subtitle: 'Mediterranean restaurant',
+      caption: 'Warm, inviting dining atmosphere',
+      images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg']
+    }, {
+      id: 'green-phone-box',
+      title: 'The Green Phone Box',
+      subtitle: 'Unique themed bar',
+      caption: 'Creative concept bar design',
+      images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg']
+    }]
+  }, {
+    id: 'outdoor-spaces',
+    title: 'Outdoor Spaces',
+    description: 'Gardens, decking, and outdoor living',
+    projects: [{
+      id: 'thormanby-lawns',
+      title: 'Thormanby Lawns',
+      subtitle: 'Landscape garden design',
+      caption: 'Extensive outdoor living space',
+      images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg']
+    }, {
+      id: 'pergola-decking',
+      title: 'Pergola Decking',
+      subtitle: 'Covered outdoor area',
+      caption: 'Timber pergola with integrated seating',
+      images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg', 'placeholder4.jpg']
+    }, {
+      id: 'howth-decking',
+      title: 'Howth Decking',
+      subtitle: 'Coastal deck installation',
+      caption: 'Weather-resistant decking solution',
+      images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg']
+    }, {
+      id: 'raheny-patio',
+      title: 'Raheny Patio',
+      subtitle: 'Stone patio design',
+      caption: 'Natural stone outdoor entertaining area',
+      images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg']
+    }, {
+      id: 'decking-2024',
+      title: 'Decking 2024',
+      subtitle: 'Modern deck construction',
+      caption: 'Contemporary outdoor platform',
+      images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg', 'placeholder4.jpg']
+    }, {
+      id: 'treehouse',
+      title: 'Children\'s Treehouse',
+      subtitle: 'Custom playground structure',
+      caption: 'Safe and imaginative play space',
+      images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg']
+    }, {
+      id: 'raheny-garage',
+      title: 'Raheny Garage',
+      subtitle: 'Garage conversion project',
+      caption: 'Multi-purpose outdoor building',
+      images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg']
+    }, {
+      id: 'container-home',
+      title: 'Container Home',
+      subtitle: 'Shipping container conversion',
+      caption: 'Innovative living space solution',
+      images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg', 'placeholder4.jpg']
+    }, {
+      id: 'archideo',
+      title: 'Archideo',
+      subtitle: 'Architectural outdoor feature',
+      caption: 'Statement outdoor installation',
+      images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg']
+    }]
+  }, {
+    id: 'custom-pieces',
+    title: 'Custom Pieces',
+    description: 'Bespoke furniture and installations',
+    projects: [{
+      id: 'art-studio',
+      title: 'Art Studio',
+      subtitle: 'Custom studio furniture',
+      caption: 'Tailored workspace solutions',
+      images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg']
+    }]
+  }];
   const handleCategoryClick = (categoryId: string) => {
     setExpandedCategory(expandedCategory === categoryId ? null : categoryId);
   };
-
   const handleProjectClick = (project: any) => {
     setSelectedProject(project);
     setCurrentImageIndex(0);
   };
-
   const handleCloseModal = () => {
     setSelectedProject(null);
     setCurrentImageIndex(0);
   };
-
   const handlePrevImage = () => {
     if (selectedProject) {
-      setCurrentImageIndex((prev) => 
-        prev === 0 ? selectedProject.images.length - 1 : prev - 1
-      );
+      setCurrentImageIndex(prev => prev === 0 ? selectedProject.images.length - 1 : prev - 1);
     }
   };
-
   const handleNextImage = () => {
     if (selectedProject) {
-      setCurrentImageIndex((prev) => 
-        prev === selectedProject.images.length - 1 ? 0 : prev + 1
-      );
+      setCurrentImageIndex(prev => prev === selectedProject.images.length - 1 ? 0 : prev + 1);
     }
   };
-
   const scrollToContact = () => {
-    document.getElementById('contact-form')?.scrollIntoView({ 
-      behavior: 'smooth' 
+    document.getElementById('contact-form')?.scrollIntoView({
+      behavior: 'smooth'
     });
   };
 
@@ -122,7 +185,6 @@ const Index = () => {
         }
       }
     };
-
     window.addEventListener('keydown', handleKeyPress);
     return () => window.removeEventListener('keydown', handleKeyPress);
   }, [selectedProject]);
@@ -153,21 +215,21 @@ const Index = () => {
   }];
   const projects = [{
     id: 'summit-inn-recent',
-    title: "Decking", 
+    title: "Decking",
     subtitle: "Custom Bar Design and Production",
     caption: "Premium walnut bar with brass fixtures and custom lighting design",
     image: projSummitImg,
     images: ['summit1.jpg', 'summit2.jpg', 'summit3.jpg', 'summit4.jpg']
   }, {
     id: 'abbey-tavern-recent',
-    title: "The Green Phone Box", 
+    title: "The Green Phone Box",
     subtitle: "Walnut Backlit Bar",
     caption: "Sophisticated backlit bar featuring rich walnut wood and integrated LED lighting",
     image: projAbbeyImg,
     images: ['abbey1.jpg', 'abbey2.jpg', 'abbey3.jpg']
   }, {
     id: 'findlaters-recent',
-    title: "Home Container", 
+    title: "Home Container",
     subtitle: "Interior Shelving in Solid Oak",
     caption: "Custom solid oak shelving system with precision joinery and natural finish",
     image: projFindlatersImg,
@@ -285,22 +347,14 @@ const Index = () => {
           {/* CTA Button - Responsive */}
           <div className="mt-12 lg:mt-16 text-center mb-8 lg:mb-12">
             <ScrollReveal delay={200}>
-              <Button 
-                onClick={scrollToContact}
-                className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 lg:px-16 lg:py-6 rounded-lg text-lg lg:text-xl lg:w-64"
-              >
-                Get Free Consultation
-              </Button>
+              
             </ScrollReveal>
           </div>
 
           {/* NEW CTA Button - Between Producing and What We Create */}
           <div className="hidden md:block mt-16 text-center">
             <ScrollReveal delay={250}>
-              <Button 
-                onClick={scrollToContact}
-                className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 rounded-lg text-lg"
-              >
+              <Button onClick={scrollToContact} className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 rounded-lg text-lg">
                 Start Your Project
               </Button>
             </ScrollReveal>
@@ -322,11 +376,9 @@ const Index = () => {
           </ScrollReveal>
           
           <div className="space-y-4">
-            {portfolioCategories.map((category, categoryIndex) => (
-              <div key={category.id} className="w-full">
+            {portfolioCategories.map((category, categoryIndex) => <div key={category.id} className="w-full">
                 <ScrollReveal delay={categoryIndex * 100}>
-                  <div 
-                    className={`
+                  <div className={`
                       relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 ease-out
                       bg-gradient-to-br from-bg-section-alt/80 via-bg-section-alt-2/75 to-bg-section-alt/80
                       backdrop-blur-md border border-bg-section-alt/60 shadow-2xl
@@ -334,20 +386,13 @@ const Index = () => {
                       hover:shadow-accent-primary/30 hover:shadow-[0_25px_50px_-12px_rgba(197,156,87,0.35)]
                       hover:border-accent-primary/50 hover:border-b-accent-primary/60 hover:scale-[1.02] 
                       hover:bg-gradient-to-br hover:from-bg-section-alt-2/90 hover:via-bg-section-alt/85 hover:to-bg-section-alt-2/90
-                      ${expandedCategory === category.id 
-                        ? 'shadow-accent-primary/40 shadow-[0_30px_60px_-12px_rgba(197,156,87,0.4)] border-accent-primary/70 border-b-accent-primary/80 bg-gradient-to-br from-bg-section-alt-2/90 via-bg-section-alt/85 to-bg-section-alt-2/90' 
-                        : ''
-                      }
-                    `}
-                    onClick={() => handleCategoryClick(category.id)}
-                  >
+                      ${expandedCategory === category.id ? 'shadow-accent-primary/40 shadow-[0_30px_60px_-12px_rgba(197,156,87,0.4)] border-accent-primary/70 border-b-accent-primary/80 bg-gradient-to-br from-bg-section-alt-2/90 via-bg-section-alt/85 to-bg-section-alt-2/90' : ''}
+                    `} onClick={() => handleCategoryClick(category.id)}>
                     {/* Premium inner glow */}
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.02] to-transparent"></div>
                     
                     {/* Active state accent line */}
-                    {expandedCategory === category.id && (
-                      <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-accent-primary to-transparent"></div>
-                    )}
+                    {expandedCategory === category.id && <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-accent-primary to-transparent"></div>}
                     
                     <div className="relative px-2 py-4">
                       <div className="flex items-center justify-between">
@@ -357,9 +402,7 @@ const Index = () => {
                           </h3>
                           <p className="text-gray-300 text-lg font-medium">{category.description}</p>
                         </div>
-                        <div className={`transform transition-all duration-300 ease-out ${
-                          expandedCategory === category.id ? 'rotate-180 text-accent-primary' : 'text-gray-400'
-                        }`}>
+                        <div className={`transform transition-all duration-300 ease-out ${expandedCategory === category.id ? 'rotate-180 text-accent-primary' : 'text-gray-400'}`}>
                           <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
                           </svg>
@@ -367,21 +410,12 @@ const Index = () => {
                       </div>
                     
                     {/* Accordion Content */}
-                    <div className={`transition-all duration-500 ease-in-out overflow-hidden ${
-                      expandedCategory === category.id 
-                        ? 'max-h-[1500px] opacity-100 mt-8' 
-                        : 'max-h-0 opacity-0'
-                    }`}>
+                    <div className={`transition-all duration-500 ease-in-out overflow-hidden ${expandedCategory === category.id ? 'max-h-[1500px] opacity-100 mt-8' : 'max-h-0 opacity-0'}`}>
                       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {category.projects.map((project, projectIndex) => (
-                          <div
-                            key={project.id}
-                            className="bg-bg-section-alt/50 rounded-xl overflow-hidden cursor-pointer group hover:bg-bg-section-alt/75 transition-all duration-300 border border-bg-section-alt/30 hover:border-accent-primary/50 border-b-2 border-b-accent-primary/40 hover:border-b-accent-primary/70 p-1 hover:shadow-lg hover:shadow-accent-primary/20"
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              handleProjectClick(project);
-                            }}
-                          >
+                        {category.projects.map((project, projectIndex) => <div key={project.id} className="bg-bg-section-alt/50 rounded-xl overflow-hidden cursor-pointer group hover:bg-bg-section-alt/75 transition-all duration-300 border border-bg-section-alt/30 hover:border-accent-primary/50 border-b-2 border-b-accent-primary/40 hover:border-b-accent-primary/70 p-1 hover:shadow-lg hover:shadow-accent-primary/20" onClick={e => {
+                        e.stopPropagation();
+                        handleProjectClick(project);
+                      }}>
                             <div className="relative h-48 bg-gradient-to-br from-bg-section-alt-2 to-bg-section-alt overflow-hidden">
                               <ScrollReveal delay={projectIndex * 50}>
                                 <img src={project.images[0]} alt={`${project.title} preview`} className="w-full h-full object-cover transform scale-110" />
@@ -395,33 +429,21 @@ const Index = () => {
                               <h4 className="font-heading font-bold text-text-primary mb-1 group-hover:text-accent-primary transition-colors">{project.title}</h4>
                               <p className="text-text-secondary text-sm">{project.subtitle}</p>
                             </div>
-                          </div>
-                        ))}
+                          </div>)}
                       </div>
                     </div>
                   </div>
                   </div>
                 </ScrollReveal>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
         
         {/* Project Modal */}
-        {selectedProject && (
-          <div 
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fade-in"
-            onClick={handleCloseModal}
-          >
-            <div 
-              className="bg-gray-900 rounded-2xl max-w-4xl max-h-[80vh] w-full overflow-hidden shadow-2xl border border-gray-700/50 relative animate-scale-in"
-              onClick={(e) => e.stopPropagation()}
-            >
+        {selectedProject && <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fade-in" onClick={handleCloseModal}>
+            <div className="bg-gray-900 rounded-2xl max-w-4xl max-h-[80vh] w-full overflow-hidden shadow-2xl border border-gray-700/50 relative animate-scale-in" onClick={e => e.stopPropagation()}>
               {/* Close Button */}
-              <button
-                onClick={handleCloseModal}
-                className="absolute top-4 right-4 z-10 w-10 h-10 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center text-white transition-colors"
-              >
+              <button onClick={handleCloseModal} className="absolute top-4 right-4 z-10 w-10 h-10 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center text-white transition-colors">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
@@ -435,64 +457,35 @@ const Index = () => {
                 {/* Image Carousel */}
                 <div className="relative">
                   <div className="aspect-video bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl overflow-hidden relative">
-                    <img 
-                      src={selectedProject.images[currentImageIndex]} 
-                      alt={`${selectedProject.title} - Image ${currentImageIndex + 1}`} 
-                      className="w-full h-full object-cover transform scale-110"
-                    />
+                    <img src={selectedProject.images[currentImageIndex]} alt={`${selectedProject.title} - Image ${currentImageIndex + 1}`} className="w-full h-full object-cover transform scale-110" />
                   </div>
                   
                   {/* Navigation Arrows */}
-                  {selectedProject.images.length > 1 && (
-                    <>
-                      <button
-                        onClick={handlePrevImage}
-                        className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center text-white transition-colors"
-                      >
+                  {selectedProject.images.length > 1 && <>
+                      <button onClick={handlePrevImage} className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center text-white transition-colors">
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                         </svg>
                       </button>
-                      <button
-                        onClick={handleNextImage}
-                        className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center text-white transition-colors"
-                      >
+                      <button onClick={handleNextImage} className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center text-white transition-colors">
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
                       </button>
-                    </>
-                  )}
+                    </>}
                 </div>
                 
                 {/* Image Thumbnails */}
-                {selectedProject.images.length > 1 && (
-                  <div className="flex gap-2 mt-4 justify-center items-center overflow-x-auto px-4 py-2 min-h-[50px]">
-                    {selectedProject.images.map((_, index) => (
-                      <button
-                        key={index}
-                        onClick={() => setCurrentImageIndex(index)}
-                        className={`w-16 h-12 rounded-lg overflow-hidden flex-shrink-0 transition-all ${
-                          currentImageIndex === index 
-                            ? 'ring-2 ring-white/80 opacity-100' 
-                            : 'opacity-60 hover:opacity-80'
-                        }`}
-                      >
+                {selectedProject.images.length > 1 && <div className="flex gap-2 mt-4 justify-center items-center overflow-x-auto px-4 py-2 min-h-[50px]">
+                    {selectedProject.images.map((_, index) => <button key={index} onClick={() => setCurrentImageIndex(index)} className={`w-16 h-12 rounded-lg overflow-hidden flex-shrink-0 transition-all ${currentImageIndex === index ? 'ring-2 ring-white/80 opacity-100' : 'opacity-60 hover:opacity-80'}`}>
                         <div className="w-full h-full bg-gradient-to-br from-gray-600 to-gray-700 relative overflow-hidden">
-                          <img 
-                            src={selectedProject.images[index]} 
-                            alt={`${selectedProject.title} - Thumbnail ${index + 1}`} 
-                            className="w-full h-full object-cover"
-                          />
+                          <img src={selectedProject.images[index]} alt={`${selectedProject.title} - Thumbnail ${index + 1}`} className="w-full h-full object-cover" />
                         </div>
-                      </button>
-                    ))}
-                  </div>
-                )}
+                      </button>)}
+                  </div>}
               </div>
             </div>
-          </div>
-        )}
+          </div>}
       </section>
 
       {/* Section 4: Why Custom > Standard */}
@@ -532,22 +525,29 @@ const Index = () => {
                   
                   {/* Rows */}
                   <div className="divide-y divide-bg-main/10">
-                    {[
-                      { standard: "Same as everyone", custom: "One-of-a-kind design" },
-                      { standard: "Machine produced", custom: "Hand crafted" },
-                      { standard: "Cheap materials", custom: "Premium oak, walnut, brass" },
-                      { standard: "Disposable", custom: "Heirloom quality" },
-                      { standard: "Flat-packed", custom: "Installed by craftsmen" }
-                    ].map((row, index) => (
-                      <div key={index} className="grid grid-cols-2">
+                    {[{
+                    standard: "Same as everyone",
+                    custom: "One-of-a-kind design"
+                  }, {
+                    standard: "Machine produced",
+                    custom: "Hand crafted"
+                  }, {
+                    standard: "Cheap materials",
+                    custom: "Premium oak, walnut, brass"
+                  }, {
+                    standard: "Disposable",
+                    custom: "Heirloom quality"
+                  }, {
+                    standard: "Flat-packed",
+                    custom: "Installed by craftsmen"
+                  }].map((row, index) => <div key={index} className="grid grid-cols-2">
                         <div className="p-4 text-text-muted text-sm text-center border-r border-accent-primary/20">
                           {row.standard}
                         </div>
                         <div className="p-4 text-text-primary font-semibold text-sm text-center bg-accent-primary/5 border-l-2 border-accent-primary/40">
                           {row.custom}
                         </div>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
                 </div>
 
@@ -565,22 +565,29 @@ const Index = () => {
                   
                   {/* Rows */}
                   <div className="divide-y divide-bg-main/10">
-                    {[
-                      { standard: "Same as everyone", custom: "One-of-a-kind design" },
-                      { standard: "Machine produced", custom: "Hand crafted" },
-                      { standard: "Cheap materials", custom: "Premium oak, walnut, brass" },
-                      { standard: "Disposable", custom: "Heirloom quality" },
-                      { standard: "Flat-packed", custom: "Installed by craftsmen" }
-                    ].map((row, index) => (
-                      <div key={index} className="grid grid-cols-2">
+                    {[{
+                    standard: "Same as everyone",
+                    custom: "One-of-a-kind design"
+                  }, {
+                    standard: "Machine produced",
+                    custom: "Hand crafted"
+                  }, {
+                    standard: "Cheap materials",
+                    custom: "Premium oak, walnut, brass"
+                  }, {
+                    standard: "Disposable",
+                    custom: "Heirloom quality"
+                  }, {
+                    standard: "Flat-packed",
+                    custom: "Installed by craftsmen"
+                  }].map((row, index) => <div key={index} className="grid grid-cols-2">
                         <div className="p-6 text-text-muted text-base text-center border-r border-accent-primary/20">
                           {row.standard}
                         </div>
                         <div className="p-6 text-text-primary font-semibold text-base text-center bg-accent-primary/5 border-l-2 border-accent-primary/40">
                           {row.custom}
                         </div>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
                 </div>
               </div>
@@ -590,20 +597,29 @@ const Index = () => {
             <ScrollReveal delay={300}>
               <div className="bg-bg-section-alt-2 rounded-2xl p-8 border border-accent-primary/20 shadow-lg shadow-accent-primary/10 mb-12">
                 <div className="grid md:grid-cols-4 gap-8">
-                  {[
-                    { icon: "🔨", title: "Unique every time", subtitle: "Never repeated design" },
-                    { icon: "🇮🇪", title: "Local craftsmanship", subtitle: "Made in Ireland" },
-                    { icon: "🌳", title: "Natural materials", subtitle: "Oak. Walnut. Brass." },
-                    { icon: "🛡️", title: "Built to last", subtitle: "Decades, not years" }
-                  ].map((benefit, index) => (
-                    <div key={index} className="text-center">
+                  {[{
+                  icon: "🔨",
+                  title: "Unique every time",
+                  subtitle: "Never repeated design"
+                }, {
+                  icon: "🇮🇪",
+                  title: "Local craftsmanship",
+                  subtitle: "Made in Ireland"
+                }, {
+                  icon: "🌳",
+                  title: "Natural materials",
+                  subtitle: "Oak. Walnut. Brass."
+                }, {
+                  icon: "🛡️",
+                  title: "Built to last",
+                  subtitle: "Decades, not years"
+                }].map((benefit, index) => <div key={index} className="text-center">
                       <div className="text-4xl mb-3">{benefit.icon}</div>
                       <h4 className="font-heading font-bold text-text-primary mb-2 text-lg">
                         {benefit.title}
                       </h4>
                       <p className="text-text-secondary text-sm">{benefit.subtitle}</p>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </div>
             </ScrollReveal>
@@ -611,10 +627,7 @@ const Index = () => {
             {/* CTA Button - After comparison table */}
             <ScrollReveal delay={400}>
               <div className="text-center">
-                <Button 
-                  onClick={scrollToContact}
-                  className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 rounded-lg text-lg"
-                >
+                <Button onClick={scrollToContact} className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 rounded-lg text-lg">
                   Get Free Consultation
                 </Button>
               </div>
@@ -633,12 +646,8 @@ const Index = () => {
             </h2>
           </ScrollReveal>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <ScrollReveal key={index} delay={index * 100}>
-                <div 
-                  className="premium-card group cursor-pointer"
-                  onClick={() => handleProjectClick(project)}
-                >
+            {projects.map((project, index) => <ScrollReveal key={index} delay={index * 100}>
+                <div className="premium-card group cursor-pointer" onClick={() => handleProjectClick(project)}>
                   <div className="relative overflow-hidden rounded-lg">
                     <ScrollReveal delay={index * 100}>
                       <img src={project.image} alt={project.title} className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" />
@@ -656,17 +665,13 @@ const Index = () => {
                     </div>
                   </div>
                 </div>
-              </ScrollReveal>
-            ))}
+              </ScrollReveal>)}
           </div>
           
           {/* CTA Button */}
           <div className="text-center mt-16">
             <ScrollReveal delay={300}>
-              <Button 
-                onClick={scrollToContact}
-                className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 rounded-lg text-lg"
-              >
+              <Button onClick={scrollToContact} className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 rounded-lg text-lg">
                 Start Your Project
               </Button>
             </ScrollReveal>
@@ -697,19 +702,19 @@ const Index = () => {
                     <div className="text-5xl text-accent-focus mr-3 leading-none">"</div>
                     <div className="flex text-accent-primary">
                       <svg className="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                       <svg className="w-5 h-5 fill-current ml-1" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                       <svg className="w-5 h-5 fill-current ml-1" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                       <svg className="w-5 h-5 fill-current ml-1" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                       <svg className="w-5 h-5 fill-current ml-1" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                     </div>
                   </div>
@@ -729,7 +734,7 @@ const Index = () => {
               <div className="bg-bg-section-alt rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
                 <div className="flex items-center mb-4">
                   <svg className="w-6 h-6 text-accent-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd"/>
+                    <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" />
                   </svg>
                   <div className="text-2xl text-accent-focus">"</div>
                 </div>
@@ -742,7 +747,7 @@ const Index = () => {
               <div className="bg-bg-section-alt rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
                 <div className="flex items-center mb-4">
                   <svg className="w-6 h-6 text-accent-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd"/>
+                    <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" />
                   </svg>
                   <div className="text-2xl text-accent-focus">"</div>
                 </div>
@@ -755,7 +760,7 @@ const Index = () => {
               <div className="bg-bg-section-alt rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
                 <div className="flex items-center mb-4">
                   <svg className="w-6 h-6 text-accent-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd"/>
+                    <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" />
                   </svg>
                   <div className="text-2xl text-accent-focus">"</div>
                 </div>
@@ -768,10 +773,7 @@ const Index = () => {
           {/* CTA Button */}
           <ScrollReveal delay={400}>
             <div className="text-center">
-                <Button 
-                  onClick={() => scrollToContact()}
-                  className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 rounded-lg text-lg"
-                >
+                <Button onClick={() => scrollToContact()} className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 rounded-lg text-lg">
                   Let's build yours →
                 </Button>
             </div>
@@ -809,10 +811,7 @@ const Index = () => {
           {/* CTA Button after What We Build */}
           <div className="text-center mt-16">
             <ScrollReveal delay={300}>
-              <Button 
-                onClick={scrollToContact}
-                className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 rounded-lg text-lg"
-              >
+              <Button onClick={scrollToContact} className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 rounded-lg text-lg">
                 Let's build yours →
               </Button>
             </ScrollReveal>
@@ -840,10 +839,7 @@ const Index = () => {
           {/* CTA Button - After FAQ */}
           <div className="text-center mt-12">
             <ScrollReveal delay={100}>
-              <Button 
-                onClick={scrollToContact}
-                className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 rounded-lg text-lg"
-              >
+              <Button onClick={scrollToContact} className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 rounded-lg text-lg">
                 Get Your Quote
               </Button>
             </ScrollReveal>
@@ -946,19 +942,13 @@ const Index = () => {
                 })} />
                   </div>
                   <div className="space-y-6 pt-4">
-                    <Button 
-                      type="submit" 
-                      className="w-full bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out py-6 rounded-xl text-lg tracking-wider"
-                    >
+                    <Button type="submit" className="w-full bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out py-6 rounded-xl text-lg tracking-wider">
                       Send message
                     </Button>
                     
                     <div className="text-center pt-2">
                       <p className="text-text-secondary text-base mb-4">Or send directly via WhatsApp instead</p>
-                      <Button 
-                        className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 rounded-xl text-lg tracking-wider" 
-                        asChild
-                      >
+                      <Button className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 rounded-xl text-lg tracking-wider" asChild>
                         <a href="https://wa.me/353000000000" target="_blank" rel="noopener noreferrer">
                           WhatsApp Us
                         </a>
