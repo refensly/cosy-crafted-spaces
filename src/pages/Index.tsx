@@ -646,7 +646,7 @@ const Index = () => {
                     <ScrollReveal delay={index * 100}>
                       <img src={project.image} alt={project.title} className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" />
                     </ScrollReveal>
-                    <div className="absolute inset-0 bg-gradient-to-t from-bg-main/90 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                    <div className="absolute inset-0 bg-gradient-to-t from-bg-main/90 to-transparent opacity-100 transition-opacity duration-300 flex items-end">
                       <div className="p-6">
                         <h3 className="font-heading font-bold text-text-primary mb-1">
                           {project.title}
