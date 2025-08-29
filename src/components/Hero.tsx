@@ -79,27 +79,31 @@ const Hero = () => {
       {/* Center gradient overlay for text readability */}
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-black/30 to-transparent z-20" />
       
-      {/* Brand Name */}
-      <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-30">
-        <div className="text-text-primary font-body text-lg tracking-wide">Tiny Outdoor Spaces</div>
-      </div>
+      {/* Brand Name - Desktop Only */}
+      {!isMobile && (
+        <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-30">
+          <div className="text-text-primary font-body text-lg tracking-wide">Tiny Outdoor Spaces</div>
+        </div>
+      )}
       
       {/* Center Content */}
       <div className={`relative z-30 ${isMobile ? 'min-h-[90vh]' : 'min-h-screen'} flex items-center justify-center px-4 sm:px-6 ${isMobile ? 'py-8' : ''}`}>
         <div className="text-center max-w-none mx-auto px-2 sm:px-4">
-          <h1 className={`font-grifter text-text-primary ${isMobile ? 'mb-2' : 'mb-4 sm:mb-6'} ${isMobile ? 'leading-tight' : 'leading-tight'} ${animationsStarted ? 'animate-fade-up animation-delay-500' : 'opacity-0'}`}>
-            <div className={`${isMobile ? 'text-2xl leading-tight' : 'text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[120px]'} ${animationsStarted ? 'animate-fade-up animation-delay-700' : 'opacity-0'}`}>Unique Handmade</div>
-            <div className={`${isMobile ? 'text-2xl leading-tight px-1' : 'text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[120px] px-2 sm:px-8 md:px-16'} ${animationsStarted ? 'animate-fade-up animation-delay-900' : 'opacity-0'}`}>Furniture from Dublin</div>
+          <h1 className={`font-grifter text-text-primary ${isMobile ? 'mb-4' : 'mb-4 sm:mb-6'} ${isMobile ? 'leading-tight' : 'leading-tight'} ${animationsStarted ? 'animate-fade-up animation-delay-500' : 'opacity-0'}`}>
+            <div className={`${isMobile ? 'text-4xl leading-tight' : 'text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[120px]'} ${animationsStarted ? 'animate-fade-up animation-delay-700' : 'opacity-0'}`}>Unique Handmade</div>
+            <div className={`${isMobile ? 'text-4xl leading-tight px-1' : 'text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[120px] px-2 sm:px-8 md:px-16'} ${animationsStarted ? 'animate-fade-up animation-delay-900' : 'opacity-0'}`}>Furniture from Dublin</div>
           </h1>
-          <p className={`${isMobile ? 'text-lg leading-relaxed' : 'text-lg sm:text-xl md:text-2xl'} text-text-secondary ${isMobile ? 'mb-2' : 'mb-6 sm:mb-8'} max-w-2xl mx-auto leading-relaxed px-2 ${animationsStarted ? 'animate-fade-up animation-delay-1100' : 'opacity-0'}`}>
+          <p className={`${isMobile ? 'text-base leading-relaxed' : 'text-lg sm:text-xl md:text-2xl'} text-text-secondary ${isMobile ? 'mb-6' : 'mb-6 sm:mb-8'} max-w-2xl mx-auto leading-relaxed px-2 ${animationsStarted ? 'animate-fade-up animation-delay-1100' : 'opacity-0'}`}>
             <div className="font-body font-normal text-white">Handcrafted bars, restaurants, outdoor living spaces and furniture.</div>
             <div className="text-white">Designed once, built to last.</div>
           </p>
           
-          {/* Unique Badge */}
-          <div className={`${isMobile ? 'mb-8' : 'mb-6 sm:mb-8'} ${animationsStarted ? 'animate-fade-up animation-delay-1300' : 'opacity-0'}`}>
-            <span className={`text-white font-heading font-bold tracking-wider ${isMobile ? 'text-xl' : 'text-xl sm:text-2xl md:text-[32px]'}`}>Unique.</span>
-          </div>
+          {/* Unique Badge - Desktop Only */}
+          {!isMobile && (
+            <div className={`mb-6 sm:mb-8 ${animationsStarted ? 'animate-fade-up animation-delay-1300' : 'opacity-0'}`}>
+              <span className={`text-white font-heading font-bold tracking-wider text-xl sm:text-2xl md:text-[32px]`}>Unique.</span>
+            </div>
+          )}
           
           {/* CTAs */}
           <div className="space-y-4">
@@ -115,6 +119,13 @@ const Hero = () => {
                   <span className="hidden sm:block">TALK TO US ON WHATSAPP</span>
                 </a>
               </Button>
+
+              {/* Get a Quote - Mobile visible, Desktop separate section */}
+              {isMobile && (
+                <Button variant="outline" className={`border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 w-[90%] mx-auto block text-lg px-8 py-3 min-h-[48px]`} onClick={scrollToContact}>
+                  GET A QUOTE
+                </Button>
+              )}
             </div>
             
             {/* Desktop Secondary CTA */}
