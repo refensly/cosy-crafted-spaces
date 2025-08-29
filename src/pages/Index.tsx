@@ -333,11 +333,11 @@ const Index = () => {
           </div>
 
           <ScrollReveal>
-            <div className="bg-bg-section-alt rounded-xl px-12 py-16 text-center">
-              <h3 className="font-heading font-bold text-text-primary mb-8">
+            <div className="bg-bg-section-alt rounded-xl p-8 text-center">
+              <h3 className="font-heading font-bold text-text-primary mb-4">
                 Producing
               </h3>
-              <p className="text-xl text-text-secondary max-w-4xl mx-auto mb-6 lg:mb-8">
+              <p className="text-lg text-text-secondary max-w-4xl mx-auto mb-6 lg:mb-8">
                 Each piece goes through careful planning, selection of premium materials, 
                 and meticulous handcrafting to ensure it meets our quality standards.
               </p>
@@ -348,7 +348,7 @@ const Index = () => {
           {/* NEW CTA Button - Between Producing and What We Create */}
           <div className="hidden md:block mt-16 text-center">
             <ScrollReveal delay={250}>
-              <Button onClick={scrollToContact} className="bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-16 py-6 rounded-lg text-2xl min-w-[280px] text-center">
+              <Button onClick={scrollToContact} className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-16 py-6 rounded-lg text-2xl min-w-[280px] text-center">
                 Start Your Project
               </Button>
             </ScrollReveal>
@@ -621,7 +621,7 @@ const Index = () => {
             {/* CTA Button - After comparison table */}
             <ScrollReveal delay={400}>
               <div className="text-center">
-                <Button onClick={scrollToContact} className="bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-16 py-6 rounded-lg text-2xl min-w-[280px] text-center">
+                <Button onClick={scrollToContact} className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 rounded-lg text-lg">
                   Get Free Consultation
                 </Button>
               </div>
@@ -665,7 +665,7 @@ const Index = () => {
           {/* CTA Button */}
           <div className="text-center mt-16">
             <ScrollReveal delay={300}>
-              <Button onClick={scrollToContact} className="bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-16 py-6 rounded-lg text-2xl min-w-[280px] text-center">
+              <Button onClick={scrollToContact} className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 rounded-lg text-lg">
                 Start Your Project
               </Button>
             </ScrollReveal>
@@ -693,7 +693,7 @@ const Index = () => {
                 </div>
                 <div className="md:col-span-3">
                   <div className="flex items-start mb-4">
-                    <div className="text-5xl text-accent-focus mr-3 leading-none">"</div>
+                    
                     <div className="flex text-accent-primary">
                       <svg className="w-5 h-5 fill-current" viewBox="0 0 20 20">
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
@@ -730,7 +730,7 @@ const Index = () => {
                   <svg className="w-6 h-6 text-accent-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" />
                   </svg>
-                  <div className="text-2xl text-accent-focus">"</div>
+                  
                 </div>
                 <p className="text-text-primary mb-4 leading-relaxed">Perfect craftsmanship. Built exactly to our specifications.</p>
                 <cite className="text-text-secondary font-bold">— Abbey Tavern</cite>
@@ -743,7 +743,7 @@ const Index = () => {
                   <svg className="w-6 h-6 text-accent-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" />
                   </svg>
-                  <div className="text-2xl text-accent-focus">"</div>
+                  
                 </div>
                 <p className="text-text-primary mb-4 leading-relaxed">Our customers constantly compliment the bar design.</p>
                 <cite className="text-text-secondary font-bold">— Findlaters</cite>
@@ -756,7 +756,7 @@ const Index = () => {
                   <svg className="w-6 h-6 text-accent-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" />
                   </svg>
-                  <div className="text-2xl text-accent-focus">"</div>
+                  
                 </div>
                 <p className="text-text-primary mb-4 leading-relaxed">Exceptional attention to detail. Worth every penny.</p>
                 <cite className="text-text-secondary font-bold">— Private Client</cite>
@@ -767,7 +767,7 @@ const Index = () => {
           {/* CTA Button */}
           <ScrollReveal delay={400}>
             <div className="text-center">
-                <Button onClick={() => scrollToContact()} className="bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-16 py-6 rounded-lg text-2xl min-w-[280px] text-center">
+                <Button onClick={() => scrollToContact()} className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 rounded-lg text-lg">
                   Let's build yours →
                 </Button>
             </div>
@@ -805,7 +805,7 @@ const Index = () => {
           {/* CTA Button after What We Build */}
           <div className="text-center mt-16">
             <ScrollReveal delay={300}>
-              <Button onClick={scrollToContact} className="bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-16 py-6 rounded-lg text-2xl min-w-[280px] text-center">
+              <Button onClick={scrollToContact} className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 rounded-lg text-lg">
                 Let's build yours →
               </Button>
             </ScrollReveal>
@@ -833,7 +833,7 @@ const Index = () => {
           {/* CTA Button - After FAQ */}
           <div className="text-center mt-12">
             <ScrollReveal delay={100}>
-              <Button onClick={scrollToContact} className="bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-16 py-6 rounded-lg text-2xl min-w-[280px] text-center">
+              <Button onClick={scrollToContact} className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 rounded-lg text-lg">
                 Get Your Quote
               </Button>
             </ScrollReveal>
@@ -936,13 +936,13 @@ const Index = () => {
                 })} />
                   </div>
                   <div className="space-y-6 pt-4">
-                    <Button type="submit" className="w-full bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out py-6 rounded-xl text-2xl tracking-wider">
+                    <Button type="submit" className="w-full bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out py-6 rounded-xl text-lg tracking-wider">
                       Send message
                     </Button>
                     
                     <div className="text-center pt-2">
                       <p className="text-text-secondary text-base mb-4">Or send directly via WhatsApp instead</p>
-                      <Button className="bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-16 py-6 rounded-xl text-2xl min-w-[280px] text-center tracking-wider" asChild>
+                      <Button className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 rounded-xl text-lg tracking-wider" asChild>
                         <a href="https://wa.me/353000000000" target="_blank" rel="noopener noreferrer">
                           WhatsApp Us
                         </a>
