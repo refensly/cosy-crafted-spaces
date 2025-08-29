@@ -222,7 +222,9 @@ const Index = () => {
             <ScrollReveal delay={200}>
               <div className="relative">
                 <div className="w-full h-96 rounded-xl overflow-hidden">
-                  <img src="/lovable-uploads/ea7da7da-0fb2-4c7b-8f87-b1ad11374f9f.png" alt="Custom bar interior with warm lighting and wood finishes" className="w-full h-full object-cover transform scale-125" />
+                  <ScrollReveal delay={250}>
+                    <img src="/lovable-uploads/ea7da7da-0fb2-4c7b-8f87-b1ad11374f9f.png" alt="Custom bar interior with warm lighting and wood finishes" className="w-full h-full object-cover transform scale-125" />
+                  </ScrollReveal>
                 </div>
               </div>
             </ScrollReveal>
@@ -255,7 +257,9 @@ const Index = () => {
                 <div className="text-center">
                   <div className="relative mb-4">
                     <div className="w-full h-64 rounded-lg overflow-hidden shadow-lg">
-                      <img src={example.image} alt="Custom craftsmanship and interior design" className="w-full h-full object-cover transform scale-110" />
+                      <ScrollReveal delay={index * 100 + 50}>
+                        <img src={example.image} alt="Custom craftsmanship and interior design" className="w-full h-full object-cover transform scale-110" />
+                      </ScrollReveal>
                     </div>
                   </div>
                   <h3 className="font-heading font-bold text-text-primary mb-2 text-lg">
@@ -277,6 +281,18 @@ const Index = () => {
               </p>
             </div>
           </ScrollReveal>
+          
+          {/* CTA Button - Mobile Only */}
+          <div className="md:hidden mt-12 text-center">
+            <ScrollReveal delay={200}>
+              <Button 
+                onClick={scrollToContact}
+                className="border-2 border-accent-primary text-white bg-transparent font-semibold hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 text-lg px-8 py-3 uppercase tracking-wider"
+              >
+                Get Free Consultation
+              </Button>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
 
@@ -355,7 +371,9 @@ const Index = () => {
                             }}
                           >
                             <div className="relative h-48 bg-gradient-to-br from-bg-section-alt-2 to-bg-section-alt overflow-hidden">
-                              <img src={project.images[0]} alt={`${project.title} preview`} className="w-full h-full object-cover transform scale-110" />
+                              <ScrollReveal delay={projectIndex * 50}>
+                                <img src={project.images[0]} alt={`${project.title} preview`} className="w-full h-full object-cover transform scale-110" />
+                              </ScrollReveal>
                               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                               <div className="absolute bottom-4 left-4 right-4">
                                 <div className="text-white font-medium text-sm opacity-70">Preview Image</div>
@@ -486,32 +504,68 @@ const Index = () => {
 
             {/* Comparison Table */}
             <ScrollReveal delay={200}>
-              <div className="bg-bg-section-alt-2 rounded-2xl p-8 border border-accent-primary/20 shadow-lg shadow-accent-primary/10 mb-12">
+              <div className="bg-bg-section-alt-2 rounded-2xl border border-accent-primary/20 shadow-lg shadow-accent-primary/10 mb-12 overflow-hidden">
                 
-                {/* Table Header */}
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="text-center py-4 rounded-lg bg-bg-main/50">
-                    <span className="text-text-muted font-bold text-lg uppercase tracking-wider">Mass-market</span>
+                {/* Mobile-Optimized Table */}
+                <div className="md:hidden">
+                  {/* Header */}
+                  <div className="grid grid-cols-2 bg-bg-main/30">
+                    <div className="text-center py-4 bg-bg-main/50 border-r border-accent-primary/30">
+                      <span className="text-text-muted font-bold text-sm uppercase tracking-wider">Mass-market</span>
+                    </div>
+                    <div className="text-center py-4 bg-gradient-to-r from-accent-primary/20 to-accent-hover/20 border border-accent-primary/40">
+                      <span className="text-accent-primary font-bold text-sm uppercase tracking-wider">Custom</span>
+                    </div>
                   </div>
-                  <div className="text-center py-4 rounded-lg bg-gradient-to-r from-accent-primary/20 to-accent-hover/20 border border-accent-primary/40 shadow-md shadow-accent-primary/20">
-                    <span className="text-accent-primary font-bold text-lg uppercase tracking-wider">Custom</span>
+                  
+                  {/* Rows */}
+                  <div className="divide-y divide-bg-main/10">
+                    {[
+                      { standard: "Same as everyone", custom: "One-of-a-kind design" },
+                      { standard: "Machine produced", custom: "Hand crafted" },
+                      { standard: "Cheap materials", custom: "Premium oak, walnut, brass" },
+                      { standard: "Disposable", custom: "Heirloom quality" },
+                      { standard: "Flat-packed", custom: "Installed by craftsmen" }
+                    ].map((row, index) => (
+                      <div key={index} className="grid grid-cols-2">
+                        <div className="p-4 text-text-muted text-sm text-center border-r border-accent-primary/20">
+                          {row.standard}
+                        </div>
+                        <div className="p-4 text-text-primary font-semibold text-sm text-center bg-accent-primary/5 border-l-2 border-accent-primary/40">
+                          {row.custom}
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
-                
-                {/* Table Rows */}
-                <div className="space-y-4">
-                  {[
-                    { standard: "Same as everyone", custom: "One-of-a-kind design" },
-                    { standard: "Machine produced", custom: "Hand crafted" },
-                    { standard: "Cheap materials", custom: "Premium oak, walnut, brass" },
-                    { standard: "Disposable", custom: "Heirloom quality" },
-                    { standard: "Flat-packed", custom: "Installed by craftsmen" }
-                  ].map((row, index) => (
-                    <div key={index} className="grid grid-cols-2 gap-4 py-4 border-b border-bg-main/20 last:border-b-0">
-                      <span className="text-text-muted text-base">{row.standard}</span>
-                      <span className="text-text-primary font-semibold text-base bg-accent-primary/5 px-3 py-1 rounded-lg border-l-2 border-accent-primary/40">{row.custom}</span>
+
+                {/* Desktop Table (unchanged) */}
+                <div className="hidden md:block p-8">
+                  {/* Table Header */}
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="text-center py-4 rounded-lg bg-bg-main/50">
+                      <span className="text-text-muted font-bold text-lg uppercase tracking-wider">Mass-market</span>
                     </div>
-                  ))}
+                    <div className="text-center py-4 rounded-lg bg-gradient-to-r from-accent-primary/20 to-accent-hover/20 border border-accent-primary/40 shadow-md shadow-accent-primary/20">
+                      <span className="text-accent-primary font-bold text-lg uppercase tracking-wider">Custom</span>
+                    </div>
+                  </div>
+                  
+                  {/* Table Rows */}
+                  <div className="space-y-4">
+                    {[
+                      { standard: "Same as everyone", custom: "One-of-a-kind design" },
+                      { standard: "Machine produced", custom: "Hand crafted" },
+                      { standard: "Cheap materials", custom: "Premium oak, walnut, brass" },
+                      { standard: "Disposable", custom: "Heirloom quality" },
+                      { standard: "Flat-packed", custom: "Installed by craftsmen" }
+                    ].map((row, index) => (
+                      <div key={index} className="grid grid-cols-2 gap-4 py-4 border-b border-bg-main/20 last:border-b-0">
+                        <span className="text-text-muted text-base">{row.standard}</span>
+                        <span className="text-text-primary font-semibold text-base bg-accent-primary/5 px-3 py-1 rounded-lg border-l-2 border-accent-primary/40">{row.custom}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </ScrollReveal>
@@ -542,12 +596,10 @@ const Index = () => {
             <ScrollReveal delay={400}>
               <div className="text-center">
                 <Button 
-                  className="bg-bg-section-alt border border-accent-primary text-white font-bold text-xl px-12 py-6 rounded-xl hover:bg-accent-primary/10 hover:border-accent-hover hover:shadow-xl hover:shadow-accent-primary/40 transition-all duration-300 uppercase tracking-wider hover:scale-105"
-                  asChild
+                  onClick={scrollToContact}
+                  className="border-2 border-accent-primary text-white bg-transparent font-semibold hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 text-lg px-8 py-3 uppercase tracking-wider"
                 >
-                  <a href="https://wa.me/353000000000" target="_blank" rel="noopener noreferrer">
-                    Talk to us on WhatsApp
-                  </a>
+                  Get Free Consultation
                 </Button>
               </div>
             </ScrollReveal>
@@ -572,7 +624,9 @@ const Index = () => {
                   onClick={() => handleProjectClick(project)}
                 >
                   <div className="relative overflow-hidden rounded-lg">
-                    <img src={project.image} alt={project.title} className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" />
+                    <ScrollReveal delay={index * 100}>
+                      <img src={project.image} alt={project.title} className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" />
+                    </ScrollReveal>
                     <div className="absolute inset-0 bg-gradient-to-t from-bg-main/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                       <div className="p-6">
                         <h3 className="font-heading font-bold text-text-primary mb-1">
@@ -588,6 +642,18 @@ const Index = () => {
                 </div>
               </ScrollReveal>
             ))}
+          </div>
+          
+          {/* CTA Button */}
+          <div className="text-center mt-16">
+            <ScrollReveal delay={300}>
+              <Button 
+                onClick={scrollToContact}
+                className="border-2 border-accent-primary text-white bg-transparent font-semibold hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 text-lg px-8 py-3 uppercase tracking-wider"
+              >
+                Start Your Project
+              </Button>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -606,7 +672,9 @@ const Index = () => {
             <div className="bg-bg-section-alt rounded-2xl p-8 mb-12 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
               <div className="grid md:grid-cols-5 gap-8 items-center">
                 <div className="md:col-span-2 relative">
-                  <img src={socialProofImg} alt="The Summit Inn custom bar" className="w-full h-64 md:h-80 object-cover rounded-xl" />
+                  <ScrollReveal delay={100}>
+                    <img src={socialProofImg} alt="The Summit Inn custom bar" className="w-full h-64 md:h-80 object-cover rounded-xl" />
+                  </ScrollReveal>
                 </div>
                 <div className="md:col-span-3">
                   <div className="flex items-start mb-4">
@@ -714,7 +782,9 @@ const Index = () => {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60 rounded-xl"></div>
                 <div className="absolute inset-0 border border-accent-primary/30 rounded-xl"></div>
-                <img src={makerImg} alt="Craftsman working in workshop" className="w-full h-96 object-cover rounded-xl" />
+                <ScrollReveal delay={250}>
+                  <img src={makerImg} alt="Craftsman working in workshop" className="w-full h-96 object-cover rounded-xl" />
+                </ScrollReveal>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl"></div>
               </div>
             </ScrollReveal>
@@ -736,6 +806,18 @@ const Index = () => {
                   tailored for your space.
                 </p>
               </div>
+            </ScrollReveal>
+          </div>
+          
+          {/* CTA Button */}
+          <div className="text-center mt-12">
+            <ScrollReveal delay={100}>
+              <Button 
+                onClick={scrollToContact}
+                className="border-2 border-accent-primary text-white bg-transparent font-semibold hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 text-lg px-8 py-3 uppercase tracking-wider"
+              >
+                Get Your Quote
+              </Button>
             </ScrollReveal>
           </div>
         </div>
@@ -780,7 +862,9 @@ const Index = () => {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-transparent to-black/30 rounded-xl"></div>
                 <div className="absolute inset-0 border-2 border-accent-primary/40 rounded-xl transform rotate-1 shadow-lg shadow-accent-primary/20"></div>
-                <img src={makerImg} alt="Craftsman in workshop" className="relative w-full h-96 object-cover rounded-xl" />
+                <ScrollReveal delay={100}>
+                  <img src={makerImg} alt="Craftsman in workshop" className="relative w-full h-96 object-cover rounded-xl" />
+                </ScrollReveal>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent rounded-xl"></div>
               </div>
             </ScrollReveal>
@@ -833,21 +917,26 @@ const Index = () => {
                   message: e.target.value
                 })} />
                   </div>
-                  <Button type="submit" className="btn-primary w-full">
-                    Send message
-                  </Button>
-                  
-                  <div className="flex justify-center space-x-4 pt-4">
-                    <Button variant="outline" className="btn-secondary" asChild>
-                      <a href="https://wa.me/353000000000" target="_blank" rel="noopener noreferrer">
-                        WhatsApp
-                      </a>
+                  <div className="space-y-4">
+                    <Button 
+                      type="submit" 
+                      className="w-full bg-accent-primary hover:bg-accent-hover text-bg-main font-bold py-4 px-8 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-accent-primary/30 text-lg"
+                    >
+                      Send message
                     </Button>
-                    <Button variant="outline" className="btn-secondary" asChild>
-                      <a href="https://t.me/tinyoutdoorspaces" target="_blank" rel="noopener noreferrer">
-                        Telegram
-                      </a>
-                    </Button>
+                    
+                    <div className="text-center">
+                      <p className="text-text-secondary text-sm mb-3">Or send directly in WhatsApp instead</p>
+                      <Button 
+                        variant="outline" 
+                        className="border-2 border-accent-primary text-accent-primary bg-transparent hover:bg-accent-primary hover:text-bg-main transition-all duration-300 px-8 py-2 font-semibold" 
+                        asChild
+                      >
+                        <a href="https://wa.me/353000000000" target="_blank" rel="noopener noreferrer">
+                          💬 WhatsApp Us
+                        </a>
+                      </Button>
+                    </div>
                   </div>
                 </form>}
             </div>
