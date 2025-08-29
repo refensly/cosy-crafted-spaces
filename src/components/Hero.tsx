@@ -108,10 +108,10 @@ const Hero = () => {
           <div className={`${isMobile ? 'text-5xl leading-tight' : 'text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[120px]'} ${animationsStarted ? 'animate-fade-up animation-delay-700' : 'opacity-0'}`}>Unique Handmade</div>
           <div className={`${isMobile ? 'text-5xl leading-tight px-1' : 'text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[120px] px-2 sm:px-8 md:px-16'} ${animationsStarted ? 'animate-fade-up animation-delay-900' : 'opacity-0'}`}>Furniture from Dublin</div>
         </h1>
-        <p className={`${isMobile ? 'text-base leading-relaxed' : 'text-lg sm:text-xl md:text-2xl'} text-text-secondary ${isMobile ? 'mb-8' : 'mb-6 sm:mb-8'} max-w-2xl mx-auto leading-relaxed px-2 ${animationsStarted ? 'animate-fade-up animation-delay-1100' : 'opacity-0'}`}>
+        <div className={`${isMobile ? 'text-base leading-relaxed' : 'text-lg sm:text-xl md:text-2xl'} text-text-secondary ${isMobile ? 'mb-8' : 'mb-6 sm:mb-8'} max-w-2xl mx-auto leading-relaxed px-2 ${animationsStarted ? 'animate-fade-up animation-delay-1100' : 'opacity-0'}`}>
           <div className="font-body font-normal text-white">Handcrafted bars, restaurants, outdoor living spaces and furniture.</div>
           <div className="text-white">Designed once, built to last.</div>
-        </p>
+        </div>
         
         {/* Unique Badge - Desktop Only */}
         {isDesktop && (
