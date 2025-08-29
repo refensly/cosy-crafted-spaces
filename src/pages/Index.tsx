@@ -287,7 +287,7 @@ const Index = () => {
             <ScrollReveal delay={200}>
               <Button 
                 onClick={scrollToContact}
-                className="border-2 border-accent-primary text-white bg-transparent font-semibold hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 text-lg px-8 py-3 uppercase tracking-wider"
+                className="bg-bg-dark/90 text-white font-bold uppercase border-2 border-accent hover:bg-bg-dark transition-all duration-300 px-8 py-3 rounded-lg"
               >
                 Get Free Consultation
               </Button>
@@ -649,7 +649,7 @@ const Index = () => {
             <ScrollReveal delay={300}>
               <Button 
                 onClick={scrollToContact}
-                className="border-2 border-accent-primary text-white bg-transparent font-semibold hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 text-lg px-8 py-3 uppercase tracking-wider"
+                className="bg-bg-dark/90 text-white font-bold uppercase border-2 border-accent hover:bg-bg-dark transition-all duration-300 px-8 py-3 rounded-lg"
               >
                 Start Your Project
               </Button>
@@ -752,12 +752,12 @@ const Index = () => {
           {/* CTA Button */}
           <ScrollReveal delay={400}>
             <div className="text-center">
-                <button 
+                <Button 
                   onClick={() => scrollToContact()}
-                  className="bg-bg-main border border-accent-primary text-white font-bold text-lg px-12 py-4 rounded-lg hover:bg-accent-primary/10 hover:border-accent-hover hover:shadow-lg hover:shadow-accent-primary/30 transition-all duration-300 uppercase tracking-wider"
+                  className="bg-bg-dark/90 text-white font-bold uppercase border-2 border-accent hover:bg-bg-dark transition-all duration-300 px-12 py-4 rounded-lg"
                 >
                   Let's build yours →
-                </button>
+                </Button>
             </div>
           </ScrollReveal>
         </div>
@@ -814,7 +814,7 @@ const Index = () => {
             <ScrollReveal delay={100}>
               <Button 
                 onClick={scrollToContact}
-                className="border-2 border-accent-primary text-white bg-transparent font-semibold hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 text-lg px-8 py-3 uppercase tracking-wider"
+                className="bg-bg-dark/90 text-white font-bold uppercase border-2 border-accent hover:bg-bg-dark transition-all duration-300 px-8 py-3 rounded-lg"
               >
                 Get Your Quote
               </Button>
@@ -920,7 +920,7 @@ const Index = () => {
                   <div className="space-y-4">
                     <Button 
                       type="submit" 
-                      className="w-full bg-accent-primary hover:bg-accent-hover text-bg-main font-bold py-4 px-8 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-accent-primary/30 text-lg"
+                      className="w-full bg-bg-dark/90 text-white font-bold uppercase border-2 border-accent hover:bg-bg-dark transition-all duration-300 py-4 rounded-lg"
                     >
                       Send message
                     </Button>
@@ -928,8 +928,7 @@ const Index = () => {
                     <div className="text-center">
                       <p className="text-text-secondary text-sm mb-3">Or send directly in WhatsApp instead</p>
                       <Button 
-                        variant="outline" 
-                        className="border-2 border-accent-primary text-accent-primary bg-transparent hover:bg-accent-primary hover:text-bg-main transition-all duration-300 px-8 py-2 font-semibold" 
+                        className="bg-bg-dark/90 text-white font-bold uppercase border-2 border-accent hover:bg-bg-dark transition-all duration-300 px-8 py-2 rounded-lg" 
                         asChild
                       >
                         <a href="https://wa.me/353000000000" target="_blank" rel="noopener noreferrer">
