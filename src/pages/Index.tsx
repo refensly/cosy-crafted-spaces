@@ -344,12 +344,6 @@ const Index = () => {
             </div>
           </ScrollReveal>
           
-          {/* CTA Button - Responsive */}
-          <div className="mt-12 lg:mt-16 text-center mb-8 lg:mb-12">
-            <ScrollReveal delay={200}>
-              
-            </ScrollReveal>
-          </div>
 
           {/* NEW CTA Button - Between Producing and What We Create */}
           <div className="hidden md:block mt-16 text-center">
