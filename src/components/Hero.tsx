@@ -3,8 +3,8 @@ import { Button } from '@/components/ui/button';
 import { useBreakpoints } from '@/hooks/use-breakpoints';
 import { OptimizedHeroImage } from '@/components/OptimizedHeroImage';
 // Using organized door textures
-const doorLeft = '/src/assets/images/hero-door-left.png';
-const doorRight = '/src/assets/images/hero-door-right.png';
+const doorLeft = '/images/hero-door-left.png';
+const doorRight = '/images/hero-door-right.png';
 const Hero = () => {
   const [panelsOpened, setPanelsOpened] = useState(false);
   const [scrollY, setScrollY] = useState(0);
@@ -16,7 +16,7 @@ const Hero = () => {
     const link = document.createElement('link');
     link.rel = 'preload';
     link.as = 'image';
-    link.href = '/src/assets/images/hero-background.png';
+    link.href = '/images/hero-background.png';
     document.head.appendChild(link);
 
     // Trigger the opening animation after component mounts (desktop only)

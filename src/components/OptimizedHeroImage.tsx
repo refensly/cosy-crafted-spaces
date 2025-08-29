@@ -15,7 +15,7 @@ export const OptimizedHeroImage: React.FC<OptimizedHeroImageProps> = ({
   const [imageLoaded, setImageLoaded] = useState(false)
   
   // Define the hero image URL inside the component to avoid scoping issues
-  const heroImageUrl = '/src/assets/images/hero-background.png'
+  const heroImageUrl = '/images/hero-background.png'
 
   useEffect(() => {
     // Preload the hero image
