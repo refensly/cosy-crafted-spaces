@@ -48,19 +48,19 @@ const Index = () => {
       title: 'MAMO',
       subtitle: 'Contemporary restaurant interior',
       caption: 'Modern dining space with custom furnishings',
-      images: ['/src/assets/images/project-mamo-1.png', '/src/assets/images/project-mamo-2.png', '/src/assets/images/project-mamo-3.png', '/src/assets/images/project-mamo-4.png']
+      images: ['/images/project-mamo-1.png', '/images/project-mamo-2.png', '/images/project-mamo-3.png', '/images/project-mamo-4.png']
     }, {
       id: 'riverside-bar',
       title: 'Riverside Bar',
       subtitle: 'Waterfront bar installation',
       caption: 'Outdoor-inspired bar design',
-      images: ['/src/assets/images/project-riverside-bar-1.png', '/src/assets/images/project-riverside-bar-2.png', '/src/assets/images/project-riverside-bar-3.png']
+      images: ['/images/project-riverside-bar-1.png', '/images/project-riverside-bar-2.png', '/images/project-riverside-bar-3.png']
     }, {
       id: 'peggys',
       title: 'Peggy\'s St Stephens',
       subtitle: 'Traditional pub refurbishment',
       caption: 'Classic Irish pub with modern touches',
-      images: ['/src/assets/images/project-riverside-bar-1.png', 'placeholder2.jpg', 'placeholder3.jpg', 'placeholder4.jpg', 'placeholder5.jpg']
+      images: ['/images/project-riverside-bar-1.png', 'placeholder2.jpg', 'placeholder3.jpg', 'placeholder4.jpg', 'placeholder5.jpg']
     }, {
       id: 'casa-clontarf',
       title: 'Casa Clontarf',
@@ -233,7 +233,7 @@ const Index = () => {
     subtitle: "Interior Shelving in Solid Oak",
     caption: "Custom solid oak shelving system with precision joinery and natural finish",
     image: projFindlatersImg,
-    images: ['/src/assets/images/project-mamo-1.png', '/src/assets/images/project-findlaters-2.png', 'findlaters3.jpg', 'findlaters4.jpg']
+    images: ['/images/project-mamo-1.png', '/images/project-findlaters-2.png', 'findlaters3.jpg', 'findlaters4.jpg']
   }];
   const processSteps = [{
     number: "1",
@@ -286,7 +286,7 @@ const Index = () => {
                 <div className="w-full h-96 rounded-xl overflow-hidden">
                   <ScrollReveal delay={250}>
                      <img 
-                       src="/src/assets/images/custom-bar-interior.png" 
+                       src="/images/custom-bar-interior.png" 
                        alt="Custom bar interior with warm lighting and wood finishes" 
                        className="w-full h-full object-cover transform scale-125"
                        loading="lazy"
@@ -310,15 +310,15 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {[{
             title: "Crafted for Real Spaces",
-            image: "/src/assets/images/promise-real-spaces.png",
+            image: "/images/promise-real-spaces.png",
             description: "Every project transforms pubs, homes, and outdoor living areas"
           }, {
             title: "Built with Precision",
-            image: "/src/assets/images/promise-precision.png",
+            image: "/images/promise-precision.png",
             description: "Joinery details, finishing, and premium materials"
           }, {
             title: "One-of-a-Kind Results",
-            image: "/src/assets/images/promise-unique-results.png",
+            image: "/images/promise-unique-results.png",
             description: "Never repeated, always designed for your exact space"
           }].map((example, index) => <ScrollReveal key={index} delay={index * 100}>
                 <div className="text-center">
