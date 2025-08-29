@@ -287,9 +287,21 @@ const Index = () => {
             <ScrollReveal delay={200}>
               <Button 
                 onClick={scrollToContact}
-                className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-8 py-3 rounded-lg"
+                className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 rounded-lg text-lg"
               >
                 Get Free Consultation
+              </Button>
+            </ScrollReveal>
+          </div>
+
+          {/* NEW CTA Button - Between Producing and What We Create */}
+          <div className="hidden md:block mt-16 text-center">
+            <ScrollReveal delay={250}>
+              <Button 
+                onClick={scrollToContact}
+                className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 rounded-lg text-lg"
+              >
+                Start Your Project
               </Button>
             </ScrollReveal>
           </div>
@@ -539,20 +551,20 @@ const Index = () => {
                   </div>
                 </div>
 
-                {/* Desktop Table (unchanged) */}
-                <div className="hidden md:block p-8">
-                  {/* Table Header */}
-                  <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div className="text-center py-4 rounded-lg bg-bg-main/50">
+                {/* Desktop Table - Redesigned to match mobile */}
+                <div className="hidden md:block">
+                  {/* Header */}
+                  <div className="grid grid-cols-2 bg-bg-main/30 rounded-t-xl">
+                    <div className="text-center py-6 bg-bg-main/50 border-r border-accent-primary/30 rounded-tl-xl">
                       <span className="text-text-muted font-bold text-lg uppercase tracking-wider">Mass-market</span>
                     </div>
-                    <div className="text-center py-4 rounded-lg bg-gradient-to-r from-accent-primary/20 to-accent-hover/20 border border-accent-primary/40 shadow-md shadow-accent-primary/20">
+                    <div className="text-center py-6 bg-gradient-to-r from-accent-primary/20 to-accent-hover/20 border border-accent-primary/40 rounded-tr-xl">
                       <span className="text-accent-primary font-bold text-lg uppercase tracking-wider">Custom</span>
                     </div>
                   </div>
                   
-                  {/* Table Rows */}
-                  <div className="space-y-4">
+                  {/* Rows */}
+                  <div className="divide-y divide-bg-main/10">
                     {[
                       { standard: "Same as everyone", custom: "One-of-a-kind design" },
                       { standard: "Machine produced", custom: "Hand crafted" },
@@ -560,9 +572,13 @@ const Index = () => {
                       { standard: "Disposable", custom: "Heirloom quality" },
                       { standard: "Flat-packed", custom: "Installed by craftsmen" }
                     ].map((row, index) => (
-                      <div key={index} className="grid grid-cols-2 gap-4 py-4 border-b border-bg-main/20 last:border-b-0">
-                        <span className="text-text-muted text-base">{row.standard}</span>
-                        <span className="text-text-primary font-semibold text-base bg-accent-primary/5 px-3 py-1 rounded-lg border-l-2 border-accent-primary/40">{row.custom}</span>
+                      <div key={index} className="grid grid-cols-2">
+                        <div className="p-6 text-text-muted text-base text-center border-r border-accent-primary/20">
+                          {row.standard}
+                        </div>
+                        <div className="p-6 text-text-primary font-semibold text-base text-center bg-accent-primary/5 border-l-2 border-accent-primary/40">
+                          {row.custom}
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -592,12 +608,12 @@ const Index = () => {
               </div>
             </ScrollReveal>
 
-            {/* CTA Button */}
+            {/* CTA Button - After comparison table */}
             <ScrollReveal delay={400}>
               <div className="text-center">
                 <Button 
                   onClick={scrollToContact}
-                  className="border-2 border-accent-primary text-white bg-transparent font-semibold hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 text-lg px-8 py-3 uppercase tracking-wider"
+                  className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 rounded-lg text-lg"
                 >
                   Get Free Consultation
                 </Button>
@@ -649,7 +665,7 @@ const Index = () => {
             <ScrollReveal delay={300}>
               <Button 
                 onClick={scrollToContact}
-                className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-8 py-3 rounded-lg"
+                className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 rounded-lg text-lg"
               >
                 Start Your Project
               </Button>
@@ -754,7 +770,7 @@ const Index = () => {
             <div className="text-center">
                 <Button 
                   onClick={() => scrollToContact()}
-                  className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 rounded-lg"
+                  className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 rounded-lg text-lg"
                 >
                   Let's build yours →
                 </Button>
@@ -789,6 +805,18 @@ const Index = () => {
               </div>
             </ScrollReveal>
           </div>
+
+          {/* CTA Button after What We Build */}
+          <div className="text-center mt-16">
+            <ScrollReveal delay={300}>
+              <Button 
+                onClick={scrollToContact}
+                className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 rounded-lg text-lg"
+              >
+                Let's build yours →
+              </Button>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
 
@@ -809,12 +837,12 @@ const Index = () => {
             </ScrollReveal>
           </div>
           
-          {/* CTA Button */}
+          {/* CTA Button - After FAQ */}
           <div className="text-center mt-12">
             <ScrollReveal delay={100}>
               <Button 
                 onClick={scrollToContact}
-                className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-8 py-3 rounded-lg"
+                className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 rounded-lg text-lg"
               >
                 Get Your Quote
               </Button>
@@ -891,48 +919,48 @@ const Index = () => {
                 Ready to start?
               </h2>
               
-              {formSubmitted ? <div className="bg-neutral-light/10 border border-neutral-light/20 rounded-xl p-8 text-center">
-                  <h3 className="text-xl font-semibold text-text-primary mb-2">
+              {formSubmitted ? <div className="bg-neutral-light/10 border border-neutral-light/20 rounded-xl p-12 text-center">
+                  <h3 className="text-2xl font-semibold text-text-primary mb-4">
                     Thanks for reaching out!
                   </h3>
-                  <p className="text-text-secondary">
+                  <p className="text-text-secondary text-lg">
                     We'll get back to you within 24 hours.
                   </p>
-                </div> : <form onSubmit={handleSubmit} className="space-y-6">
+                </div> : <form onSubmit={handleSubmit} className="space-y-8">
                   <div>
-                    <Input type="text" placeholder="Your name" className="form-field" value={formData.name} onChange={e => setFormData({
+                    <Input type="text" placeholder="Your name" className="form-field h-16 text-lg px-6 py-4 rounded-xl border-2 border-input/50 focus:border-accent-primary/60 bg-bg-main/50" value={formData.name} onChange={e => setFormData({
                   ...formData,
                   name: e.target.value
                 })} required />
                   </div>
                   <div>
-                    <Input type="text" placeholder="Email or phone" className="form-field" value={formData.contact} onChange={e => setFormData({
+                    <Input type="text" placeholder="Email or phone" className="form-field h-16 text-lg px-6 py-4 rounded-xl border-2 border-input/50 focus:border-accent-primary/60 bg-bg-main/50" value={formData.contact} onChange={e => setFormData({
                   ...formData,
                   contact: e.target.value
                 })} required />
                   </div>
                   <div>
-                    <Textarea placeholder="Tell us about your project" className="form-field min-h-[120px]" value={formData.message} onChange={e => setFormData({
+                    <Textarea placeholder="Tell us about your project" className="form-field min-h-[160px] text-lg px-6 py-4 rounded-xl border-2 border-input/50 focus:border-accent-primary/60 bg-bg-main/50 resize-none" value={formData.message} onChange={e => setFormData({
                   ...formData,
                   message: e.target.value
                 })} />
                   </div>
-                  <div className="space-y-4">
+                  <div className="space-y-6 pt-4">
                     <Button 
                       type="submit" 
-                      className="w-full bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out py-4 rounded-lg"
+                      className="w-full bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out py-6 rounded-xl text-lg tracking-wider"
                     >
                       Send message
                     </Button>
                     
-                    <div className="text-center">
-                      <p className="text-text-secondary text-sm mb-3">Or send directly in WhatsApp instead</p>
+                    <div className="text-center pt-2">
+                      <p className="text-text-secondary text-base mb-4">Or send directly via WhatsApp instead</p>
                       <Button 
-                        className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-8 py-2 rounded-lg" 
+                        className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 rounded-xl text-lg tracking-wider" 
                         asChild
                       >
                         <a href="https://wa.me/353000000000" target="_blank" rel="noopener noreferrer">
-                          💬 WhatsApp Us
+                          WhatsApp Us
                         </a>
                       </Button>
                     </div>
