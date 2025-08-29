@@ -333,8 +333,8 @@ const Index = () => {
           </div>
 
           <ScrollReveal>
-            <div className="bg-bg-section-alt rounded-xl p-8 text-center">
-              <h3 className="font-heading font-bold text-text-primary mb-4">
+            <div className="bg-bg-section-alt rounded-xl px-12 py-16 text-center">
+              <h3 className="font-heading font-bold text-text-primary mb-8">
                 Producing
               </h3>
               <p className="text-xl text-text-secondary max-w-4xl mx-auto mb-6 lg:mb-8">
