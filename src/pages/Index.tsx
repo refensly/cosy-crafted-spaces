@@ -287,7 +287,7 @@ const Index = () => {
             <ScrollReveal delay={200}>
               <Button 
                 onClick={scrollToContact}
-                className="bg-bg-dark/90 text-white font-bold uppercase border-2 border-accent hover:bg-bg-dark transition-all duration-300 px-8 py-3 rounded-lg"
+                className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-8 py-3 rounded-lg"
               >
                 Get Free Consultation
               </Button>
@@ -649,7 +649,7 @@ const Index = () => {
             <ScrollReveal delay={300}>
               <Button 
                 onClick={scrollToContact}
-                className="bg-bg-dark/90 text-white font-bold uppercase border-2 border-accent hover:bg-bg-dark transition-all duration-300 px-8 py-3 rounded-lg"
+                className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-8 py-3 rounded-lg"
               >
                 Start Your Project
               </Button>
@@ -754,7 +754,7 @@ const Index = () => {
             <div className="text-center">
                 <Button 
                   onClick={() => scrollToContact()}
-                  className="bg-bg-dark/90 text-white font-bold uppercase border-2 border-accent hover:bg-bg-dark transition-all duration-300 px-12 py-4 rounded-lg"
+                  className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 rounded-lg"
                 >
                   Let's build yours →
                 </Button>
@@ -814,7 +814,7 @@ const Index = () => {
             <ScrollReveal delay={100}>
               <Button 
                 onClick={scrollToContact}
-                className="bg-bg-dark/90 text-white font-bold uppercase border-2 border-accent hover:bg-bg-dark transition-all duration-300 px-8 py-3 rounded-lg"
+                className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-8 py-3 rounded-lg"
               >
                 Get Your Quote
               </Button>
@@ -920,7 +920,7 @@ const Index = () => {
                   <div className="space-y-4">
                     <Button 
                       type="submit" 
-                      className="w-full bg-bg-dark/90 text-white font-bold uppercase border-2 border-accent hover:bg-bg-dark transition-all duration-300 py-4 rounded-lg"
+                      className="w-full bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out py-4 rounded-lg"
                     >
                       Send message
                     </Button>
@@ -928,7 +928,7 @@ const Index = () => {
                     <div className="text-center">
                       <p className="text-text-secondary text-sm mb-3">Or send directly in WhatsApp instead</p>
                       <Button 
-                        className="bg-bg-dark/90 text-white font-bold uppercase border-2 border-accent hover:bg-bg-dark transition-all duration-300 px-8 py-2 rounded-lg" 
+                        className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-8 py-2 rounded-lg" 
                         asChild
                       >
                         <a href="https://wa.me/353000000000" target="_blank" rel="noopener noreferrer">
