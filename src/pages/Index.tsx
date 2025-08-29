@@ -285,7 +285,12 @@ const Index = () => {
               <div className="relative">
                 <div className="w-full h-96 rounded-xl overflow-hidden">
                   <ScrollReveal delay={250}>
-                    <img src="/lovable-uploads/ea7da7da-0fb2-4c7b-8f87-b1ad11374f9f.png" alt="Custom bar interior with warm lighting and wood finishes" className="w-full h-full object-cover transform scale-125" />
+                    <img 
+                      src="/lovable-uploads/ea7da7da-0fb2-4c7b-8f87-b1ad11374f9f.png" 
+                      alt="Custom bar interior with warm lighting and wood finishes" 
+                      className="w-full h-full object-cover transform scale-125"
+                      loading="lazy"
+                    />
                   </ScrollReveal>
                 </div>
               </div>
@@ -320,7 +325,12 @@ const Index = () => {
                   <div className="relative mb-4">
                     <div className="w-full h-64 rounded-lg overflow-hidden shadow-lg">
                       <ScrollReveal delay={index * 100 + 50}>
-                        <img src={example.image} alt="Custom craftsmanship and interior design" className="w-full h-full object-cover object-center" />
+                        <img 
+                          src={example.image} 
+                          alt="Custom craftsmanship and interior design" 
+                          className="w-full h-full object-cover object-center"
+                          loading="lazy"
+                        />
                       </ScrollReveal>
                     </div>
                   </div>
@@ -412,7 +422,12 @@ const Index = () => {
                       }}>
                             <div className="relative h-48 bg-gradient-to-br from-bg-section-alt-2 to-bg-section-alt overflow-hidden">
                               <ScrollReveal delay={projectIndex * 50}>
-                                <img src={project.images[0]} alt={`${project.title} preview`} className="w-full h-full object-cover transform scale-110" />
+                                <img 
+                                  src={project.images[0]} 
+                                  alt={`${project.title} preview`} 
+                                  className="w-full h-full object-cover transform scale-110"
+                                  loading="lazy"
+                                />
                               </ScrollReveal>
                               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                               <div className="absolute bottom-4 left-4 right-4">
@@ -644,7 +659,12 @@ const Index = () => {
                 <div className="premium-card group cursor-pointer" onClick={() => handleProjectClick(project)}>
                   <div className="relative overflow-hidden rounded-lg">
                     <ScrollReveal delay={index * 100}>
-                      <img src={project.image} alt={project.title} className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" />
+                      <img 
+                        src={project.image} 
+                        alt={project.title} 
+                        className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                        loading="lazy"
+                      />
                     </ScrollReveal>
                     <div className="absolute inset-0 bg-gradient-to-t from-bg-main/90 to-transparent opacity-100 transition-opacity duration-300 flex items-end">
                       <div className="p-6">
@@ -688,7 +708,12 @@ const Index = () => {
               <div className="grid md:grid-cols-5 gap-8 items-center">
                 <div className="md:col-span-2 relative">
                   <ScrollReveal delay={100}>
-                    <img src={socialProofImg} alt="The Summit Inn custom bar" className="w-full h-64 md:h-80 object-cover rounded-xl" />
+                    <img 
+                      src={socialProofImg} 
+                      alt="The Summit Inn custom bar" 
+                      className="w-full h-64 md:h-80 object-cover rounded-xl"
+                      loading="lazy"
+                    />
                   </ScrollReveal>
                 </div>
                 <div className="md:col-span-3">
@@ -795,7 +820,12 @@ const Index = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60 rounded-xl"></div>
                 <div className="absolute inset-0 border border-accent-primary/30 rounded-xl"></div>
                 <ScrollReveal delay={250}>
-                  <img src={makerImg} alt="Craftsman working in workshop" className="w-full h-96 object-cover rounded-xl" />
+                  <img 
+                    src={makerImg} 
+                    alt="Craftsman working in workshop" 
+                    className="w-full h-96 object-cover rounded-xl"
+                    loading="lazy"
+                  />
                 </ScrollReveal>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl"></div>
               </div>
@@ -844,7 +874,12 @@ const Index = () => {
       {/* Section 7: Process */}
       <section id="process" className="section-padding bg-bg-section-alt relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <img src={makerImg} alt="" className="w-full h-full object-cover" />
+          <img 
+            src={makerImg} 
+            alt="" 
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
         </div>
         <div className="container mx-auto px-6 relative">
           <ScrollReveal>
@@ -881,7 +916,12 @@ const Index = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-transparent to-black/30 rounded-xl"></div>
                 <div className="absolute inset-0 border-2 border-accent-primary/40 rounded-xl transform rotate-1 shadow-lg shadow-accent-primary/20"></div>
                 <ScrollReveal delay={100}>
-                  <img src={makerImg} alt="Craftsman in workshop" className="relative w-full h-96 object-cover rounded-xl" />
+                  <img 
+                    src={makerImg} 
+                    alt="Craftsman in workshop" 
+                    className="relative w-full h-96 object-cover rounded-xl"
+                    loading="lazy"
+                  />
                 </ScrollReveal>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent rounded-xl"></div>
               </div>

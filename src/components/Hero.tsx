@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { useIsMobile } from '@/hooks/use-mobile';
+import { useBreakpoints } from '@/hooks/use-breakpoints';
+import { OptimizedHeroImage } from '@/components/OptimizedHeroImage';
 // Using new door textures
 const doorLeft = '/lovable-uploads/beb3b349-e1f2-4c72-b827-28476d36aa64.png';
 const doorRight = '/lovable-uploads/7e78a817-eeaf-43ab-b44a-2df376f29fef.png';
@@ -8,15 +9,30 @@ const Hero = () => {
   const [panelsOpened, setPanelsOpened] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const [animationsStarted, setAnimationsStarted] = useState(false);
-  const isMobile = useIsMobile();
+  const { isMobile, isDesktop, isMobileOrTablet } = useBreakpoints();
 
   useEffect(() => {
-    // Preload hero background for mobile
+    // Preload optimized hero images based on viewport
     if (isMobile) {
       const link = document.createElement('link');
       link.rel = 'preload';
       link.as = 'image';
+      link.href = '/src/assets/hero-mobile.webp';
+      link.media = '(max-width: 767px)';
+      document.head.appendChild(link);
+    } else if (!isDesktop) {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.as = 'image';
+      link.href = '/src/assets/hero-tablet.webp';
+      link.media = '(min-width: 768px) and (max-width: 1024px)';
+      document.head.appendChild(link);
+    } else {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.as = 'image';
       link.href = '/lovable-uploads/7928fc98-36e8-4b94-bd48-06681d62fc6f.png';
+      link.media = '(min-width: 1025px)';
       document.head.appendChild(link);
     }
 
@@ -32,7 +48,7 @@ const Hero = () => {
 
     // Handle scroll for parallax effects (desktop only)
     const handleScroll = () => {
-      if (!isMobile) {
+      if (isDesktop) {
         const scrollPercent = window.scrollY / window.innerHeight * 100;
         setScrollY(window.scrollY);
         if (scrollPercent > 5 && !panelsOpened) {
@@ -41,13 +57,18 @@ const Hero = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    if (isDesktop) {
+      window.addEventListener('scroll', handleScroll);
+    }
+    
     return () => {
       clearTimeout(timer);
       clearTimeout(animationTimer);
-      window.removeEventListener('scroll', handleScroll);
+      if (isDesktop) {
+        window.removeEventListener('scroll', handleScroll);
+      }
     };
-  }, [panelsOpened, isMobile]);
+  }, [panelsOpened, isMobile, isDesktop]);
 
   const scrollToContact = () => {
     document.getElementById('contact-form')?.scrollIntoView({
@@ -57,15 +78,24 @@ const Hero = () => {
   };
 
   return (
-    <section className={`relative ${isMobile ? 'min-h-[90vh]' : 'min-h-screen'} ${isMobile ? 'bg-[#131F1A]' : 'bg-bg-main'} overflow-hidden animate-fade-in`} style={{animationDuration: '0.5s'}}>
-      {/* Bar Background */}
-      <div className="absolute inset-0 w-full h-full bg-cover bg-center" style={{
-        backgroundImage: `url('/lovable-uploads/7928fc98-36e8-4b94-bd48-06681d62fc6f.png')`,
-        transform: isMobile ? 'none' : `translateY(${scrollY * 0.1}px)`
-      }} />
+    <section 
+      className={`relative ${isMobile ? 'min-h-[90vh]' : 'min-h-screen'} overflow-hidden animate-fade-in`}
+      style={{
+        animationDuration: '0.5s',
+        minHeight: isMobile ? '90vh' : '100vh',
+        backgroundColor: 'hsl(var(--bg-deep-green))'
+      }}
+    >
+      {/* Optimized Hero Background */}
+      <OptimizedHeroImage 
+        style={{
+          transform: isDesktop ? `translateY(${scrollY * 0.1}px)` : 'none',
+          backgroundAttachment: isMobileOrTablet ? 'scroll' : 'fixed'
+        }}
+      />
     
-    {/* Door Panels - Desktop Only */}
-    {!isMobile && (
+    {/* Door Panels - Desktop Only (hide on mobile and tablet) */}
+    {isDesktop && (
       <>
         {/* Left Door Panel (duplicated from right) */}
         <div className="absolute top-0 left-0 w-1/2 h-full bg-center z-10" style={{
@@ -88,13 +118,6 @@ const Hero = () => {
     {/* Center gradient overlay for text readability */}
     <div className={`absolute inset-0 z-20 ${isMobile ? 'bg-gradient-to-r from-transparent via-black/50 to-transparent' : 'bg-gradient-to-r from-transparent via-black/30 to-transparent'}`} />
     
-    {/* Brand Name - Desktop Only */}
-    {!isMobile && (
-      <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-30">
-        <div className="text-text-primary font-body text-lg tracking-wide">Tiny Outdoor Spaces</div>
-      </div>
-    )}
-    
     {/* Center Content */}
     <div className={`relative z-30 ${isMobile ? 'min-h-[90vh]' : 'min-h-screen'} flex items-center justify-center px-4 sm:px-6 ${isMobile ? 'py-8' : ''}`}>
       <div className="text-center max-w-none mx-auto px-2 sm:px-4">
@@ -108,7 +131,7 @@ const Hero = () => {
         </p>
         
         {/* Unique Badge - Desktop Only */}
-        {!isMobile && (
+        {isDesktop && (
           <div className={`mb-6 sm:mb-8 ${animationsStarted ? 'animate-fade-up animation-delay-1300' : 'opacity-0'}`}>
             <span className={`text-white font-heading font-bold tracking-wider text-xl sm:text-2xl md:text-[32px]`}>Unique.</span>
           </div>
