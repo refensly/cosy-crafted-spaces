@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { useBreakpoints } from '@/hooks/use-breakpoints';
 import { OptimizedHeroImage } from '@/components/OptimizedHeroImage';
-// Using new door textures
-const doorLeft = '/lovable-uploads/beb3b349-e1f2-4c72-b827-28476d36aa64.png';
-const doorRight = '/lovable-uploads/7e78a817-eeaf-43ab-b44a-2df376f29fef.png';
+// Using organized door textures
+const doorLeft = '/src/assets/images/hero-door-left.png';
+const doorRight = '/src/assets/images/hero-door-right.png';
 const Hero = () => {
   const [panelsOpened, setPanelsOpened] = useState(false);
   const [scrollY, setScrollY] = useState(0);
@@ -16,7 +16,7 @@ const Hero = () => {
     const link = document.createElement('link');
     link.rel = 'preload';
     link.as = 'image';
-    link.href = '/lovable-uploads/7928fc98-36e8-4b94-bd48-06681d62fc6f.png';
+    link.href = '/src/assets/images/hero-background.png';
     document.head.appendChild(link);
 
     // Trigger the opening animation after component mounts (desktop only)

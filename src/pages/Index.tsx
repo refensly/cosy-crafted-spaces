@@ -8,16 +8,16 @@ import Hero from '@/components/Hero';
 import ScrollReveal from '@/components/ScrollReveal';
 
 // Import images
-import painValueImg from '@/assets/pain-value.jpg';
-import capBarsImg from '@/assets/cap-bars.jpg';
-import capHomeBarsImg from '@/assets/cap-home-bars.jpg';
-import capOutdoorImg from '@/assets/cap-outdoor.jpg';
-import capFurnitureImg from '@/assets/cap-furniture.jpg';
-import projSummitImg from '@/assets/proj-summit.jpg';
-import projAbbeyImg from '@/assets/proj-abbey.jpg';
-import projFindlatersImg from '@/assets/proj-findlaters.jpg';
-import makerImg from '@/assets/maker.jpg';
-import socialProofImg from '@/assets/social-proof.jpg';
+import painValueImg from '@/assets/images/pain-value.jpg';
+import capBarsImg from '@/assets/images/capability-bars.jpg';
+import capHomeBarsImg from '@/assets/images/capability-home-bars.jpg';
+import capOutdoorImg from '@/assets/images/capability-outdoor.jpg';
+import capFurnitureImg from '@/assets/images/capability-furniture.jpg';
+import projSummitImg from '@/assets/images/project-summit-inn.jpg';
+import projAbbeyImg from '@/assets/images/project-abbey.jpg';
+import projFindlatersImg from '@/assets/images/project-findlaters.jpg';
+import makerImg from '@/assets/images/maker-profile.jpg';
+import socialProofImg from '@/assets/images/client-testimonial.jpg';
 const Index = () => {
   const {
     toast
@@ -48,19 +48,19 @@ const Index = () => {
       title: 'MAMO',
       subtitle: 'Contemporary restaurant interior',
       caption: 'Modern dining space with custom furnishings',
-      images: ['/lovable-uploads/4194660c-2cb2-400e-9138-2966145f8d91.png', '/lovable-uploads/ddca6966-25e5-41e9-9940-1476c50da397.png', '/lovable-uploads/a88b51b7-5c8c-4e84-9ab7-4e700d23eb7b.png', '/lovable-uploads/6a00bfd9-433a-4ea1-bfd0-8913bd788a7c.png']
+      images: ['/src/assets/images/project-mamo-1.png', '/src/assets/images/project-mamo-2.png', '/src/assets/images/project-mamo-3.png', '/src/assets/images/project-mamo-4.png']
     }, {
       id: 'riverside-bar',
       title: 'Riverside Bar',
       subtitle: 'Waterfront bar installation',
       caption: 'Outdoor-inspired bar design',
-      images: ['/lovable-uploads/127596f6-fadd-499b-884d-f7c8612bfebc.png', '/lovable-uploads/e334f14c-67e6-4dd6-80de-7000223b1205.png', '/lovable-uploads/f44659e3-6590-44eb-95ef-745c93fc744a.png']
+      images: ['/src/assets/images/project-riverside-bar-1.png', '/src/assets/images/project-riverside-bar-2.png', '/src/assets/images/project-riverside-bar-3.png']
     }, {
       id: 'peggys',
       title: 'Peggy\'s St Stephens',
       subtitle: 'Traditional pub refurbishment',
       caption: 'Classic Irish pub with modern touches',
-      images: ['/lovable-uploads/127596f6-fadd-499b-884d-f7c8612bfebc.png', 'placeholder2.jpg', 'placeholder3.jpg', 'placeholder4.jpg', 'placeholder5.jpg']
+      images: ['/src/assets/images/project-riverside-bar-1.png', 'placeholder2.jpg', 'placeholder3.jpg', 'placeholder4.jpg', 'placeholder5.jpg']
     }, {
       id: 'casa-clontarf',
       title: 'Casa Clontarf',
@@ -233,7 +233,7 @@ const Index = () => {
     subtitle: "Interior Shelving in Solid Oak",
     caption: "Custom solid oak shelving system with precision joinery and natural finish",
     image: projFindlatersImg,
-    images: ['/lovable-uploads/4194660c-2cb2-400e-9138-2966145f8d91.png', '/lovable-uploads/d3e56680-f7a3-43e1-8796-05a598bf8041.png', 'findlaters3.jpg', 'findlaters4.jpg']
+    images: ['/src/assets/images/project-mamo-1.png', '/src/assets/images/project-findlaters-2.png', 'findlaters3.jpg', 'findlaters4.jpg']
   }];
   const processSteps = [{
     number: "1",
@@ -285,12 +285,12 @@ const Index = () => {
               <div className="relative">
                 <div className="w-full h-96 rounded-xl overflow-hidden">
                   <ScrollReveal delay={250}>
-                    <img 
-                      src="/lovable-uploads/ea7da7da-0fb2-4c7b-8f87-b1ad11374f9f.png" 
-                      alt="Custom bar interior with warm lighting and wood finishes" 
-                      className="w-full h-full object-cover transform scale-125"
-                      loading="lazy"
-                    />
+                     <img 
+                       src="/src/assets/images/custom-bar-interior.png" 
+                       alt="Custom bar interior with warm lighting and wood finishes" 
+                       className="w-full h-full object-cover transform scale-125"
+                       loading="lazy"
+                     />
                   </ScrollReveal>
                 </div>
               </div>
@@ -310,15 +310,15 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {[{
             title: "Crafted for Real Spaces",
-            image: "/lovable-uploads/34739a11-b299-4d2a-8171-96d9cfd4af84.png",
+            image: "/src/assets/images/promise-real-spaces.png",
             description: "Every project transforms pubs, homes, and outdoor living areas"
           }, {
             title: "Built with Precision",
-            image: "/lovable-uploads/850aebde-49f4-4b54-9e1f-31e3f96d8502.png",
+            image: "/src/assets/images/promise-precision.png",
             description: "Joinery details, finishing, and premium materials"
           }, {
             title: "One-of-a-Kind Results",
-            image: "/lovable-uploads/2cdada7e-0ab2-43b4-9f6e-ea92a4f29f8f.png",
+            image: "/src/assets/images/promise-unique-results.png",
             description: "Never repeated, always designed for your exact space"
           }].map((example, index) => <ScrollReveal key={index} delay={index * 100}>
                 <div className="text-center">
