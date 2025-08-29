@@ -348,7 +348,7 @@ const Index = () => {
           {/* NEW CTA Button - Between Producing and What We Create */}
           <div className="hidden md:block mt-16 text-center">
             <ScrollReveal delay={250}>
-              <Button onClick={scrollToContact} className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-16 py-6 rounded-lg text-2xl min-w-[280px] text-center">
+              <Button onClick={scrollToContact} className="bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-16 py-6 rounded-lg text-2xl min-w-[280px] text-center">
                 Start Your Project
               </Button>
             </ScrollReveal>
