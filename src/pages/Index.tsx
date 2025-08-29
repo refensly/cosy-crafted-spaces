@@ -346,9 +346,9 @@ const Index = () => {
           
 
           {/* NEW CTA Button - Between Producing and What We Create */}
-          <div className="hidden md:block mt-16 text-center">
+          <div className="mt-16 text-center">
             <ScrollReveal delay={250}>
-              <Button onClick={scrollToContact} className="bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-16 py-6 rounded-lg text-2xl min-w-[280px] text-center">
+              <Button onClick={scrollToContact} className="bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
                 Start Your Project
               </Button>
             </ScrollReveal>
@@ -621,7 +621,7 @@ const Index = () => {
             {/* CTA Button - After comparison table */}
             <ScrollReveal delay={400}>
               <div className="text-center">
-                <Button onClick={scrollToContact} className="bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-16 py-6 rounded-lg text-2xl min-w-[280px] text-center">
+                <Button onClick={scrollToContact} className="bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
                   Get Free Consultation
                 </Button>
               </div>
@@ -665,7 +665,7 @@ const Index = () => {
           {/* CTA Button */}
           <div className="text-center mt-16">
             <ScrollReveal delay={300}>
-              <Button onClick={scrollToContact} className="bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-16 py-6 rounded-lg text-2xl min-w-[280px] text-center">
+              <Button onClick={scrollToContact} className="bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
                 Start Your Project
               </Button>
             </ScrollReveal>
@@ -767,7 +767,7 @@ const Index = () => {
           {/* CTA Button */}
           <ScrollReveal delay={400}>
             <div className="text-center">
-                <Button onClick={() => scrollToContact()} className="bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-16 py-6 rounded-lg text-2xl min-w-[280px] text-center">
+                <Button onClick={() => scrollToContact()} className="bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
                   Let's build yours →
                 </Button>
             </div>
@@ -805,7 +805,7 @@ const Index = () => {
           {/* CTA Button after What We Build */}
           <div className="text-center mt-16">
             <ScrollReveal delay={300}>
-              <Button onClick={scrollToContact} className="bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-16 py-6 rounded-lg text-2xl min-w-[280px] text-center">
+              <Button onClick={scrollToContact} className="bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
                 Let's build yours →
               </Button>
             </ScrollReveal>
@@ -833,7 +833,7 @@ const Index = () => {
           {/* CTA Button - After FAQ */}
           <div className="text-center mt-12">
             <ScrollReveal delay={100}>
-              <Button onClick={scrollToContact} className="bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-16 py-6 rounded-lg text-2xl min-w-[280px] text-center">
+              <Button onClick={scrollToContact} className="bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
                 Get Your Quote
               </Button>
             </ScrollReveal>
@@ -936,13 +936,13 @@ const Index = () => {
                 })} />
                   </div>
                   <div className="space-y-6 pt-4">
-                    <Button type="submit" className="w-full bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out py-6 rounded-xl text-2xl tracking-wider">
+                    <Button type="submit" className="w-full bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out py-4 md:py-6 rounded-xl text-lg md:text-2xl tracking-wider">
                       Send message
                     </Button>
                     
                     <div className="text-center pt-2">
                       <p className="text-text-secondary text-base mb-4">Or send directly via WhatsApp instead</p>
-                      <Button className="bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-16 py-6 rounded-xl text-2xl min-w-[280px] text-center tracking-wider" asChild>
+                      <Button className="bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-8 py-4 md:px-16 md:py-6 rounded-xl text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center tracking-wider" asChild>
                         <a href="https://wa.me/353000000000" target="_blank" rel="noopener noreferrer">
                           WhatsApp Us
                         </a>
