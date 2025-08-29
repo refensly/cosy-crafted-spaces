@@ -936,13 +936,13 @@ const Index = () => {
                 })} />
                   </div>
                   <div className="space-y-6 pt-4">
-                    <Button type="submit" className="w-full bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out py-6 rounded-xl text-lg tracking-wider">
+                    <Button type="submit" className="w-full bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out py-6 rounded-xl text-2xl tracking-wider">
                       Send message
                     </Button>
                     
                     <div className="text-center pt-2">
                       <p className="text-text-secondary text-base mb-4">Or send directly via WhatsApp instead</p>
-                      <Button className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 rounded-xl text-lg tracking-wider" asChild>
+                      <Button className="bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-16 py-6 rounded-xl text-2xl min-w-[280px] text-center tracking-wider" asChild>
                         <a href="https://wa.me/353000000000" target="_blank" rel="noopener noreferrer">
                           WhatsApp Us
                         </a>
