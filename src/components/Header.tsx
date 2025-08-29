@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -74,12 +75,77 @@ const Header = () => {
         </div>
 
         {/* Mobile menu button */}
-        <button className="md:hidden text-text-primary">
+        <button 
+          className="md:hidden text-text-primary"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
       </nav>
+
+      {/* Mobile menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-bg-main border-t border-border">
+          <div className="px-6 py-4 space-y-4">
+            <button 
+              onClick={() => {
+                scrollToSection('work');
+                setMobileMenuOpen(false);
+              }}
+              className="block w-full text-left text-text-secondary hover:text-text-primary transition-colors py-2"
+            >
+              Work
+            </button>
+            <button 
+              onClick={() => {
+                scrollToSection('process');
+                setMobileMenuOpen(false);
+              }}
+              className="block w-full text-left text-text-secondary hover:text-text-primary transition-colors py-2"
+            >
+              Process
+            </button>
+            <button 
+              onClick={() => {
+                scrollToSection('about');
+                setMobileMenuOpen(false);
+              }}
+              className="block w-full text-left text-text-secondary hover:text-text-primary transition-colors py-2"
+            >
+              About
+            </button>
+            <button 
+              onClick={() => {
+                scrollToSection('reviews');
+                setMobileMenuOpen(false);
+              }}
+              className="block w-full text-left text-text-secondary hover:text-text-primary transition-colors py-2"
+            >
+              Reviews
+            </button>
+            <button 
+              onClick={() => {
+                scrollToSection('contact');
+                setMobileMenuOpen(false);
+              }}
+              className="block w-full text-left text-text-secondary hover:text-text-primary transition-colors py-2"
+            >
+              Contact
+            </button>
+            <Button 
+              className="w-full bg-transparent text-white font-bold uppercase border border-neutral-light hover:bg-white/10 transition-all duration-300 mt-4"
+              onClick={() => {
+                scrollToSection('contact-form');
+                setMobileMenuOpen(false);
+              }}
+            >
+              Let's build yours
+            </Button>
+          </div>
+        </div>
+      )}
     </header>
   );
 };

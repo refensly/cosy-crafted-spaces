@@ -115,36 +115,29 @@ const Hero = () => {
         )}
         
         {/* CTAs */}
-        <div className={`${isMobile ? 'space-y-4' : 'space-y-4'}`}>
-          <div className={`${isMobile ? 'space-y-4 px-[5%] mt-12' : 'space-y-4'} ${animationsStarted ? 'animate-fade-up animation-delay-1500' : 'opacity-0'}`}>
-            <Button variant="outline" className={`${isMobile ? 'border-accent-primary border-[3px] text-white font-semibold hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 w-[90%] mx-auto block text-lg px-8 py-2.5 min-h-[42px]' : 'btn-primary font-bold bg-transparent text-white uppercase border-2 border-white hover:bg-white/10 transition-all duration-300 ease-in-out shadow-xl hover-scale w-full sm:w-auto text-lg sm:text-xl md:text-2xl px-6 sm:px-12 md:px-18 py-6 sm:py-10 md:py-14'}`} style={isMobile ? {} : {boxShadow: '0 0 30px hsl(39 54% 45% / 0.6)'}} onClick={scrollToContact}>
+        <div className={`${isMobile ? 'space-y-4' : 'space-y-6'}`}>
+          {/* Main CTA */}
+          <div className={`${isMobile ? 'px-[5%] mt-12' : 'flex justify-center'} ${animationsStarted ? 'animate-fade-up animation-delay-1500' : 'opacity-0'}`}>
+            <Button variant="outline" className={`${isMobile ? 'border-accent-primary border-[3px] text-white font-semibold hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 w-[90%] mx-auto flex items-center justify-center text-lg px-8 py-2.5 min-h-[42px]' : 'btn-primary font-bold bg-transparent text-white uppercase border-2 border-white hover:bg-white/10 transition-all duration-300 ease-in-out shadow-xl hover-scale w-auto text-lg sm:text-xl md:text-2xl px-6 sm:px-12 md:px-18 py-6 sm:py-10 md:py-14'}`} style={isMobile ? {} : {boxShadow: '0 0 30px hsl(39 54% 45% / 0.6)'}} onClick={scrollToContact}>
               <span className="block sm:hidden">FREE CONSULTATION</span>
               <span className="hidden sm:block">GET FREE CONSULTATION NOW</span>
             </Button>
-            
-            <Button variant="outline" className={`border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 ${isMobile ? 'w-[90%] mx-auto block text-sm px-6 py-2 min-h-[36px]' : 'w-full sm:w-auto px-6 sm:px-10 md:px-14 py-4 sm:py-6 md:py-7 text-lg sm:text-xl'}`} asChild>
+          </div>
+          
+          {/* Secondary CTAs */}
+          <div className={`${isMobile ? 'space-y-4 px-[5%]' : 'flex justify-center gap-6'} ${animationsStarted ? 'animate-fade-up animation-delay-1700' : 'opacity-0'}`}>
+            <Button variant="outline" className={`border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 ${isMobile ? 'w-[90%] mx-auto block text-sm px-6 py-2 min-h-[36px]' : 'w-auto px-6 sm:px-10 md:px-14 py-4 sm:py-6 md:py-7 text-lg sm:text-xl'}`} asChild>
               <a href="https://wa.me/353000000000" target="_blank" rel="noopener noreferrer">
                 <span className="block sm:hidden">WHATSAPP US</span>
                 <span className="hidden sm:block">TALK TO US ON WHATSAPP</span>
               </a>
             </Button>
 
-            {/* Get a Quote - Mobile visible, Desktop separate section */}
-            {isMobile && (
-              <Button variant="outline" className={`border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 w-[90%] mx-auto block text-sm px-6 py-2 min-h-[36px]`} onClick={scrollToContact}>
-                GET A QUOTE
-              </Button>
-            )}
+            <Button variant="outline" className={`border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 ${isMobile ? 'w-[90%] mx-auto block text-sm px-6 py-2 min-h-[36px]' : 'w-auto px-6 sm:px-10 md:px-14 py-4 sm:py-6 md:py-7 text-lg sm:text-xl'}`} onClick={scrollToContact}>
+              <span className="block sm:hidden">GET A QUOTE</span>
+              <span className="hidden sm:block">GET A QUOTE</span>
+            </Button>
           </div>
-          
-          {/* Desktop Secondary CTA */}
-          {!isMobile && (
-            <div className={`flex justify-center mt-6 ${animationsStarted ? 'animate-fade-up animation-delay-1700' : 'opacity-0'}`}>
-              <Button variant="outline" className={`border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 px-6 sm:px-10 md:px-14 py-4 sm:py-6 md:py-7 text-lg sm:text-xl`} onClick={scrollToContact}>
-                GET A QUOTE
-              </Button>
-            </div>
-          )}
         </div>
       </div>
     </div>
