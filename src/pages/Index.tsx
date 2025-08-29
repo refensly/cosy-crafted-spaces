@@ -320,7 +320,7 @@ const Index = () => {
                   <div className="relative mb-4">
                     <div className="w-full h-64 rounded-lg overflow-hidden shadow-lg">
                       <ScrollReveal delay={index * 100 + 50}>
-                        <img src={example.image} alt="Custom craftsmanship and interior design" className="w-full h-full object-cover transform scale-110" />
+                        <img src={example.image} alt="Custom craftsmanship and interior design" className="w-full h-full object-cover" />
                       </ScrollReveal>
                     </div>
                   </div>
