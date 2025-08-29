@@ -768,7 +768,7 @@ const Index = () => {
           <ScrollReveal delay={400}>
             <div className="text-center">
                 <Button onClick={() => scrollToContact()} className="bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
-                  Let's build yours →
+                  Let's build yours
                 </Button>
             </div>
           </ScrollReveal>
@@ -806,7 +806,7 @@ const Index = () => {
           <div className="text-center mt-16">
             <ScrollReveal delay={300}>
               <Button onClick={scrollToContact} className="bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
-                Let's build yours →
+                Let's build yours
               </Button>
             </ScrollReveal>
           </div>
