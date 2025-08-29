@@ -12,29 +12,12 @@ const Hero = () => {
   const { isMobile, isDesktop, isMobileOrTablet } = useBreakpoints();
 
   useEffect(() => {
-    // Preload optimized hero images based on viewport
-    if (isMobile) {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.as = 'image';
-      link.href = '/src/assets/hero-mobile.webp';
-      link.media = '(max-width: 767px)';
-      document.head.appendChild(link);
-    } else if (!isDesktop) {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.as = 'image';
-      link.href = '/src/assets/hero-tablet.webp';
-      link.media = '(min-width: 768px) and (max-width: 1024px)';
-      document.head.appendChild(link);
-    } else {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.as = 'image';
-      link.href = '/lovable-uploads/7928fc98-36e8-4b94-bd48-06681d62fc6f.png';
-      link.media = '(min-width: 1025px)';
-      document.head.appendChild(link);
-    }
+    // Preload the hero background image for all devices
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = '/lovable-uploads/7928fc98-36e8-4b94-bd48-06681d62fc6f.png';
+    document.head.appendChild(link);
 
     // Trigger the opening animation after component mounts (desktop only)
     const timer = setTimeout(() => {
