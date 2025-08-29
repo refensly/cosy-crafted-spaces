@@ -275,19 +275,19 @@ const Index = () => {
               <h3 className="font-heading font-bold text-text-primary mb-4">
                 Producing
               </h3>
-              <p className="text-lg text-text-secondary max-w-4xl mx-auto">
+              <p className="text-lg text-text-secondary max-w-4xl mx-auto mb-6 lg:mb-8">
                 Each piece goes through careful planning, selection of premium materials, 
                 and meticulous handcrafting to ensure it meets our quality standards.
               </p>
             </div>
           </ScrollReveal>
           
-          {/* CTA Button - Mobile Only */}
-          <div className="md:hidden mt-12 text-center">
+          {/* CTA Button - Responsive */}
+          <div className="mt-12 lg:mt-16 text-center mb-8 lg:mb-12">
             <ScrollReveal delay={200}>
               <Button 
                 onClick={scrollToContact}
-                className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 rounded-lg text-lg"
+                className="bg-[#0F1111] text-white font-bold uppercase border-2 border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-12 py-4 lg:px-16 lg:py-6 rounded-lg text-lg lg:text-xl lg:w-64"
               >
                 Get Free Consultation
               </Button>
