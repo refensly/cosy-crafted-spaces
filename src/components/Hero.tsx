@@ -86,7 +86,7 @@ const Hero = () => {
     )}
     
     {/* Center gradient overlay for text readability */}
-    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-black/30 to-transparent z-20" />
+    <div className={`absolute inset-0 z-20 ${isMobile ? 'bg-gradient-to-r from-transparent via-black/50 to-transparent' : 'bg-gradient-to-r from-transparent via-black/30 to-transparent'}`} />
     
     {/* Brand Name - Desktop Only */}
     {!isMobile && (
@@ -115,9 +115,9 @@ const Hero = () => {
         )}
         
         {/* CTAs */}
-        <div className="space-y-4">
-          <div className={`${isMobile ? 'space-y-4 px-[5%]' : 'space-y-4'} ${animationsStarted ? 'animate-fade-up animation-delay-1500' : 'opacity-0'}`}>
-            <Button className={`btn-primary font-bold bg-transparent text-white uppercase border-2 border-white hover:bg-white/10 transition-all duration-300 ease-in-out shadow-xl hover-scale ${isMobile ? 'w-[90%] mx-auto block text-lg px-8 py-2.5 min-h-[42px]' : 'w-full sm:w-auto text-lg sm:text-xl md:text-2xl px-6 sm:px-12 md:px-18 py-6 sm:py-10 md:py-14'}`} style={{boxShadow: '0 0 30px hsl(39 54% 45% / 0.6)'}} onClick={scrollToContact}>
+        <div className={`${isMobile ? 'space-y-4' : 'space-y-4'}`}>
+          <div className={`${isMobile ? 'space-y-4 px-[5%] mt-12' : 'space-y-4'} ${animationsStarted ? 'animate-fade-up animation-delay-1500' : 'opacity-0'}`}>
+            <Button variant="outline" className={`${isMobile ? 'border-accent-primary border-[3px] text-white font-semibold hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 w-[90%] mx-auto block text-lg px-8 py-2.5 min-h-[42px]' : 'btn-primary font-bold bg-transparent text-white uppercase border-2 border-white hover:bg-white/10 transition-all duration-300 ease-in-out shadow-xl hover-scale w-full sm:w-auto text-lg sm:text-xl md:text-2xl px-6 sm:px-12 md:px-18 py-6 sm:py-10 md:py-14'}`} style={isMobile ? {} : {boxShadow: '0 0 30px hsl(39 54% 45% / 0.6)'}} onClick={scrollToContact}>
               <span className="block sm:hidden">FREE CONSULTATION</span>
               <span className="hidden sm:block">GET FREE CONSULTATION NOW</span>
             </Button>
