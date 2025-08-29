@@ -126,16 +126,16 @@ const Hero = () => {
           
           {/* Secondary CTAs */}
           <div className={`${isMobile ? 'space-y-4 px-[5%]' : 'flex justify-center gap-6'} ${animationsStarted ? 'animate-fade-up animation-delay-1700' : 'opacity-0'}`}>
+            <Button variant="outline" className={`border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 ${isMobile ? 'w-[90%] mx-auto block text-sm px-6 py-2 min-h-[36px]' : 'w-auto px-6 sm:px-10 md:px-14 py-4 sm:py-6 md:py-7 text-lg sm:text-xl'}`} onClick={scrollToContact}>
+              <span className="block sm:hidden">GET A QUOTE</span>
+              <span className="hidden sm:block">GET A QUOTE</span>
+            </Button>
+
             <Button variant="outline" className={`border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 ${isMobile ? 'w-[90%] mx-auto block text-sm px-6 py-2 min-h-[36px]' : 'w-auto px-6 sm:px-10 md:px-14 py-4 sm:py-6 md:py-7 text-lg sm:text-xl'}`} asChild>
               <a href="https://wa.me/353000000000" target="_blank" rel="noopener noreferrer">
                 <span className="block sm:hidden">WHATSAPP US</span>
                 <span className="hidden sm:block">TALK TO US ON WHATSAPP</span>
               </a>
-            </Button>
-
-            <Button variant="outline" className={`border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 ${isMobile ? 'w-[90%] mx-auto block text-sm px-6 py-2 min-h-[36px]' : 'w-auto px-6 sm:px-10 md:px-14 py-4 sm:py-6 md:py-7 text-lg sm:text-xl'}`} onClick={scrollToContact}>
-              <span className="block sm:hidden">GET A QUOTE</span>
-              <span className="hidden sm:block">GET A QUOTE</span>
             </Button>
           </div>
         </div>
