@@ -28,6 +28,7 @@ const Index = () => {
     message: ''
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
   const [selectedProject, setSelectedProject] = useState<any>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -190,15 +191,43 @@ const Index = () => {
   }, [selectedProject]);
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (isSubmitting) return;
+    
+    setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      setFormSubmitted(true);
-      toast({
-        title: "Thanks for reaching out!",
-        description: "We'll get back to you within 24 hours."
+    try {
+      const response = await fetch('https://formspree.io/f/myzdervr', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.contact,
+          message: formData.message,
+        }),
       });
-    }, 500);
+
+      if (response.ok) {
+        setFormSubmitted(true);
+        setFormData({ name: '', contact: '', message: '' }); // Clear form
+        toast({
+          title: "Thanks for reaching out!",
+          description: "We'll get back to you within 24 hours."
+        });
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or contact us directly.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   const capabilities = [{
     title: "Hospitality Spaces",
@@ -976,8 +1005,12 @@ const Index = () => {
                 })} />
                   </div>
                   <div className="space-y-6 pt-4">
-                    <Button type="submit" className="w-full bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out py-4 md:py-6 rounded-xl text-lg md:text-2xl tracking-wider">
-                      Send message
+                    <Button 
+                      type="submit" 
+                      disabled={isSubmitting}
+                      className="w-full bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out py-4 md:py-6 rounded-xl text-lg md:text-2xl tracking-wider disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-[#0F1111] disabled:hover:scale-100"
+                    >
+                      {isSubmitting ? "Sending..." : "Send message"}
                     </Button>
                     
                     <div className="text-center pt-2">
