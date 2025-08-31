@@ -305,7 +305,7 @@ const Index = () => {
                   If you want something nobody else has, we design and build it for you. 
                   Premium materials, made locally.
                 </p>
-                <div className="max-sm:space-y-3 space-y-4 max-sm:mb-6 mb-8">
+                <div className="max-sm:space-y-3 space-y-4">
                   {["One-of-a-kind design (never repeated)", "Premium hardwoods & brass", "Built in Ireland, built to last"].map((item, index) => 
                     <div key={index} className="relative group">
                       <div className="bg-gradient-to-r from-bg-section-alt/40 via-bg-section-alt/60 to-bg-section-alt/40 backdrop-blur-sm border border-accent-primary/30 rounded-xl max-sm:p-4 p-5 shadow-lg shadow-accent-primary/10 hover:shadow-accent-primary/20 transition-all duration-300 hover:border-accent-primary/50">
