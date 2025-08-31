@@ -26,7 +26,7 @@ const buttonVariants = cva(
         icon: "h-10 w-10",
         "mobile-compact": "max-sm:text-[15px] max-sm:font-semibold max-sm:px-5 max-sm:py-3 max-sm:rounded-xl max-sm:min-h-[44px] sm:px-6 sm:py-3 sm:text-base md:px-8 md:py-4 md:text-lg",
         "mobile-secondary": "max-sm:text-[14px] max-sm:font-medium max-sm:px-5 max-sm:py-3 max-sm:rounded-xl max-sm:min-h-[44px] sm:px-6 sm:py-3 sm:text-base md:px-8 md:py-4 md:text-lg md:font-semibold",
-        "project-card": "text-sm font-medium px-4 py-2 rounded-lg sm:px-6 sm:py-3 sm:text-base md:px-8 md:py-4 md:text-lg md:font-semibold",
+        "project-card": "text-xs font-medium px-3 py-2 rounded-md sm:px-4 sm:py-2 sm:text-sm md:px-5 md:py-2.5 md:text-sm md:font-semibold",
       },
     },
     defaultVariants: {
