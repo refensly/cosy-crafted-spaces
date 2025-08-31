@@ -4,21 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Global Overflow Prevention & Box Model Reset */
-html, body {
-  overflow-x: hidden;
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-/* Responsive Media Constraints */
-img, video, iframe, embed, object {
-  max-width: 100%;
-  height: auto;
-}
-
 /* Tiny Outdoor Spaces - Premium Design System */
 
 @layer base {
