@@ -546,7 +546,7 @@ const Index = () => {
 
             {/* Comparison Table */}
             <ScrollReveal delay={200}>
-              <div className="bg-bg-section-alt-2 rounded-2xl border border-accent-primary/20 shadow-lg shadow-accent-primary/10 mb-12 overflow-hidden">
+              <div className="bg-gradient-to-br from-bg-section-alt-2 via-bg-wood-dark to-bg-main rounded-2xl border border-accent-primary/20 shadow-lg shadow-accent-primary/10 mb-12 overflow-hidden">
                 
                 {/* Mobile-Optimized Table */}
                 <div className="md:hidden">
@@ -632,7 +632,7 @@ const Index = () => {
 
             {/* Benefits Icons Row */}
             <ScrollReveal delay={300}>
-              <div className="bg-bg-section-alt-2 rounded-xl max-sm:p-3 p-5 border border-accent-primary/20 shadow-lg shadow-accent-primary/10 max-sm:mb-4 mb-6">
+              <div className="bg-gradient-to-br from-bg-section-alt-2 via-bg-wood-dark to-bg-main rounded-xl max-sm:p-3 p-5 border border-accent-primary/20 shadow-lg shadow-accent-primary/10 max-sm:mb-4 mb-6">
                 <div className="grid grid-cols-2 md:grid-cols-4 max-sm:gap-3 gap-4">
                   {[{
                   icon: "🔨",
@@ -718,7 +718,7 @@ const Index = () => {
       </section>
 
       {/* Reviews Section */}
-      <section id="reviews" className="max-sm:py-6 py-16 lg:py-20 bg-bg-section-alt-2">
+      <section id="reviews" className="max-sm:py-6 py-16 lg:py-20 bg-gradient-to-br from-bg-section-alt-2 via-bg-wood-dark to-bg-main">
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-6 mb-10 text-4xl md:text-5xl">
@@ -898,7 +898,7 @@ const Index = () => {
           </ScrollReveal>
           <div className="grid md:grid-cols-4 max-sm:gap-y-4 gap-6">
             {processSteps.map((step, index) => <ScrollReveal key={index} delay={index * 150}>
-                <div className="text-center bg-bg-section-alt-2/50 rounded-xl max-sm:p-4 p-5 border border-accent-primary/20 hover:border-accent-primary/40 transition-all duration-300">
+                <div className="text-center bg-gradient-to-br from-bg-section-alt-2 via-bg-wood-dark to-bg-main/50 rounded-xl max-sm:p-4 p-5 border border-accent-primary/20 hover:border-accent-primary/40 transition-all duration-300">
                   <div className="max-sm:w-12 max-sm:h-12 w-16 h-16 bg-gradient-to-br from-accent-primary to-accent-hover rounded-full flex items-center justify-center mx-auto max-sm:mb-3 mb-4 shadow-lg shadow-accent-primary/30">
                     <span className="max-sm:text-xl text-2xl font-heading font-bold text-bg-main">
                       {step.number}
@@ -939,7 +939,7 @@ const Index = () => {
       </section>
 
       {/* Section 9: Contact Form */}
-      <section id="contact-form" className="max-sm:py-6 py-16 lg:py-20 bg-bg-section-alt-2">
+      <section id="contact-form" className="max-sm:py-6 py-16 lg:py-20 bg-gradient-to-br from-bg-section-alt-2 via-bg-wood-dark to-bg-main">
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <div className="max-w-2xl mx-auto text-center">
