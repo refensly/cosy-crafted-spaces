@@ -180,27 +180,27 @@ const Index = () => {
   }, [selectedProject]);
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
     if (isSubmitting) return;
-    
     setIsSubmitting(true);
-
     try {
       const response = await fetch('https://formspree.io/f/myzdervr', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({
           name: formData.name,
           email: formData.contact,
-          message: formData.message,
-        }),
+          message: formData.message
+        })
       });
-
       if (response.ok) {
         setFormSubmitted(true);
-        setFormData({ name: '', contact: '', message: '' }); // Clear form
+        setFormData({
+          name: '',
+          contact: '',
+          message: ''
+        }); // Clear form
         toast({
           title: "Thanks for reaching out!",
           description: "We'll get back to you within 24 hours."
@@ -303,12 +303,7 @@ const Index = () => {
               <div className="relative">
                 <div className="w-full h-96 rounded-xl overflow-hidden">
                   <ScrollReveal delay={250}>
-                     <img 
-                       src="/images/custom-bar-interior.png" 
-                       alt="Custom bar interior with warm lighting and wood finishes" 
-                       className="w-full h-full object-cover transform scale-125"
-                       loading="lazy"
-                     />
+                     <img src="/images/custom-bar-interior.png" alt="Custom bar interior with warm lighting and wood finishes" className="w-full h-full object-cover transform scale-125" loading="lazy" />
                   </ScrollReveal>
                 </div>
               </div>
@@ -343,12 +338,7 @@ const Index = () => {
                   <div className="relative mb-4">
                     <div className="w-full h-64 rounded-lg overflow-hidden shadow-lg">
                       <ScrollReveal delay={index * 100 + 50}>
-                        <img 
-                          src={example.image} 
-                          alt="Custom craftsmanship and interior design" 
-                          className="w-full h-full object-cover object-center"
-                          loading="lazy"
-                        />
+                        <img src={example.image} alt="Custom craftsmanship and interior design" className="w-full h-full object-cover object-center" loading="lazy" />
                       </ScrollReveal>
                     </div>
                   </div>
@@ -440,12 +430,7 @@ const Index = () => {
                       }}>
                             <div className="relative h-48 bg-gradient-to-br from-bg-section-alt-2 to-bg-section-alt overflow-hidden">
                               <ScrollReveal delay={projectIndex * 50}>
-                                <img 
-                                  src={project.images[0]} 
-                                  alt={`${project.title} preview`} 
-                                  className="w-full h-full object-cover transform scale-110"
-                                  loading="lazy"
-                                />
+                                <img src={project.images[0]} alt={`${project.title} preview`} className="w-full h-full object-cover transform scale-110" loading="lazy" />
                               </ScrollReveal>
                               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                               <div className="absolute bottom-4 left-4 right-4">
@@ -677,12 +662,7 @@ const Index = () => {
                 <div className="premium-card group cursor-pointer" onClick={() => handleProjectClick(project)}>
                   <div className="relative overflow-hidden rounded-lg">
                     <ScrollReveal delay={index * 100}>
-                      <img 
-                        src={project.image} 
-                        alt={project.title} 
-                        className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-                        loading="lazy"
-                      />
+                      <img src={project.image} alt={project.title} className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
                     </ScrollReveal>
                     <div className="absolute inset-0 bg-gradient-to-t from-bg-main/90 to-transparent opacity-100 transition-opacity duration-300 flex items-end">
                       <div className="p-6">
@@ -726,12 +706,7 @@ const Index = () => {
               <div className="grid md:grid-cols-5 gap-8 items-center">
                 <div className="md:col-span-2 relative">
                   <ScrollReveal delay={100}>
-                    <img 
-                      src={imageConfig.testimonial} 
-                      alt="The Summit Inn custom bar" 
-                      className="w-full h-64 md:h-80 object-cover rounded-xl"
-                      loading="lazy"
-                    />
+                    <img src={imageConfig.testimonial} alt="The Summit Inn custom bar" className="w-full h-64 md:h-80 object-cover rounded-xl" loading="lazy" />
                   </ScrollReveal>
                 </div>
                 <div className="md:col-span-3">
@@ -838,12 +813,7 @@ const Index = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60 rounded-xl"></div>
                 <div className="absolute inset-0 border border-accent-primary/30 rounded-xl"></div>
                 <ScrollReveal delay={250}>
-                  <img 
-                    src={imageConfig.maker} 
-                    alt="Craftsman working in workshop" 
-                    className="w-full h-96 object-cover rounded-xl"
-                    loading="lazy"
-                  />
+                  <img src={imageConfig.maker} alt="Craftsman working in workshop" className="w-full h-96 object-cover rounded-xl" loading="lazy" />
                 </ScrollReveal>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl"></div>
               </div>
@@ -892,12 +862,7 @@ const Index = () => {
       {/* Section 7: Process */}
       <section id="process" className="section-padding bg-bg-section-alt relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <img 
-            src={imageConfig.maker} 
-            alt="" 
-            className="w-full h-full object-cover"
-            loading="lazy"
-          />
+          <img src={imageConfig.maker} alt="" className="w-full h-full object-cover" loading="lazy" />
         </div>
         <div className="container mx-auto px-6 relative">
           <ScrollReveal>
@@ -934,24 +899,15 @@ const Index = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-transparent to-black/30 rounded-xl"></div>
                 <div className="absolute inset-0 border-2 border-accent-primary/40 rounded-xl transform rotate-1 shadow-lg shadow-accent-primary/20"></div>
                 <ScrollReveal delay={100}>
-                  <img 
-                    src={imageConfig.maker} 
-                    alt="Craftsman in workshop" 
-                    className="relative w-full h-96 object-cover rounded-xl"
-                    loading="lazy"
-                  />
+                  <img src={imageConfig.maker} alt="Craftsman in workshop" className="relative w-full h-96 object-cover rounded-xl" loading="lazy" />
                 </ScrollReveal>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent rounded-xl"></div>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <div>
-                <h2 className="font-heading font-bold text-text-primary mb-6">
-                  Who I am
-                </h2>
-                <p className="text-xl text-text-secondary mb-8 leading-relaxed">
-                  Every project is built by me, one at a time. I work with walnut, oak and brass to create unique pieces that never repeat. Quality and detail are my signature.
-                </p>
+                <h2 className="font-heading font-bold text-text-primary mb-6">The Signature</h2>
+                <p className="text-xl text-text-secondary mb-8 leading-relaxed">Crafted from walnut, oak, and brass, each piece is unique and unrepeatable. Defined by precision and distinguished by detail, this work carries the signature of timeless craftsmanship, embodied in the hands of its maker</p>
               </div>
             </ScrollReveal>
           </div>
@@ -963,9 +919,7 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <div className="max-w-2xl mx-auto text-center">
-              <h2 className="font-heading font-bold text-text-primary mb-6">
-                Ready to start?
-              </h2>
+              <h2 className="font-heading font-bold text-text-primary mb-6">Ready To Start?</h2>
               
               {formSubmitted ? <div className="bg-neutral-light/10 border border-neutral-light/20 rounded-xl p-12 text-center">
                   <h3 className="text-2xl font-semibold text-text-primary mb-4">
@@ -974,59 +928,33 @@ const Index = () => {
                   <p className="text-text-secondary text-lg">
                     We'll get back to you within 24 hours.
                   </p>
-                </div> : <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="space-y-1">
-                    <label className="block text-text-secondary text-sm font-medium">Your Name</label>
-                    <Input 
-                      type="text" 
-                      placeholder="" 
-                      className="w-full bg-transparent border-0 border-b border-gray-300 rounded-none px-0 py-3 text-lg focus:border-primary focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-gray-400 text-white caret-white" 
-                      value={formData.name} 
-                      onChange={e => setFormData({
-                        ...formData,
-                        name: e.target.value
-                      })} 
-                      required 
-                    />
+                </div> : <form onSubmit={handleSubmit} className="space-y-8">
+                  <div>
+                    <Input type="text" placeholder="Your name" className="form-field h-16 text-lg px-6 py-4 rounded-xl border-2 border-input/50 focus:border-accent-primary/60 bg-bg-main/50" value={formData.name} onChange={e => setFormData({
+                  ...formData,
+                  name: e.target.value
+                })} required />
                   </div>
-                  <div className="space-y-1">
-                    <label className="block text-text-secondary text-sm font-medium">Email</label>
-                    <Input 
-                      type="text" 
-                      placeholder="" 
-                      className="w-full bg-transparent border-0 border-b border-gray-300 rounded-none px-0 py-3 text-lg focus:border-primary focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-gray-400 text-white caret-white" 
-                      value={formData.contact} 
-                      onChange={e => setFormData({
-                        ...formData,
-                        contact: e.target.value
-                      })} 
-                      required 
-                    />
+                  <div>
+                    <Input type="text" placeholder="Email or phone" className="form-field h-16 text-lg px-6 py-4 rounded-xl border-2 border-input/50 focus:border-accent-primary/60 bg-bg-main/50" value={formData.contact} onChange={e => setFormData({
+                  ...formData,
+                  contact: e.target.value
+                })} required />
                   </div>
-                  <div className="space-y-1">
-                    <label className="block text-text-secondary text-sm font-medium">Tell us about your project</label>
-                    <Input 
-                      placeholder="" 
-                      className="w-full bg-transparent border-0 border-b border-gray-300 rounded-none px-0 py-3 text-lg focus:border-primary focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-gray-400 text-white caret-white" 
-                      value={formData.message} 
-                      onChange={e => setFormData({
-                        ...formData,
-                        message: e.target.value
-                      })} 
-                    />
+                  <div>
+                    <Textarea placeholder="Tell us about your project" className="form-field min-h-[160px] text-lg px-6 py-4 rounded-xl border-2 border-input/50 focus:border-accent-primary/60 bg-bg-main/50 resize-none" value={formData.message} onChange={e => setFormData({
+                  ...formData,
+                  message: e.target.value
+                })} />
                   </div>
-                  <div className="space-y-4 pt-4">
-                    <Button 
-                      type="submit" 
-                      disabled={isSubmitting}
-                      className="w-full bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out py-4 rounded-lg text-lg disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      {isSubmitting ? "Sending..." : "Next"}
+                  <div className="space-y-6 pt-4">
+                    <Button type="submit" disabled={isSubmitting} className="w-full bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out py-4 md:py-6 rounded-xl text-lg md:text-2xl tracking-wider disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-[#0F1111] disabled:hover:scale-100">
+                      {isSubmitting ? "Sending..." : "Send message"}
                     </Button>
                     
-                    <div className="text-center pt-4">
-                      <p className="text-text-secondary text-sm mb-4">Or send directly via WhatsApp instead</p>
-                      <Button className="bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-8 py-4 rounded-lg text-lg" asChild>
+                    <div className="text-center pt-2">
+                      <p className="text-text-secondary text-base mb-4">Or send directly via WhatsApp instead</p>
+                      <Button className="bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-8 py-4 md:px-16 md:py-6 rounded-xl text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center tracking-wider" asChild>
                         <a href="https://wa.me/353879380494" target="_blank" rel="noopener noreferrer">
                           WhatsApp Us
                         </a>
@@ -1102,19 +1030,9 @@ const Index = () => {
           <div className="flex flex-col items-center space-y-6">
             {/* Social Media Icon */}
             <div className="flex justify-center">
-              <a 
-                href="#" 
-                className="w-12 h-12 rounded-full border border-gray-600 flex items-center justify-center hover:border-white hover:bg-white/10 transition-all duration-300"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <svg 
-                  width="20" 
-                  height="20" 
-                  fill="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              <a href="#" className="w-12 h-12 rounded-full border border-gray-600 flex items-center justify-center hover:border-white hover:bg-white/10 transition-all duration-300" target="_blank" rel="noopener noreferrer">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                 </svg>
               </a>
             </div>
