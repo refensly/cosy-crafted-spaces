@@ -1008,12 +1008,21 @@ const Index = () => {
                     <div className="relative">
                       <Textarea 
                         placeholder="" 
-                        className="w-full bg-transparent border-0 border-b border-gray-300 rounded-none px-0 py-3 text-lg min-h-[100px] focus:border-primary focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 resize-none placeholder:text-gray-400 text-white caret-white" 
+                        className="w-full bg-transparent border-0 border-b border-gray-300 rounded-none px-0 py-3 text-lg min-h-[3rem] leading-normal focus:border-primary focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 resize-none placeholder:text-gray-400 text-white caret-white" 
                         value={formData.message} 
                         onChange={e => setFormData({
                           ...formData,
                           message: e.target.value
                         })} 
+                        style={{ 
+                          height: 'auto',
+                          minHeight: '3rem'
+                        }}
+                        onInput={(e) => {
+                          const target = e.target as HTMLTextAreaElement;
+                          target.style.height = 'auto';
+                          target.style.height = Math.max(48, target.scrollHeight) + 'px';
+                        }}
                       />
                     </div>
                   </div>
