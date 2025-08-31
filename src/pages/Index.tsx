@@ -332,14 +332,14 @@ const Index = () => {
       </section>
 
       {/* New Section: Handmade Quality Examples */}
-      <section className="pt-24 pb-24 bg-bg-main">
+      <section className="section-padding bg-bg-main">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="font-heading font-bold text-text-primary text-center mb-12">Our Promise</h2>
+            <h2 className="font-heading font-bold text-text-primary text-center max-sm:mb-6 mb-12">Our Promise</h2>
             
           </ScrollReveal>
           
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-3 max-sm:gap-6 gap-8 max-sm:mb-8 mb-12">
             {[{
             title: "Crafted for Real Spaces",
             image: "/images/promise-real-spaces.png",
@@ -394,19 +394,19 @@ const Index = () => {
       </section>
 
       {/* Section 3: Interactive Portfolio */}
-      <section id="work" className="py-20 md:py-24 lg:py-32 relative overflow-hidden bg-deep-green">
+      <section id="work" className="section-padding relative overflow-hidden bg-deep-green">
         
-        <div className="container mx-auto px-8 md:px-12 lg:px-16 relative z-10">
+        <div className="container mx-auto max-sm:px-4 px-8 md:px-12 lg:px-16 relative z-10">
           <ScrollReveal>
-            <div className="text-center mb-20">
-              <h2 className="font-heading font-bold text-text-primary text-center mb-6 text-5xl md:text-6xl">
+            <div className="text-center max-sm:mb-12 mb-20">
+              <h2 className="font-heading font-bold text-text-primary text-center max-sm:mb-4 mb-6 text-5xl md:text-6xl">
                 What We Create
               </h2>
               <div className="w-24 h-0.5 bg-accent-primary mx-auto"></div>
             </div>
           </ScrollReveal>
           
-          <div className="space-y-4">
+          <div className="max-sm:space-y-3 space-y-4">
             {portfolioCategories.map((category, categoryIndex) => <div key={category.id} className="w-full">
                 <ScrollReveal delay={categoryIndex * 100}>
                   <div className={`
@@ -714,18 +714,18 @@ const Index = () => {
       <section id="reviews" className="section-padding bg-bg-section-alt-2">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="font-heading font-bold text-text-primary text-center mb-16 text-4xl">
+            <h2 className="font-heading font-bold text-text-primary text-center max-sm:mb-8 mb-16 text-4xl">
               What our clients say
             </h2>
           </ScrollReveal>
 
           {/* Hero Review */}
           <ScrollReveal>
-            <div className="bg-bg-section-alt rounded-2xl p-8 mb-12 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
-              <div className="grid md:grid-cols-5 gap-8 items-center">
+            <div className="bg-bg-section-alt rounded-2xl max-sm:p-5 p-8 max-sm:mb-8 mb-12 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
+              <div className="grid md:grid-cols-5 max-sm:gap-4 gap-8 items-center">
                 <div className="md:col-span-2 relative">
                   <ScrollReveal delay={100}>
-                    <img src={imageConfig.testimonial} alt="The Summit Inn custom bar" className="w-full h-64 md:h-80 object-cover rounded-xl" loading="lazy" />
+                    <img src={imageConfig.testimonial} alt="The Summit Inn custom bar" className="w-full max-sm:max-h-[360px] h-64 md:h-80 object-cover rounded-xl" loading="lazy" />
                   </ScrollReveal>
                 </div>
                 <div className="md:col-span-3">
@@ -832,7 +832,7 @@ const Index = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60 rounded-xl"></div>
                 <div className="absolute inset-0 border border-accent-primary/30 rounded-xl"></div>
                 <ScrollReveal delay={250}>
-                  <img src={imageConfig.maker} alt="Craftsman working in workshop" className="w-full h-96 object-cover rounded-xl" loading="lazy" />
+                  <img src={imageConfig.maker} alt="Craftsman working in workshop" className="w-full max-sm:max-h-[360px] h-96 object-cover rounded-xl" loading="lazy" />
                 </ScrollReveal>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl"></div>
               </div>
@@ -918,7 +918,7 @@ const Index = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-transparent to-black/30 rounded-xl"></div>
                 <div className="absolute inset-0 border-2 border-accent-primary/40 rounded-xl transform rotate-1 shadow-lg shadow-accent-primary/20"></div>
                 <ScrollReveal delay={100}>
-                  <img src={imageConfig.maker} alt="Craftsman in workshop" className="relative w-full h-96 object-cover rounded-xl" loading="lazy" />
+                  <img src={imageConfig.maker} alt="Craftsman in workshop" className="relative w-full max-sm:max-h-[360px] h-96 object-cover rounded-xl" loading="lazy" />
                 </ScrollReveal>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent rounded-xl"></div>
               </div>
@@ -949,25 +949,25 @@ const Index = () => {
                   </p>
                 </div> : <form onSubmit={handleSubmit} className="space-y-8">
                   <div>
-                    <Input type="text" placeholder="Your name" className="form-field h-16 text-lg px-6 py-4 rounded-xl border-2 border-input/50 focus:border-accent-primary/60 bg-bg-main/50" value={formData.name} onChange={e => setFormData({
+                    <Input type="text" placeholder="Your name" className="form-field max-sm:h-12 h-16 max-sm:text-[15px] text-lg px-6 py-4 rounded-xl border-2 border-input/50 focus:border-accent-primary/60 bg-bg-main/50" value={formData.name} onChange={e => setFormData({
                   ...formData,
                   name: e.target.value
                 })} required />
                   </div>
                   <div>
-                    <Input type="text" placeholder="Email or phone" className="form-field h-16 text-lg px-6 py-4 rounded-xl border-2 border-input/50 focus:border-accent-primary/60 bg-bg-main/50" value={formData.contact} onChange={e => setFormData({
+                    <Input type="text" placeholder="Email or phone" className="form-field max-sm:h-12 h-16 max-sm:text-[15px] text-lg px-6 py-4 rounded-xl border-2 border-input/50 focus:border-accent-primary/60 bg-bg-main/50" value={formData.contact} onChange={e => setFormData({
                   ...formData,
                   contact: e.target.value
                 })} required />
                   </div>
                   <div>
-                    <Textarea placeholder="Tell us about your project" className="form-field min-h-[160px] text-lg px-6 py-4 rounded-xl border-2 border-input/50 focus:border-accent-primary/60 bg-bg-main/50 resize-none" value={formData.message} onChange={e => setFormData({
+                    <Textarea placeholder="Tell us about your project" className="form-field min-h-[160px] max-sm:text-[15px] text-lg px-6 py-4 rounded-xl border-2 border-input/50 focus:border-accent-primary/60 bg-bg-main/50 resize-none" value={formData.message} onChange={e => setFormData({
                   ...formData,
                   message: e.target.value
                 })} />
                   </div>
-                  <div className="space-y-6 pt-4">
-                    <Button type="submit" disabled={isSubmitting} className="w-full bg-[#0F1111] text-white font-normal uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out py-4 md:py-6 rounded-xl text-lg md:text-2xl tracking-wider disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-[#0F1111] disabled:hover:scale-100">
+                  <div className="max-sm:space-y-4 space-y-6 pt-4">
+                    <Button type="submit" disabled={isSubmitting} className="w-full max-w-[320px] mx-auto bg-[#0F1111] text-white font-normal uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out max-sm:py-3 max-sm:text-[15px] py-4 md:py-6 rounded-xl text-lg md:text-2xl tracking-wider disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-[#0F1111] disabled:hover:scale-100">
                       {isSubmitting ? "Sending..." : "Send message"}
                     </Button>
                     

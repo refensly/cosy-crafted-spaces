@@ -104,11 +104,11 @@ const Hero = () => {
     {/* Center Content */}
     <div className={`relative z-30 ${isMobile ? 'min-h-[90vh]' : 'min-h-screen'} flex items-center justify-center px-4 sm:px-6 ${isMobile ? 'py-8' : ''}`}>
       <div className="text-center max-w-none mx-auto px-2 sm:px-4">
-        <h1 className={`font-grifter text-text-primary ${isMobile ? 'mb-4' : 'mb-4 sm:mb-6'} ${isMobile ? 'leading-tight' : 'leading-tight'} ${animationsStarted ? 'animate-fade-up animation-delay-500' : 'opacity-0'}`}>
-          <div className={`${isMobile ? 'text-3xl leading-tight' : 'text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[120px]'} ${animationsStarted ? 'animate-fade-up animation-delay-700' : 'opacity-0'}`}>Unique Handmade</div>
-          <div className={`${isMobile ? 'text-3xl leading-tight px-1' : 'text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[120px] px-2 sm:px-8 md:px-16'} ${animationsStarted ? 'animate-fade-up animation-delay-900' : 'opacity-0'}`}>Furniture from Dublin</div>
+        <h1 className={`font-grifter text-text-primary ${isMobile ? 'mb-4' : 'mb-4 sm:mb-6'} ${animationsStarted ? 'animate-fade-up animation-delay-500' : 'opacity-0'}`}>
+          <div className={`${isMobile ? 'text-[clamp(28px,6vw,36px)] font-extrabold leading-tight' : 'text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[120px]'} ${animationsStarted ? 'animate-fade-up animation-delay-700' : 'opacity-0'}`}>Unique Handmade</div>
+          <div className={`${isMobile ? 'text-[clamp(28px,6vw,36px)] font-extrabold leading-tight px-1' : 'text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[120px] px-2 sm:px-8 md:px-16'} ${animationsStarted ? 'animate-fade-up animation-delay-900' : 'opacity-0'}`}>Furniture from Dublin</div>
         </h1>
-        <div className={`${isMobile ? 'text-sm leading-relaxed px-4' : 'text-lg sm:text-xl md:text-2xl'} text-text-secondary ${isMobile ? 'mb-6' : 'mb-6 sm:mb-8'} max-w-2xl mx-auto leading-relaxed px-2 ${animationsStarted ? 'animate-fade-up animation-delay-1100' : 'opacity-0'}`}>
+        <div className={`${isMobile ? 'text-[15px] leading-relaxed px-4 max-w-[65ch] mx-auto' : 'text-lg sm:text-xl md:text-2xl'} text-text-secondary ${isMobile ? 'mb-6' : 'mb-6 sm:mb-8'} max-w-2xl mx-auto leading-relaxed px-2 ${animationsStarted ? 'animate-fade-up animation-delay-1100' : 'opacity-0'}`}>
           <div className="font-body font-normal text-white">Handcrafted bars, restaurants, outdoor living spaces and furniture.</div>
           <div className="text-white">Designed once, built to last.</div>
         </div>
@@ -124,15 +124,15 @@ const Hero = () => {
         <div className={`${isMobile ? 'space-y-3 px-6' : 'space-y-6'}`}>
           {/* Main CTA */}
           <div className={`${isMobile ? 'mt-8' : 'flex justify-center'} ${animationsStarted ? 'animate-fade-up animation-delay-1500' : 'opacity-0'}`}>
-            <Button variant="outline" className={`${isMobile ? 'border-accent-primary border-2 text-white font-medium hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out w-full mx-auto flex items-center justify-center text-base px-6 py-3 min-h-[48px] rounded-lg' : 'btn-primary font-medium bg-transparent text-white uppercase border-2 border-white hover:bg-white/10 transition-all duration-300 ease-in-out shadow-xl hover-scale w-auto text-lg sm:text-xl md:text-2xl px-6 sm:px-12 md:px-18 py-6 sm:py-10 md:py-14'}`} style={isMobile ? {} : {boxShadow: '0 0 30px hsl(39 54% 45% / 0.6)'}} onClick={scrollToContact}>
+            <Button variant="outline" className={`${isMobile ? 'border-accent-primary border-2 text-white font-semibold hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out w-full max-w-[320px] mx-auto flex items-center justify-center text-[15px] px-5 py-3 rounded-xl min-h-[48px]' : 'btn-primary font-medium bg-transparent text-white uppercase border-2 border-white hover:bg-white/10 transition-all duration-300 ease-in-out shadow-xl hover-scale w-auto text-lg sm:text-xl md:text-2xl px-6 sm:px-12 md:px-18 py-6 sm:py-10 md:py-14'}`} style={isMobile ? {} : {boxShadow: '0 0 30px hsl(39 54% 45% / 0.6)'}} onClick={scrollToContact}>
               <span className="block sm:hidden">FREE CONSULTATION</span>
               <span className="hidden sm:block">GET FREE CONSULTATION NOW</span>
             </Button>
           </div>
           
           {/* Secondary CTAs */}
-          <div className={`${isMobile ? 'space-y-3' : 'flex justify-center gap-6'} ${animationsStarted ? 'animate-fade-up animation-delay-1700' : 'opacity-0'}`}>
-            <Button variant="outline" className={`border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 ${isMobile ? 'w-full mx-auto block text-sm px-6 py-2.5 min-h-[42px] rounded-lg' : 'w-auto px-6 sm:px-10 md:px-14 py-4 sm:py-6 md:py-7 text-lg sm:text-xl'}`} onClick={scrollToContact}>
+          <div className={`${isMobile ? 'flex flex-col gap-3' : 'flex justify-center gap-6'} ${animationsStarted ? 'animate-fade-up animation-delay-1700' : 'opacity-0'}`}>
+            <Button variant="outline" className={`border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 ${isMobile ? 'w-full max-w-[320px] mx-auto text-[14px] font-medium px-5 py-3 rounded-xl min-h-[44px]' : 'w-auto px-6 sm:px-10 md:px-14 py-4 sm:py-6 md:py-7 text-lg sm:text-xl'}`} onClick={scrollToContact}>
               <span className="block sm:hidden">GET A QUOTE</span>
               <span className="hidden sm:block">GET A QUOTE</span>
             </Button>
@@ -141,7 +141,7 @@ const Hero = () => {
               href="https://wa.me/353879380494" 
               target="_blank" 
               rel="noopener noreferrer"
-              className={`inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 ${isMobile ? 'w-full mx-auto block text-sm px-6 py-2.5 min-h-[42px] rounded-lg' : 'w-auto px-6 sm:px-10 md:px-14 py-4 sm:py-6 md:py-7 text-lg sm:text-xl'}`}
+              className={`inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 ${isMobile ? 'w-full max-w-[320px] mx-auto text-[14px] px-5 py-3 rounded-xl min-h-[44px]' : 'w-auto px-6 sm:px-10 md:px-14 py-4 sm:py-6 md:py-7 text-lg sm:text-xl'}`}
             >
               <span className="block sm:hidden">WHATSAPP US</span>
               <span className="hidden sm:block">TALK TO US ON WHATSAPP</span>
