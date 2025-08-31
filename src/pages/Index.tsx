@@ -1005,9 +1005,9 @@ const Index = () => {
                   </div>
                   <div className="space-y-1">
                     <label className="block text-text-secondary text-sm font-medium">Tell us about your project</label>
-                    <Textarea 
+                    <Input 
                       placeholder="" 
-                      className="w-full bg-transparent border-0 border-b border-gray-300 rounded-none px-0 py-3 text-lg focus:border-primary focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 resize-none placeholder:text-gray-400 text-white caret-white" 
+                      className="w-full bg-transparent border-0 border-b border-gray-300 rounded-none px-0 py-3 text-lg focus:border-primary focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-gray-400 text-white caret-white" 
                       value={formData.message} 
                       onChange={e => setFormData({
                         ...formData,
