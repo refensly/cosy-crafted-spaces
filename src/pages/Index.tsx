@@ -718,7 +718,7 @@ const Index = () => {
       </section>
 
       {/* Reviews Section */}
-      <section id="reviews" className="max-sm:py-8 py-16 lg:py-20 bg-bg-section-alt-2">
+      <section id="reviews" className="max-sm:py-6 py-16 lg:py-20 bg-bg-section-alt-2">
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-6 mb-10 text-4xl md:text-5xl">
@@ -728,82 +728,82 @@ const Index = () => {
 
           {/* Hero Review */}
           <ScrollReveal>
-            <div className="bg-bg-section-alt rounded-2xl max-sm:p-5 p-8 max-sm:mb-8 mb-12 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
-              <div className="grid md:grid-cols-5 max-sm:gap-4 gap-8 items-center">
+            <div className="bg-bg-section-alt rounded-2xl max-sm:p-3 p-8 max-sm:mb-6 mb-12 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
+              <div className="grid md:grid-cols-5 max-sm:gap-3 gap-8 items-center">
                 <div className="md:col-span-2 relative">
                   <ScrollReveal delay={100}>
-                    <img src={imageConfig.testimonial} alt="The Summit Inn custom bar" className="w-full max-sm:max-h-48 h-64 md:h-80 object-cover rounded-xl" loading="lazy" />
+                    <img src={imageConfig.testimonial} alt="The Summit Inn custom bar" className="w-full max-sm:max-h-24 h-64 md:h-80 object-cover rounded-xl" loading="lazy" />
                   </ScrollReveal>
                 </div>
                 <div className="md:col-span-3">
                   <div className="flex items-start mb-4">
                     
                     <div className="flex text-accent-primary">
-                      <svg className="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                      <svg className="max-sm:w-4 max-sm:h-4 w-5 h-5 fill-current" viewBox="0 0 20 20">
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
-                      <svg className="w-5 h-5 fill-current ml-1" viewBox="0 0 20 20">
+                      <svg className="max-sm:w-4 max-sm:h-4 w-5 h-5 fill-current ml-1" viewBox="0 0 20 20">
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
-                      <svg className="w-5 h-5 fill-current ml-1" viewBox="0 0 20 20">
+                      <svg className="max-sm:w-4 max-sm:h-4 w-5 h-5 fill-current ml-1" viewBox="0 0 20 20">
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
-                      <svg className="w-5 h-5 fill-current ml-1" viewBox="0 0 20 20">
+                      <svg className="max-sm:w-4 max-sm:h-4 w-5 h-5 fill-current ml-1" viewBox="0 0 20 20">
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
-                      <svg className="w-5 h-5 fill-current ml-1" viewBox="0 0 20 20">
+                      <svg className="max-sm:w-4 max-sm:h-4 w-5 h-5 fill-current ml-1" viewBox="0 0 20 20">
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                     </div>
                   </div>
-                  <blockquote className="max-sm:text-[15px] max-sm:leading-relaxed max-sm:mb-4 text-xl text-text-primary mb-6 leading-relaxed">
+                  <blockquote className="max-sm:text-[13px] max-sm:leading-relaxed max-sm:mb-3 text-xl text-text-primary mb-6 leading-relaxed">
                     Absolutely stunning work. The attention to detail and quality of craftsmanship 
                     exceeded our expectations. This bar is the centerpiece of our venue.
                   </blockquote>
-                  <cite className="text-text-secondary font-bold max-sm:text-[15px] text-lg">— The Summit Inn</cite>
+                  <cite className="text-text-secondary font-bold max-sm:text-[13px] text-lg">— The Summit Inn</cite>
                 </div>
               </div>
             </div>
           </ScrollReveal>
 
           {/* Grid of Reviews */}
-          <div className="grid md:grid-cols-3 max-sm:gap-4 gap-8 mb-12">
+          <div className="grid md:grid-cols-3 max-sm:gap-3 gap-8 mb-12">
             <ScrollReveal delay={100}>
-              <div className="bg-bg-section-alt rounded-xl max-sm:p-5 p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
-                <div className="flex items-center max-sm:mb-3 mb-4">
-                  <svg className="max-sm:w-5 max-sm:h-5 w-6 h-6 text-accent-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <div className="bg-bg-section-alt rounded-xl max-sm:p-3 p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
+                <div className="flex items-center max-sm:mb-2 mb-4">
+                  <svg className="max-sm:w-4 max-sm:h-4 w-6 h-6 text-accent-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" />
                   </svg>
                   
                 </div>
-                <p className="text-text-primary max-sm:text-[15px] max-sm:leading-relaxed max-sm:mb-3 mb-4 leading-relaxed">Perfect craftsmanship. Built exactly to our specifications.</p>
-                <cite className="text-text-secondary font-bold max-sm:text-[14px]">— Abbey Tavern</cite>
+                <p className="text-text-primary max-sm:text-[13px] max-sm:leading-relaxed max-sm:mb-2 mb-4 leading-relaxed">Perfect craftsmanship. Built exactly to our specifications.</p>
+                <cite className="text-text-secondary font-bold max-sm:text-[12px]">— Abbey Tavern</cite>
               </div>
             </ScrollReveal>
             
             <ScrollReveal delay={200}>
-              <div className="bg-bg-section-alt rounded-xl max-sm:p-5 p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
-                <div className="flex items-center max-sm:mb-3 mb-4">
-                  <svg className="max-sm:w-5 max-sm:h-5 w-6 h-6 text-accent-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <div className="bg-bg-section-alt rounded-xl max-sm:p-3 p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
+                <div className="flex items-center max-sm:mb-2 mb-4">
+                  <svg className="max-sm:w-4 max-sm:h-4 w-6 h-6 text-accent-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" />
                   </svg>
                   
                 </div>
-                <p className="text-text-primary max-sm:text-[15px] max-sm:leading-relaxed max-sm:mb-3 mb-4 leading-relaxed">Our customers constantly compliment the bar design.</p>
-                <cite className="text-text-secondary font-bold max-sm:text-[14px]">— Findlaters</cite>
+                <p className="text-text-primary max-sm:text-[13px] max-sm:leading-relaxed max-sm:mb-2 mb-4 leading-relaxed">Our customers constantly compliment the bar design.</p>
+                <cite className="text-text-secondary font-bold max-sm:text-[12px]">— Findlaters</cite>
               </div>
             </ScrollReveal>
             
             <ScrollReveal delay={300}>
-              <div className="bg-bg-section-alt rounded-xl max-sm:p-5 p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
-                <div className="flex items-center max-sm:mb-3 mb-4">
-                  <svg className="max-sm:w-5 max-sm:h-5 w-6 h-6 text-accent-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <div className="bg-bg-section-alt rounded-xl max-sm:p-3 p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
+                <div className="flex items-center max-sm:mb-2 mb-4">
+                  <svg className="max-sm:w-4 max-sm:h-4 w-6 h-6 text-accent-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" />
                   </svg>
                   
                 </div>
-                <p className="text-text-primary max-sm:text-[15px] max-sm:leading-relaxed max-sm:mb-3 mb-4 leading-relaxed">Exceptional attention to detail. Worth every penny.</p>
-                <cite className="text-text-secondary font-bold max-sm:text-[14px]">— Private Client</cite>
+                <p className="text-text-primary max-sm:text-[13px] max-sm:leading-relaxed max-sm:mb-2 mb-4 leading-relaxed">Exceptional attention to detail. Worth every penny.</p>
+                <cite className="text-text-secondary font-bold max-sm:text-[12px]">— Private Client</cite>
               </div>
             </ScrollReveal>
           </div>
