@@ -980,7 +980,7 @@ const Index = () => {
                     <Input 
                       type="text" 
                       placeholder="" 
-                      className="w-full bg-transparent border-0 border-b border-gray-300 rounded-none px-0 py-3 text-lg focus:border-primary focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-gray-400" 
+                      className="w-full bg-transparent border-0 border-b border-gray-300 rounded-none px-0 py-3 text-lg focus:border-primary focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-gray-400 text-white caret-white" 
                       value={formData.name} 
                       onChange={e => setFormData({
                         ...formData,
@@ -994,7 +994,7 @@ const Index = () => {
                     <Input 
                       type="text" 
                       placeholder="" 
-                      className="w-full bg-transparent border-0 border-b border-gray-300 rounded-none px-0 py-3 text-lg focus:border-primary focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-gray-400" 
+                      className="w-full bg-transparent border-0 border-b border-gray-300 rounded-none px-0 py-3 text-lg focus:border-primary focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-gray-400 text-white caret-white" 
                       value={formData.contact} 
                       onChange={e => setFormData({
                         ...formData,
@@ -1005,15 +1005,17 @@ const Index = () => {
                   </div>
                   <div className="space-y-1">
                     <label className="block text-text-secondary text-sm font-medium">Tell us about your project</label>
-                    <Textarea 
-                      placeholder="" 
-                      className="w-full bg-transparent border-0 border-b border-gray-300 rounded-none px-0 py-3 text-lg min-h-[100px] focus:border-primary focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 resize-none placeholder:text-gray-400" 
-                      value={formData.message} 
-                      onChange={e => setFormData({
-                        ...formData,
-                        message: e.target.value
-                      })} 
-                    />
+                    <div className="relative">
+                      <Textarea 
+                        placeholder="" 
+                        className="w-full bg-transparent border-0 border-b border-gray-300 rounded-none px-0 py-3 text-lg min-h-[100px] focus:border-primary focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 resize-none placeholder:text-gray-400 text-white caret-white" 
+                        value={formData.message} 
+                        onChange={e => setFormData({
+                          ...formData,
+                          message: e.target.value
+                        })} 
+                      />
+                    </div>
                   </div>
                   <div className="space-y-4 pt-4">
                     <Button 
