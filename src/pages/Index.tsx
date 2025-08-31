@@ -281,7 +281,7 @@ const Index = () => {
       
       {/* Mobile menu overlay for main content */}
       <div 
-        className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-30 transition-all duration-300 ease-in-out ${
+        className={`fixed inset-0 bg-black/80 backdrop-blur-sm z-30 transition-all duration-300 ease-in-out ${
           mobileMenuOpen 
             ? 'opacity-100 visible' 
             : 'opacity-0 invisible'
@@ -289,7 +289,9 @@ const Index = () => {
         style={{ top: 0 }}
       />
       
-      <Hero />
+      <div className={`transition-opacity duration-300 ${mobileMenuOpen ? 'opacity-20' : 'opacity-100'}`}>
+        <Hero />
+      </div>
 
       {/* Section 2: Pain → Value */}
       <section className="section-padding bg-bg-section-alt-2">
