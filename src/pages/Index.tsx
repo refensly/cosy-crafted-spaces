@@ -974,8 +974,8 @@ const Index = () => {
                   <p className="text-text-secondary text-lg">
                     We'll get back to you within 24 hours.
                   </p>
-                </div> : <form onSubmit={handleSubmit} className="space-y-10">
-                  <div className="space-y-2">
+                </div> : <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="space-y-1">
                     <label className="block text-text-secondary text-sm font-medium">Your Name</label>
                     <Input 
                       type="text" 
@@ -989,7 +989,7 @@ const Index = () => {
                       required 
                     />
                   </div>
-                  <div className="space-y-2">
+                  <div className="space-y-1">
                     <label className="block text-text-secondary text-sm font-medium">Email</label>
                     <Input 
                       type="text" 
@@ -1003,11 +1003,11 @@ const Index = () => {
                       required 
                     />
                   </div>
-                  <div className="space-y-2">
+                  <div className="space-y-1">
                     <label className="block text-text-secondary text-sm font-medium">Tell us about your project</label>
                     <Textarea 
                       placeholder="" 
-                      className="w-full bg-transparent border-0 border-b border-gray-300 rounded-none px-0 py-3 text-lg min-h-[120px] focus:border-primary focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 resize-none placeholder:text-gray-400" 
+                      className="w-full bg-transparent border-0 border-b border-gray-300 rounded-none px-0 py-3 text-lg min-h-[100px] focus:border-primary focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 resize-none placeholder:text-gray-400" 
                       value={formData.message} 
                       onChange={e => setFormData({
                         ...formData,
@@ -1015,7 +1015,7 @@ const Index = () => {
                       })} 
                     />
                   </div>
-                  <div className="space-y-6 pt-6">
+                  <div className="space-y-4 pt-4">
                     <Button 
                       type="submit" 
                       disabled={isSubmitting}
