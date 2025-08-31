@@ -1,0 +1,40 @@
+Images Directory Contents - All images are organized here:
+
+✅ Hero Images:
+- hero-background.png
+- hero-door-left.png  
+- hero-door-right.png
+
+✅ Capability Images:
+- capability-bars.jpg
+- capability-home-bars.jpg
+- capability-outdoor.jpg
+- capability-furniture.jpg
+
+✅ Project Images:
+- project-summit-inn.jpg
+- project-abbey.jpg
+- project-findlaters.jpg
+- project-findlaters-2.png
+- project-mamo-1.png
+- project-mamo-2.png
+- project-mamo-3.png
+- project-mamo-4.png
+- project-riverside-bar-1.png
+- project-riverside-bar-2.png
+- project-riverside-bar-3.png
+
+✅ Team & Social Proof:
+- maker-profile.jpg
+- client-testimonial.jpg
+
+✅ Feature/Promise Icons:
+- promise-precision.png
+- promise-real-spaces.png
+- promise-unique-results.png
+
+✅ Additional:
+- custom-bar-interior.png
+- pain-value.jpg
+
+All images are working! Try refreshing your file explorer or expanding the public folder.
