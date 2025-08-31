@@ -6,18 +6,7 @@ import { useToast } from '@/hooks/use-toast';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import ScrollReveal from '@/components/ScrollReveal';
-
-// Import images
-import painValueImg from '@/assets/images/pain-value.jpg';
-import capBarsImg from '@/assets/images/capability-bars.jpg';
-import capHomeBarsImg from '@/assets/images/capability-home-bars.jpg';
-import capOutdoorImg from '@/assets/images/capability-outdoor.jpg';
-import capFurnitureImg from '@/assets/images/capability-furniture.jpg';
-import projSummitImg from '@/assets/images/project-summit-inn.jpg';
-import projAbbeyImg from '@/assets/images/project-abbey.jpg';
-import projFindlatersImg from '@/assets/images/project-findlaters.jpg';
-import makerImg from '@/assets/images/maker-profile.jpg';
-import socialProofImg from '@/assets/images/client-testimonial.jpg';
+import { imageConfig } from '@/lib/imageConfig';
 const Index = () => {
   const {
     toast
@@ -231,15 +220,15 @@ const Index = () => {
   };
   const capabilities = [{
     title: "Hospitality Spaces",
-    image: capBarsImg,
+    image: imageConfig.capabilities.bars,
     description: "Custom outdoor bar installations"
   }, {
     title: "Outdoor Spaces",
-    image: capHomeBarsImg,
+    image: imageConfig.capabilities.homeBars,
     description: "Sophisticated home entertainment spaces"
   }, {
     title: "Custom Pieces",
-    image: capOutdoorImg,
+    image: imageConfig.capabilities.outdoor,
     description: "Complete outdoor living solutions"
   }];
   const projects = [{
@@ -247,21 +236,21 @@ const Index = () => {
     title: "Decking",
     subtitle: "Custom Bar Design and Production",
     caption: "Premium walnut bar with brass fixtures and custom lighting design",
-    image: projSummitImg,
+    image: imageConfig.projects.summit,
     images: ['summit1.jpg', 'summit2.jpg', 'summit3.jpg', 'summit4.jpg']
   }, {
     id: 'abbey-tavern-recent',
     title: "The Green Phone Box",
     subtitle: "Walnut Backlit Bar",
     caption: "Sophisticated backlit bar featuring rich walnut wood and integrated LED lighting",
-    image: projAbbeyImg,
+    image: imageConfig.projects.abbey,
     images: ['abbey1.jpg', 'abbey2.jpg', 'abbey3.jpg']
   }, {
     id: 'findlaters-recent',
     title: "Home Container",
     subtitle: "Interior Shelving in Solid Oak",
     caption: "Custom solid oak shelving system with precision joinery and natural finish",
-    image: projFindlatersImg,
+    image: imageConfig.projects.findlaters,
     images: ['/images/project-mamo-1.png', '/images/project-findlaters-2.png', 'findlaters3.jpg', 'findlaters4.jpg']
   }];
   const processSteps = [{
@@ -738,7 +727,7 @@ const Index = () => {
                 <div className="md:col-span-2 relative">
                   <ScrollReveal delay={100}>
                     <img 
-                      src={socialProofImg} 
+                      src={imageConfig.testimonial} 
                       alt="The Summit Inn custom bar" 
                       className="w-full h-64 md:h-80 object-cover rounded-xl"
                       loading="lazy"
@@ -850,7 +839,7 @@ const Index = () => {
                 <div className="absolute inset-0 border border-accent-primary/30 rounded-xl"></div>
                 <ScrollReveal delay={250}>
                   <img 
-                    src={makerImg} 
+                    src={imageConfig.maker} 
                     alt="Craftsman working in workshop" 
                     className="w-full h-96 object-cover rounded-xl"
                     loading="lazy"
@@ -904,7 +893,7 @@ const Index = () => {
       <section id="process" className="section-padding bg-bg-section-alt relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <img 
-            src={makerImg} 
+            src={imageConfig.maker} 
             alt="" 
             className="w-full h-full object-cover"
             loading="lazy"
@@ -946,7 +935,7 @@ const Index = () => {
                 <div className="absolute inset-0 border-2 border-accent-primary/40 rounded-xl transform rotate-1 shadow-lg shadow-accent-primary/20"></div>
                 <ScrollReveal delay={100}>
                   <img 
-                    src={makerImg} 
+                    src={imageConfig.maker} 
                     alt="Craftsman in workshop" 
                     className="relative w-full h-96 object-cover rounded-xl"
                     loading="lazy"
