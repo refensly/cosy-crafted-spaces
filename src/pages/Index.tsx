@@ -974,37 +974,59 @@ const Index = () => {
                   <p className="text-text-secondary text-lg">
                     We'll get back to you within 24 hours.
                   </p>
-                </div> : <form onSubmit={handleSubmit} className="space-y-8">
-                  <div>
-                    <Input type="text" placeholder="Your name" className="form-field h-16 text-lg px-6 py-4 rounded-xl border-2 border-input/50 focus:border-accent-primary/60 bg-bg-main/50" value={formData.name} onChange={e => setFormData({
-                  ...formData,
-                  name: e.target.value
-                })} required />
+                </div> : <form onSubmit={handleSubmit} className="space-y-10">
+                  <div className="space-y-2">
+                    <label className="block text-text-secondary text-sm font-medium">Your Name</label>
+                    <Input 
+                      type="text" 
+                      placeholder="" 
+                      className="w-full bg-transparent border-0 border-b border-gray-300 rounded-none px-0 py-3 text-lg focus:border-primary focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-gray-400" 
+                      value={formData.name} 
+                      onChange={e => setFormData({
+                        ...formData,
+                        name: e.target.value
+                      })} 
+                      required 
+                    />
                   </div>
-                  <div>
-                    <Input type="text" placeholder="Email or phone" className="form-field h-16 text-lg px-6 py-4 rounded-xl border-2 border-input/50 focus:border-accent-primary/60 bg-bg-main/50" value={formData.contact} onChange={e => setFormData({
-                  ...formData,
-                  contact: e.target.value
-                })} required />
+                  <div className="space-y-2">
+                    <label className="block text-text-secondary text-sm font-medium">Email</label>
+                    <Input 
+                      type="text" 
+                      placeholder="" 
+                      className="w-full bg-transparent border-0 border-b border-gray-300 rounded-none px-0 py-3 text-lg focus:border-primary focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-gray-400" 
+                      value={formData.contact} 
+                      onChange={e => setFormData({
+                        ...formData,
+                        contact: e.target.value
+                      })} 
+                      required 
+                    />
                   </div>
-                  <div>
-                    <Textarea placeholder="Tell us about your project" className="form-field min-h-[160px] text-lg px-6 py-4 rounded-xl border-2 border-input/50 focus:border-accent-primary/60 bg-bg-main/50 resize-none" value={formData.message} onChange={e => setFormData({
-                  ...formData,
-                  message: e.target.value
-                })} />
+                  <div className="space-y-2">
+                    <label className="block text-text-secondary text-sm font-medium">Tell us about your project</label>
+                    <Textarea 
+                      placeholder="" 
+                      className="w-full bg-transparent border-0 border-b border-gray-300 rounded-none px-0 py-3 text-lg min-h-[120px] focus:border-primary focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 resize-none placeholder:text-gray-400" 
+                      value={formData.message} 
+                      onChange={e => setFormData({
+                        ...formData,
+                        message: e.target.value
+                      })} 
+                    />
                   </div>
-                  <div className="space-y-6 pt-4">
+                  <div className="space-y-6 pt-6">
                     <Button 
                       type="submit" 
                       disabled={isSubmitting}
-                      className="w-full bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out py-4 md:py-6 rounded-xl text-lg md:text-2xl tracking-wider disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-[#0F1111] disabled:hover:scale-100"
+                      className="w-full bg-primary text-white font-medium py-4 rounded-full text-lg tracking-wide hover:bg-primary/90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      {isSubmitting ? "Sending..." : "Send message"}
+                      {isSubmitting ? "Sending..." : "Next"}
                     </Button>
                     
-                    <div className="text-center pt-2">
-                      <p className="text-text-secondary text-base mb-4">Or send directly via WhatsApp instead</p>
-                      <Button className="bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-8 py-4 md:px-16 md:py-6 rounded-xl text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center tracking-wider" asChild>
+                    <div className="text-center pt-4">
+                      <p className="text-text-secondary text-sm mb-4">Or send directly via WhatsApp instead</p>
+                      <Button className="bg-transparent border border-gray-300 text-text-primary font-medium px-8 py-3 rounded-full text-sm hover:bg-gray-50 transition-all duration-300" asChild>
                         <a href="https://wa.me/353879380494" target="_blank" rel="noopener noreferrer">
                           WhatsApp Us
                         </a>
