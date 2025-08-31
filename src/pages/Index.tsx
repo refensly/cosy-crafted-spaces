@@ -1005,26 +1005,15 @@ const Index = () => {
                   </div>
                   <div className="space-y-1">
                     <label className="block text-text-secondary text-sm font-medium">Tell us about your project</label>
-                    <div className="relative">
-                      <Textarea 
-                        placeholder="" 
-                        className="w-full bg-transparent border-0 border-b border-gray-300 rounded-none px-0 py-3 text-lg min-h-[3rem] leading-normal focus:border-primary focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 resize-none placeholder:text-gray-400 text-white caret-white" 
-                        value={formData.message} 
-                        onChange={e => setFormData({
-                          ...formData,
-                          message: e.target.value
-                        })} 
-                        style={{ 
-                          height: 'auto',
-                          minHeight: '3rem'
-                        }}
-                        onInput={(e) => {
-                          const target = e.target as HTMLTextAreaElement;
-                          target.style.height = 'auto';
-                          target.style.height = Math.max(48, target.scrollHeight) + 'px';
-                        }}
-                      />
-                    </div>
+                    <Textarea 
+                      placeholder="" 
+                      className="w-full bg-transparent border-0 border-b border-gray-300 rounded-none px-0 py-3 text-lg focus:border-primary focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 resize-none placeholder:text-gray-400 text-white caret-white" 
+                      value={formData.message} 
+                      onChange={e => setFormData({
+                        ...formData,
+                        message: e.target.value
+                      })} 
+                    />
                   </div>
                   <div className="space-y-4 pt-4">
                     <Button 
