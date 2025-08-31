@@ -361,9 +361,9 @@ const Index = () => {
           }].map((example, index) => <ScrollReveal key={index} delay={index * 100}>
                 <div className="text-center">
                   <div className="relative max-sm:mb-2 mb-4">
-                    <div className="w-full h-64 rounded-lg overflow-hidden shadow-lg">
+                    <div className="w-full rounded-lg overflow-hidden shadow-lg">
                       <ScrollReveal delay={index * 100 + 50}>
-                        <img src={example.image} alt="Custom craftsmanship and interior design" className="w-full h-full object-cover object-center" loading="lazy" />
+                        <img src={example.image} alt="Custom craftsmanship and interior design" className="w-full max-h-64 md:max-h-72 object-cover object-center" loading="lazy" />
                       </ScrollReveal>
                     </div>
                   </div>
