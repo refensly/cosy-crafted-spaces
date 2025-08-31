@@ -299,10 +299,10 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal>
               <div>
-                <h2 className="font-heading font-bold text-text-primary mb-6">
+                <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">
                   Not another mass-production look
                 </h2>
-                <p className="text-xl text-text-secondary mb-8 leading-relaxed">
+                <p className="max-sm:text-[15px] max-sm:leading-relaxed text-lg text-text-secondary max-sm:mb-6 mb-8">
                   If you want something nobody else has, we design and build it for you. 
                   Premium materials, made locally.
                 </p>
@@ -335,7 +335,7 @@ const Index = () => {
       <section className="section-padding bg-bg-main">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="font-heading font-bold text-text-primary text-center max-sm:mb-6 mb-12">Our Promise</h2>
+            <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-12 text-4xl md:text-5xl">Our Promise</h2>
             
           </ScrollReveal>
           
@@ -361,20 +361,20 @@ const Index = () => {
                       </ScrollReveal>
                     </div>
                   </div>
-                  <h3 className="font-heading font-bold text-text-primary mb-2 text-lg">
+                  <h3 className="font-heading font-bold text-text-primary max-sm:text-lg max-sm:mb-2 mb-2 text-2xl md:text-3xl">
                     {example.title}
                   </h3>
-                  <p className="text-text-secondary text-sm">{example.description}</p>
+                  <p className="text-text-secondary max-sm:text-[15px] text-lg">{example.description}</p>
                 </div>
               </ScrollReveal>)}
           </div>
 
           <ScrollReveal>
-            <div className="bg-bg-section-alt rounded-xl p-8 text-center">
-              <h3 className="font-heading font-bold text-text-primary mb-4">
+            <div className="bg-bg-section-alt rounded-xl max-sm:p-5 p-8 text-center">
+              <h3 className="font-heading font-bold text-text-primary max-sm:text-lg max-sm:mb-4 mb-4 text-2xl md:text-3xl">
                 Producing
               </h3>
-              <p className="text-lg text-text-secondary max-w-4xl mx-auto mb-6 lg:mb-8">
+              <p className="max-sm:text-[15px] max-sm:leading-relaxed text-lg text-text-secondary max-w-4xl mx-auto max-sm:mb-6 mb-6 lg:mb-8">
                 Each piece goes through careful planning, selection of premium materials, 
                 and meticulous handcrafting to ensure it meets our quality standards.
               </p>
@@ -383,9 +383,9 @@ const Index = () => {
           
 
           {/* NEW CTA Button - Between Producing and What We Create */}
-          <div className="mt-16 text-center">
+          <div className="max-sm:mt-8 mt-16 text-center">
             <ScrollReveal delay={250}>
-                <Button onClick={scrollToContact} className="bg-[#0F1111] text-white font-normal uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
+                <Button onClick={scrollToContact} variant="outline" size="mobile-compact" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 max-sm:w-full max-sm:max-w-[320px] max-sm:mx-auto bg-[#0F1111] border border-accent px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
                 Start Your Project
               </Button>
             </ScrollReveal>
@@ -399,7 +399,7 @@ const Index = () => {
         <div className="container mx-auto max-sm:px-4 px-8 md:px-12 lg:px-16 relative z-10">
           <ScrollReveal>
             <div className="text-center max-sm:mb-12 mb-20">
-              <h2 className="font-heading font-bold text-text-primary text-center max-sm:mb-4 mb-6 text-5xl md:text-6xl">
+              <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">
                 What We Create
               </h2>
               <div className="w-24 h-0.5 bg-accent-primary mx-auto"></div>
@@ -413,7 +413,7 @@ const Index = () => {
                       relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 ease-out
                       bg-gradient-to-br from-bg-section-alt/80 via-bg-section-alt-2/75 to-bg-section-alt/80
                       backdrop-blur-md border border-bg-section-alt/60 shadow-2xl
-                      border-b-2 border-b-accent-primary/30 px-10 py-8
+                      border-b-2 border-b-accent-primary/30 max-sm:px-5 max-sm:py-6 px-10 py-8
                       hover:shadow-accent-primary/30 hover:shadow-[0_25px_50px_-12px_rgba(197,156,87,0.35)]
                       hover:border-accent-primary/50 hover:border-b-accent-primary/60 hover:scale-[1.02] 
                       hover:bg-gradient-to-br hover:from-bg-section-alt-2/90 hover:via-bg-section-alt/85 hover:to-bg-section-alt-2/90
@@ -526,14 +526,14 @@ const Index = () => {
             
             {/* Headline */}
             <ScrollReveal>
-              <h2 className="font-heading font-bold text-text-primary text-4xl lg:text-5xl mb-8 text-center">
+              <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-8 text-4xl lg:text-5xl text-center">
                 Why choose custom over mass-market
               </h2>
             </ScrollReveal>
             
             {/* Intro Text */}
             <ScrollReveal delay={100}>
-              <p className="text-xl lg:text-2xl text-text-secondary leading-relaxed mb-12 text-center max-w-4xl mx-auto">
+              <p className="max-sm:text-[15px] max-sm:leading-relaxed max-sm:mb-6 text-xl lg:text-2xl text-text-secondary leading-relaxed mb-12 text-center max-w-4xl mx-auto">
                 Most furniture today is disposable. We build for decades — each piece unique, designed and crafted in Ireland from premium oak, walnut, and brass.
               </p>
             </ScrollReveal>
@@ -646,10 +646,10 @@ const Index = () => {
                   subtitle: "Decades, not years"
                 }].map((benefit, index) => <div key={index} className="text-center">
                       <div className="text-4xl mb-3">{benefit.icon}</div>
-                      <h4 className="font-heading font-bold text-text-primary mb-2 text-lg">
+                      <h4 className="font-heading font-bold text-text-primary max-sm:text-base max-sm:mb-2 mb-2 text-lg">
                         {benefit.title}
                       </h4>
-                      <p className="text-text-secondary text-sm">{benefit.subtitle}</p>
+                      <p className="text-text-secondary max-sm:text-[14px] text-sm">{benefit.subtitle}</p>
                     </div>)}
                 </div>
               </div>
@@ -658,7 +658,7 @@ const Index = () => {
             {/* CTA Button - After comparison table */}
             <ScrollReveal delay={400}>
               <div className="text-center">
-                <Button onClick={scrollToContact} className="bg-[#0F1111] text-white font-normal uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
+                <Button onClick={scrollToContact} variant="outline" size="mobile-compact" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 max-sm:w-full max-sm:max-w-[320px] max-sm:mx-auto bg-[#0F1111] border border-accent px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
                   Get Free Consultation
                 </Button>
               </div>
@@ -672,7 +672,7 @@ const Index = () => {
       <section className="section-padding bg-bg-main">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="font-heading font-bold text-text-primary text-center mb-16">
+            <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-8 mb-16 text-4xl md:text-5xl">
               Recent projects
             </h2>
           </ScrollReveal>
@@ -684,12 +684,12 @@ const Index = () => {
                       <img src={project.image} alt={project.title} className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
                     </ScrollReveal>
                     <div className="absolute inset-0 bg-gradient-to-t from-bg-main/90 to-transparent opacity-100 transition-opacity duration-300 flex items-end">
-                      <div className="p-6">
-                        <h3 className="font-heading font-bold text-text-primary mb-1">
+                      <div className="max-sm:p-5 p-6">
+                        <h3 className="font-heading font-bold text-text-primary max-sm:text-lg max-sm:mb-1 mb-1 text-2xl">
                           {project.title}
                         </h3>
-                        <p className="text-text-secondary text-sm mb-3">{project.subtitle}</p>
-                        <Button variant="outline" size="sm" className="btn-secondary">
+                        <p className="text-text-secondary max-sm:text-[14px] max-sm:mb-3 text-sm mb-3">{project.subtitle}</p>
+                        <Button variant="outline" size="mobile-secondary" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out max-sm:text-[14px] max-sm:px-5 max-sm:py-3 max-sm:rounded-xl btn-secondary">
                           View Project
                         </Button>
                       </div>
@@ -702,7 +702,7 @@ const Index = () => {
           {/* CTA Button */}
           <div className="text-center mt-16">
             <ScrollReveal delay={300}>
-              <Button onClick={scrollToContact} className="bg-[#0F1111] text-white font-normal uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
+              <Button onClick={scrollToContact} variant="outline" size="mobile-compact" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 max-sm:w-full max-sm:max-w-[320px] max-sm:mx-auto bg-[#0F1111] border border-accent px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
                 Start Your Project
               </Button>
             </ScrollReveal>
@@ -714,7 +714,7 @@ const Index = () => {
       <section id="reviews" className="section-padding bg-bg-section-alt-2">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="font-heading font-bold text-text-primary text-center max-sm:mb-8 mb-16 text-4xl">
+            <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-8 mb-16 text-4xl md:text-5xl">
               What our clients say
             </h2>
           </ScrollReveal>
@@ -749,11 +749,11 @@ const Index = () => {
                       </svg>
                     </div>
                   </div>
-                  <blockquote className="text-xl text-text-primary mb-6 leading-relaxed">
+                  <blockquote className="max-sm:text-[15px] max-sm:leading-relaxed max-sm:mb-4 text-xl text-text-primary mb-6 leading-relaxed">
                     Absolutely stunning work. The attention to detail and quality of craftsmanship 
                     exceeded our expectations. This bar is the centerpiece of our venue.
                   </blockquote>
-                  <cite className="text-text-secondary font-bold text-lg">— The Summit Inn</cite>
+                  <cite className="text-text-secondary font-bold max-sm:text-[15px] text-lg">— The Summit Inn</cite>
                 </div>
               </div>
             </div>
@@ -762,41 +762,41 @@ const Index = () => {
           {/* Grid of Reviews */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <ScrollReveal delay={100}>
-              <div className="bg-bg-section-alt rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
-                <div className="flex items-center mb-4">
-                  <svg className="w-6 h-6 text-accent-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <div className="bg-bg-section-alt rounded-xl max-sm:p-5 p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
+                <div className="flex items-center max-sm:mb-3 mb-4">
+                  <svg className="max-sm:w-5 max-sm:h-5 w-6 h-6 text-accent-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" />
                   </svg>
                   
                 </div>
-                <p className="text-text-primary mb-4 leading-relaxed">Perfect craftsmanship. Built exactly to our specifications.</p>
-                <cite className="text-text-secondary font-bold">— Abbey Tavern</cite>
+                <p className="text-text-primary max-sm:text-[15px] max-sm:leading-relaxed max-sm:mb-3 mb-4 leading-relaxed">Perfect craftsmanship. Built exactly to our specifications.</p>
+                <cite className="text-text-secondary font-bold max-sm:text-[14px]">— Abbey Tavern</cite>
               </div>
             </ScrollReveal>
             
             <ScrollReveal delay={200}>
-              <div className="bg-bg-section-alt rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
-                <div className="flex items-center mb-4">
-                  <svg className="w-6 h-6 text-accent-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <div className="bg-bg-section-alt rounded-xl max-sm:p-5 p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
+                <div className="flex items-center max-sm:mb-3 mb-4">
+                  <svg className="max-sm:w-5 max-sm:h-5 w-6 h-6 text-accent-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" />
                   </svg>
                   
                 </div>
-                <p className="text-text-primary mb-4 leading-relaxed">Our customers constantly compliment the bar design.</p>
-                <cite className="text-text-secondary font-bold">— Findlaters</cite>
+                <p className="text-text-primary max-sm:text-[15px] max-sm:leading-relaxed max-sm:mb-3 mb-4 leading-relaxed">Our customers constantly compliment the bar design.</p>
+                <cite className="text-text-secondary font-bold max-sm:text-[14px]">— Findlaters</cite>
               </div>
             </ScrollReveal>
             
             <ScrollReveal delay={300}>
-              <div className="bg-bg-section-alt rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
-                <div className="flex items-center mb-4">
-                  <svg className="w-6 h-6 text-accent-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <div className="bg-bg-section-alt rounded-xl max-sm:p-5 p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
+                <div className="flex items-center max-sm:mb-3 mb-4">
+                  <svg className="max-sm:w-5 max-sm:h-5 w-6 h-6 text-accent-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" />
                   </svg>
                   
                 </div>
-                <p className="text-text-primary mb-4 leading-relaxed">Exceptional attention to detail. Worth every penny.</p>
-                <cite className="text-text-secondary font-bold">— Private Client</cite>
+                <p className="text-text-primary max-sm:text-[15px] max-sm:leading-relaxed max-sm:mb-3 mb-4 leading-relaxed">Exceptional attention to detail. Worth every penny.</p>
+                <cite className="text-text-secondary font-bold max-sm:text-[14px]">— Private Client</cite>
               </div>
             </ScrollReveal>
           </div>
@@ -804,7 +804,7 @@ const Index = () => {
           {/* CTA Button */}
           <ScrollReveal delay={400}>
             <div className="text-center">
-                <Button onClick={() => scrollToContact()} className="bg-[#0F1111] text-white font-normal uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
+                <Button onClick={() => scrollToContact()} variant="outline" size="mobile-compact" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 max-sm:w-full max-sm:max-w-[320px] max-sm:mx-auto bg-[#0F1111] border border-accent px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
                   Let's build yours
                 </Button>
             </div>
@@ -818,10 +818,10 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal>
               <div>
-                <h2 className="font-heading font-bold text-text-primary mb-6">
+                <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">
                   What We Build
                 </h2>
-                <p className="text-xl text-text-secondary mb-8 leading-relaxed">
+                <p className="max-sm:text-[15px] max-sm:leading-relaxed max-sm:mb-6 text-xl text-text-secondary mb-8 leading-relaxed">
                   From full pub interiors to outdoor kitchens, from custom bars to one-off furniture — 
                   we design and craft everything to fit your exact space.
                 </p>
@@ -842,7 +842,7 @@ const Index = () => {
           {/* CTA Button after What We Build */}
           <div className="text-center mt-16">
             <ScrollReveal delay={300}>
-               <Button onClick={scrollToContact} className="bg-[#0F1111] text-white font-normal uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
+               <Button onClick={scrollToContact} variant="outline" size="mobile-compact" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 max-sm:w-full max-sm:max-w-[320px] max-sm:mx-auto bg-[#0F1111] border border-accent px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
                 Let's build yours
               </Button>
             </ScrollReveal>
@@ -855,11 +855,11 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <ScrollReveal>
-              <div className="bg-bg-main rounded-xl p-8">
-                <h2 className="font-heading font-bold text-text-primary mb-6 text-2xl">
+              <div className="bg-bg-main rounded-xl max-sm:p-5 p-8">
+                <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">
                   Can I customize it for myself?
                 </h2>
-                <p className="text-xl text-text-secondary leading-relaxed">
+                <p className="max-sm:text-[15px] max-sm:leading-relaxed text-xl text-text-secondary leading-relaxed">
                   Yes. Every build starts with your vision. Size, finish, details — everything can be 
                   tailored for your space.
                 </p>
@@ -870,7 +870,7 @@ const Index = () => {
           {/* CTA Button - After FAQ */}
           <div className="text-center mt-12">
             <ScrollReveal delay={100}>
-              <Button onClick={scrollToContact} className="bg-[#0F1111] text-white font-normal uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
+              <Button onClick={scrollToContact} variant="outline" size="mobile-compact" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 max-sm:w-full max-sm:max-w-[320px] max-sm:mx-auto bg-[#0F1111] border border-accent px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
                 Get Your Quote
               </Button>
             </ScrollReveal>
@@ -885,22 +885,22 @@ const Index = () => {
         </div>
         <div className="container mx-auto px-6 relative">
           <ScrollReveal>
-            <h2 className="font-heading font-bold text-text-primary text-center mb-16">
+            <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-8 mb-16 text-4xl md:text-5xl">
               How we work
             </h2>
           </ScrollReveal>
           <div className="grid md:grid-cols-4 gap-8">
             {processSteps.map((step, index) => <ScrollReveal key={index} delay={index * 150}>
-                <div className="text-center bg-bg-section-alt-2/50 rounded-xl p-6 border border-accent-primary/20 hover:border-accent-primary/40 transition-all duration-300">
-                  <div className="w-20 h-20 bg-gradient-to-br from-accent-primary to-accent-hover rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-accent-primary/30">
-                    <span className="text-3xl font-heading font-bold text-bg-main">
+                <div className="text-center bg-bg-section-alt-2/50 rounded-xl max-sm:p-5 p-6 border border-accent-primary/20 hover:border-accent-primary/40 transition-all duration-300">
+                  <div className="max-sm:w-16 max-sm:h-16 w-20 h-20 bg-gradient-to-br from-accent-primary to-accent-hover rounded-full flex items-center justify-center mx-auto max-sm:mb-4 mb-6 shadow-lg shadow-accent-primary/30">
+                    <span className="max-sm:text-2xl text-3xl font-heading font-bold text-bg-main">
                       {step.number}
                     </span>
                   </div>
-                  <h3 className="font-heading font-bold text-text-primary mb-3 text-xl">
+                  <h3 className="font-heading font-bold text-text-primary max-sm:text-lg max-sm:mb-2 mb-3 text-xl">
                     {step.title}
                   </h3>
-                  <p className="text-text-secondary text-lg">{step.description}</p>
+                  <p className="text-text-secondary max-sm:text-[15px] text-lg">{step.description}</p>
                   {index < processSteps.length - 1 && <div className="hidden md:block w-full h-px bg-accent-primary/30 mt-8"></div>}
                   {index === processSteps.length - 1 && <div className="hidden md:block w-full h-px bg-accent-primary/30 mt-8"></div>}
                 </div>
@@ -925,8 +925,8 @@ const Index = () => {
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <div>
-                <h2 className="font-heading font-bold text-text-primary mb-6">The Signature</h2>
-                <p className="text-xl text-text-secondary mb-8 leading-relaxed">Crafted from walnut, oak, and brass, each piece is unique and unrepeatable. Defined by precision and distinguished by detail, this work carries the signature of timeless craftsmanship, embodied in the hands of its maker</p>
+                <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">The Signature</h2>
+                <p className="max-sm:text-[15px] max-sm:leading-relaxed max-sm:mb-6 text-xl text-text-secondary mb-8 leading-relaxed">Crafted from walnut, oak, and brass, each piece is unique and unrepeatable. Defined by precision and distinguished by detail, this work carries the signature of timeless craftsmanship, embodied in the hands of its maker</p>
               </div>
             </ScrollReveal>
           </div>
@@ -938,13 +938,13 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <div className="max-w-2xl mx-auto text-center">
-              <h2 className="font-heading font-bold text-text-primary mb-6">Ready To Start?</h2>
+              <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">Ready To Start?</h2>
               
               {formSubmitted ? <div className="bg-neutral-light/10 border border-neutral-light/20 rounded-xl p-12 text-center">
-                  <h3 className="text-2xl font-semibold text-text-primary mb-4">
+                  <h3 className="max-sm:text-lg text-2xl font-semibold text-text-primary max-sm:mb-3 mb-4">
                     Thanks for reaching out!
                   </h3>
-                  <p className="text-text-secondary text-lg">
+                  <p className="text-text-secondary max-sm:text-[15px] text-lg">
                     We'll get back to you within 24 hours.
                   </p>
                 </div> : <form onSubmit={handleSubmit} className="space-y-8">
@@ -967,13 +967,13 @@ const Index = () => {
                 })} />
                   </div>
                   <div className="max-sm:space-y-4 space-y-6 pt-4">
-                    <Button type="submit" disabled={isSubmitting} className="w-full max-w-[320px] mx-auto bg-[#0F1111] text-white font-normal uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out max-sm:py-3 max-sm:text-[15px] py-4 md:py-6 rounded-xl text-lg md:text-2xl tracking-wider disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-[#0F1111] disabled:hover:scale-100">
+                    <Button type="submit" disabled={isSubmitting} variant="outline" size="mobile-compact" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 max-sm:w-full max-sm:max-w-[320px] max-sm:mx-auto w-full max-w-[320px] mx-auto bg-[#0F1111] border border-accent px-8 py-4 md:px-16 md:py-6 rounded-xl text-lg md:text-2xl tracking-wider disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-[#0F1111] disabled:hover:scale-100">
                       {isSubmitting ? "Sending..." : "Send message"}
                     </Button>
                     
                     <div className="text-center pt-2">
-                      <p className="text-text-secondary text-base mb-4">Or send directly via WhatsApp instead</p>
-                      <a href="https://wa.me/353879380494" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-normal ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-[#0F1111] text-white uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-8 py-4 md:px-16 md:py-6 rounded-xl text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center tracking-wider">WHATSAPP US</a>
+                      <p className="text-text-secondary max-sm:text-[15px] text-base max-sm:mb-3 mb-4">Or send directly via WhatsApp instead</p>
+                      <a href="https://wa.me/353879380494" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-normal ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 max-sm:w-full max-sm:max-w-[320px] max-sm:mx-auto max-sm:text-[15px] max-sm:px-5 max-sm:py-3 max-sm:rounded-xl bg-[#0F1111] border border-accent px-8 py-4 md:px-16 md:py-6 rounded-xl text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center tracking-wider">WHATSAPP US</a>
                     </div>
                   </div>
                 </form>}
@@ -989,8 +989,8 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-12">
             {/* Company Branding */}
             <div className="lg:col-span-1">
-              <h3 className="text-2xl font-heading font-bold mb-2">Tiny Outdoor Spaces</h3>
-              <p className="text-gray-400 text-sm tracking-wide">CUSTOM WOODWORKING</p>
+              <h3 className="max-sm:text-lg text-2xl font-heading font-bold max-sm:mb-2 mb-2">Tiny Outdoor Spaces</h3>
+              <p className="text-gray-400 max-sm:text-[14px] text-sm tracking-wide">CUSTOM WOODWORKING</p>
             </div>
 
             {/* Services Column */}
