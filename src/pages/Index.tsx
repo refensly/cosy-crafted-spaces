@@ -293,7 +293,7 @@ const Index = () => {
       </div>
 
       {/* Section 2: Pain → Value */}
-      <section className="max-sm:py-8 py-16 lg:py-20 bg-bg-section-alt-2">
+      <section className="max-sm:py-6 py-16 lg:py-20 bg-bg-section-alt-2">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <ScrollReveal>
@@ -328,7 +328,7 @@ const Index = () => {
               <div className="relative">
                 <div className="w-full h-96 rounded-xl overflow-hidden shadow-2xl shadow-accent-primary/20 border border-accent-primary/20">
                   <ScrollReveal delay={250}>
-                     <img src="/images/custom-bar-interior.png" alt="Custom bar interior with warm lighting and wood finishes" className="w-full h-full object-cover transform scale-125" loading="lazy" />
+                     <img src="/images/custom-bar-interior.png" alt="Custom bar interior with warm lighting and wood finishes" className="w-full h-full object-cover" loading="lazy" />
                   </ScrollReveal>
                 </div>
               </div>
@@ -338,7 +338,7 @@ const Index = () => {
       </section>
 
       {/* New Section: Handmade Quality Examples */}
-      <section className="max-sm:py-8 py-16 lg:py-20 bg-bg-main">
+      <section className="max-sm:py-6 py-16 lg:py-20 bg-bg-main">
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-6 mb-10 text-4xl md:text-5xl">Our Promise</h2>
@@ -360,14 +360,14 @@ const Index = () => {
             description: "Never repeated, always designed for your exact space"
           }].map((example, index) => <ScrollReveal key={index} delay={index * 100}>
                 <div className="text-center">
-                  <div className="relative mb-4">
+                  <div className="relative max-sm:mb-2 mb-4">
                     <div className="w-full h-64 rounded-lg overflow-hidden shadow-lg">
                       <ScrollReveal delay={index * 100 + 50}>
                         <img src={example.image} alt="Custom craftsmanship and interior design" className="w-full h-full object-cover object-center" loading="lazy" />
                       </ScrollReveal>
                     </div>
                   </div>
-                  <h3 className="font-heading font-bold text-text-primary max-sm:text-lg max-sm:mb-2 mb-2 text-2xl md:text-3xl">
+                  <h3 className="font-heading font-bold text-text-primary max-sm:text-lg max-sm:mt-2 max-sm:mb-2 mt-4 mb-2 text-2xl md:text-3xl">
                     {example.title}
                   </h3>
                   <p className="text-text-secondary max-sm:text-[15px] text-lg">{example.description}</p>
@@ -400,11 +400,11 @@ const Index = () => {
       </section>
 
       {/* Section 3: Interactive Portfolio */}
-      <section id="work" className="section-padding relative overflow-hidden bg-deep-green">
+      <section id="work" className="max-sm:py-6 py-16 lg:py-20 relative overflow-hidden bg-deep-green">
         
         <div className="container mx-auto max-sm:px-4 px-8 md:px-12 lg:px-16 relative z-10">
           <ScrollReveal>
-            <div className="text-center max-sm:mb-12 mb-20">
+            <div className="text-center max-sm:mb-8 mb-16">
               <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">
                 What We Create
               </h2>
@@ -412,7 +412,7 @@ const Index = () => {
             </div>
           </ScrollReveal>
           
-          <div className="max-sm:space-y-2 space-y-3 max-w-4xl mx-auto">
+          <div className="max-sm:space-y-2 space-y-3 max-w-3xl mx-auto">
             {portfolioCategories.map((category, categoryIndex) => <div key={category.id} className="w-full">
                 <ScrollReveal delay={categoryIndex * 100}>
                   <div className={`
@@ -632,8 +632,8 @@ const Index = () => {
 
             {/* Benefits Icons Row */}
             <ScrollReveal delay={300}>
-              <div className="bg-bg-section-alt-2 rounded-xl max-sm:p-4 p-6 border border-accent-primary/20 shadow-lg shadow-accent-primary/10 max-sm:mb-6 mb-8">
-                <div className="grid grid-cols-2 md:grid-cols-4 max-sm:gap-4 gap-6">
+              <div className="bg-bg-section-alt-2 rounded-xl max-sm:p-3 p-5 border border-accent-primary/20 shadow-lg shadow-accent-primary/10 max-sm:mb-4 mb-6">
+                <div className="grid grid-cols-2 md:grid-cols-4 max-sm:gap-3 gap-4">
                   {[{
                   icon: "🔨",
                   title: "Unique every time",
@@ -651,7 +651,7 @@ const Index = () => {
                   title: "Built to last",
                   subtitle: "Decades, not years"
                 }].map((benefit, index) => <div key={index} className="text-center">
-                      <div className="max-sm:text-2xl text-3xl max-sm:mb-2 mb-3">{benefit.icon}</div>
+                      <div className="max-sm:text-xl text-2xl max-sm:mb-1 mb-2">{benefit.icon}</div>
                       <h4 className="font-heading font-bold text-text-primary max-sm:text-[14px] max-sm:mb-1 mb-2 text-base">
                         {benefit.title}
                       </h4>
@@ -675,7 +675,7 @@ const Index = () => {
       </section>
 
       {/* Section 5: Portfolio */}
-      <section className="max-sm:py-8 py-16 lg:py-20 bg-bg-main">
+      <section className="max-sm:py-6 py-16 lg:py-20 bg-bg-main">
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-6 mb-12 text-4xl md:text-5xl">
@@ -684,7 +684,7 @@ const Index = () => {
           </ScrollReveal>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {projects.map((project, index) => <ScrollReveal key={index} delay={index * 100}>
-                <div className="group cursor-pointer bg-gradient-to-br from-bg-section-alt/60 via-bg-section-alt-2/50 to-bg-section-alt/60 backdrop-blur-sm border border-accent-primary/30 rounded-2xl shadow-2xl shadow-accent-primary/20 hover:shadow-accent-primary/40 hover:border-accent-primary/60 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1 overflow-hidden" onClick={() => handleProjectClick(project)}>
+                <div className="group cursor-pointer bg-gradient-to-br from-bg-section-alt/60 via-bg-section-alt-2/50 to-bg-section-alt/60 backdrop-blur-sm border border-accent-primary/30 rounded-2xl shadow-xl shadow-accent-primary/30 hover:shadow-2xl hover:shadow-accent-primary/50 hover:border-accent-primary/60 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1 overflow-hidden" onClick={() => handleProjectClick(project)}>
                   <div className="relative overflow-hidden">
                     <ScrollReveal delay={index * 100}>
                       <img src={project.image} alt={project.title} className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
@@ -820,22 +820,22 @@ const Index = () => {
       </section>
 
       {/* New Section: What We Build */}
-      <section className="max-sm:py-8 py-16 lg:py-20 bg-bg-main">
+      <section className="max-sm:py-6 py-16 lg:py-20 bg-bg-main">
         <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="grid lg:grid-cols-2 max-sm:gap-4 gap-6 lg:gap-8 items-center">
             <ScrollReveal>
               <div>
                 <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">
                   What We Build
                 </h2>
-                <p className="max-sm:text-[15px] max-sm:leading-relaxed max-sm:mb-6 text-xl text-text-secondary mb-8 leading-relaxed">
+                <p className="max-sm:text-[15px] max-sm:leading-relaxed max-sm:mb-4 text-xl text-text-secondary mb-6 leading-relaxed">
                   From full pub interiors to outdoor kitchens, from custom bars to one-off furniture — 
                   we design and craft everything to fit your exact space.
                 </p>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={200}>
-              <div className="relative">
+              <div className="relative max-sm:mt-2">
                 <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60 rounded-xl"></div>
                 <div className="absolute inset-0 border border-accent-primary/30 rounded-xl"></div>
                 <ScrollReveal delay={250}>
@@ -858,7 +858,7 @@ const Index = () => {
       </section>
 
       {/* New Section: FAQ */}
-      <section className="max-sm:py-8 py-16 lg:py-20 bg-bg-section-alt">
+      <section className="max-sm:py-6 py-16 lg:py-20 bg-bg-section-alt">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <ScrollReveal>
@@ -886,7 +886,7 @@ const Index = () => {
       </section>
 
       {/* Section 7: Process */}
-      <section id="process" className="max-sm:py-8 py-16 lg:py-20 bg-bg-section-alt relative overflow-hidden">
+      <section id="process" className="max-sm:py-6 py-16 lg:py-20 bg-bg-section-alt relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <img src={imageConfig.maker} alt="" className="w-full h-full object-cover" loading="lazy" />
         </div>
@@ -896,20 +896,18 @@ const Index = () => {
               How we work
             </h2>
           </ScrollReveal>
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-4 max-sm:gap-y-4 gap-6">
             {processSteps.map((step, index) => <ScrollReveal key={index} delay={index * 150}>
-                <div className="text-center bg-bg-section-alt-2/50 rounded-xl max-sm:p-5 p-6 border border-accent-primary/20 hover:border-accent-primary/40 transition-all duration-300">
-                  <div className="max-sm:w-16 max-sm:h-16 w-20 h-20 bg-gradient-to-br from-accent-primary to-accent-hover rounded-full flex items-center justify-center mx-auto max-sm:mb-4 mb-6 shadow-lg shadow-accent-primary/30">
-                    <span className="max-sm:text-2xl text-3xl font-heading font-bold text-bg-main">
+                <div className="text-center bg-bg-section-alt-2/50 rounded-xl max-sm:p-4 p-5 border border-accent-primary/20 hover:border-accent-primary/40 transition-all duration-300">
+                  <div className="max-sm:w-12 max-sm:h-12 w-16 h-16 bg-gradient-to-br from-accent-primary to-accent-hover rounded-full flex items-center justify-center mx-auto max-sm:mb-3 mb-4 shadow-lg shadow-accent-primary/30">
+                    <span className="max-sm:text-xl text-2xl font-heading font-bold text-bg-main">
                       {step.number}
                     </span>
                   </div>
-                  <h3 className="font-heading font-bold text-text-primary max-sm:text-lg max-sm:mb-2 mb-3 text-xl">
+                  <h3 className="font-heading font-bold text-text-primary max-sm:text-base max-sm:mb-2 mb-2 text-lg">
                     {step.title}
                   </h3>
-                  <p className="text-text-secondary max-sm:text-[15px] text-lg">{step.description}</p>
-                  {index < processSteps.length - 1 && <div className="hidden md:block w-full h-px bg-accent-primary/30 mt-8"></div>}
-                  {index === processSteps.length - 1 && <div className="hidden md:block w-full h-px bg-accent-primary/30 mt-8"></div>}
+                  <p className="text-text-secondary max-sm:text-[14px] text-base">{step.description}</p>
                 </div>
               </ScrollReveal>)}
           </div>
@@ -917,7 +915,7 @@ const Index = () => {
       </section>
 
       {/* Section 8: Who Am I */}
-      <section id="about" className="max-sm:py-8 py-16 lg:py-20 bg-bg-main">
+      <section id="about" className="max-sm:py-6 py-16 lg:py-20 bg-bg-main">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <ScrollReveal>
@@ -941,7 +939,7 @@ const Index = () => {
       </section>
 
       {/* Section 9: Contact Form */}
-      <section id="contact-form" className="max-sm:py-8 py-16 lg:py-20 bg-bg-section-alt-2">
+      <section id="contact-form" className="max-sm:py-6 py-16 lg:py-20 bg-bg-section-alt-2">
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <div className="max-w-2xl mx-auto text-center">
