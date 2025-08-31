@@ -9,8 +9,12 @@ import Hero from '@/components/Hero';
 import ScrollReveal from '@/components/ScrollReveal';
 import { imageConfig } from '@/lib/imageConfig';
 const Index = () => {
-  const { toast } = useToast();
-  const { mobileMenuOpen } = useMobileMenu();
+  const {
+    toast
+  } = useToast();
+  const {
+    mobileMenuOpen
+  } = useMobileMenu();
   const [formData, setFormData] = useState({
     name: '',
     contact: '',
@@ -280,14 +284,9 @@ const Index = () => {
       <Header />
       
       {/* Mobile menu overlay for main content */}
-      <div 
-        className={`fixed inset-0 bg-black/80 backdrop-blur-sm z-30 transition-all duration-300 ease-in-out ${
-          mobileMenuOpen 
-            ? 'opacity-100 visible' 
-            : 'opacity-0 invisible'
-        }`}
-        style={{ top: 0 }}
-      />
+      <div className={`fixed inset-0 bg-black/80 backdrop-blur-sm z-30 transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`} style={{
+      top: 0
+    }} />
       
       <div className={`transition-opacity duration-300 ${mobileMenuOpen ? 'opacity-20' : 'opacity-100'}`}>
         <Hero />
@@ -990,7 +989,7 @@ const Index = () => {
             {/* Company Branding */}
             <div className="lg:col-span-1">
               <h3 className="max-sm:text-lg text-2xl font-heading font-bold max-sm:mb-2 mb-2">Tiny Outdoor Spaces</h3>
-              <p className="text-gray-400 max-sm:text-[14px] text-sm tracking-wide">CUSTOM WOODWORKING</p>
+              
             </div>
 
             {/* Services Column */}
@@ -1052,7 +1051,7 @@ const Index = () => {
               </a>
               <a href="mailto:info@tinyoutdoorspaces.com" className="w-12 h-12 rounded-full border border-gray-600 flex items-center justify-center hover:border-white hover:bg-white/10 transition-all duration-300">
                 <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                 </svg>
               </a>
             </div>
