@@ -1026,7 +1026,7 @@ const Index = () => {
                     
                     <div className="text-center pt-4">
                       <p className="text-text-secondary text-sm mb-4">Or send directly via WhatsApp instead</p>
-                      <Button className="bg-transparent border border-gray-300 text-text-primary font-medium px-8 py-3 rounded-full text-sm hover:bg-gray-50 transition-all duration-300" asChild>
+                      <Button className="bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-8 py-4 rounded-lg text-lg" asChild>
                         <a href="https://wa.me/353879380494" target="_blank" rel="noopener noreferrer">
                           WhatsApp Us
                         </a>
