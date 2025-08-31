@@ -161,7 +161,6 @@ const Index = () => {
       behavior: 'smooth'
     });
   };
-
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({
       behavior: 'smooth',
@@ -961,14 +960,7 @@ const Index = () => {
                     
                     <div className="text-center pt-2">
                       <p className="text-text-secondary text-base mb-4">Or send directly via WhatsApp instead</p>
-                      <a 
-                        href="https://wa.me/353879380494" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-8 py-4 md:px-16 md:py-6 rounded-xl text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center tracking-wider"
-                      >
-                        WhatsApp Us
-                      </a>
+                      <a href="https://wa.me/353879380494" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-[#0F1111] text-white font-medium uppercase border border-accent hover:bg-transparent hover:scale-105 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 ease-out px-8 py-4 md:px-16 md:py-6 rounded-xl text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center tracking-wider">WHATSAPP US</a>
                     </div>
                   </div>
                 </form>}
@@ -993,7 +985,7 @@ const Index = () => {
               <h4 className="text-white font-semibold text-sm tracking-wider mb-4">SERVICES</h4>
               <ul className="space-y-2">
                 <li><button onClick={() => scrollToSection('work')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">CUSTOM BARS</button></li>
-                <li><button onClick={() => scrollToSection('work')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">FURNITURE</button></li>
+                
                 <li><button onClick={() => scrollToSection('work')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">OUTDOOR SPACES</button></li>
                 <li><button onClick={() => scrollToSection('work')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">HOME BARS</button></li>
               </ul>
@@ -1005,7 +997,7 @@ const Index = () => {
               <ul className="space-y-2">
                 <li><button onClick={() => scrollToSection('work')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">RECENT WORK</button></li>
                 <li><button onClick={() => scrollToSection('work')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">COMMERCIAL</button></li>
-                <li><button onClick={() => scrollToSection('work')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">RESIDENTIAL</button></li>
+                
                 <li><button onClick={() => scrollToSection('work')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">GALLERY</button></li>
               </ul>
             </div>
@@ -1014,7 +1006,7 @@ const Index = () => {
             <div>
               <h4 className="text-white font-semibold text-sm tracking-wider mb-4">ABOUT US</h4>
               <ul className="space-y-2">
-                <li><button onClick={() => scrollToSection('about')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">OUR STORY</button></li>
+                
                 <li><button onClick={() => scrollToSection('about')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">THE MAKER</button></li>
                 <li><button onClick={() => scrollToSection('process')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">PROCESS</button></li>
                 <li><button onClick={() => scrollToSection('reviews')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">TESTIMONIALS</button></li>
@@ -1028,7 +1020,7 @@ const Index = () => {
                 <li><button onClick={() => scrollToSection('contact-form')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">GET QUOTE</button></li>
                 <li><a href="https://wa.me/353879380494" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide">WHATSAPP</a></li>
                 <li><button onClick={() => scrollToSection('contact-form')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">EMAIL</button></li>
-                <li><button onClick={() => scrollToSection('about')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">LOCATION</button></li>
+                
               </ul>
             </div>
           </div>
@@ -1048,9 +1040,7 @@ const Index = () => {
             </div>
 
             {/* Copyright */}
-            <p className="text-gray-500 text-sm text-center">
-              ©Copyright. All rights reserved.
-            </p>
+            <p className="text-gray-500 text-sm text-center">©Copyright Tiny Outdoor Spaces. All rights reserved.</p>
           </div>
         </div>
       </footer>
