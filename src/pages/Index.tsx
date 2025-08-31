@@ -3,14 +3,14 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import { useMobileMenu } from '@/contexts/MobileMenuContext';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import ScrollReveal from '@/components/ScrollReveal';
 import { imageConfig } from '@/lib/imageConfig';
 const Index = () => {
-  const {
-    toast
-  } = useToast();
+  const { toast } = useToast();
+  const { mobileMenuOpen } = useMobileMenu();
   const [formData, setFormData] = useState({
     name: '',
     contact: '',
@@ -278,6 +278,17 @@ const Index = () => {
   }];
   return <div className="min-h-screen">
       <Header />
+      
+      {/* Mobile menu overlay for main content */}
+      <div 
+        className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-30 transition-all duration-300 ease-in-out ${
+          mobileMenuOpen 
+            ? 'opacity-100 visible' 
+            : 'opacity-0 invisible'
+        }`}
+        style={{ top: 0 }}
+      />
+      
       <Hero />
 
       {/* Section 2: Pain → Value */}
