@@ -77,25 +77,27 @@ const Hero = () => {
         }}
       />
     
-    {/* Door Panels - Desktop Only (hide on mobile and tablet) */}
+    {/* Door Panels Container - Desktop Only (hide on mobile and tablet) */}
     {isDesktop && (
-      <>
+      <div className="absolute inset-0 w-full h-full overflow-hidden z-10">
         {/* Left Door Panel (duplicated from right) */}
-        <div className="absolute top-0 left-0 w-1/2 h-full bg-center z-10" style={{
+        <div className="absolute top-0 left-0 w-1/2 h-full bg-center" style={{
           backgroundImage: `url(${doorRight})`,
           backgroundSize: '50%',
           backgroundRepeat: 'no-repeat',
-          transform: `translateX(calc(-50% + 150px - ${scrollY * 0.3}px)) scaleX(-1)`
+          transform: `translateX(${Math.max(-50, -50 + (scrollY * 0.2))}%) scaleX(-1)`,
+          willChange: 'transform'
         }} />
         
         {/* Right Door Panel */}
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-center z-10" style={{
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-center" style={{
           backgroundImage: `url(${doorRight})`,
           backgroundSize: '50%',
           backgroundRepeat: 'no-repeat',
-          transform: `translateX(calc(50% - 150px + ${scrollY * 0.3}px))`
+          transform: `translateX(${Math.min(50, 50 - (scrollY * 0.2))}%)`,
+          willChange: 'transform'
         }} />
-      </>
+      </div>
     )}
     
     {/* Center gradient overlay for text readability */}

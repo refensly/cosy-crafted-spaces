@@ -294,7 +294,7 @@ const Index = () => {
 
       {/* Section 2: Pain → Value */}
       <section className="max-sm:pt-6 max-sm:pb-3 pt-16 pb-8 lg:pt-20 lg:pb-12 bg-gradient-to-br from-bg-section-alt-2 via-bg-wood-dark to-bg-main">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto max-w-screen-lg px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <ScrollReveal>
               <div>
@@ -339,7 +339,7 @@ const Index = () => {
 
       {/* New Section: Handmade Quality Examples */}
       <section className="max-sm:py-6 py-16 lg:py-20 bg-bg-main">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto max-w-screen-lg px-4 sm:px-6">
           <ScrollReveal>
             <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-6 mb-10 text-4xl md:text-5xl">Our Promise</h2>
             
@@ -527,7 +527,7 @@ const Index = () => {
 
       {/* Section 4: Why Custom > Standard */}
       <section className="max-sm:py-8 py-16 lg:py-20 bg-bg-section-alt">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto max-w-screen-lg px-4 sm:px-6">
           <div className="max-w-5xl mx-auto">
             
             {/* Headline */}
@@ -676,7 +676,7 @@ const Index = () => {
 
       {/* Section 5: Portfolio */}
       <section className="max-sm:py-6 py-16 lg:py-20 bg-bg-main">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto max-w-screen-lg px-4 sm:px-6">
           <ScrollReveal>
             <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-6 mb-12 text-4xl md:text-5xl">
               Recent projects
@@ -719,7 +719,7 @@ const Index = () => {
 
       {/* Reviews Section */}
       <section id="reviews" className="max-sm:py-6 py-16 lg:py-20 bg-gradient-to-br from-bg-section-alt-2 via-bg-wood-dark to-bg-main">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto max-w-screen-lg px-4 sm:px-6">
           <ScrollReveal>
             <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-6 mb-10 text-4xl md:text-5xl">
               What our clients say
@@ -821,7 +821,7 @@ const Index = () => {
 
       {/* New Section: What We Build */}
       <section className="max-sm:py-6 py-16 lg:py-20 bg-bg-main">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto max-w-screen-lg px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 max-sm:gap-4 gap-6 lg:gap-8 items-center">
             <ScrollReveal>
               <div>
@@ -859,7 +859,7 @@ const Index = () => {
 
       {/* New Section: FAQ */}
       <section className="max-sm:py-6 py-16 lg:py-20 bg-bg-section-alt">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto max-w-screen-lg px-4 sm:px-6">
           <div className="max-w-4xl mx-auto">
             <ScrollReveal>
               <div className="bg-bg-main rounded-xl max-sm:p-5 p-8">
@@ -890,7 +890,7 @@ const Index = () => {
         <div className="absolute inset-0 opacity-10">
           <img src={imageConfig.maker} alt="" className="w-full h-full object-cover" loading="lazy" />
         </div>
-        <div className="container mx-auto px-6 relative">
+        <div className="container mx-auto max-w-screen-lg px-4 sm:px-6 relative">
           <ScrollReveal>
             <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-6 mb-10 text-4xl md:text-5xl">
               How we work
@@ -916,7 +916,7 @@ const Index = () => {
 
       {/* Section 8: Who Am I */}
       <section id="about" className="max-sm:py-6 py-16 lg:py-20 bg-bg-main">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto max-w-screen-lg px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <ScrollReveal>
               <div className="relative">
@@ -940,7 +940,7 @@ const Index = () => {
 
       {/* Section 9: Contact Form */}
       <section id="contact-form" className="max-sm:py-6 py-16 lg:py-20 bg-gradient-to-br from-bg-section-alt-2 via-bg-wood-dark to-bg-main">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto max-w-screen-lg px-4 sm:px-6">
           <ScrollReveal>
             <div className="max-w-2xl mx-auto text-center">
               <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">Ready To Start?</h2>
@@ -989,7 +989,7 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="bg-[#0F0F0F] text-white py-16">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto max-w-screen-lg px-4 sm:px-6">
           {/* Main Footer Content */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-12">
             {/* Company Branding */}
