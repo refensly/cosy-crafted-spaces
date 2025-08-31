@@ -732,7 +732,7 @@ const Index = () => {
               <div className="grid md:grid-cols-5 max-sm:gap-4 gap-8 items-center">
                 <div className="md:col-span-2 relative">
                   <ScrollReveal delay={100}>
-                    <img src={imageConfig.testimonial} alt="The Summit Inn custom bar" className="w-full max-sm:max-h-[360px] h-64 md:h-80 object-cover rounded-xl" loading="lazy" />
+                    <img src={imageConfig.testimonial} alt="The Summit Inn custom bar" className="w-full max-sm:max-h-48 h-64 md:h-80 object-cover rounded-xl" loading="lazy" />
                   </ScrollReveal>
                 </div>
                 <div className="md:col-span-3">
@@ -767,7 +767,7 @@ const Index = () => {
           </ScrollReveal>
 
           {/* Grid of Reviews */}
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-3 max-sm:gap-4 gap-8 mb-12">
             <ScrollReveal delay={100}>
               <div className="bg-bg-section-alt rounded-xl max-sm:p-5 p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
                 <div className="flex items-center max-sm:mb-3 mb-4">
