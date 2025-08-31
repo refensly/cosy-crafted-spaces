@@ -293,9 +293,9 @@ const Index = () => {
       </div>
 
       {/* Section 2: Pain → Value */}
-      <section className="section-padding bg-bg-section-alt-2">
+      <section className="max-sm:py-8 py-16 lg:py-20 bg-bg-section-alt-2">
         <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <ScrollReveal>
               <div>
                 <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">
@@ -305,21 +305,28 @@ const Index = () => {
                   If you want something nobody else has, we design and build it for you. 
                   Premium materials, made locally.
                 </p>
-                <div className="space-y-4">
-                  {["One-of-a-kind design (never repeated)", "Premium hardwoods & brass", "Built in Ireland, built to last"].map((item, index) => <div key={index} className="flex items-center space-x-3">
-                      <div className="w-5 h-5 rounded-full bg-accent-primary flex items-center justify-center">
-                        <svg className="w-3 h-3 text-bg-main" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
+                <div className="max-sm:space-y-3 space-y-4">
+                  {["One-of-a-kind design (never repeated)", "Premium hardwoods & brass", "Built in Ireland, built to last"].map((item, index) => 
+                    <div key={index} className="relative group">
+                      <div className="bg-gradient-to-r from-bg-section-alt/40 via-bg-section-alt/60 to-bg-section-alt/40 backdrop-blur-sm border border-accent-primary/30 rounded-xl max-sm:p-4 p-5 shadow-lg shadow-accent-primary/10 hover:shadow-accent-primary/20 transition-all duration-300 hover:border-accent-primary/50">
+                        <div className="flex items-center space-x-4">
+                          <div className="w-6 h-6 rounded-full bg-gradient-to-br from-accent-primary to-accent-hover flex items-center justify-center shadow-lg shadow-accent-primary/30">
+                            <svg className="w-3.5 h-3.5 text-bg-main" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                            </svg>
+                          </div>
+                          <span className="text-text-primary font-medium max-sm:text-[15px] text-base">{item}</span>
+                        </div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
                       </div>
-                      <span className="text-text-primary">{item}</span>
-                    </div>)}
+                    </div>
+                  )}
                 </div>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <div className="relative">
-                <div className="w-full h-96 rounded-xl overflow-hidden">
+                <div className="w-full h-96 rounded-xl overflow-hidden shadow-2xl shadow-accent-primary/20 border border-accent-primary/20">
                   <ScrollReveal delay={250}>
                      <img src="/images/custom-bar-interior.png" alt="Custom bar interior with warm lighting and wood finishes" className="w-full h-full object-cover transform scale-125" loading="lazy" />
                   </ScrollReveal>
@@ -331,10 +338,10 @@ const Index = () => {
       </section>
 
       {/* New Section: Handmade Quality Examples */}
-      <section className="section-padding bg-bg-main">
+      <section className="max-sm:py-8 py-16 lg:py-20 bg-bg-main">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-12 text-4xl md:text-5xl">Our Promise</h2>
+            <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-6 mb-10 text-4xl md:text-5xl">Our Promise</h2>
             
           </ScrollReveal>
           
@@ -405,18 +412,18 @@ const Index = () => {
             </div>
           </ScrollReveal>
           
-          <div className="max-sm:space-y-3 space-y-4">
+          <div className="max-sm:space-y-2 space-y-3 max-w-4xl mx-auto">
             {portfolioCategories.map((category, categoryIndex) => <div key={category.id} className="w-full">
                 <ScrollReveal delay={categoryIndex * 100}>
                   <div className={`
-                      relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 ease-out
+                      relative overflow-hidden rounded-xl cursor-pointer transition-all duration-500 ease-out
                       bg-gradient-to-br from-bg-section-alt/80 via-bg-section-alt-2/75 to-bg-section-alt/80
-                      backdrop-blur-md border border-bg-section-alt/60 shadow-2xl
-                      border-b-2 border-b-accent-primary/30 max-sm:px-5 max-sm:py-6 px-10 py-8
-                      hover:shadow-accent-primary/30 hover:shadow-[0_25px_50px_-12px_rgba(197,156,87,0.35)]
-                      hover:border-accent-primary/50 hover:border-b-accent-primary/60 hover:scale-[1.02] 
+                      backdrop-blur-md border border-bg-section-alt/60 shadow-xl
+                      border-b-2 border-b-accent-primary/30 max-sm:px-4 max-sm:py-4 px-6 py-5
+                      hover:shadow-accent-primary/30 hover:shadow-[0_20px_40px_-12px_rgba(197,156,87,0.35)]
+                      hover:border-accent-primary/50 hover:border-b-accent-primary/60 hover:scale-[1.01] 
                       hover:bg-gradient-to-br hover:from-bg-section-alt-2/90 hover:via-bg-section-alt/85 hover:to-bg-section-alt-2/90
-                      ${expandedCategory === category.id ? 'shadow-accent-primary/40 shadow-[0_30px_60px_-12px_rgba(197,156,87,0.4)] border-accent-primary/70 border-b-accent-primary/80 bg-gradient-to-br from-bg-section-alt-2/90 via-bg-section-alt/85 to-bg-section-alt-2/90' : ''}
+                      ${expandedCategory === category.id ? 'shadow-accent-primary/40 shadow-[0_25px_50px_-12px_rgba(197,156,87,0.4)] border-accent-primary/70 border-b-accent-primary/80 bg-gradient-to-br from-bg-section-alt-2/90 via-bg-section-alt/85 to-bg-section-alt-2/90' : ''}
                     `} onClick={() => handleCategoryClick(category.id)}>
                     {/* Premium inner glow */}
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.02] to-transparent"></div>
@@ -424,16 +431,16 @@ const Index = () => {
                     {/* Active state accent line */}
                     {expandedCategory === category.id && <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-accent-primary to-transparent"></div>}
                     
-                    <div className="relative px-2 py-4">
+                    <div className="relative max-sm:px-1 max-sm:py-2 px-2 py-3">
                       <div className="flex items-center justify-between">
                         <div>
-                          <h3 className="font-heading font-bold text-white text-2xl md:text-3xl mb-3 tracking-tight">
+                          <h3 className="font-heading font-bold text-white max-sm:text-lg max-sm:mb-1 text-xl md:text-2xl mb-2 tracking-tight">
                             {category.title}
                           </h3>
-                          <p className="text-gray-300 text-lg font-medium">{category.description}</p>
+                          <p className="text-gray-300 max-sm:text-[14px] text-base font-medium">{category.description}</p>
                         </div>
                         <div className={`transform transition-all duration-300 ease-out ${expandedCategory === category.id ? 'rotate-180 text-accent-primary' : 'text-gray-400'}`}>
-                          <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="max-sm:w-5 max-sm:h-5 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
                           </svg>
                         </div>
@@ -519,20 +526,20 @@ const Index = () => {
       </section>
 
       {/* Section 4: Why Custom > Standard */}
-      <section className="py-16 md:py-20 bg-bg-section-alt">
+      <section className="max-sm:py-8 py-16 lg:py-20 bg-bg-section-alt">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
             
             {/* Headline */}
             <ScrollReveal>
-              <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-8 text-4xl lg:text-5xl text-center">
+              <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl lg:text-5xl text-center">
                 Why choose custom over mass-market
               </h2>
             </ScrollReveal>
             
             {/* Intro Text */}
             <ScrollReveal delay={100}>
-              <p className="max-sm:text-[15px] max-sm:leading-relaxed max-sm:mb-6 text-xl lg:text-2xl text-text-secondary leading-relaxed mb-12 text-center max-w-4xl mx-auto">
+              <p className="max-sm:text-[15px] max-sm:leading-relaxed max-sm:mb-6 text-xl lg:text-2xl text-text-secondary leading-relaxed mb-8 text-center max-w-4xl mx-auto">
                 Most furniture today is disposable. We build for decades — each piece unique, designed and crafted in Ireland from premium oak, walnut, and brass.
               </p>
             </ScrollReveal>
@@ -625,8 +632,8 @@ const Index = () => {
 
             {/* Benefits Icons Row */}
             <ScrollReveal delay={300}>
-              <div className="bg-bg-section-alt-2 rounded-2xl p-8 border border-accent-primary/20 shadow-lg shadow-accent-primary/10 mb-12">
-                <div className="grid md:grid-cols-4 gap-8">
+              <div className="bg-bg-section-alt-2 rounded-xl max-sm:p-4 p-6 border border-accent-primary/20 shadow-lg shadow-accent-primary/10 max-sm:mb-6 mb-8">
+                <div className="grid grid-cols-2 md:grid-cols-4 max-sm:gap-4 gap-6">
                   {[{
                   icon: "🔨",
                   title: "Unique every time",
@@ -644,11 +651,11 @@ const Index = () => {
                   title: "Built to last",
                   subtitle: "Decades, not years"
                 }].map((benefit, index) => <div key={index} className="text-center">
-                      <div className="text-4xl mb-3">{benefit.icon}</div>
-                      <h4 className="font-heading font-bold text-text-primary max-sm:text-base max-sm:mb-2 mb-2 text-lg">
+                      <div className="max-sm:text-2xl text-3xl max-sm:mb-2 mb-3">{benefit.icon}</div>
+                      <h4 className="font-heading font-bold text-text-primary max-sm:text-[14px] max-sm:mb-1 mb-2 text-base">
                         {benefit.title}
                       </h4>
-                      <p className="text-text-secondary max-sm:text-[14px] text-sm">{benefit.subtitle}</p>
+                      <p className="text-text-secondary max-sm:text-[12px] text-sm">{benefit.subtitle}</p>
                     </div>)}
                 </div>
               </div>
@@ -668,31 +675,32 @@ const Index = () => {
       </section>
 
       {/* Section 5: Portfolio */}
-      <section className="section-padding bg-bg-main">
+      <section className="max-sm:py-8 py-16 lg:py-20 bg-bg-main">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-8 mb-16 text-4xl md:text-5xl">
+            <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-6 mb-12 text-4xl md:text-5xl">
               Recent projects
             </h2>
           </ScrollReveal>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {projects.map((project, index) => <ScrollReveal key={index} delay={index * 100}>
-                <div className="premium-card group cursor-pointer" onClick={() => handleProjectClick(project)}>
-                  <div className="relative overflow-hidden rounded-lg">
+                <div className="group cursor-pointer bg-gradient-to-br from-bg-section-alt/60 via-bg-section-alt-2/50 to-bg-section-alt/60 backdrop-blur-sm border border-accent-primary/30 rounded-2xl shadow-2xl shadow-accent-primary/20 hover:shadow-accent-primary/40 hover:border-accent-primary/60 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1 overflow-hidden" onClick={() => handleProjectClick(project)}>
+                  <div className="relative overflow-hidden">
                     <ScrollReveal delay={index * 100}>
-                      <img src={project.image} alt={project.title} className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
+                      <img src={project.image} alt={project.title} className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
                     </ScrollReveal>
-                    <div className="absolute inset-0 bg-gradient-to-t from-bg-main/90 to-transparent opacity-100 transition-opacity duration-300 flex items-end">
-                      <div className="max-sm:p-5 p-6">
-                        <h3 className="font-heading font-bold text-text-primary max-sm:text-lg max-sm:mb-1 mb-1 text-2xl">
+                    <div className="absolute inset-0 bg-gradient-to-t from-bg-main/95 via-bg-main/40 to-transparent opacity-100 transition-opacity duration-300 flex items-end">
+                      <div className="max-sm:p-5 p-6 w-full">
+                        <h3 className="font-heading font-bold text-text-primary max-sm:text-lg max-sm:mb-1 mb-2 text-xl">
                           {project.title}
                         </h3>
-                        <p className="text-text-secondary max-sm:text-[14px] max-sm:mb-3 text-sm mb-3">{project.subtitle}</p>
-                        <Button variant="outline" size="mobile-secondary" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out max-sm:text-[14px] max-sm:px-5 max-sm:py-3 max-sm:rounded-xl btn-secondary">
+                        <p className="text-text-secondary max-sm:text-[14px] max-sm:mb-3 text-sm mb-4 leading-relaxed">{project.subtitle}</p>
+                        <Button variant="outline" size="mobile-secondary" className="border-accent-primary/80 text-accent-primary hover:bg-accent-primary hover:text-bg-main hover:border-accent-primary transition-all duration-300 max-sm:text-[14px] max-sm:px-5 max-sm:py-3 max-sm:rounded-xl shadow-lg shadow-accent-primary/20 hover:shadow-accent-primary/40">
                           View Project
                         </Button>
                       </div>
                     </div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   </div>
                 </div>
               </ScrollReveal>)}
@@ -710,10 +718,10 @@ const Index = () => {
       </section>
 
       {/* Reviews Section */}
-      <section id="reviews" className="section-padding bg-bg-section-alt-2">
+      <section id="reviews" className="max-sm:py-8 py-16 lg:py-20 bg-bg-section-alt-2">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-8 mb-16 text-4xl md:text-5xl">
+            <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-6 mb-10 text-4xl md:text-5xl">
               What our clients say
             </h2>
           </ScrollReveal>
@@ -812,9 +820,9 @@ const Index = () => {
       </section>
 
       {/* New Section: What We Build */}
-      <section className="section-padding bg-bg-main">
+      <section className="max-sm:py-8 py-16 lg:py-20 bg-bg-main">
         <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <ScrollReveal>
               <div>
                 <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">
@@ -831,7 +839,7 @@ const Index = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60 rounded-xl"></div>
                 <div className="absolute inset-0 border border-accent-primary/30 rounded-xl"></div>
                 <ScrollReveal delay={250}>
-                  <img src={imageConfig.maker} alt="Craftsman working in workshop" className="w-full max-sm:max-h-[360px] h-96 object-cover rounded-xl" loading="lazy" />
+                  <img src={imageConfig.maker} alt="Craftsman working in workshop" className="w-full max-sm:max-h-[300px] h-80 lg:h-96 object-cover rounded-xl" loading="lazy" />
                 </ScrollReveal>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl"></div>
               </div>
@@ -850,7 +858,7 @@ const Index = () => {
       </section>
 
       {/* New Section: FAQ */}
-      <section className="section-padding bg-bg-section-alt">
+      <section className="max-sm:py-8 py-16 lg:py-20 bg-bg-section-alt">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <ScrollReveal>
@@ -878,13 +886,13 @@ const Index = () => {
       </section>
 
       {/* Section 7: Process */}
-      <section id="process" className="section-padding bg-bg-section-alt relative overflow-hidden">
+      <section id="process" className="max-sm:py-8 py-16 lg:py-20 bg-bg-section-alt relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <img src={imageConfig.maker} alt="" className="w-full h-full object-cover" loading="lazy" />
         </div>
         <div className="container mx-auto px-6 relative">
           <ScrollReveal>
-            <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-8 mb-16 text-4xl md:text-5xl">
+            <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-6 mb-10 text-4xl md:text-5xl">
               How we work
             </h2>
           </ScrollReveal>
@@ -909,15 +917,15 @@ const Index = () => {
       </section>
 
       {/* Section 8: Who Am I */}
-      <section id="about" className="section-padding bg-bg-main">
+      <section id="about" className="max-sm:py-8 py-16 lg:py-20 bg-bg-main">
         <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <ScrollReveal>
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-transparent to-black/30 rounded-xl"></div>
                 <div className="absolute inset-0 border-2 border-accent-primary/40 rounded-xl transform rotate-1 shadow-lg shadow-accent-primary/20"></div>
                 <ScrollReveal delay={100}>
-                  <img src={imageConfig.maker} alt="Craftsman in workshop" className="relative w-full max-sm:max-h-[360px] h-96 object-cover rounded-xl" loading="lazy" />
+                  <img src={imageConfig.maker} alt="Craftsman in workshop" className="relative w-full max-sm:max-h-[300px] h-80 lg:h-96 object-cover rounded-xl" loading="lazy" />
                 </ScrollReveal>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent rounded-xl"></div>
               </div>
@@ -933,7 +941,7 @@ const Index = () => {
       </section>
 
       {/* Section 9: Contact Form */}
-      <section id="contact-form" className="section-padding bg-bg-section-alt-2">
+      <section id="contact-form" className="max-sm:py-8 py-16 lg:py-20 bg-bg-section-alt-2">
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <div className="max-w-2xl mx-auto text-center">
