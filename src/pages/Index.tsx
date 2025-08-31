@@ -309,12 +309,7 @@ const Index = () => {
                   {["One-of-a-kind design (never repeated)", "Premium hardwoods & brass", "Built in Ireland, built to last"].map((item, index) => 
                     <div key={index} className="relative group">
                       <div className="bg-gradient-to-r from-bg-section-alt/40 via-bg-section-alt/60 to-bg-section-alt/40 backdrop-blur-sm border border-accent-primary/30 rounded-xl max-sm:p-4 p-5 shadow-lg shadow-accent-primary/10 hover:shadow-accent-primary/20 transition-all duration-300 hover:border-accent-primary/50">
-                        <div className="flex items-center space-x-4">
-                          <div className="w-6 h-6 rounded-full bg-gradient-to-br from-accent-primary to-accent-hover flex items-center justify-center shadow-lg shadow-accent-primary/30">
-                            <svg className="w-3.5 h-3.5 text-bg-main" fill="currentColor" viewBox="0 0 20 20">
-                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                            </svg>
-                          </div>
+                        <div className="flex items-center">
                           <span className="text-text-primary font-medium max-sm:text-[15px] text-base">{item}</span>
                         </div>
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
