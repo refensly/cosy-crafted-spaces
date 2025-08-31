@@ -695,7 +695,7 @@ const Index = () => {
                           {project.title}
                         </h3>
                         <p className="text-text-secondary max-sm:text-[14px] max-sm:mb-3 text-sm mb-4 leading-relaxed">{project.subtitle}</p>
-                        <Button variant="outline" size="mobile-secondary" className="border-accent-primary/80 text-accent-primary hover:bg-accent-primary hover:text-bg-main hover:border-accent-primary transition-all duration-300 max-sm:text-[14px] max-sm:px-5 max-sm:py-3 max-sm:rounded-xl shadow-lg shadow-accent-primary/20 hover:shadow-accent-primary/40">
+                        <Button variant="outline" size="project-card" className="border-accent-primary/80 text-accent-primary hover:bg-accent-primary hover:text-bg-main hover:border-accent-primary transition-all duration-300 shadow-lg shadow-accent-primary/20 hover:shadow-accent-primary/40 hover:scale-105">
                           View Project
                         </Button>
                       </div>
