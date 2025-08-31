@@ -137,12 +137,15 @@ const Hero = () => {
               <span className="hidden sm:block">GET A QUOTE</span>
             </Button>
 
-            <Button variant="outline" className={`border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 ${isMobile ? 'w-full mx-auto block text-sm px-6 py-2.5 min-h-[42px] rounded-lg' : 'w-auto px-6 sm:px-10 md:px-14 py-4 sm:py-6 md:py-7 text-lg sm:text-xl'}`} asChild>
-              <a href="https://wa.me/353879380494" target="_blank" rel="noopener noreferrer nofollow">
-                <span className="block sm:hidden">WHATSAPP US</span>
-                <span className="hidden sm:block">TALK TO US ON WHATSAPP</span>
-              </a>
-            </Button>
+            <a 
+              href="https://wa.me/353879380494" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={`inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 ${isMobile ? 'w-full mx-auto block text-sm px-6 py-2.5 min-h-[42px] rounded-lg' : 'w-auto px-6 sm:px-10 md:px-14 py-4 sm:py-6 md:py-7 text-lg sm:text-xl'}`}
+            >
+              <span className="block sm:hidden">WHATSAPP US</span>
+              <span className="hidden sm:block">TALK TO US ON WHATSAPP</span>
+            </a>
           </div>
         </div>
       </div>
