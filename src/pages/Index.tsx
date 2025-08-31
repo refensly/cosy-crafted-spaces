@@ -526,7 +526,7 @@ const Index = () => {
       </section>
 
       {/* Section 4: Why Custom > Standard */}
-      <section className="max-sm:py-8 py-16 lg:py-20 bg-bg-section-alt">
+      <section className="max-sm:py-8 py-16 lg:py-20" style={{background: 'var(--gradient-section)'}}>
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
             
@@ -858,7 +858,7 @@ const Index = () => {
       </section>
 
       {/* New Section: FAQ */}
-      <section className="max-sm:py-6 py-16 lg:py-20 bg-bg-section-alt">
+      <section className="max-sm:py-6 py-16 lg:py-20" style={{background: 'var(--gradient-section)'}}>
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <ScrollReveal>
