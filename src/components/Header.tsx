@@ -14,6 +14,19 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [mobileMenuOpen]);
+
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ 
       behavior: 'smooth',
@@ -85,8 +98,18 @@ const Header = () => {
         </button>
       </nav>
 
+      {/* Mobile menu overlay */}
+      <div 
+        className={`md:hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-40 transition-all duration-300 ease-in-out ${
+          mobileMenuOpen 
+            ? 'opacity-100 visible' 
+            : 'opacity-0 invisible'
+        }`}
+        onClick={() => setMobileMenuOpen(false)}
+      />
+
       {/* Mobile menu */}
-      <div className={`md:hidden bg-bg-main border-t border-border transition-all duration-300 ease-in-out ${
+      <div className={`md:hidden bg-bg-main border-t border-border transition-all duration-300 ease-in-out relative z-50 ${
         mobileMenuOpen 
           ? 'max-h-screen opacity-100 visible' 
           : 'max-h-0 opacity-0 invisible overflow-hidden'
