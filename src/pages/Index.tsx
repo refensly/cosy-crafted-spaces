@@ -824,7 +824,7 @@ const Index = () => {
                 <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">
                   What We Build
                 </h2>
-                <div className="w-24 h-0.5 bg-accent-primary mx-auto mb-8"></div>
+                <div className="w-24 h-0.5 bg-accent-primary mb-8"></div>
                 <p className="max-sm:text-[15px] max-sm:leading-relaxed max-sm:mb-4 text-xl text-text-secondary mb-6 leading-relaxed">
                   From full pub interiors to outdoor kitchens, from custom bars to one-off furniture — 
                   we design and craft everything to fit your exact space.
