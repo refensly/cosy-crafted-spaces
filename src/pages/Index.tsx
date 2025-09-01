@@ -357,7 +357,7 @@ const Index = () => {
                   <div className="relative max-sm:mb-1 mb-2">
                      <div className="w-full rounded-lg overflow-hidden shadow-md bg-bg-secondary">
                        <ScrollReveal delay={index * 100 + 50}>
-                         <img src={example.image} alt="Custom craftsmanship and interior design" className="w-full h-32 object-contain" loading="lazy" />
+                         <img src={example.image} alt="Custom craftsmanship and interior design" className="w-full h-32 object-cover object-center" loading="lazy" />
                        </ScrollReveal>
                      </div>
                   </div>
