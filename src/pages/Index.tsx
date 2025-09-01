@@ -337,7 +337,7 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">Our Promise</h2>
-            <div className="w-24 h-0.5 bg-accent-primary mx-auto"></div>
+            <div className="w-24 h-0.5 bg-accent-primary mx-auto mb-8"></div>
             
           </ScrollReveal>
           
@@ -404,7 +404,7 @@ const Index = () => {
               <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">
                 What We Create
               </h2>
-              <div className="w-24 h-0.5 bg-accent-primary mx-auto"></div>
+              <div className="w-24 h-0.5 bg-accent-primary mx-auto mb-8"></div>
             </div>
           </ScrollReveal>
           
@@ -531,7 +531,7 @@ const Index = () => {
               <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl lg:text-5xl text-center">
                 Why choose custom over mass-market
               </h2>
-              <div className="w-24 h-0.5 bg-accent-primary mx-auto"></div>
+              <div className="w-24 h-0.5 bg-accent-primary mx-auto mb-8"></div>
             </ScrollReveal>
             
             {/* Intro Text */}
@@ -678,7 +678,7 @@ const Index = () => {
             <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">
               Recent projects
             </h2>
-            <div className="w-24 h-0.5 bg-accent-primary mx-auto"></div>
+            <div className="w-24 h-0.5 bg-accent-primary mx-auto mb-8"></div>
           </ScrollReveal>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {projects.map((project, index) => <ScrollReveal key={index} delay={index * 100}>
@@ -826,7 +826,7 @@ const Index = () => {
                 <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">
                   What We Build
                 </h2>
-                <div className="w-24 h-0.5 bg-accent-primary mx-auto"></div>
+                <div className="w-24 h-0.5 bg-accent-primary mx-auto mb-8"></div>
                 <p className="max-sm:text-[15px] max-sm:leading-relaxed max-sm:mb-4 text-xl text-text-secondary mb-6 leading-relaxed">
                   From full pub interiors to outdoor kitchens, from custom bars to one-off furniture — 
                   we design and craft everything to fit your exact space.
@@ -865,7 +865,7 @@ const Index = () => {
                 <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">
                   Can I customize it for myself?
                 </h2>
-                <div className="w-24 h-0.5 bg-accent-primary mx-auto"></div>
+                <div className="w-24 h-0.5 bg-accent-primary mx-auto mb-8"></div>
                 <p className="max-sm:text-[15px] max-sm:leading-relaxed text-xl text-text-secondary leading-relaxed">
                   Yes. Every build starts with your vision. Size, finish, details — everything can be 
                   tailored for your space.
@@ -895,7 +895,7 @@ const Index = () => {
             <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">
               How we work
             </h2>
-            <div className="w-24 h-0.5 bg-accent-primary mx-auto"></div>
+            <div className="w-24 h-0.5 bg-accent-primary mx-auto mb-8"></div>
           </ScrollReveal>
           <div className="grid md:grid-cols-4 max-sm:gap-y-4 gap-6">
             {processSteps.map((step, index) => <ScrollReveal key={index} delay={index * 150}>
@@ -932,7 +932,7 @@ const Index = () => {
             <ScrollReveal delay={200}>
               <div>
                 <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">The Signature</h2>
-                <div className="w-24 h-0.5 bg-accent-primary mx-auto"></div>
+                <div className="w-24 h-0.5 bg-accent-primary mx-auto mb-8"></div>
                 <p className="max-sm:text-[15px] max-sm:leading-relaxed max-sm:mb-6 text-xl text-text-secondary mb-8 leading-relaxed">Crafted from walnut, oak, and brass, each piece is unique and unrepeatable. Defined by precision and distinguished by detail, this work carries the signature of timeless craftsmanship, embodied in the hands of its maker</p>
               </div>
             </ScrollReveal>
@@ -946,7 +946,7 @@ const Index = () => {
           <ScrollReveal>
             <div className="max-w-2xl mx-auto text-center">
               <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">Ready To Start?</h2>
-              <div className="w-24 h-0.5 bg-accent-primary mx-auto"></div>
+              <div className="w-24 h-0.5 bg-accent-primary mx-auto mb-8"></div>
               
               {formSubmitted ? <div className="bg-neutral-light/10 border border-neutral-light/20 rounded-xl p-12 text-center">
                   <h3 className="max-sm:text-lg text-2xl font-semibold text-text-primary max-sm:mb-3 mb-4">
