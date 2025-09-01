@@ -110,7 +110,7 @@ const Hero = () => {
           </div>}
         
         {/* CTAs */}
-        <div className={`${isMobile ? 'space-y-3 px-6' : 'space-y-6'}`}>
+        <div className={`${isMobile ? 'space-y-6 px-6' : 'space-y-10'}`}>
           {/* Main CTA */}
           <div className={`${isMobile ? 'mt-8' : 'flex justify-center'} ${animationsStarted ? 'animate-fade-up animation-delay-1500' : 'opacity-0'}`}>
             <Button variant="outline" className={`${isMobile ? 'border-accent-primary border-2 text-white font-semibold hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out w-full max-w-[320px] mx-auto flex items-center justify-center text-[15px] px-5 py-3 rounded-xl min-h-[48px]' : 'btn-primary font-medium bg-transparent text-white uppercase border-2 border-white hover:bg-white/10 transition-all duration-300 ease-in-out shadow-xl hover-scale w-auto text-lg sm:text-xl md:text-2xl px-6 sm:px-12 md:px-18 py-6 sm:py-10 md:py-14'}`} style={isMobile ? {} : {
@@ -122,7 +122,7 @@ const Hero = () => {
           </div>
           
           {/* Secondary CTAs */}
-          <div className={`${isMobile ? 'flex flex-col gap-3' : 'flex flex-col gap-3 items-center'} ${animationsStarted ? 'animate-fade-up animation-delay-1700' : 'opacity-0'}`}>
+          <div className={`${isMobile ? 'flex flex-col gap-4' : 'flex flex-col gap-5 items-center'} ${animationsStarted ? 'animate-fade-up animation-delay-1700' : 'opacity-0'}`}>
             <Button variant="outline" className={`border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 ${isMobile ? 'w-full max-w-[320px] mx-auto text-[14px] font-medium px-5 py-3 rounded-xl min-h-[44px]' : 'w-auto px-6 sm:px-10 md:px-14 py-4 sm:py-6 md:py-7 text-lg sm:text-xl'}`} onClick={scrollToContact}>
               <span className="block sm:hidden">GET A QUOTE</span>
               <span className="hidden sm:block">GET A QUOTE</span>
