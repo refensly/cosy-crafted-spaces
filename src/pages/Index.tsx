@@ -323,7 +323,7 @@ const Index = () => {
               <div className="relative">
                 <div className="w-full rounded-xl overflow-hidden shadow-xl shadow-accent-primary/15 border border-accent-primary/15">
                   <ScrollReveal delay={250}>
-                     <img src="/images/custom-bar-interior.png" alt="Custom bar interior with warm lighting and wood finishes" className="w-full aspect-[4/3] object-cover object-center bg-gray-900" loading="lazy" />
+                     <img src="/images/custom-bar-interior.png" alt="Custom bar interior with warm lighting and wood finishes" className="w-full h-48 sm:h-56 md:h-64 object-cover object-center bg-gray-900" loading="lazy" />
                   </ScrollReveal>
                 </div>
               </div>
