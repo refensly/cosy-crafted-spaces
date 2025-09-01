@@ -865,7 +865,7 @@ const Index = () => {
                 <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">
                   Can I customize it for myself?
                 </h2>
-                <div className="w-24 h-0.5 bg-accent-primary mx-auto mb-8"></div>
+                <div className="w-24 h-0.5 bg-accent-primary mb-8"></div>
                 <p className="max-sm:text-[15px] max-sm:leading-relaxed text-xl text-text-secondary leading-relaxed">
                   Yes. Every build starts with your vision. Size, finish, details — everything can be 
                   tailored for your space.
