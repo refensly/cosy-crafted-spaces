@@ -141,7 +141,7 @@ const Hero = () => {
               href="https://wa.me/353879380494" 
               target="_blank" 
               rel="noopener noreferrer"
-              className={`inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 ${isMobile ? 'w-full max-w-[320px] mx-auto text-[14px] px-5 py-3 rounded-xl min-h-[44px]' : 'w-[320px] px-8 py-5 text-lg font-medium'}`}
+              className={`inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-accent-primary text-white bg-[#0F1111] hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 ${isMobile ? 'w-full max-w-[320px] mx-auto text-[14px] px-5 py-3 rounded-xl min-h-[44px]' : 'w-[320px] px-8 py-5 text-lg font-medium'}`}
             >
               <span className="block sm:hidden">WHATSAPP US</span>
               <span className="hidden sm:block">TALK TO US ON WHATSAPP</span>
