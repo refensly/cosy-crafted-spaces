@@ -9,8 +9,11 @@ const Hero = () => {
   const [panelsOpened, setPanelsOpened] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const [animationsStarted, setAnimationsStarted] = useState(false);
-  const { isMobile, isDesktop, isMobileOrTablet } = useBreakpoints();
-
+  const {
+    isMobile,
+    isDesktop,
+    isMobileOrTablet
+  } = useBreakpoints();
   useEffect(() => {
     // Preload the hero background image for all devices
     const link = document.createElement('link');
@@ -39,11 +42,9 @@ const Hero = () => {
         }
       }
     };
-
     if (isDesktop) {
       window.addEventListener('scroll', handleScroll);
     }
-    
     return () => {
       clearTimeout(timer);
       clearTimeout(animationTimer);
@@ -52,51 +53,41 @@ const Hero = () => {
       }
     };
   }, [panelsOpened, isMobile, isDesktop]);
-
   const scrollToContact = () => {
     document.getElementById('contact-form')?.scrollIntoView({
       behavior: 'smooth',
       block: 'start'
     });
   };
-
-  return (
-    <section 
-      className={`relative ${isMobile ? 'min-h-[90vh]' : 'min-h-screen'} overflow-hidden animate-fade-in`}
-      style={{
-        animationDuration: '0.5s',
-        minHeight: isMobile ? '90vh' : '100vh',
-        backgroundColor: 'hsl(var(--bg-deep-green))'
-      }}
-    >
+  return <section className={`relative ${isMobile ? 'min-h-[90vh]' : 'min-h-screen'} overflow-hidden animate-fade-in`} style={{
+    animationDuration: '0.5s',
+    minHeight: isMobile ? '90vh' : '100vh',
+    backgroundColor: 'hsl(var(--bg-deep-green))'
+  }}>
       {/* Optimized Hero Background */}
-      <OptimizedHeroImage 
-        style={{
-          transform: isDesktop ? `translateY(${scrollY * 0.1}px)` : 'none',
-          backgroundAttachment: isMobileOrTablet ? 'scroll' : 'fixed'
-        }}
-      />
+      <OptimizedHeroImage style={{
+      transform: isDesktop ? `translateY(${scrollY * 0.1}px)` : 'none',
+      backgroundAttachment: isMobileOrTablet ? 'scroll' : 'fixed'
+    }} />
     
     {/* Door Panels - Desktop Only (hide on mobile and tablet) */}
-    {isDesktop && (
-      <>
+    {isDesktop && <>
         {/* Left Door Panel (duplicated from right) */}
         <div className="absolute top-0 left-0 w-1/2 h-full bg-center z-10" style={{
-          backgroundImage: `url(${doorRight})`,
-          backgroundSize: '50%',
-          backgroundRepeat: 'no-repeat',
-          transform: `translateX(calc(-50% + 150px - ${scrollY * 0.3}px)) scaleX(-1)`
-        }} />
+        backgroundImage: `url(${doorRight})`,
+        backgroundSize: '50%',
+        backgroundRepeat: 'no-repeat',
+        transform: `translateX(calc(-50% + 150px - ${scrollY * 0.3}px)) scaleX(-1)`
+      }} />
         
         {/* Right Door Panel */}
         <div className="absolute top-0 right-0 w-1/2 h-full bg-center z-10" style={{
-          backgroundImage: `url(${doorRight})`,
-          backgroundSize: '50%',
-          backgroundRepeat: 'no-repeat',
-          transform: `translateX(calc(50% - 150px + ${scrollY * 0.3}px))`
-        }} />
-      </>
-    )}
+        backgroundImage: `url(${doorRight})`,
+        backgroundSize: '50%',
+        backgroundRepeat: 'no-repeat',
+        transform: `translateX(calc(50% - 150px + ${scrollY * 0.3}px))`
+      }} />
+      </>}
     
     {/* Center gradient overlay for text readability */}
     <div className={`absolute inset-0 z-20 ${isMobile ? 'bg-gradient-to-r from-transparent via-black/50 to-transparent' : 'bg-gradient-to-r from-transparent via-black/30 to-transparent'}`} />
@@ -114,35 +105,30 @@ const Hero = () => {
         </div>
         
         {/* Unique Badge - Desktop Only */}
-        {isDesktop && (
-          <div className={`mb-6 sm:mb-8 ${animationsStarted ? 'animate-fade-up animation-delay-1300' : 'opacity-0'}`}>
-            <span className={`text-white font-heading font-bold tracking-wider text-xl sm:text-2xl md:text-[32px]`}>Unique.</span>
-          </div>
-        )}
+        {isDesktop && <div className={`mb-6 sm:mb-8 ${animationsStarted ? 'animate-fade-up animation-delay-1300' : 'opacity-0'}`}>
+            
+          </div>}
         
         {/* CTAs */}
         <div className={`${isMobile ? 'space-y-3 px-6' : 'space-y-6'}`}>
           {/* Main CTA */}
           <div className={`${isMobile ? 'mt-8' : 'flex justify-center'} ${animationsStarted ? 'animate-fade-up animation-delay-1500' : 'opacity-0'}`}>
-            <Button variant="outline" className={`${isMobile ? 'border-accent-primary border-2 text-white font-semibold hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out w-full max-w-[320px] mx-auto flex items-center justify-center text-[15px] px-5 py-3 rounded-xl min-h-[48px]' : 'btn-primary font-medium bg-transparent text-white uppercase border-2 border-white hover:bg-white/10 transition-all duration-300 ease-in-out shadow-xl hover-scale w-auto text-lg sm:text-xl md:text-2xl px-6 sm:px-12 md:px-18 py-6 sm:py-10 md:py-14'}`} style={isMobile ? {} : {boxShadow: '0 0 30px hsl(39 54% 45% / 0.6)'}} onClick={scrollToContact}>
+            <Button variant="outline" className={`${isMobile ? 'border-accent-primary border-2 text-white font-semibold hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out w-full max-w-[320px] mx-auto flex items-center justify-center text-[15px] px-5 py-3 rounded-xl min-h-[48px]' : 'btn-primary font-medium bg-transparent text-white uppercase border-2 border-white hover:bg-white/10 transition-all duration-300 ease-in-out shadow-xl hover-scale w-auto text-lg sm:text-xl md:text-2xl px-6 sm:px-12 md:px-18 py-6 sm:py-10 md:py-14'}`} style={isMobile ? {} : {
+              boxShadow: '0 0 30px hsl(39 54% 45% / 0.6)'
+            }} onClick={scrollToContact}>
               <span className="block sm:hidden">FREE CONSULTATION</span>
               <span className="hidden sm:block">GET FREE CONSULTATION NOW</span>
             </Button>
           </div>
           
           {/* Secondary CTAs */}
-          <div className={`${isMobile ? 'flex flex-col gap-3' : 'flex flex-col items-center gap-4'} ${animationsStarted ? 'animate-fade-up animation-delay-1700' : 'opacity-0'}`}>
-            <Button variant="outline" className={`border-accent-primary text-white bg-[#0F1111] hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 ${isMobile ? 'w-full max-w-[320px] mx-auto text-[14px] font-medium px-5 py-3 rounded-xl min-h-[44px]' : 'w-[320px] px-8 py-5 text-lg font-medium'}`} onClick={scrollToContact}>
+          <div className={`${isMobile ? 'flex flex-col gap-3' : 'flex justify-center gap-6'} ${animationsStarted ? 'animate-fade-up animation-delay-1700' : 'opacity-0'}`}>
+            <Button variant="outline" className={`border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 ${isMobile ? 'w-full max-w-[320px] mx-auto text-[14px] font-medium px-5 py-3 rounded-xl min-h-[44px]' : 'w-auto px-6 sm:px-10 md:px-14 py-4 sm:py-6 md:py-7 text-lg sm:text-xl'}`} onClick={scrollToContact}>
               <span className="block sm:hidden">GET A QUOTE</span>
               <span className="hidden sm:block">GET A QUOTE</span>
             </Button>
 
-            <a 
-              href="https://wa.me/353879380494" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className={`inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-accent-primary text-white bg-[#0F1111] hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 ${isMobile ? 'w-full max-w-[320px] mx-auto text-[14px] px-5 py-3 rounded-xl min-h-[44px]' : 'w-[320px] px-8 py-5 text-lg font-medium'}`}
-            >
+            <a href="https://wa.me/353879380494" target="_blank" rel="noopener noreferrer" className={`inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 ${isMobile ? 'w-full max-w-[320px] mx-auto text-[14px] px-5 py-3 rounded-xl min-h-[44px]' : 'w-auto px-6 sm:px-10 md:px-14 py-4 sm:py-6 md:py-7 text-lg sm:text-xl'}`}>
               <span className="block sm:hidden">WHATSAPP US</span>
               <span className="hidden sm:block">TALK TO US ON WHATSAPP</span>
             </a>
@@ -157,7 +143,6 @@ const Hero = () => {
         <div className="w-1 h-3 bg-white rounded-full"></div>
       </div>
     </div>
-  </section>
-  );
+  </section>;
 };
 export default Hero;
