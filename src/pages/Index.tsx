@@ -720,6 +720,7 @@ const Index = () => {
             <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">
               What our clients say
             </h2>
+            <div className="w-24 h-0.5 bg-accent-primary mx-auto mb-8"></div>
           </ScrollReveal>
 
           {/* Hero Review */}
