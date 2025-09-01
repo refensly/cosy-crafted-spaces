@@ -714,21 +714,21 @@ const Index = () => {
       </section>
 
       {/* Reviews Section */}
-      <section id="reviews" className="max-sm:py-6 py-16 lg:py-20 bg-gradient-to-br from-bg-section-alt-2 via-bg-wood-dark to-bg-main">
+      <section id="reviews" className="max-sm:py-4 py-12 lg:py-16 bg-gradient-to-br from-bg-section-alt-2 via-bg-wood-dark to-bg-main">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-6 mb-10 text-4xl md:text-5xl">
+            <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(20px,4.5vw,24px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-8 text-3xl md:text-4xl">
               What our clients say
             </h2>
           </ScrollReveal>
 
           {/* Hero Review */}
           <ScrollReveal>
-            <div className="bg-bg-section-alt rounded-2xl max-sm:p-3 p-8 max-sm:mb-6 mb-12 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
-              <div className="grid md:grid-cols-5 max-sm:gap-3 gap-8 items-center">
+            <div className="bg-bg-section-alt rounded-xl max-sm:p-2 p-6 max-sm:mb-4 mb-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
+              <div className="grid md:grid-cols-5 max-sm:gap-2 gap-6 items-center">
                 <div className="md:col-span-2 relative">
                   <ScrollReveal delay={100}>
-                    <img src={imageConfig.testimonial} alt="The Summit Inn custom bar" className="w-full max-sm:max-h-24 h-64 md:h-80 object-cover rounded-xl" loading="lazy" />
+                    <img src={imageConfig.testimonial} alt="The Summit Inn custom bar" className="w-full max-sm:max-h-20 h-48 md:h-64 object-cover rounded-xl" loading="lazy" />
                   </ScrollReveal>
                 </div>
                 <div className="md:col-span-3">
@@ -752,54 +752,54 @@ const Index = () => {
                       </svg>
                     </div>
                   </div>
-                  <blockquote className="max-sm:text-[13px] max-sm:leading-relaxed max-sm:mb-3 text-xl text-text-primary mb-6 leading-relaxed">
+                  <blockquote className="max-sm:text-[12px] max-sm:leading-relaxed max-sm:mb-2 text-lg text-text-primary mb-4 leading-relaxed">
                     Absolutely stunning work. The attention to detail and quality of craftsmanship 
                     exceeded our expectations. This bar is the centerpiece of our venue.
                   </blockquote>
-                  <cite className="text-text-secondary font-bold max-sm:text-[13px] text-lg">— The Summit Inn</cite>
+                  <cite className="text-text-secondary font-bold max-sm:text-[11px] text-base">— The Summit Inn</cite>
                 </div>
               </div>
             </div>
           </ScrollReveal>
 
           {/* Grid of Reviews */}
-          <div className="grid md:grid-cols-3 max-sm:gap-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-3 max-sm:gap-2 gap-4 mb-8">
             <ScrollReveal delay={100}>
-              <div className="bg-bg-section-alt rounded-xl max-sm:p-3 p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
+              <div className="bg-bg-section-alt rounded-lg max-sm:p-2 p-4 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
                 <div className="flex items-center max-sm:mb-2 mb-4">
-                  <svg className="max-sm:w-4 max-sm:h-4 w-6 h-6 text-accent-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="max-sm:w-3 max-sm:h-3 w-4 h-4 text-accent-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" />
                   </svg>
                   
                 </div>
-                <p className="text-text-primary max-sm:text-[13px] max-sm:leading-relaxed max-sm:mb-2 mb-4 leading-relaxed">Perfect craftsmanship. Built exactly to our specifications.</p>
-                <cite className="text-text-secondary font-bold max-sm:text-[12px]">— Abbey Tavern</cite>
+                <p className="text-text-primary max-sm:text-[11px] max-sm:leading-relaxed max-sm:mb-1 mb-3 leading-relaxed">Perfect craftsmanship. Built exactly to our specifications.</p>
+                <cite className="text-text-secondary font-bold max-sm:text-[10px] text-sm">— Abbey Tavern</cite>
               </div>
             </ScrollReveal>
             
             <ScrollReveal delay={200}>
-              <div className="bg-bg-section-alt rounded-xl max-sm:p-3 p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
+              <div className="bg-bg-section-alt rounded-lg max-sm:p-2 p-4 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
                 <div className="flex items-center max-sm:mb-2 mb-4">
-                  <svg className="max-sm:w-4 max-sm:h-4 w-6 h-6 text-accent-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="max-sm:w-3 max-sm:h-3 w-4 h-4 text-accent-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" />
                   </svg>
                   
                 </div>
-                <p className="text-text-primary max-sm:text-[13px] max-sm:leading-relaxed max-sm:mb-2 mb-4 leading-relaxed">Our customers constantly compliment the bar design.</p>
-                <cite className="text-text-secondary font-bold max-sm:text-[12px]">— Findlaters</cite>
+                <p className="text-text-primary max-sm:text-[11px] max-sm:leading-relaxed max-sm:mb-1 mb-3 leading-relaxed">Our customers constantly compliment the bar design.</p>
+                <cite className="text-text-secondary font-bold max-sm:text-[10px] text-sm">— Findlaters</cite>
               </div>
             </ScrollReveal>
             
             <ScrollReveal delay={300}>
-              <div className="bg-bg-section-alt rounded-xl max-sm:p-3 p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
+              <div className="bg-bg-section-alt rounded-lg max-sm:p-2 p-4 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
                 <div className="flex items-center max-sm:mb-2 mb-4">
-                  <svg className="max-sm:w-4 max-sm:h-4 w-6 h-6 text-accent-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="max-sm:w-3 max-sm:h-3 w-4 h-4 text-accent-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" />
                   </svg>
                   
                 </div>
-                <p className="text-text-primary max-sm:text-[13px] max-sm:leading-relaxed max-sm:mb-2 mb-4 leading-relaxed">Exceptional attention to detail. Worth every penny.</p>
-                <cite className="text-text-secondary font-bold max-sm:text-[12px]">— Private Client</cite>
+                <p className="text-text-primary max-sm:text-[11px] max-sm:leading-relaxed max-sm:mb-1 mb-3 leading-relaxed">Exceptional attention to detail. Worth every penny.</p>
+                <cite className="text-text-secondary font-bold max-sm:text-[10px] text-sm">— Private Client</cite>
               </div>
             </ScrollReveal>
           </div>
