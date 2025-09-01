@@ -928,7 +928,7 @@ const Index = () => {
             <ScrollReveal delay={200}>
               <div>
                 <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">The Signature</h2>
-                <div className="w-24 h-0.5 bg-accent-primary mx-auto mb-8"></div>
+                <div className="w-24 h-0.5 bg-accent-primary mb-8"></div>
                 <p className="max-sm:text-[15px] max-sm:leading-relaxed max-sm:mb-6 text-xl text-text-secondary mb-8 leading-relaxed">Crafted from walnut, oak, and brass, each piece is unique and unrepeatable. Defined by precision and distinguished by detail, this work carries the signature of timeless craftsmanship, embodied in the hands of its maker</p>
               </div>
             </ScrollReveal>
