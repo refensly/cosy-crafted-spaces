@@ -293,7 +293,7 @@ const Index = () => {
       </div>
 
       {/* Section 2: Pain → Value */}
-      <section className="max-sm:pt-6 max-sm:pb-3 pt-16 pb-8 lg:pt-20 lg:pb-12 bg-gradient-to-br from-bg-section-alt-2 via-bg-wood-dark to-bg-main">
+      <section id="pain-value-section" className="max-sm:pt-6 max-sm:pb-3 pt-16 pb-8 lg:pt-20 lg:pb-12 bg-gradient-to-br from-bg-section-alt-2 via-bg-wood-dark to-bg-main">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <ScrollReveal>
