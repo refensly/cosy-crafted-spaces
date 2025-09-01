@@ -132,7 +132,7 @@ const Hero = () => {
           
           {/* Secondary CTAs */}
           <div className={`${isMobile ? 'flex flex-col gap-3' : 'flex flex-col items-center gap-4'} ${animationsStarted ? 'animate-fade-up animation-delay-1700' : 'opacity-0'}`}>
-            <Button variant="outline" className={`border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 ${isMobile ? 'w-full max-w-[320px] mx-auto text-[14px] font-medium px-5 py-3 rounded-xl min-h-[44px]' : 'w-[320px] px-8 py-5 text-lg font-medium'}`} onClick={scrollToContact}>
+            <Button variant="outline" className={`border-accent-primary text-white bg-[#0F1111] hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 ${isMobile ? 'w-full max-w-[320px] mx-auto text-[14px] font-medium px-5 py-3 rounded-xl min-h-[44px]' : 'w-[320px] px-8 py-5 text-lg font-medium'}`} onClick={scrollToContact}>
               <span className="block sm:hidden">GET A QUOTE</span>
               <span className="hidden sm:block">GET A QUOTE</span>
             </Button>
