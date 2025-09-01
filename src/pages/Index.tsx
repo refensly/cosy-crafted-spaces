@@ -717,7 +717,7 @@ const Index = () => {
       <section id="reviews" className="max-sm:py-4 py-12 lg:py-16 bg-gradient-to-br from-bg-section-alt-2 via-bg-wood-dark to-bg-main">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(20px,4.5vw,24px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-8 text-3xl md:text-4xl">
+            <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">
               What our clients say
             </h2>
           </ScrollReveal>
