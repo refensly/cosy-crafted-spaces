@@ -293,35 +293,37 @@ const Index = () => {
       </div>
 
       {/* Section 2: Pain → Value */}
-      <section id="pain-value-section" className="max-sm:pt-6 max-sm:pb-3 pt-16 pb-8 lg:pt-20 lg:pb-12 bg-gradient-to-br from-bg-section-alt-2 via-bg-wood-dark to-bg-main">
+      <section id="pain-value-section" className="max-sm:pt-4 max-sm:pb-2 pt-12 pb-6 lg:pt-16 lg:pb-8 bg-gradient-to-br from-bg-section-alt-2 via-bg-wood-dark to-bg-main">
         <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <ScrollReveal>
               <div>
-                <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">
+                <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-3 mb-4 text-4xl md:text-5xl">
                   Not another mass-production look
                 </h2>
-                <p className="max-sm:text-[15px] max-sm:leading-relaxed text-lg text-text-secondary max-sm:mb-6 mb-8">
+                <p className="max-sm:text-[15px] max-sm:leading-relaxed text-lg text-text-secondary max-sm:mb-4 mb-6">
                   If you want something nobody else has, we design and build it for you. 
                   Premium materials, made locally.
                 </p>
-                <div className="max-sm:space-y-3 space-y-4">
-                  {["One-of-a-kind design (never repeated)", "Premium hardwoods & brass", "Built in Ireland, built to last"].map((item, index) => <div key={index} className="relative group">
-                      <div className="bg-gradient-to-r from-bg-section-alt/40 via-bg-section-alt/60 to-bg-section-alt/40 backdrop-blur-sm border border-accent-primary/30 rounded-xl max-sm:p-4 p-5 shadow-lg shadow-accent-primary/10 hover:shadow-accent-primary/20 transition-all duration-300 hover:border-accent-primary/50">
+                <div className="max-sm:space-y-2 space-y-3">
+                  {["One-of-a-kind design (never repeated)", "Premium hardwoods & brass", "Built in Ireland, built to last"].map((item, index) => 
+                    <div key={index} className="relative group">
+                      <div className="bg-gradient-to-r from-bg-section-alt/30 via-bg-section-alt/50 to-bg-section-alt/30 backdrop-blur-sm border border-accent-primary/20 rounded-lg max-sm:p-3 p-4 shadow-md shadow-accent-primary/5 hover:shadow-accent-primary/15 transition-all duration-300 hover:border-accent-primary/40 hover:scale-[1.01]">
                         <div className="flex items-center">
-                          <span className="text-text-primary font-medium max-sm:text-[15px] text-base">{item}</span>
+                          <div className="w-1.5 h-1.5 bg-accent-primary rounded-full mr-3 opacity-80"></div>
+                          <span className="text-text-primary font-medium max-sm:text-[14px] text-sm">{item}</span>
                         </div>
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
                       </div>
-                    </div>)}
+                    </div>
+                  )}
                 </div>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <div className="relative">
-                <div className="w-full rounded-xl overflow-hidden shadow-2xl shadow-accent-primary/20 border border-accent-primary/20">
+                <div className="w-full rounded-xl overflow-hidden shadow-xl shadow-accent-primary/15 border border-accent-primary/15">
                   <ScrollReveal delay={250}>
-                     <img src="/images/custom-bar-interior.png" alt="Custom bar interior with warm lighting and wood finishes" className="w-full h-64 md:h-72 object-cover object-[50%_40%] bg-gray-900" loading="lazy" />
+                     <img src="/images/custom-bar-interior.png" alt="Custom bar interior with warm lighting and wood finishes" className="w-full h-56 md:h-64 object-cover object-[50%_40%] bg-gray-900" loading="lazy" />
                   </ScrollReveal>
                 </div>
               </div>
