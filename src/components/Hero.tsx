@@ -131,8 +131,8 @@ const Hero = () => {
           </div>
           
           {/* Secondary CTAs */}
-          <div className={`${isMobile ? 'flex flex-col gap-3' : 'flex justify-center gap-6'} ${animationsStarted ? 'animate-fade-up animation-delay-1700' : 'opacity-0'}`}>
-            <Button variant="outline" className={`border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 ${isMobile ? 'w-full max-w-[320px] mx-auto text-[14px] font-medium px-5 py-3 rounded-xl min-h-[44px]' : 'w-auto px-6 sm:px-10 md:px-14 py-4 sm:py-6 md:py-7 text-lg sm:text-xl'}`} onClick={scrollToContact}>
+          <div className={`${isMobile ? 'flex flex-col gap-3' : 'flex flex-col items-center gap-4'} ${animationsStarted ? 'animate-fade-up animation-delay-1700' : 'opacity-0'}`}>
+            <Button variant="outline" className={`border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 ${isMobile ? 'w-full max-w-[320px] mx-auto text-[14px] font-medium px-5 py-3 rounded-xl min-h-[44px]' : 'w-[280px] px-6 sm:px-10 md:px-14 py-4 sm:py-6 md:py-7 text-lg sm:text-xl'}`} onClick={scrollToContact}>
               <span className="block sm:hidden">GET A QUOTE</span>
               <span className="hidden sm:block">GET A QUOTE</span>
             </Button>
@@ -141,7 +141,7 @@ const Hero = () => {
               href="https://wa.me/353879380494" 
               target="_blank" 
               rel="noopener noreferrer"
-              className={`inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 ${isMobile ? 'w-full max-w-[320px] mx-auto text-[14px] px-5 py-3 rounded-xl min-h-[44px]' : 'w-auto px-6 sm:px-10 md:px-14 py-4 sm:py-6 md:py-7 text-lg sm:text-xl'}`}
+              className={`inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 ${isMobile ? 'w-full max-w-[320px] mx-auto text-[14px] px-5 py-3 rounded-xl min-h-[44px]' : 'w-[280px] px-6 sm:px-10 md:px-14 py-4 sm:py-6 md:py-7 text-lg sm:text-xl'}`}
             >
               <span className="block sm:hidden">WHATSAPP US</span>
               <span className="hidden sm:block">TALK TO US ON WHATSAPP</span>
