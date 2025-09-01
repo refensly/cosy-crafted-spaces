@@ -331,61 +331,59 @@ const Index = () => {
       </section>
 
       {/* New Section: Handmade Quality Examples */}
-      <section className="max-sm:py-6 py-16 lg:py-20 bg-bg-main">
+      <section className="max-sm:py-4 py-16 lg:py-20 bg-bg-main">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">Our Promise</h2>
-            <div className="w-24 h-0.5 bg-accent-primary mx-auto mb-8"></div>
-            
+            <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-3 mb-6 text-4xl md:text-5xl">Our Promise</h2>
+            <div className="w-24 h-0.5 bg-accent-primary mx-auto max-sm:mb-4 mb-8"></div>
           </ScrollReveal>
           
-          <div className="grid md:grid-cols-3 max-sm:gap-4 gap-6 max-sm:mb-6 mb-8">
+          {/* Mobile: Horizontal scroll, Desktop: Grid */}
+          <div className="md:grid md:grid-cols-3 md:gap-6 max-sm:flex max-sm:gap-3 max-sm:overflow-x-auto max-sm:pb-2 max-sm:mb-4 mb-8">
             {[{
-            title: "Crafted for Real Spaces",
+            title: "Real Spaces",
             image: "/images/promise-real-spaces.png",
-            description: "Every project transforms pubs, homes, and outdoor living areas"
+            description: "Transforms pubs, homes & outdoor areas"
           }, {
-            title: "Built with Precision",
-            image: "/images/promise-precision.png",
-            description: "Joinery details, finishing, and premium materials"
+            title: "Precision Built",
+            image: "/images/promise-precision.png", 
+            description: "Premium materials & joinery details"
           }, {
-            title: "One-of-a-Kind Results",
+            title: "One-of-a-Kind",
             image: "/images/promise-unique-results.png",
-            description: "Never repeated, always designed for your exact space"
+            description: "Always designed for your exact space"
           }].map((example, index) => <ScrollReveal key={index} delay={index * 100}>
-                <div className="text-center">
+                <div className="text-center max-sm:flex-shrink-0 max-sm:w-48">
                   <div className="relative max-sm:mb-1 mb-2">
-                     <div className="w-full rounded-lg overflow-hidden shadow-md aspect-[4/3]">
+                     <div className="w-full rounded-lg overflow-hidden shadow-md max-sm:aspect-square aspect-[4/3]">
                        <ScrollReveal delay={index * 100 + 50}>
                          <img src={example.image} alt="Custom craftsmanship and interior design" className={`w-full h-full object-cover ${index === 1 ? 'object-[50%_65%]' : 'object-center'}`} loading="lazy" />
                        </ScrollReveal>
                      </div>
                   </div>
-                  <h3 className="font-heading font-bold text-text-primary max-sm:text-base max-sm:mt-1 max-sm:mb-1 mt-2 mb-1 text-xl">
+                  <h3 className="font-heading font-bold text-text-primary max-sm:text-sm max-sm:mt-1 max-sm:mb-1 mt-2 mb-1 text-xl">
                     {example.title}
                   </h3>
-                  <p className="text-text-secondary max-sm:text-sm text-base">{example.description}</p>
+                  <p className="text-text-secondary max-sm:text-xs max-sm:leading-tight text-base">{example.description}</p>
                 </div>
               </ScrollReveal>)}
           </div>
 
           <ScrollReveal>
-            <div className="bg-bg-section-alt rounded-xl max-sm:p-5 p-8 text-center">
-              <h3 className="font-heading font-bold text-text-primary max-sm:text-lg max-sm:mb-4 mb-4 text-2xl md:text-3xl">
-                Producing
+            <div className="bg-bg-section-alt rounded-xl max-sm:p-3 p-8 text-center max-sm:mb-4 mb-8">
+              <h3 className="font-heading font-bold text-text-primary max-sm:text-base max-sm:mb-2 mb-4 text-2xl md:text-3xl">
+                Producing Quality Results
               </h3>
-              <p className="max-sm:text-[15px] max-sm:leading-relaxed text-lg text-text-secondary max-w-4xl mx-auto max-sm:mb-6 mb-6 lg:mb-8">
-                Each piece goes through careful planning, selection of premium materials, 
-                and meticulous handcrafting to ensure it meets our quality standards.
+              <p className="max-sm:text-xs max-sm:leading-snug text-lg text-text-secondary max-w-4xl mx-auto">
+                Careful planning, premium materials, and meticulous handcrafting.
               </p>
             </div>
           </ScrollReveal>
-          
 
-          {/* NEW CTA Button - Between Producing and What We Create */}
-          <div className="max-sm:mt-8 mt-16 text-center">
+          {/* CTA Button */}
+          <div className="max-sm:mt-0 mt-16 text-center">
             <ScrollReveal delay={250}>
-                <Button onClick={scrollToContact} variant="outline" size="mobile-compact" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 max-sm:w-full max-sm:max-w-[320px] max-sm:mx-auto bg-[#0F1111] border border-accent px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
+                <Button onClick={scrollToContact} variant="outline" size="mobile-compact" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 max-sm:w-full max-sm:max-w-[280px] max-sm:mx-auto max-sm:py-2 max-sm:text-sm bg-[#0F1111] border border-accent px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
                 Start Your Project
               </Button>
             </ScrollReveal>
