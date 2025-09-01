@@ -306,16 +306,14 @@ const Index = () => {
                   Premium materials, made locally.
                 </p>
                 <div className="max-sm:space-y-3 space-y-4">
-                  {["One-of-a-kind design (never repeated)", "Premium hardwoods & brass", "Built in Ireland, built to last"].map((item, index) => 
-                    <div key={index} className="relative group">
+                  {["One-of-a-kind design (never repeated)", "Premium hardwoods & brass", "Built in Ireland, built to last"].map((item, index) => <div key={index} className="relative group">
                       <div className="bg-gradient-to-r from-bg-section-alt/40 via-bg-section-alt/60 to-bg-section-alt/40 backdrop-blur-sm border border-accent-primary/30 rounded-xl max-sm:p-4 p-5 shadow-lg shadow-accent-primary/10 hover:shadow-accent-primary/20 transition-all duration-300 hover:border-accent-primary/50">
                         <div className="flex items-center">
                           <span className="text-text-primary font-medium max-sm:text-[15px] text-base">{item}</span>
                         </div>
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
                       </div>
-                    </div>
-                  )}
+                    </div>)}
                 </div>
               </div>
             </ScrollReveal>
@@ -522,7 +520,9 @@ const Index = () => {
       </section>
 
       {/* Section 4: Why Custom > Standard */}
-      <section className="max-sm:py-8 py-16 lg:py-20" style={{background: 'var(--gradient-section)'}}>
+      <section className="max-sm:py-8 py-16 lg:py-20" style={{
+      background: 'var(--gradient-section)'
+    }}>
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
             
@@ -857,7 +857,9 @@ const Index = () => {
       </section>
 
       {/* New Section: FAQ */}
-      <section className="max-sm:py-6 py-16 lg:py-20" style={{background: 'var(--gradient-section)'}}>
+      <section className="max-sm:py-6 py-16 lg:py-20" style={{
+      background: 'var(--gradient-section)'
+    }}>
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <ScrollReveal>
@@ -900,11 +902,7 @@ const Index = () => {
           <div className="grid md:grid-cols-4 max-sm:gap-y-4 gap-6">
             {processSteps.map((step, index) => <ScrollReveal key={index} delay={index * 150}>
                 <div className="text-center bg-gradient-to-br from-bg-section-alt-2 via-bg-wood-dark to-bg-main/50 rounded-xl max-sm:p-4 p-5 border border-accent-primary/20 hover:border-accent-primary/40 transition-all duration-300">
-                  <div className="max-sm:w-12 max-sm:h-12 w-16 h-16 bg-gradient-to-br from-accent-primary to-accent-hover rounded-full flex items-center justify-center mx-auto max-sm:mb-3 mb-4 shadow-lg shadow-accent-primary/30">
-                    <span className="max-sm:text-xl text-2xl font-heading font-bold text-bg-main">
-                      {step.number}
-                    </span>
-                  </div>
+                  
                   <h3 className="font-heading font-bold text-text-primary max-sm:text-base max-sm:mb-2 mb-2 text-lg">
                     {step.title}
                   </h3>
