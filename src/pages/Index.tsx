@@ -8,6 +8,11 @@ import { useMobileMenu } from '@/contexts/MobileMenuContext';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import ScrollReveal from '@/components/ScrollReveal';
+import PromiseCarousel from '@/components/PromiseCarousel';
+import CapabilitiesCarousel from '@/components/CapabilitiesCarousel';
+import AnimatedText from '@/components/AnimatedText';
+import AnimatedReviews from '@/components/AnimatedReviews';
+import AnimatedProcess from '@/components/AnimatedProcess';
 import { imageConfig } from '@/lib/imageConfig';
 const Index = () => {
   const {
@@ -268,7 +273,7 @@ const Index = () => {
   const processSteps = [{
     number: "1",
     title: "Consultation",
-    description: "Share your idea"
+    description: "Share your ideas, discuss options"
   }, {
     number: "2",
     title: "Design",
@@ -294,36 +299,36 @@ const Index = () => {
         <Hero />
       </div>
 
-      {/* Section 2: Pain → Value */}
-      <section id="pain-value-section" className="max-sm:pt-4 max-sm:pb-2 pt-12 pb-6 lg:pt-16 lg:pb-8 bg-gradient-to-br from-bg-section-alt-2 via-bg-wood-dark to-bg-main">
-        <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      {/* Section 2: Pain → Value - Minimal Style */}
+      <section id="pain-value-section" className="py-12 md:pt-20 md:pb-20 lg:pt-32 lg:pb-32" style={{ background: 'var(--gradient-brown-primary)' }}>
+        <div className="container mx-auto px-4 md:px-6 max-w-6xl">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-16 lg:gap-24 items-center">
             <ScrollReveal>
-              <div>
-                <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-3 mb-4 text-4xl md:text-5xl">
+              <div className="space-y-6 md:space-y-8">
+                <h2 className="font-heading text-text-primary text-3xl md:text-5xl lg:text-6xl font-light tracking-tight leading-tight">
                   Not another mass-production look
                 </h2>
-                <p className="max-sm:text-[15px] max-sm:leading-relaxed text-lg text-text-secondary max-sm:mb-4 mb-6">
+                <p className="text-lg md:text-xl text-text-secondary font-light leading-relaxed">
                   If you want something nobody else has, we design and build it for you. 
                   Premium materials, made locally.
                 </p>
-                <div className="max-sm:space-y-2 space-y-3">
-                  {["One-of-a-kind design (never repeated)", "Premium hardwoods & brass", "Built in Ireland, built to last"].map((item, index) => <div key={index} className="relative group">
-                      <div className="bg-gradient-to-r from-bg-section-alt/30 via-bg-section-alt/50 to-bg-section-alt/30 backdrop-blur-sm border border-accent-primary/20 rounded-lg max-sm:p-3 p-4 shadow-md shadow-accent-primary/5 hover:shadow-accent-primary/15 transition-all duration-300 hover:border-accent-primary/40 hover:scale-[1.01]">
-                        <div className="flex items-center">
-                          <div className="w-1.5 h-1.5 bg-accent-primary rounded-full mr-3 opacity-80"></div>
-                          <span className="text-text-primary font-medium max-sm:text-[14px] text-sm">{item}</span>
-                        </div>
+                <div className="space-y-4 md:space-y-6 mt-8 md:mt-12">
+                  {["One-of-a-kind design (never repeated)", "Premium hardwoods & brass", "Built in Ireland, built to last"].map((item, index) => 
+                    <ScrollReveal key={index} delay={index * 100}>
+                      <div className="flex items-center space-x-3 md:space-x-4">
+                        <div className="w-1 h-1 bg-accent-primary rounded-full opacity-60 flex-shrink-0"></div>
+                        <span className="text-text-primary font-light text-base md:text-lg">{item}</span>
                       </div>
-                    </div>)}
+                    </ScrollReveal>
+                  )}
                 </div>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={200}>
-              <div className="relative">
-                <div className="w-full rounded-xl overflow-hidden shadow-xl shadow-accent-primary/15 border border-accent-primary/15">
+              <div className="relative mt-8 lg:mt-0">
+                <div className="w-full rounded-none overflow-hidden">
                   <ScrollReveal delay={250}>
-                     <img src="/images/custom-bar-interior.png" alt="Custom bar interior with warm lighting and wood finishes" className="w-full h-48 sm:h-56 md:h-64 object-cover object-center bg-gray-900" loading="lazy" />
+                     <img src="/images/custom-bar-interior.png" alt="Custom bar interior with warm lighting and wood finishes" className="w-full h-64 md:h-80 lg:h-96 object-cover object-center" loading="lazy" />
                   </ScrollReveal>
                 </div>
               </div>
@@ -332,88 +337,112 @@ const Index = () => {
         </div>
       </section>
 
-      {/* New Section: Handmade Quality Examples */}
-      <section className="max-sm:py-4 py-16 lg:py-20 bg-bg-main">
-        <div className="container mx-auto px-6">
+      {/* Our Promise Section - Minimal Clean */}
+      <section className="py-16 md:py-32 lg:py-40" style={{ background: 'var(--gradient-brown-primary)' }}>
+        <div className="container mx-auto px-4 md:px-6 max-w-6xl">
           <ScrollReveal>
-            <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-3 mb-6 text-4xl md:text-5xl">Our Promise</h2>
-            <div className="w-24 h-0.5 bg-accent-primary mx-auto max-sm:mb-4 mb-8"></div>
+            <div className="text-center mb-12 md:mb-20">
+              <h2 className="font-heading text-text-primary text-center text-3xl md:text-5xl lg:text-6xl font-light tracking-tight mb-6 md:mb-8">Our Promise</h2>
+            </div>
           </ScrollReveal>
           
-          {/* Mobile: Horizontal scroll, Desktop: Grid */}
-          <div className="md:grid md:grid-cols-3 md:gap-6 max-sm:flex max-sm:gap-3 max-sm:overflow-x-auto max-sm:pb-2 max-sm:mb-4 mb-8">
-            {[{
-            title: "Real Spaces",
-            image: "/images/promise-real-spaces.png",
-            description: "Transforms pubs, homes & outdoor areas"
-          }, {
-            title: "Precision Built",
-            image: "/images/promise-precision.png",
-            description: "Premium materials & joinery details"
-          }, {
-            title: "One-of-a-Kind",
-            image: "/images/promise-unique-results.png",
-            description: "Always designed for your exact space"
-          }].map((example, index) => <ScrollReveal key={index} delay={index * 100}>
-                <div className="text-center max-sm:flex-shrink-0 max-sm:w-48">
-                  <div className="relative max-sm:mb-1 mb-2">
-                     <div className="w-full rounded-lg overflow-hidden shadow-md bg-bg-secondary">
-                       <ScrollReveal delay={index * 100 + 50}>
-                         <img src={example.image} alt="Custom craftsmanship and interior design" className="w-full h-32 object-cover object-center" loading="lazy" />
-                       </ScrollReveal>
-                     </div>
-                  </div>
-                  <h3 className="font-heading font-bold text-text-primary max-sm:text-sm max-sm:mt-1 max-sm:mb-1 mt-2 mb-1 text-xl">
-                    {example.title}
-                  </h3>
-                  <p className="text-text-secondary max-sm:text-xs max-sm:leading-tight text-base">{example.description}</p>
+          {/* Mobile Animated Version */}
+          <div className="md:hidden mb-12">
+            <PromiseCarousel />
+          </div>
+          
+          {/* Desktop Grid Version - Minimal */}
+          <div className="hidden md:grid md:grid-cols-3 gap-16 lg:gap-20 mb-20">
+            <ScrollReveal className="text-center">
+              <div className="space-y-8">
+                <div className="w-20 h-20 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-accent-primary/20 to-accent-primary/10">
+                  <img 
+                    src="/images/promise-precision.png" 
+                    alt="Precision craftsmanship tools and measurements" 
+                    className="w-full h-full object-cover opacity-80"
+                  />
                 </div>
-              </ScrollReveal>)}
+                <h3 className="font-heading text-text-primary text-2xl font-light">Precision</h3>
+                <p className="text-text-secondary text-base font-light leading-relaxed">
+                  Every measurement, every cut, every joint crafted with meticulous attention to detail.
+                </p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal className="text-center" delay={100}>
+              <div className="space-y-8">
+                <div className="w-20 h-20 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-accent-primary/20 to-accent-primary/10">
+                  <img 
+                    src="/images/promise-real-spaces.png" 
+                    alt="Real customer spaces transformed with custom woodwork" 
+                    className="w-full h-full object-cover opacity-80"
+                  />
+                </div>
+                <h3 className="font-heading text-text-primary text-2xl font-light">Real Spaces</h3>
+                <p className="text-text-secondary text-base font-light leading-relaxed">
+                  We work in your actual space, ensuring perfect fit and functionality.
+                </p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal className="text-center" delay={200}>
+              <div className="space-y-8">
+                <div className="w-20 h-20 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-accent-primary/20 to-accent-primary/10">
+                  <img 
+                    src="/images/promise-unique-results.png" 
+                    alt="Unique custom woodwork designs showcasing creativity" 
+                    className="w-full h-full object-cover opacity-80"
+                  />
+                </div>
+                <h3 className="font-heading text-text-primary text-2xl font-light">Unique Results</h3>
+                <p className="text-text-secondary text-base font-light leading-relaxed">
+                  No cookie-cutter solutions. Each piece is uniquely designed to match your style.
+                </p>
+              </div>
+            </ScrollReveal>
           </div>
 
           <ScrollReveal>
-            <div className="bg-bg-section-alt rounded-xl max-sm:p-3 p-8 text-center max-sm:mb-4 mb-8">
-              <h3 className="font-heading font-bold text-text-primary max-sm:text-base max-sm:mb-2 mb-4 text-2xl md:text-3xl">
+            <div className="text-center space-y-4 md:space-y-6 mb-12 md:mb-16">
+              <h3 className="font-heading text-text-primary text-xl md:text-2xl lg:text-3xl font-light">
                 Producing Quality Results
               </h3>
-              <p className="max-sm:text-xs max-sm:leading-snug text-lg text-text-secondary max-w-4xl mx-auto">
+              <p className="text-base md:text-lg text-text-secondary font-light max-w-4xl mx-auto leading-relaxed">
                 Careful planning, premium materials, and meticulous handcrafting.
               </p>
             </div>
           </ScrollReveal>
 
-          {/* CTA Button */}
-          <div className="max-sm:mt-0 mt-16 text-center">
+          {/* CTA Button - Minimal */}
+          <div className="text-center">
             <ScrollReveal delay={250}>
-                <Button onClick={scrollToContact} variant="outline" size="mobile-compact" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 max-sm:w-full max-sm:max-w-[280px] max-sm:mx-auto max-sm:py-2 max-sm:text-sm bg-[#0F1111] border border-accent px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
+              <button onClick={scrollToContact} className="btn-rounded">
                 Start Your Project
-              </Button>
+              </button>
             </ScrollReveal>
           </div>
         </div>
       </section>
 
       {/* Section 3: Interactive Portfolio */}
-      <section id="work" className="max-sm:py-6 py-16 lg:py-20 relative overflow-hidden bg-deep-green">
+      <section id="work" className="py-12 md:py-16 lg:py-20 relative overflow-hidden" style={{ background: 'var(--gradient-brown-primary)' }}>
         
-        <div className="container mx-auto max-sm:px-4 px-8 md:px-12 lg:px-16 relative z-10">
+        <div className="container mx-auto px-4 md:px-12 lg:px-16 relative z-10">
           <ScrollReveal>
-            <div className="text-center max-sm:mb-8 mb-16">
-              <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">
+            <div className="text-center mb-8 md:mb-16">
+              <h2 className="font-heading font-bold text-text-primary text-center text-2xl md:text-4xl lg:text-5xl font-bold leading-snug mb-4 md:mb-6">
                 What We Create
               </h2>
-              <div className="w-24 h-0.5 bg-accent-primary mx-auto mb-8"></div>
+              <div className="w-16 md:w-24 h-0.5 bg-accent-primary mx-auto mb-6 md:mb-8"></div>
             </div>
           </ScrollReveal>
           
-          <div className="max-sm:space-y-2 space-y-3 max-w-3xl lg:max-w-5xl mx-auto">
+          <div className="space-y-3 md:space-y-4 max-w-3xl lg:max-w-5xl mx-auto">
             {portfolioCategories.map((category, categoryIndex) => <div key={category.id} className="w-full">
                 <ScrollReveal delay={categoryIndex * 100}>
                   <div className={`
                       relative overflow-hidden rounded-xl cursor-pointer transition-all duration-500 ease-out
                       bg-gradient-to-br from-bg-section-alt/80 via-bg-section-alt-2/75 to-bg-section-alt/80
                       backdrop-blur-md border border-bg-section-alt/60 shadow-xl
-                      border-b-2 border-b-accent-primary/30 max-sm:px-4 max-sm:py-4 px-6 py-5
+                      border-b-2 border-b-accent-primary/30 px-4 md:px-6 py-4 md:py-5
                       hover:shadow-accent-primary/30 hover:shadow-[0_20px_40px_-12px_rgba(197,156,87,0.35)]
                       hover:border-accent-primary/50 hover:border-b-accent-primary/60 hover:scale-[1.01] 
                       hover:bg-gradient-to-br hover:from-bg-section-alt-2/90 hover:via-bg-section-alt/85 hover:to-bg-section-alt-2/90
@@ -425,29 +454,30 @@ const Index = () => {
                     {/* Active state accent line */}
                     {expandedCategory === category.id && <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-accent-primary to-transparent"></div>}
                     
-                    <div className="relative max-sm:px-1 max-sm:py-2 px-2 py-3">
+                    <div className="relative px-2 md:px-3 py-2 md:py-3">
                       <div className="flex items-center justify-between">
                         <div>
-                          <h3 className="font-heading font-bold text-white max-sm:text-lg max-sm:mb-1 text-xl md:text-2xl mb-2 tracking-tight">
+                          <h3 className="font-heading font-bold text-white text-lg md:text-xl lg:text-2xl mb-1 md:mb-2 tracking-tight">
                             {category.title}
                           </h3>
-                          <p className="text-gray-300 max-sm:text-[14px] text-base font-medium">{category.description}</p>
+                          <p className="text-gray-300 text-sm md:text-base font-medium">{category.description}</p>
                         </div>
-                        <div className={`transform transition-all duration-300 ease-out ${expandedCategory === category.id ? 'rotate-180 text-accent-primary' : 'text-gray-400'}`}>
-                          <svg className="max-sm:w-5 max-sm:h-5 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
-                          </svg>
+                        <div className={`transition-all duration-300 ${expandedCategory === category.id ? 'text-accent-primary' : 'text-gray-400'}`}>
+                          <div className={`w-2 h-2 rounded-full transition-all duration-300 ${expandedCategory === category.id ? 'bg-accent-primary' : 'bg-gray-400'}`}></div>
                         </div>
                       </div>
                     
                     {/* Accordion Content */}
-                    <div className={`transition-all duration-500 ease-in-out overflow-hidden ${expandedCategory === category.id ? 'max-h-[1500px] opacity-100 mt-8' : 'max-h-0 opacity-0'}`}>
-                      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {(category.id === 'bars-restaurants' && isMobile === true ?
-                      // On mobile, show only 3 specific projects for hospitality spaces
-                      category.projects.filter(p => ['summit-inn', 'riverside-bar', 'peggys'].includes(p.id)) : category.id === 'outdoor-spaces' && isMobile === true ?
-                      // On mobile, show only 4 specific projects for outdoor spaces
-                      category.projects.filter(p => ['thormanby-lawns', 'pergola-decking', 'howth-decking', 'raheny-patio'].includes(p.id)) : category.projects).map((project, projectIndex) => <div key={project.id} className="bg-bg-section-alt/50 rounded-xl overflow-hidden cursor-pointer group hover:bg-bg-section-alt/75 transition-all duration-300 border border-bg-section-alt/30 hover:border-accent-primary/50 border-b-2 border-b-accent-primary/40 hover:border-b-accent-primary/70 p-1 hover:shadow-lg hover:shadow-accent-primary/20" onClick={e => {
+                    <div className={`transition-all duration-500 ease-in-out overflow-hidden ${expandedCategory === category.id ? 'max-h-[1500px] opacity-100 mt-6 md:mt-8' : 'max-h-0 opacity-0'}`}>
+                      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                        {((category.id === 'bars-restaurants' && isMobile === true) ? 
+                          // On mobile, show only 3 specific projects for hospitality spaces
+                          category.projects.filter(p => ['summit-inn', 'riverside-bar', 'peggys'].includes(p.id))
+                          : (category.id === 'outdoor-spaces' && isMobile === true) ?
+                          // On mobile, show only 4 specific projects for outdoor spaces
+                          category.projects.filter(p => ['thormanby-lawns', 'pergola-decking', 'howth-decking', 'raheny-patio'].includes(p.id))
+                          : category.projects
+                        ).map((project, projectIndex) => <div key={project.id} className="bg-bg-section-alt/50 rounded-xl overflow-hidden cursor-pointer group hover:bg-bg-section-alt/75 transition-all duration-300 border border-bg-section-alt/30 hover:border-accent-primary/50 border-b-2 border-b-accent-primary/40 hover:border-b-accent-primary/70 p-1 hover:shadow-lg hover:shadow-accent-primary/20" onClick={e => {
                         e.stopPropagation();
                         handleProjectClick(project);
                       }}>
@@ -495,19 +525,22 @@ const Index = () => {
                     <img src={selectedProject.images[currentImageIndex]} alt={`${selectedProject.title} - Image ${currentImageIndex + 1}`} className="w-full h-full object-cover transform scale-110" />
                   </div>
                   
-                  {/* Navigation Arrows */}
-                  {selectedProject.images.length > 1 && <>
-                      <button onClick={handlePrevImage} className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center text-white transition-colors">
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                        </svg>
-                      </button>
-                      <button onClick={handleNextImage} className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center text-white transition-colors">
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </button>
-                    </>}
+                  {/* 2025 Navigation - Clean Indicators */}
+                  {selectedProject.images.length > 1 && (
+                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                      {selectedProject.images.map((_, index) => (
+                        <button
+                          key={index}
+                          onClick={() => setCurrentImageIndex(index)}
+                          className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                            index === currentImageIndex 
+                              ? 'bg-white w-8' 
+                              : 'bg-white/40 hover:bg-white/60'
+                          }`}
+                        />
+                      ))}
+                    </div>
+                  )}
                 </div>
                 
                 {/* Image Thumbnails */}
@@ -524,140 +557,101 @@ const Index = () => {
       </section>
 
       {/* Section 4: Why Custom > Standard */}
-      <section className="max-sm:py-8 py-16 lg:py-20" style={{
-      background: 'var(--gradient-section)'
-    }}>
-        <div className="container mx-auto px-6">
+      <section className="py-12 md:py-16 lg:py-20" style={{ background: 'var(--gradient-brown-primary)' }}>
+        <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-5xl mx-auto">
             
             {/* Headline */}
             <ScrollReveal>
-              <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl lg:text-5xl text-center">
+              <h2 className="font-heading font-bold text-text-primary text-2xl md:text-4xl lg:text-5xl text-center font-bold leading-snug mb-4 md:mb-6">
                 Why choose custom over mass-market
               </h2>
-              <div className="w-24 h-0.5 bg-accent-primary mx-auto mb-8"></div>
+              <div className="w-16 md:w-24 h-0.5 bg-accent-primary mx-auto mb-6 md:mb-8"></div>
             </ScrollReveal>
             
             {/* Intro Text */}
             <ScrollReveal delay={100}>
-              <p className="max-sm:text-[15px] max-sm:leading-relaxed max-sm:mb-6 text-xl lg:text-2xl text-text-secondary leading-relaxed mb-8 text-center max-w-4xl mx-auto">
+              <p className="text-base md:text-xl lg:text-2xl text-text-secondary leading-relaxed mb-6 md:mb-8 text-center max-w-4xl mx-auto">
                 Most furniture today is disposable. We build for decades — each piece unique, designed and crafted in Ireland from premium oak, walnut, and brass.
               </p>
             </ScrollReveal>
 
-            {/* Comparison Table */}
+            {/* 2025 Comparison - Cardless, Clean Dividers */}
             <ScrollReveal delay={200}>
-              <div className="bg-gradient-to-br from-bg-section-alt-2 via-bg-wood-dark to-bg-main rounded-2xl border border-accent-primary/20 shadow-lg shadow-accent-primary/10 mb-12 overflow-hidden">
-                
-                {/* Mobile-Optimized Table */}
-                <div className="md:hidden">
-                  {/* Header */}
-                  <div className="grid grid-cols-2 bg-bg-main/30">
-                    <div className="text-center py-4 bg-bg-main/50 border-r border-accent-primary/30">
-                      <span className="text-text-muted font-bold text-sm uppercase tracking-wider">Mass-market</span>
-                    </div>
-                    <div className="text-center py-4 bg-gradient-to-r from-accent-primary/20 to-accent-hover/20 border border-accent-primary/40">
-                      <span className="text-accent-primary font-bold text-sm uppercase tracking-wider">Custom</span>
-                    </div>
+              <div className="space-y-6 md:space-y-8 mb-8 md:mb-12">
+                {/* Header */}
+                <div className="grid grid-cols-2 gap-8 md:gap-16 lg:gap-32 text-center mb-6 md:mb-8">
+                  <div>
+                    <h3 className="text-text-muted font-heading font-light text-lg md:text-xl lg:text-2xl">mass market</h3>
                   </div>
-                  
-                  {/* Rows */}
-                  <div className="divide-y divide-bg-main/10">
-                    {[{
-                    standard: "Same as everyone",
-                    custom: "One-of-a-kind design"
-                  }, {
-                    standard: "Machine produced",
-                    custom: "Hand crafted"
-                  }, {
-                    standard: "Cheap materials",
-                    custom: "Premium oak, walnut, brass"
-                  }, {
-                    standard: "Disposable",
-                    custom: "Heirloom quality"
-                  }, {
-                    standard: "Flat-packed",
-                    custom: "Installed by craftsmen"
-                  }].map((row, index) => <div key={index} className="grid grid-cols-2">
-                        <div className="p-4 text-text-muted text-sm text-center border-r border-accent-primary/20">
-                          {row.standard}
-                        </div>
-                        <div className="p-4 text-text-primary font-semibold text-sm text-center bg-accent-primary/5 border-l-2 border-accent-primary/40">
-                          {row.custom}
-                        </div>
-                      </div>)}
+                  <div>
+                    <h3 className="text-accent-primary font-heading font-light text-lg md:text-xl lg:text-2xl">custom made</h3>
                   </div>
                 </div>
-
-                {/* Desktop Table - Redesigned to match mobile */}
-                <div className="hidden md:block">
-                  {/* Header */}
-                  <div className="grid grid-cols-2 bg-bg-main/30 rounded-t-xl">
-                    <div className="text-center py-6 bg-bg-main/50 border-r border-accent-primary/30 rounded-tl-xl">
-                      <span className="text-text-muted font-bold text-lg uppercase tracking-wider">Mass-market</span>
-                    </div>
-                    <div className="text-center py-6 bg-gradient-to-r from-accent-primary/20 to-accent-hover/20 border border-accent-primary/40 rounded-tr-xl">
-                      <span className="text-accent-primary font-bold text-lg uppercase tracking-wider">Custom</span>
-                    </div>
-                  </div>
-                  
-                  {/* Rows */}
-                  <div className="divide-y divide-bg-main/10">
-                    {[{
-                    standard: "Same as everyone",
-                    custom: "One-of-a-kind design"
+                
+                {/* Comparison rows - Clean spacing */}
+                <div className="space-y-4 md:space-y-6">
+                  {[{
+                    standard: "same as everyone",
+                    custom: "one-of-a-kind design"
                   }, {
-                    standard: "Machine produced",
-                    custom: "Hand crafted"
+                    standard: "machine produced",
+                    custom: "hand crafted"
                   }, {
-                    standard: "Cheap materials",
-                    custom: "Premium oak, walnut, brass"
+                    standard: "cheap materials",
+                    custom: "premium oak, walnut, brass"
                   }, {
-                    standard: "Disposable",
-                    custom: "Heirloom quality"
+                    standard: "disposable",
+                    custom: "heirloom quality"
                   }, {
-                    standard: "Flat-packed",
-                    custom: "Installed by craftsmen"
-                  }].map((row, index) => <div key={index} className="grid grid-cols-2">
-                        <div className="p-6 text-text-muted text-base text-center border-r border-accent-primary/20">
+                    standard: "flat-packed",
+                    custom: "installed by craftsmen"
+                  }].map((row, index) => (
+                    <ScrollReveal key={index} delay={250 + index * 100}>
+                      <div className="grid grid-cols-2 gap-8 md:gap-16 lg:gap-32 text-center py-4 md:py-6 hover:bg-text-primary/[0.02] transition-colors duration-300">
+                        <div className="text-text-muted font-light text-base md:text-lg lg:text-xl">
                           {row.standard}
                         </div>
-                        <div className="p-6 text-text-primary font-semibold text-base text-center bg-accent-primary/5 border-l-2 border-accent-primary/40">
+                        <div className="text-text-primary font-light text-base md:text-lg lg:text-xl">
                           {row.custom}
                         </div>
-                      </div>)}
-                  </div>
+                      </div>
+                      {index < 4 && (
+                        <div className="w-full h-px bg-gradient-to-r from-transparent via-text-primary/10 to-transparent"></div>
+                      )}
+                    </ScrollReveal>
+                  ))}
                 </div>
               </div>
             </ScrollReveal>
 
-            {/* Benefits Icons Row */}
+            {/* 2025 Animated Benefits - Clean, Borderless */}
             <ScrollReveal delay={300}>
-              <div className="bg-gradient-to-br from-bg-section-alt-2 via-bg-wood-dark to-bg-main rounded-xl max-sm:p-3 p-5 border border-accent-primary/20 shadow-lg shadow-accent-primary/10 max-sm:mb-4 mb-6">
-                <div className="grid grid-cols-2 md:grid-cols-4 max-sm:gap-3 gap-4">
-                  {[{
-                  icon: "🔨",
-                  title: "Unique every time",
-                  subtitle: "Never repeated design"
-                }, {
-                  icon: "🇮🇪",
-                  title: "Local craftsmanship",
-                  subtitle: "Made in Ireland"
-                }, {
-                  icon: "🌳",
-                  title: "Natural materials",
-                  subtitle: "Oak. Walnut. Brass."
-                }, {
-                  icon: "🛡️",
-                  title: "Built to last",
-                  subtitle: "Decades, not years"
-                }].map((benefit, index) => <div key={index} className="text-center">
-                      <div className="max-sm:text-xl text-2xl max-sm:mb-1 mb-2">{benefit.icon}</div>
-                      <h4 className="font-heading font-bold text-text-primary max-sm:text-[14px] max-sm:mb-1 mb-2 text-base">
-                        {benefit.title}
-                      </h4>
-                      <p className="text-text-secondary max-sm:text-[12px] text-sm">{benefit.subtitle}</p>
-                    </div>)}
+              <div className="text-center space-y-12 mb-6">
+                
+                {/* Main animated text */}
+                <div className="pt-8">
+                  <AnimatedText 
+                    texts={[
+                      {
+                        heading: "unique every time",
+                        body: "Every piece is crafted specifically for your space, ensuring no two projects are ever the same."
+                      },
+                      {
+                        heading: "local craftsmanship", 
+                        body: "Supporting skilled artisans in our community while delivering authentic, handcrafted quality."
+                      },
+                      {
+                        heading: "natural materials",
+                        body: "We source sustainable, high-quality wood and materials that age beautifully over time."
+                      },
+                      {
+                        heading: "built to last",
+                        body: "Traditional joinery techniques and attention to detail ensure your furniture becomes a family heirloom."
+                      }
+                    ]}
+                    delay={3500}
+                  />
                 </div>
               </div>
             </ScrollReveal>
@@ -665,9 +659,9 @@ const Index = () => {
             {/* CTA Button - After comparison table */}
             <ScrollReveal delay={400}>
               <div className="text-center">
-                <Button onClick={scrollToContact} variant="outline" size="mobile-compact" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 max-sm:w-full max-sm:max-w-[320px] max-sm:mx-auto bg-[#0F1111] border border-accent px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
-                  Get Free Consultation
-                </Button>
+                <button onClick={scrollToContact} className="btn-rounded">
+                  get free consultation
+                </button>
               </div>
             </ScrollReveal>
 
@@ -676,7 +670,7 @@ const Index = () => {
       </section>
 
       {/* Section 5: Portfolio */}
-      <section className="max-sm:py-6 py-16 lg:py-20 bg-bg-main">
+      <section className="max-sm:py-6 py-16 lg:py-20" style={{ background: 'var(--gradient-brown-primary)' }}>
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">
@@ -697,9 +691,9 @@ const Index = () => {
                           {project.title}
                         </h3>
                         <p className="text-text-secondary max-sm:text-[14px] max-sm:mb-3 text-sm mb-4 leading-relaxed">{project.subtitle}</p>
-                        <Button variant="outline" size="project-card" className="border-accent-primary/80 text-accent-primary hover:bg-accent-primary hover:text-bg-main hover:border-accent-primary transition-all duration-300 shadow-lg shadow-accent-primary/20 hover:shadow-accent-primary/40 hover:scale-105">
+                        <button className="btn-rounded">
                           View Project
-                        </Button>
+                        </button>
                       </div>
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -711,119 +705,68 @@ const Index = () => {
           {/* CTA Button */}
           <div className="text-center mt-16">
             <ScrollReveal delay={300}>
-              <Button onClick={scrollToContact} variant="outline" size="mobile-compact" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 max-sm:w-full max-sm:max-w-[320px] max-sm:mx-auto bg-[#0F1111] border border-accent px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
-                Start Your Project
-              </Button>
+               <button onClick={scrollToContact} className="btn-rounded">
+                 Start Your Project
+               </button>
             </ScrollReveal>
           </div>
         </div>
       </section>
 
-      {/* Reviews Section */}
-      <section id="reviews" className="max-sm:py-4 py-12 lg:py-16 bg-gradient-to-br from-bg-section-alt-2 via-bg-wood-dark to-bg-main">
+      {/* 2025 Reviews Section - Animated, Clean */}
+      <section id="reviews" className="py-16 md:py-24" style={{ background: 'var(--gradient-brown-primary)' }}>
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">
-              What our clients say
+            <h2 className="font-heading font-light text-text-primary text-center text-4xl md:text-6xl mb-16">
+              what our clients say
             </h2>
-            <div className="w-24 h-0.5 bg-accent-primary mb-8"></div>
           </ScrollReveal>
 
-          {/* Hero Review */}
-          <ScrollReveal>
-            <div className="bg-bg-section-alt rounded-xl max-sm:p-2 p-6 max-sm:mb-4 mb-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
-              <div className="grid md:grid-cols-5 max-sm:gap-2 gap-6 items-center">
-                <div className="md:col-span-2 relative">
-                  <ScrollReveal delay={100}>
-                    <img src={imageConfig.testimonial} alt="The Summit Inn custom bar" className="w-full max-sm:max-h-20 h-48 md:h-64 object-cover rounded-xl" loading="lazy" />
-                  </ScrollReveal>
-                </div>
-                <div className="md:col-span-3">
-                  <div className="flex items-start mb-4">
-                    
-                    <div className="flex text-accent-primary">
-                      <svg className="max-sm:w-4 max-sm:h-4 w-5 h-5 fill-current" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                      <svg className="max-sm:w-4 max-sm:h-4 w-5 h-5 fill-current ml-1" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                      <svg className="max-sm:w-4 max-sm:h-4 w-5 h-5 fill-current ml-1" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                      <svg className="max-sm:w-4 max-sm:h-4 w-5 h-5 fill-current ml-1" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                      <svg className="max-sm:w-4 max-sm:h-4 w-5 h-5 fill-current ml-1" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <blockquote className="max-sm:text-[12px] max-sm:leading-relaxed max-sm:mb-2 text-lg text-text-primary mb-4 leading-relaxed">
-                    Absolutely stunning work. The attention to detail and quality of craftsmanship 
-                    exceeded our expectations. This bar is the centerpiece of our venue.
-                  </blockquote>
-                  <cite className="text-text-secondary font-bold max-sm:text-[11px] text-base">— The Summit Inn</cite>
-                </div>
-              </div>
-            </div>
-          </ScrollReveal>
-
-          {/* Grid of Reviews */}
-          <div className="grid md:grid-cols-3 max-sm:gap-2 gap-4 mb-8">
-            <ScrollReveal delay={100}>
-              <div className="bg-bg-section-alt rounded-lg max-sm:p-2 p-4 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
-                <div className="flex items-center max-sm:mb-2 mb-4">
-                  <svg className="max-sm:w-3 max-sm:h-3 w-4 h-4 text-accent-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" />
-                  </svg>
-                  
-                </div>
-                <p className="text-text-primary max-sm:text-[11px] max-sm:leading-relaxed max-sm:mb-1 mb-3 leading-relaxed">Perfect craftsmanship. Built exactly to our specifications.</p>
-                <cite className="text-text-secondary font-bold max-sm:text-[10px] text-sm">— Abbey Tavern</cite>
-              </div>
-            </ScrollReveal>
-            
-            <ScrollReveal delay={200}>
-              <div className="bg-bg-section-alt rounded-lg max-sm:p-2 p-4 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
-                <div className="flex items-center max-sm:mb-2 mb-4">
-                  <svg className="max-sm:w-3 max-sm:h-3 w-4 h-4 text-accent-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" />
-                  </svg>
-                  
-                </div>
-                <p className="text-text-primary max-sm:text-[11px] max-sm:leading-relaxed max-sm:mb-1 mb-3 leading-relaxed">Our customers constantly compliment the bar design.</p>
-                <cite className="text-text-secondary font-bold max-sm:text-[10px] text-sm">— Findlaters</cite>
-              </div>
-            </ScrollReveal>
-            
-            <ScrollReveal delay={300}>
-              <div className="bg-bg-section-alt rounded-lg max-sm:p-2 p-4 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
-                <div className="flex items-center max-sm:mb-2 mb-4">
-                  <svg className="max-sm:w-3 max-sm:h-3 w-4 h-4 text-accent-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" />
-                  </svg>
-                  
-                </div>
-                <p className="text-text-primary max-sm:text-[11px] max-sm:leading-relaxed max-sm:mb-1 mb-3 leading-relaxed">Exceptional attention to detail. Worth every penny.</p>
-                <cite className="text-text-secondary font-bold max-sm:text-[10px] text-sm">— Private Client</cite>
-              </div>
-            </ScrollReveal>
+          {/* Animated Reviews */}
+          <div className="max-w-5xl mx-auto mb-16">
+            <AnimatedReviews 
+              reviews={[
+                {
+                  text: "Absolutely stunning work. The attention to detail and quality of craftsmanship exceeded our expectations. This bar is the centerpiece of our venue.",
+                  author: "The Summit Inn",
+                  rating: 5
+                },
+                {
+                  text: "Perfect craftsmanship. Built exactly to our specifications.",
+                  author: "Abbey Tavern",
+                  rating: 5
+                },
+                {
+                  text: "Our customers constantly compliment the bar design.",
+                  author: "Findlaters",
+                  rating: 5
+                },
+                {
+                  text: "Exceptional attention to detail. Worth every penny.",
+                  author: "Private Client",
+                  rating: 5
+                }
+              ]}
+              delay={4000}
+            />
           </div>
 
-          {/* CTA Button */}
+          {/* CTA Button - 2025 Style */}
           <ScrollReveal delay={400}>
             <div className="text-center">
-                <Button onClick={() => scrollToContact()} variant="outline" size="mobile-compact" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 max-sm:w-full max-sm:max-w-[320px] max-sm:mx-auto bg-[#0F1111] border border-accent px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
-                  Let's build yours
-                </Button>
+              <button 
+                onClick={() => scrollToContact()} 
+                className="btn-rounded"
+              >
+                Let's Build Yours
+              </button>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
       {/* New Section: What We Build */}
-      <section className="max-sm:py-6 py-16 lg:py-20 bg-bg-main">
+      <section className="max-sm:py-6 py-16 lg:py-20" style={{ background: 'var(--gradient-brown-primary)' }}>
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 max-sm:gap-4 gap-6 lg:gap-8 items-center">
             <ScrollReveal>
@@ -832,7 +775,10 @@ const Index = () => {
                   What We Build
                 </h2>
                 <div className="w-24 h-0.5 bg-accent-primary mb-8"></div>
-                
+                <p className="max-sm:text-[15px] max-sm:leading-relaxed max-sm:mb-4 text-xl text-text-secondary mb-6 leading-relaxed">
+                  From full pub interiors to outdoor kitchens, from custom bars to one-off furniture — 
+                  we design and craft everything to fit your exact space.
+                </p>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={200}>
@@ -850,18 +796,16 @@ const Index = () => {
           {/* CTA Button after What We Build */}
           <div className="text-center mt-16">
             <ScrollReveal delay={300}>
-               <Button onClick={scrollToContact} variant="outline" size="mobile-compact" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 max-sm:w-full max-sm:max-w-[320px] max-sm:mx-auto bg-[#0F1111] border border-accent px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
-                Let's build yours
-              </Button>
+               <button onClick={scrollToContact} className="btn-rounded">
+                 Let's Build Yours
+               </button>
             </ScrollReveal>
           </div>
         </div>
       </section>
 
       {/* New Section: FAQ */}
-      <section className="max-sm:py-6 py-16 lg:py-20" style={{
-      background: 'var(--gradient-section)'
-    }}>
+      <section className="max-sm:py-6 py-16 lg:py-20" style={{ background: 'var(--gradient-brown-primary)' }}>
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <ScrollReveal>
@@ -881,107 +825,52 @@ const Index = () => {
           {/* CTA Button - After FAQ */}
           <div className="text-center mt-12">
             <ScrollReveal delay={100}>
-              <Button onClick={scrollToContact} variant="outline" size="mobile-compact" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 max-sm:w-full max-sm:max-w-[320px] max-sm:mx-auto bg-[#0F1111] border border-accent px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
-                Get Your Quote
-              </Button>
+               <button onClick={scrollToContact} className="btn-rounded">
+                 Get Your Quote
+               </button>
             </ScrollReveal>
           </div>
         </div>
       </section>
 
-      {/* Section 7: Process */}
-      <section id="process" className="max-sm:py-6 py-16 lg:py-20 bg-bg-section-alt relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <img src={imageConfig.maker} alt="" className="w-full h-full object-cover" loading="lazy" />
-        </div>
-        <div className="container mx-auto max-sm:px-4 px-6 relative">
+      {/* 2025 Process Section - Animated, Clean */}
+      <section id="process" className="py-12 md:py-16 lg:py-24" style={{ background: 'var(--gradient-brown-primary)' }}>
+        <div className="container mx-auto px-4 md:px-6">
           <ScrollReveal>
-            <div className="text-center max-sm:mb-6 mb-12">
-              <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-3 mb-6 text-4xl md:text-5xl">
-                How we work
-              </h2>
-              <div className="w-24 h-0.5 bg-accent-primary mx-auto"></div>
-            </div>
+            <h2 className="font-heading font-light text-text-primary text-center text-3xl md:text-4xl lg:text-6xl mb-12 md:mb-16">
+              how we work
+            </h2>
           </ScrollReveal>
           
-          {/* Mobile - modern minimal cards */}
-          <div className="max-sm:block hidden">
-            <div className="flex gap-4 overflow-x-auto pb-4 px-1">
-              {processSteps.map((step, index) => <ScrollReveal key={index} delay={index * 100}>
-                  <div className="group flex-shrink-0 w-[160px] relative">
-                    {/* Glow effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-accent-primary/20 to-accent-secondary/20 rounded-lg blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    
-                    {/* Card */}
-                    <div className="relative bg-bg-main/90 backdrop-blur-sm rounded-lg p-4 border border-accent-primary/10 group-hover:border-accent-primary/30 transition-all duration-300 shadow-lg group-hover:shadow-accent-primary/10">
-                      {/* Modern step indicator */}
-                      <div className="flex items-center gap-2 mb-3">
-                        <div className="w-1 h-6 bg-gradient-to-b from-accent-primary to-accent-secondary rounded-full"></div>
-                        <span className="text-accent-primary font-heading font-bold text-xs">STEP {step.number}</span>
-                      </div>
-                      
-                      <h3 className="font-heading font-bold text-text-primary text-sm mb-2 leading-tight">
-                        {step.title}
-                      </h3>
-                      <p className="text-text-secondary text-xs leading-relaxed">
-                        {step.description}
-                      </p>
-                    </div>
-                  </div>
-                </ScrollReveal>)}
-            </div>
-          </div>
-
-          {/* Desktop - modern grid */}
-          <div className="max-sm:hidden grid md:grid-cols-4 gap-8">
-            {processSteps.map((step, index) => <ScrollReveal key={index} delay={index * 150}>
-                <div className="group relative">
-                  {/* Glow effect */}
-                  <div className="absolute -inset-1 bg-gradient-to-r from-accent-primary/20 via-accent-secondary/20 to-accent-primary/20 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                  
-                  {/* Card */}
-                  <div className="relative bg-bg-main/95 backdrop-blur-sm rounded-xl p-6 border border-accent-primary/10 group-hover:border-accent-primary/25 transition-all duration-500 shadow-xl group-hover:shadow-accent-primary/5">
-                    {/* Modern step indicator */}
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="w-1.5 h-8 bg-gradient-to-b from-accent-primary to-accent-secondary rounded-full"></div>
-                      <div>
-                        <span className="text-accent-primary font-heading font-bold text-sm tracking-wider">STEP</span>
-                        <div className="text-accent-primary font-heading font-bold text-lg">{step.number}</div>
-                      </div>
-                    </div>
-                    
-                    <h3 className="font-heading font-bold text-text-primary mb-3 text-lg">
-                      {step.title}
-                    </h3>
-                    <p className="text-text-secondary text-sm leading-relaxed">
-                      {step.description}
-                    </p>
-                  </div>
-                </div>
-              </ScrollReveal>)}
+          {/* Animated Process - All Devices */}
+          <div className="max-w-2xl mx-auto">
+            <AnimatedProcess 
+              steps={processSteps}
+              delay={3500}
+            />
           </div>
         </div>
       </section>
 
       {/* Section 8: Who Am I */}
-      <section id="about" className="max-sm:py-6 py-16 lg:py-20 bg-bg-main">
-        <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      <section id="about" className="py-12 md:py-16 lg:py-20" style={{ background: 'var(--gradient-brown-primary)' }}>
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
             <ScrollReveal>
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-transparent to-black/30 rounded-xl"></div>
                 <div className="absolute inset-0 border-2 border-accent-primary/40 rounded-xl transform rotate-1 shadow-lg shadow-accent-primary/20"></div>
                 <ScrollReveal delay={100}>
-                  <img src={imageConfig.maker} alt="Craftsman in workshop" className="relative w-full max-sm:max-h-[300px] h-80 lg:h-96 object-cover rounded-xl" loading="lazy" />
+                  <img src={imageConfig.maker} alt="Craftsman in workshop" className="relative w-full h-64 md:h-80 lg:h-96 object-cover rounded-xl" loading="lazy" />
                 </ScrollReveal>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent rounded-xl"></div>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={200}>
-              <div>
-                <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">The Signature</h2>
-                <div className="w-24 h-0.5 bg-accent-primary mb-8"></div>
-                <p className="max-sm:text-[15px] max-sm:leading-relaxed max-sm:mb-6 text-xl text-text-secondary mb-8 leading-relaxed">Crafted from walnut, oak, and brass, each piece is unique and unrepeatable. Defined by precision and distinguished by detail, this work carries the signature of timeless craftsmanship, embodied in the hands of its maker</p>
+              <div className="mt-6 lg:mt-0">
+                <h2 className="font-heading font-bold text-text-primary text-2xl md:text-4xl lg:text-5xl font-bold leading-snug mb-4 md:mb-6">The Signature</h2>
+                <div className="w-16 md:w-24 h-0.5 bg-accent-primary mb-6 md:mb-8"></div>
+                <p className="text-base md:text-xl text-text-secondary mb-6 md:mb-8 leading-relaxed">Crafted from walnut, oak, and brass, each piece is unique and unrepeatable. Defined by precision and distinguished by detail, this work carries the signature of timeless craftsmanship, embodied in the hands of its maker</p>
               </div>
             </ScrollReveal>
           </div>
@@ -989,47 +878,47 @@ const Index = () => {
       </section>
 
       {/* Section 9: Contact Form */}
-      <section id="contact-form" className="max-sm:py-6 py-16 lg:py-20 bg-gradient-to-br from-bg-section-alt-2 via-bg-wood-dark to-bg-main">
-        <div className="container mx-auto px-6">
+      <section id="contact-form" className="py-12 md:py-16 lg:py-20" style={{ background: 'var(--gradient-brown-primary)' }}>
+        <div className="container mx-auto px-4 md:px-6">
           <ScrollReveal>
             <div className="max-w-2xl mx-auto text-center">
-              <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">Ready To Start?</h2>
-              <div className="w-24 h-0.5 bg-accent-primary mx-auto mb-8"></div>
+              <h2 className="font-heading font-bold text-text-primary text-2xl md:text-4xl lg:text-5xl font-bold leading-snug mb-4 md:mb-6">Ready To Start?</h2>
+              <div className="w-16 md:w-24 h-0.5 bg-accent-primary mx-auto mb-6 md:mb-8"></div>
               
-              {formSubmitted ? <div className="bg-neutral-light/10 border border-neutral-light/20 rounded-xl p-12 text-center">
-                  <h3 className="max-sm:text-lg text-2xl font-semibold text-text-primary max-sm:mb-3 mb-4">
+              {formSubmitted ? <div className="bg-neutral-light/10 border border-neutral-light/20 rounded-xl p-8 md:p-12 text-center">
+                  <h3 className="text-lg md:text-2xl font-semibold text-text-primary mb-3 md:mb-4">
                     Thanks for reaching out!
                   </h3>
-                  <p className="text-text-secondary max-sm:text-[15px] text-lg">
+                  <p className="text-text-secondary text-base md:text-lg">
                     We'll get back to you within 24 hours.
                   </p>
-                </div> : <form onSubmit={handleSubmit} className="space-y-8">
+                </div> : <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
                   <div>
-                    <Input type="text" placeholder="Your name" className="form-field max-sm:h-12 h-16 max-sm:text-[15px] text-lg px-6 py-4 rounded-xl border-2 border-input/50 focus:border-accent-primary/60 bg-bg-main/50" value={formData.name} onChange={e => setFormData({
+                    <Input type="text" placeholder="Your name" className="form-field h-12 md:h-16 text-base md:text-lg px-4 md:px-6 py-3 md:py-4 rounded-xl border-2 border-input/50 focus:border-accent-primary/60 bg-bg-main/50" value={formData.name} onChange={e => setFormData({
                   ...formData,
                   name: e.target.value
                 })} required />
                   </div>
                   <div>
-                    <Input type="text" placeholder="Email or phone" className="form-field max-sm:h-12 h-16 max-sm:text-[15px] text-lg px-6 py-4 rounded-xl border-2 border-input/50 focus:border-accent-primary/60 bg-bg-main/50" value={formData.contact} onChange={e => setFormData({
+                    <Input type="text" placeholder="Email or phone" className="form-field h-12 md:h-16 text-base md:text-lg px-4 md:px-6 py-3 md:py-4 rounded-xl border-2 border-input/50 focus:border-accent-primary/60 bg-bg-main/50" value={formData.contact} onChange={e => setFormData({
                   ...formData,
                   contact: e.target.value
                 })} required />
                   </div>
                   <div>
-                    <Textarea placeholder="Tell us about your project" className="form-field min-h-[160px] max-sm:text-[15px] text-lg px-6 py-4 rounded-xl border-2 border-input/50 focus:border-accent-primary/60 bg-bg-main/50 resize-none" value={formData.message} onChange={e => setFormData({
+                    <Textarea placeholder="Tell us about your project" className="form-field min-h-[120px] md:min-h-[160px] text-base md:text-lg px-4 md:px-6 py-3 md:py-4 rounded-xl border-2 border-input/50 focus:border-accent-primary/60 bg-bg-main/50 resize-none" value={formData.message} onChange={e => setFormData({
                   ...formData,
                   message: e.target.value
                 })} />
                   </div>
-                  <div className="max-sm:space-y-4 space-y-6 pt-4">
-                    <Button type="submit" disabled={isSubmitting} variant="outline" size="mobile-compact" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 max-sm:w-full max-sm:max-w-[320px] max-sm:mx-auto w-full max-w-[320px] mx-auto bg-[#0F1111] border border-accent px-8 py-4 md:px-16 md:py-6 rounded-xl text-lg md:text-2xl tracking-wider disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-[#0F1111] disabled:hover:scale-100">
-                      {isSubmitting ? "Sending..." : "Send message"}
-                    </Button>
+                  <div className="space-y-4 md:space-y-6 pt-4">
+                     <button type="submit" disabled={isSubmitting} className="btn-rounded w-full max-w-[280px] md:max-w-[320px] mx-auto disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-[#2D2D2D]">
+                       {isSubmitting ? "Sending..." : "Send Message"}
+                     </button>
                     
                     <div className="text-center pt-2">
-                      <p className="text-text-secondary max-sm:text-[15px] text-base max-sm:mb-3 mb-4">Or send directly via WhatsApp instead</p>
-                      <a href="https://wa.me/353879380494" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-normal ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 max-sm:w-full max-sm:max-w-[320px] max-sm:mx-auto max-sm:text-[15px] max-sm:px-5 max-sm:py-3 max-sm:rounded-xl bg-[#0F1111] border border-accent px-8 py-4 md:px-16 md:py-6 rounded-xl text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center tracking-wider">WHATSAPP US</a>
+                      <p className="text-text-secondary text-sm md:text-base mb-3 md:mb-4">Or send directly via WhatsApp instead</p>
+                      <a href="https://wa.me/353879380494" target="_blank" rel="noopener noreferrer" className="btn-rounded w-full max-w-[280px] md:max-w-[320px] mx-auto">WhatsApp Us</a>
                     </div>
                   </div>
                 </form>}
@@ -1039,13 +928,13 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#0F0F0F] text-white py-16">
-        <div className="container mx-auto px-6">
+      <footer className="bg-[#0F0F0F] text-white py-12 md:py-16">
+        <div className="container mx-auto px-4 md:px-6">
           {/* Main Footer Content */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-12">
+          <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8 lg:gap-12 mb-8 md:mb-12">
             {/* Company Branding */}
-            <div className="lg:col-span-1">
-              <h3 className="max-sm:text-lg text-2xl font-heading font-bold max-sm:mb-2 mb-2">Tiny Outdoor Spaces</h3>
+            <div className="col-span-2 lg:col-span-1">
+              <h3 className="text-lg md:text-2xl font-heading font-bold mb-2">Tiny Outdoor Spaces</h3>
               
             </div>
 
