@@ -869,40 +869,12 @@ const Index = () => {
             </h2>
           </ScrollReveal>
           
-          {/* Desktop - Animated Process */}
-          <div className="hidden md:block max-w-2xl mx-auto">
+          {/* Animated Process - All Devices */}
+          <div className="max-w-2xl mx-auto">
             <AnimatedProcess 
               steps={processSteps}
               delay={3500}
             />
-          </div>
-
-          {/* Mobile - Simple List */}
-          <div className="md:hidden space-y-8">
-            {processSteps.map((step, index) => (
-              <ScrollReveal key={index} delay={index * 100}>
-                <div className="text-center space-y-4">
-                  <div className="flex items-center justify-center gap-4">
-                    <div className="w-1 h-12 bg-gradient-to-b from-accent-primary to-accent-secondary rounded-full"></div>
-                    <div className="text-left">
-                      <div className="text-accent-primary font-heading font-light text-xs tracking-wider opacity-70">
-                        step
-                      </div>
-                      <div className="text-accent-primary font-heading font-light text-2xl">
-                        {step.number}
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <h3 className="font-heading font-light text-text-primary text-xl">
-                    {step.title}
-                  </h3>
-                  <p className="text-text-secondary font-light leading-relaxed">
-                    {step.description}
-                  </p>
-                </div>
-              </ScrollReveal>
-            ))}
           </div>
         </div>
       </section>

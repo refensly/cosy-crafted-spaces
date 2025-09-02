@@ -39,7 +39,7 @@ const AnimatedProcess = ({ steps, className = '', delay = 3500 }: AnimatedProces
       <div className="text-center">
         <div 
           className={`transition-all duration-400 ${
-            isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-6 scale-95'
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}
         >
           <div className="space-y-6 max-w-md mx-auto">
