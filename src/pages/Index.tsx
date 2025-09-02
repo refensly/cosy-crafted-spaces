@@ -414,8 +414,8 @@ const Index = () => {
           {/* CTA Button - Minimal */}
           <div className="text-center">
             <ScrollReveal delay={250}>
-              <button onClick={scrollToContact} className="btn-primary text-xl">
-                start your project
+              <button onClick={scrollToContact} className="btn-rounded">
+                Start Your Project
               </button>
             </ScrollReveal>
           </div>
@@ -703,9 +703,9 @@ const Index = () => {
                           {project.title}
                         </h3>
                         <p className="text-text-secondary max-sm:text-[14px] max-sm:mb-3 text-sm mb-4 leading-relaxed">{project.subtitle}</p>
-                        <Button variant="outline" size="project-card" className="border-accent-primary/80 text-accent-primary hover:bg-accent-primary hover:text-bg-main hover:border-accent-primary transition-all duration-300 shadow-lg shadow-accent-primary/20 hover:shadow-accent-primary/40 hover:scale-105">
+                        <button className="btn-rounded">
                           View Project
-                        </Button>
+                        </button>
                       </div>
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -717,9 +717,9 @@ const Index = () => {
           {/* CTA Button */}
           <div className="text-center mt-16">
             <ScrollReveal delay={300}>
-              <Button onClick={scrollToContact} variant="outline" size="mobile-compact" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 max-sm:w-full max-sm:max-w-[320px] max-sm:mx-auto bg-[#0F1111] border border-accent px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
-                Start Your Project
-              </Button>
+               <button onClick={scrollToContact} className="btn-rounded">
+                 Start Your Project
+               </button>
             </ScrollReveal>
           </div>
         </div>
@@ -768,9 +768,9 @@ const Index = () => {
             <div className="text-center">
               <button 
                 onClick={() => scrollToContact()} 
-                className="btn-primary text-xl md:text-2xl"
+                className="btn-rounded"
               >
-                let's build yours
+                Let's Build Yours
               </button>
             </div>
           </ScrollReveal>
@@ -808,9 +808,9 @@ const Index = () => {
           {/* CTA Button after What We Build */}
           <div className="text-center mt-16">
             <ScrollReveal delay={300}>
-               <Button onClick={scrollToContact} variant="outline" size="mobile-compact" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 max-sm:w-full max-sm:max-w-[320px] max-sm:mx-auto bg-[#0F1111] border border-accent px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
-                Let's build yours
-              </Button>
+               <button onClick={scrollToContact} className="btn-rounded">
+                 Let's Build Yours
+               </button>
             </ScrollReveal>
           </div>
         </div>
@@ -837,9 +837,9 @@ const Index = () => {
           {/* CTA Button - After FAQ */}
           <div className="text-center mt-12">
             <ScrollReveal delay={100}>
-              <Button onClick={scrollToContact} variant="outline" size="mobile-compact" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 max-sm:w-full max-sm:max-w-[320px] max-sm:mx-auto bg-[#0F1111] border border-accent px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
-                Get Your Quote
-              </Button>
+               <button onClick={scrollToContact} className="btn-rounded">
+                 Get Your Quote
+               </button>
             </ScrollReveal>
           </div>
         </div>
@@ -952,13 +952,13 @@ const Index = () => {
                 })} />
                   </div>
                   <div className="max-sm:space-y-4 space-y-6 pt-4">
-                    <Button type="submit" disabled={isSubmitting} variant="outline" size="mobile-compact" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 max-sm:w-full max-sm:max-w-[320px] max-sm:mx-auto w-full max-w-[320px] mx-auto bg-[#0F1111] border border-accent px-8 py-4 md:px-16 md:py-6 rounded-xl text-lg md:text-2xl tracking-wider disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-[#0F1111] disabled:hover:scale-100">
-                      {isSubmitting ? "Sending..." : "Send message"}
-                    </Button>
+                     <button type="submit" disabled={isSubmitting} className="btn-rounded w-full max-w-[320px] mx-auto disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-[#2D2D2D]">
+                       {isSubmitting ? "Sending..." : "Send Message"}
+                     </button>
                     
                     <div className="text-center pt-2">
                       <p className="text-text-secondary max-sm:text-[15px] text-base max-sm:mb-3 mb-4">Or send directly via WhatsApp instead</p>
-                      <a href="https://wa.me/353879380494" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-normal ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 max-sm:w-full max-sm:max-w-[320px] max-sm:mx-auto max-sm:text-[15px] max-sm:px-5 max-sm:py-3 max-sm:rounded-xl bg-[#0F1111] border border-accent px-8 py-4 md:px-16 md:py-6 rounded-xl text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center tracking-wider">WHATSAPP US</a>
+                      <a href="https://wa.me/353879380494" target="_blank" rel="noopener noreferrer" className="btn-rounded w-full max-w-[320px] mx-auto">WhatsApp Us</a>
                     </div>
                   </div>
                 </form>}

@@ -39,20 +39,20 @@ const PromiseCarousel = () => {
               key={index}
               className={`absolute inset-0 transition-all duration-700 ease-in-out transform ${
                 index === currentIndex 
-                  ? 'opacity-100 translate-x-0' 
+                  ? 'opacity-100 translate-y-0' 
                   : index < currentIndex 
-                    ? 'opacity-0 -translate-x-full' 
-                    : 'opacity-0 translate-x-full'
+                    ? 'opacity-0 -translate-y-full' 
+                    : 'opacity-0 translate-y-full'
               }`}
             >
               <div className="flex flex-col h-full p-6">
-                <div className="flex-1 flex items-center justify-center mb-4">
-                  <div className="w-24 h-24 rounded-full overflow-hidden bg-accent-primary/10 shadow-none">
+                <div className="flex-1 flex items-center justify-center mb-6">
+                  <div className="w-40 h-40 rounded-full overflow-hidden bg-accent-primary/10 shadow-none">
                     <div className="w-full h-full rounded-full overflow-hidden">
                       <img 
                         src={promise.image} 
                         alt={`${promise.title} craftsmanship example`}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover scale-110"
                       />
                     </div>
                   </div>
