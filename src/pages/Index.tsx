@@ -628,32 +628,6 @@ const Index = () => {
             {/* 2025 Animated Benefits - Clean, Borderless */}
             <ScrollReveal delay={300}>
               <div className="text-center space-y-12 mb-6">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-16">
-                  {[{
-                    title: "unique every time",
-                    subtitle: "never repeated design"
-                  }, {
-                    title: "local craftsmanship", 
-                    subtitle: "made in ireland"
-                  }, {
-                    title: "natural materials",
-                    subtitle: "oak. walnut. brass."
-                  }, {
-                    title: "built to last",
-                    subtitle: "decades, not years"
-                  }].map((benefit, index) => (
-                    <ScrollReveal key={index} delay={350 + index * 100}>
-                      <div className="text-center space-y-3 hover:transform hover:-translate-y-1 transition-transform duration-300">
-                        <h4 className="font-heading font-light text-text-primary text-lg md:text-xl">
-                          <AnimatedText 
-                            texts={[benefit.title]}
-                            className="block"
-                          />
-                        </h4>
-                      </div>
-                    </ScrollReveal>
-                  ))}
-                </div>
                 
                 {/* Main animated text */}
                 <div className="pt-8">
