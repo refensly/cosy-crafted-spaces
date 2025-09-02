@@ -268,7 +268,7 @@ const Index = () => {
   const processSteps = [{
     number: "1",
     title: "Consultation",
-    description: "Share your idea"
+    description: "Share your ideas, discuss options"
   }, {
     number: "2",
     title: "Design",
