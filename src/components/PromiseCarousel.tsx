@@ -73,38 +73,18 @@ const PromiseCarousel = () => {
           {/* Progress indicators */}
           <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
             {promises.map((_, index) => (
-              <button
+              <div
                 key={index}
-                onClick={() => setCurrentIndex(index)}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
                   index === currentIndex 
                     ? 'bg-accent-primary shadow-lg' 
-                    : 'bg-white/30 hover:bg-white/50'
+                    : 'bg-white/30'
                 }`}
               />
             ))}
           </div>
         </div>
       </ScrollReveal>
-      
-      {/* Navigation arrows */}
-      <button
-        onClick={() => setCurrentIndex((prev) => (prev - 1 + promises.length) % promises.length)}
-        className="carousel-nav absolute left-3 top-1/2 transform -translate-y-1/2 flex items-center justify-center"
-      >
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-        </svg>
-      </button>
-      
-      <button
-        onClick={() => setCurrentIndex((prev) => (prev + 1) % promises.length)}
-        className="carousel-nav absolute right-3 top-1/2 transform -translate-y-1/2 flex items-center justify-center"
-      >
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-        </svg>
-      </button>
     </div>
   );
 };
