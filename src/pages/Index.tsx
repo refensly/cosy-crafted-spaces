@@ -10,6 +10,9 @@ import Hero from '@/components/Hero';
 import ScrollReveal from '@/components/ScrollReveal';
 import PromiseCarousel from '@/components/PromiseCarousel';
 import CapabilitiesCarousel from '@/components/CapabilitiesCarousel';
+import AnimatedText from '@/components/AnimatedText';
+import AnimatedReviews from '@/components/AnimatedReviews';
+import AnimatedProcess from '@/components/AnimatedProcess';
 import { imageConfig } from '@/lib/imageConfig';
 const Index = () => {
   const {
@@ -411,9 +414,9 @@ const Index = () => {
           {/* CTA Button - Minimal */}
           <div className="text-center">
             <ScrollReveal delay={250}>
-                <Button onClick={scrollToContact} variant="outline" className="border border-accent-primary/30 text-accent-primary hover:bg-accent-primary/10 hover:border-accent-primary/50 transition-all duration-300 max-sm:w-full max-sm:max-w-[300px] max-sm:mx-auto max-sm:py-4 max-sm:text-base bg-transparent px-12 py-6 rounded-none text-lg font-light tracking-wide">
-                Start Your Project
-              </Button>
+              <button onClick={scrollToContact} className="btn-primary text-xl">
+                start your project
+              </button>
             </ScrollReveal>
           </div>
         </div>
@@ -459,10 +462,8 @@ const Index = () => {
                           </h3>
                           <p className="text-gray-300 max-sm:text-[14px] text-base font-medium">{category.description}</p>
                         </div>
-                        <div className={`transform transition-all duration-300 ease-out ${expandedCategory === category.id ? 'rotate-180 text-accent-primary' : 'text-gray-400'}`}>
-                          <svg className="max-sm:w-5 max-sm:h-5 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
-                          </svg>
+                        <div className={`transition-all duration-300 ${expandedCategory === category.id ? 'text-accent-primary' : 'text-gray-400'}`}>
+                          <div className={`w-2 h-2 rounded-full transition-all duration-300 ${expandedCategory === category.id ? 'bg-accent-primary' : 'bg-gray-400'}`}></div>
                         </div>
                       </div>
                     
@@ -524,19 +525,22 @@ const Index = () => {
                     <img src={selectedProject.images[currentImageIndex]} alt={`${selectedProject.title} - Image ${currentImageIndex + 1}`} className="w-full h-full object-cover transform scale-110" />
                   </div>
                   
-                  {/* Navigation Arrows */}
-                  {selectedProject.images.length > 1 && <>
-                      <button onClick={handlePrevImage} className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center text-white transition-colors">
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                        </svg>
-                      </button>
-                      <button onClick={handleNextImage} className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center text-white transition-colors">
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </button>
-                    </>}
+                  {/* 2025 Navigation - Clean Indicators */}
+                  {selectedProject.images.length > 1 && (
+                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                      {selectedProject.images.map((_, index) => (
+                        <button
+                          key={index}
+                          onClick={() => setCurrentImageIndex(index)}
+                          className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                            index === currentImageIndex 
+                              ? 'bg-white w-8' 
+                              : 'bg-white/40 hover:bg-white/60'
+                          }`}
+                        />
+                      ))}
+                    </div>
+                  )}
                 </div>
                 
                 {/* Image Thumbnails */}
@@ -572,119 +576,94 @@ const Index = () => {
               </p>
             </ScrollReveal>
 
-            {/* Comparison Table */}
+            {/* 2025 Comparison - Cardless, Clean Dividers */}
             <ScrollReveal delay={200}>
-              <div className="bg-gradient-to-br from-bg-section-alt-2 via-bg-wood-dark to-bg-main rounded-2xl border border-accent-primary/20 shadow-lg shadow-accent-primary/10 mb-12 overflow-hidden">
-                
-                {/* Mobile-Optimized Table */}
-                <div className="md:hidden">
-                  {/* Header */}
-                  <div className="grid grid-cols-2 bg-bg-main/30">
-                    <div className="text-center py-4 bg-bg-main/50 border-r border-accent-primary/30">
-                      <span className="text-text-muted font-bold text-sm uppercase tracking-wider">Mass-market</span>
-                    </div>
-                    <div className="text-center py-4 bg-gradient-to-r from-accent-primary/20 to-accent-hover/20 border border-accent-primary/40">
-                      <span className="text-accent-primary font-bold text-sm uppercase tracking-wider">Custom</span>
-                    </div>
+              <div className="space-y-8 mb-12">
+                {/* Header */}
+                <div className="grid grid-cols-2 gap-16 md:gap-32 text-center mb-8">
+                  <div>
+                    <h3 className="text-text-muted font-heading font-light text-xl md:text-2xl">mass market</h3>
                   </div>
-                  
-                  {/* Rows */}
-                  <div className="divide-y divide-bg-main/10">
-                    {[{
-                    standard: "Same as everyone",
-                    custom: "One-of-a-kind design"
-                  }, {
-                    standard: "Machine produced",
-                    custom: "Hand crafted"
-                  }, {
-                    standard: "Cheap materials",
-                    custom: "Premium oak, walnut, brass"
-                  }, {
-                    standard: "Disposable",
-                    custom: "Heirloom quality"
-                  }, {
-                    standard: "Flat-packed",
-                    custom: "Installed by craftsmen"
-                  }].map((row, index) => <div key={index} className="grid grid-cols-2">
-                        <div className="p-4 text-text-muted text-sm text-center border-r border-accent-primary/20">
-                          {row.standard}
-                        </div>
-                        <div className="p-4 text-text-primary font-semibold text-sm text-center bg-accent-primary/5 border-l-2 border-accent-primary/40">
-                          {row.custom}
-                        </div>
-                      </div>)}
+                  <div>
+                    <h3 className="text-accent-primary font-heading font-light text-xl md:text-2xl">custom made</h3>
                   </div>
                 </div>
-
-                {/* Desktop Table - Redesigned to match mobile */}
-                <div className="hidden md:block">
-                  {/* Header */}
-                  <div className="grid grid-cols-2 bg-bg-main/30 rounded-t-xl">
-                    <div className="text-center py-6 bg-bg-main/50 border-r border-accent-primary/30 rounded-tl-xl">
-                      <span className="text-text-muted font-bold text-lg uppercase tracking-wider">Mass-market</span>
-                    </div>
-                    <div className="text-center py-6 bg-gradient-to-r from-accent-primary/20 to-accent-hover/20 border border-accent-primary/40 rounded-tr-xl">
-                      <span className="text-accent-primary font-bold text-lg uppercase tracking-wider">Custom</span>
-                    </div>
-                  </div>
-                  
-                  {/* Rows */}
-                  <div className="divide-y divide-bg-main/10">
-                    {[{
-                    standard: "Same as everyone",
-                    custom: "One-of-a-kind design"
+                
+                {/* Comparison rows - Clean spacing */}
+                <div className="space-y-6">
+                  {[{
+                    standard: "same as everyone",
+                    custom: "one-of-a-kind design"
                   }, {
-                    standard: "Machine produced",
-                    custom: "Hand crafted"
+                    standard: "machine produced",
+                    custom: "hand crafted"
                   }, {
-                    standard: "Cheap materials",
-                    custom: "Premium oak, walnut, brass"
+                    standard: "cheap materials",
+                    custom: "premium oak, walnut, brass"
                   }, {
-                    standard: "Disposable",
-                    custom: "Heirloom quality"
+                    standard: "disposable",
+                    custom: "heirloom quality"
                   }, {
-                    standard: "Flat-packed",
-                    custom: "Installed by craftsmen"
-                  }].map((row, index) => <div key={index} className="grid grid-cols-2">
-                        <div className="p-6 text-text-muted text-base text-center border-r border-accent-primary/20">
+                    standard: "flat-packed",
+                    custom: "installed by craftsmen"
+                  }].map((row, index) => (
+                    <ScrollReveal key={index} delay={250 + index * 100}>
+                      <div className="grid grid-cols-2 gap-16 md:gap-32 text-center py-6 hover:bg-text-primary/[0.02] transition-colors duration-300">
+                        <div className="text-text-muted font-light text-lg md:text-xl">
                           {row.standard}
                         </div>
-                        <div className="p-6 text-text-primary font-semibold text-base text-center bg-accent-primary/5 border-l-2 border-accent-primary/40">
+                        <div className="text-text-primary font-light text-lg md:text-xl">
                           {row.custom}
                         </div>
-                      </div>)}
-                  </div>
+                      </div>
+                      {index < 4 && (
+                        <div className="w-full h-px bg-gradient-to-r from-transparent via-text-primary/10 to-transparent"></div>
+                      )}
+                    </ScrollReveal>
+                  ))}
                 </div>
               </div>
             </ScrollReveal>
 
-            {/* Benefits Icons Row */}
+            {/* 2025 Animated Benefits - Clean, Borderless */}
             <ScrollReveal delay={300}>
-              <div className="bg-gradient-to-br from-bg-section-alt-2 via-bg-wood-dark to-bg-main rounded-xl max-sm:p-3 p-5 border border-accent-primary/20 shadow-lg shadow-accent-primary/10 max-sm:mb-4 mb-6">
-                <div className="grid grid-cols-2 md:grid-cols-4 max-sm:gap-3 gap-4">
+              <div className="text-center space-y-12 mb-6">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-16">
                   {[{
-                  icon: "🔨",
-                  title: "Unique every time",
-                  subtitle: "Never repeated design"
-                }, {
-                  icon: "🇮🇪",
-                  title: "Local craftsmanship",
-                  subtitle: "Made in Ireland"
-                }, {
-                  icon: "🌳",
-                  title: "Natural materials",
-                  subtitle: "Oak. Walnut. Brass."
-                }, {
-                  icon: "🛡️",
-                  title: "Built to last",
-                  subtitle: "Decades, not years"
-                }].map((benefit, index) => <div key={index} className="text-center">
-                      <div className="max-sm:text-xl text-2xl max-sm:mb-1 mb-2">{benefit.icon}</div>
-                      <h4 className="font-heading font-bold text-text-primary max-sm:text-[14px] max-sm:mb-1 mb-2 text-base">
-                        {benefit.title}
-                      </h4>
-                      <p className="text-text-secondary max-sm:text-[12px] text-sm">{benefit.subtitle}</p>
-                    </div>)}
+                    title: "unique every time",
+                    subtitle: "never repeated design"
+                  }, {
+                    title: "local craftsmanship", 
+                    subtitle: "made in ireland"
+                  }, {
+                    title: "natural materials",
+                    subtitle: "oak. walnut. brass."
+                  }, {
+                    title: "built to last",
+                    subtitle: "decades, not years"
+                  }].map((benefit, index) => (
+                    <ScrollReveal key={index} delay={350 + index * 100}>
+                      <div className="text-center space-y-3 hover:transform hover:-translate-y-1 transition-transform duration-300">
+                        <h4 className="font-heading font-light text-text-primary text-lg md:text-xl">
+                          <AnimatedText 
+                            texts={[benefit.title]}
+                            className="block"
+                          />
+                        </h4>
+                        <p className="text-text-secondary text-sm md:text-base font-light">{benefit.subtitle}</p>
+                      </div>
+                    </ScrollReveal>
+                  ))}
+                </div>
+                
+                {/* Main animated text */}
+                <div className="pt-8">
+                  <h3 className="font-heading font-light text-text-primary text-2xl md:text-4xl">
+                    <AnimatedText 
+                      texts={["unique every time", "local craftsmanship", "natural materials", "built to last"]}
+                      delay={2500}
+                    />
+                  </h3>
                 </div>
               </div>
             </ScrollReveal>
@@ -692,9 +671,9 @@ const Index = () => {
             {/* CTA Button - After comparison table */}
             <ScrollReveal delay={400}>
               <div className="text-center">
-                <Button onClick={scrollToContact} variant="outline" size="mobile-compact" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 max-sm:w-full max-sm:max-w-[320px] max-sm:mx-auto bg-[#0F1111] border border-accent px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
-                  Get Free Consultation
-                </Button>
+                <button onClick={scrollToContact} className="btn-primary text-xl md:text-2xl">
+                  get free consultation
+                </button>
               </div>
             </ScrollReveal>
 
@@ -746,104 +725,53 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Reviews Section */}
-      <section id="reviews" className="max-sm:py-4 py-12 lg:py-16" style={{ background: 'var(--gradient-brown-primary)' }}>
+      {/* 2025 Reviews Section - Animated, Clean */}
+      <section id="reviews" className="py-16 md:py-24" style={{ background: 'var(--gradient-brown-primary)' }}>
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">
-              What our clients say
+            <h2 className="font-heading font-light text-text-primary text-center text-4xl md:text-6xl mb-16">
+              what our clients say
             </h2>
-            <div className="w-24 h-0.5 bg-accent-primary mb-8"></div>
           </ScrollReveal>
 
-          {/* Hero Review */}
-          <ScrollReveal>
-            <div className="bg-bg-section-alt rounded-xl max-sm:p-2 p-6 max-sm:mb-4 mb-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
-              <div className="grid md:grid-cols-5 max-sm:gap-2 gap-6 items-center">
-                <div className="md:col-span-2 relative">
-                  <ScrollReveal delay={100}>
-                    <img src={imageConfig.testimonial} alt="The Summit Inn custom bar" className="w-full max-sm:max-h-20 h-48 md:h-64 object-cover rounded-xl" loading="lazy" />
-                  </ScrollReveal>
-                </div>
-                <div className="md:col-span-3">
-                  <div className="flex items-start mb-4">
-                    
-                    <div className="flex text-accent-primary">
-                      <svg className="max-sm:w-4 max-sm:h-4 w-5 h-5 fill-current" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                      <svg className="max-sm:w-4 max-sm:h-4 w-5 h-5 fill-current ml-1" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                      <svg className="max-sm:w-4 max-sm:h-4 w-5 h-5 fill-current ml-1" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                      <svg className="max-sm:w-4 max-sm:h-4 w-5 h-5 fill-current ml-1" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                      <svg className="max-sm:w-4 max-sm:h-4 w-5 h-5 fill-current ml-1" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <blockquote className="max-sm:text-[12px] max-sm:leading-relaxed max-sm:mb-2 text-lg text-text-primary mb-4 leading-relaxed">
-                    Absolutely stunning work. The attention to detail and quality of craftsmanship 
-                    exceeded our expectations. This bar is the centerpiece of our venue.
-                  </blockquote>
-                  <cite className="text-text-secondary font-bold max-sm:text-[11px] text-base">— The Summit Inn</cite>
-                </div>
-              </div>
-            </div>
-          </ScrollReveal>
-
-          {/* Grid of Reviews */}
-          <div className="grid md:grid-cols-3 max-sm:gap-2 gap-4 mb-8">
-            <ScrollReveal delay={100}>
-              <div className="bg-bg-section-alt rounded-lg max-sm:p-2 p-4 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
-                <div className="flex items-center max-sm:mb-2 mb-4">
-                  <svg className="max-sm:w-3 max-sm:h-3 w-4 h-4 text-accent-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" />
-                  </svg>
-                  
-                </div>
-                <p className="text-text-primary max-sm:text-[11px] max-sm:leading-relaxed max-sm:mb-1 mb-3 leading-relaxed">Perfect craftsmanship. Built exactly to our specifications.</p>
-                <cite className="text-text-secondary font-bold max-sm:text-[10px] text-sm">— Abbey Tavern</cite>
-              </div>
-            </ScrollReveal>
-            
-            <ScrollReveal delay={200}>
-              <div className="bg-bg-section-alt rounded-lg max-sm:p-2 p-4 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
-                <div className="flex items-center max-sm:mb-2 mb-4">
-                  <svg className="max-sm:w-3 max-sm:h-3 w-4 h-4 text-accent-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" />
-                  </svg>
-                  
-                </div>
-                <p className="text-text-primary max-sm:text-[11px] max-sm:leading-relaxed max-sm:mb-1 mb-3 leading-relaxed">Our customers constantly compliment the bar design.</p>
-                <cite className="text-text-secondary font-bold max-sm:text-[10px] text-sm">— Findlaters</cite>
-              </div>
-            </ScrollReveal>
-            
-            <ScrollReveal delay={300}>
-              <div className="bg-bg-section-alt rounded-lg max-sm:p-2 p-4 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-accent-primary/50 group">
-                <div className="flex items-center max-sm:mb-2 mb-4">
-                  <svg className="max-sm:w-3 max-sm:h-3 w-4 h-4 text-accent-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" />
-                  </svg>
-                  
-                </div>
-                <p className="text-text-primary max-sm:text-[11px] max-sm:leading-relaxed max-sm:mb-1 mb-3 leading-relaxed">Exceptional attention to detail. Worth every penny.</p>
-                <cite className="text-text-secondary font-bold max-sm:text-[10px] text-sm">— Private Client</cite>
-              </div>
-            </ScrollReveal>
+          {/* Animated Reviews */}
+          <div className="max-w-5xl mx-auto mb-16">
+            <AnimatedReviews 
+              reviews={[
+                {
+                  text: "Absolutely stunning work. The attention to detail and quality of craftsmanship exceeded our expectations. This bar is the centerpiece of our venue.",
+                  author: "The Summit Inn",
+                  rating: 5
+                },
+                {
+                  text: "Perfect craftsmanship. Built exactly to our specifications.",
+                  author: "Abbey Tavern",
+                  rating: 5
+                },
+                {
+                  text: "Our customers constantly compliment the bar design.",
+                  author: "Findlaters",
+                  rating: 5
+                },
+                {
+                  text: "Exceptional attention to detail. Worth every penny.",
+                  author: "Private Client",
+                  rating: 5
+                }
+              ]}
+              delay={4000}
+            />
           </div>
 
-          {/* CTA Button */}
+          {/* CTA Button - 2025 Style */}
           <ScrollReveal delay={400}>
             <div className="text-center">
-                <Button onClick={() => scrollToContact()} variant="outline" size="mobile-compact" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 max-sm:w-full max-sm:max-w-[320px] max-sm:mx-auto bg-[#0F1111] border border-accent px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
-                  Let's build yours
-                </Button>
+              <button 
+                onClick={() => scrollToContact()} 
+                className="btn-primary text-xl md:text-2xl"
+              >
+                let's build yours
+              </button>
             </div>
           </ScrollReveal>
         </div>
@@ -917,75 +845,48 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Section 7: Process */}
-      <section id="process" className="max-sm:py-6 py-16 lg:py-20 relative overflow-hidden" style={{ background: 'var(--gradient-brown-primary)' }}>
-        <div className="absolute inset-0 opacity-10">
-          <img src={imageConfig.maker} alt="" className="w-full h-full object-cover" loading="lazy" />
-        </div>
-        <div className="container mx-auto px-6 relative">
+      {/* 2025 Process Section - Animated, Clean */}
+      <section id="process" className="py-16 md:py-24" style={{ background: 'var(--gradient-brown-primary)' }}>
+        <div className="container mx-auto px-6">
           <ScrollReveal>
-            <div className="text-center max-sm:mb-6 mb-12">
-              <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-3 mb-6 text-4xl md:text-5xl">
-                How We Work
-              </h2>
-              <div className="w-24 h-0.5 bg-accent-primary mx-auto"></div>
-            </div>
+            <h2 className="font-heading font-light text-text-primary text-center text-4xl md:text-6xl mb-16">
+              how we work
+            </h2>
           </ScrollReveal>
           
-          {/* Mobile - modern minimal cards */}
-          <div className="max-sm:block hidden">
-            <div className="flex gap-4 overflow-x-auto pb-4 px-1 hide-scrollbar">
-              {processSteps.map((step, index) => (
-                  <div key={index} className="group flex-shrink-0 w-[160px] relative">
-                    {/* Glow effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-accent-primary/20 to-accent-secondary/20 rounded-lg blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    
-                    {/* Card */}
-                    <div className="relative bg-bg-main/90 backdrop-blur-sm rounded-lg p-4 border border-accent-primary/10 group-hover:border-accent-primary/30 transition-all duration-300 shadow-lg group-hover:shadow-accent-primary/10">
-                      {/* Modern step indicator */}
-                      <div className="flex items-center gap-2 mb-3">
-                        <div className="w-1 h-6 bg-gradient-to-b from-accent-primary to-accent-secondary rounded-full"></div>
-                        <span className="text-accent-primary font-heading font-bold text-xs">STEP {step.number}</span>
-                      </div>
-                      
-                      <h3 className="font-heading font-bold text-text-primary text-sm mb-2 leading-tight">
-                        {step.title}
-                      </h3>
-                      <p className="text-text-secondary text-xs leading-relaxed">
-                        {step.description}
-                      </p>
-                    </div>
-                  </div>
-              ))}
-            </div>
+          {/* Desktop - Animated Process */}
+          <div className="hidden md:block max-w-2xl mx-auto">
+            <AnimatedProcess 
+              steps={processSteps}
+              delay={3500}
+            />
           </div>
 
-          {/* Desktop - modern grid */}
-          <div className="max-sm:hidden grid md:grid-cols-4 gap-8">
+          {/* Mobile - Simple List */}
+          <div className="md:hidden space-y-8">
             {processSteps.map((step, index) => (
-                <div key={index} className="group relative">
-                  {/* Glow effect */}
-                  <div className="absolute -inset-1 bg-gradient-to-r from-accent-primary/20 via-accent-secondary/20 to-accent-primary/20 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                  
-                  {/* Card */}
-                  <div className="relative bg-bg-main/95 backdrop-blur-sm rounded-xl p-6 border border-accent-primary/10 group-hover:border-accent-primary/25 transition-all duration-500 shadow-xl group-hover:shadow-accent-primary/5">
-                    {/* Modern step indicator */}
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="w-1.5 h-8 bg-gradient-to-b from-accent-primary to-accent-secondary rounded-full"></div>
-                      <div>
-                        <span className="text-accent-primary font-heading font-bold text-sm tracking-wider">STEP</span>
-                        <div className="text-accent-primary font-heading font-bold text-lg">{step.number}</div>
+              <ScrollReveal key={index} delay={index * 100}>
+                <div className="text-center space-y-4">
+                  <div className="flex items-center justify-center gap-4">
+                    <div className="w-1 h-12 bg-gradient-to-b from-accent-primary to-accent-secondary rounded-full"></div>
+                    <div className="text-left">
+                      <div className="text-accent-primary font-heading font-light text-xs tracking-wider opacity-70">
+                        step
+                      </div>
+                      <div className="text-accent-primary font-heading font-light text-2xl">
+                        {step.number}
                       </div>
                     </div>
-                    
-                    <h3 className="font-heading font-bold text-text-primary mb-3 text-lg">
-                      {step.title}
-                    </h3>
-                    <p className="text-text-secondary text-sm leading-relaxed">
-                      {step.description}
-                    </p>
                   </div>
+                  
+                  <h3 className="font-heading font-light text-text-primary text-xl">
+                    {step.title}
+                  </h3>
+                  <p className="text-text-secondary font-light leading-relaxed">
+                    {step.description}
+                  </p>
                 </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
