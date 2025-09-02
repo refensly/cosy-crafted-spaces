@@ -295,7 +295,7 @@ const Index = () => {
       </div>
 
       {/* Section 2: Pain → Value */}
-      <section id="pain-value-section" className="max-sm:pt-4 max-sm:pb-2 pt-12 pb-6 lg:pt-16 lg:pb-8 bg-gradient-to-br from-bg-section-alt-2 via-bg-wood-dark to-bg-main">
+      <section id="pain-value-section" className="max-sm:pt-4 max-sm:pb-2 pt-12 pb-6 lg:pt-16 lg:pb-8" style={{ background: 'var(--gradient-brown-primary)' }}>
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <ScrollReveal>
@@ -335,7 +335,7 @@ const Index = () => {
       </section>
 
       {/* New Section: Handmade Quality Examples */}
-      <section className="max-sm:py-4 py-16 lg:py-20 bg-bg-main">
+      <section className="max-sm:py-4 py-16 lg:py-20" style={{ background: 'var(--gradient-brown-secondary)' }}>
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-3 mb-6 text-4xl md:text-5xl">Our Promise</h2>
@@ -396,9 +396,9 @@ const Index = () => {
       </section>
 
       {/* Section 3: Interactive Portfolio */}
-      <section id="work" className="max-sm:py-6 py-16 lg:py-20 relative overflow-hidden bg-deep-green">
+      <section id="work" className="max-sm:py-6 py-16 lg:py-20 relative overflow-hidden" style={{ background: 'var(--gradient-brown-tertiary)' }}>
         
-        <div className="container mx-auto max-sm:px-4 px-8 md:px-12 lg:px-16 relative z-10">
+        <div className="container mx-auto px-6 md:px-12 lg:px-16 relative z-10">
           <ScrollReveal>
             <div className="text-center max-sm:mb-8 mb-16">
               <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">
@@ -681,7 +681,7 @@ const Index = () => {
       </section>
 
       {/* Section 5: Portfolio */}
-      <section className="max-sm:py-6 py-16 lg:py-20 bg-bg-main">
+      <section className="max-sm:py-6 py-16 lg:py-20" style={{ background: 'var(--gradient-brown-primary)' }}>
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">
@@ -725,7 +725,7 @@ const Index = () => {
       </section>
 
       {/* Reviews Section */}
-      <section id="reviews" className="max-sm:py-4 py-12 lg:py-16 bg-gradient-to-br from-bg-section-alt-2 via-bg-wood-dark to-bg-main">
+      <section id="reviews" className="max-sm:py-4 py-12 lg:py-16" style={{ background: 'var(--gradient-brown-secondary)' }}>
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">
@@ -828,7 +828,7 @@ const Index = () => {
       </section>
 
       {/* New Section: What We Build */}
-      <section className="max-sm:py-6 py-16 lg:py-20 bg-bg-main">
+      <section className="max-sm:py-6 py-16 lg:py-20" style={{ background: 'var(--gradient-brown-tertiary)' }}>
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 max-sm:gap-4 gap-6 lg:gap-8 items-center">
             <ScrollReveal>
@@ -867,9 +867,7 @@ const Index = () => {
       </section>
 
       {/* New Section: FAQ */}
-      <section className="max-sm:py-6 py-16 lg:py-20" style={{
-      background: 'var(--gradient-section)'
-    }}>
+      <section className="max-sm:py-6 py-16 lg:py-20" style={{ background: 'var(--gradient-brown-accent)' }}>
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <ScrollReveal>
@@ -898,11 +896,11 @@ const Index = () => {
       </section>
 
       {/* Section 7: Process */}
-      <section id="process" className="max-sm:py-6 py-16 lg:py-20 bg-bg-section-alt relative overflow-hidden">
+      <section id="process" className="max-sm:py-6 py-16 lg:py-20 relative overflow-hidden" style={{ background: 'var(--gradient-brown-primary)' }}>
         <div className="absolute inset-0 opacity-10">
           <img src={imageConfig.maker} alt="" className="w-full h-full object-cover" loading="lazy" />
         </div>
-        <div className="container mx-auto max-sm:px-4 px-6 relative">
+        <div className="container mx-auto px-6 relative">
           <ScrollReveal>
             <div className="text-center max-sm:mb-6 mb-12">
               <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-3 mb-6 text-4xl md:text-5xl">
@@ -972,7 +970,7 @@ const Index = () => {
       </section>
 
       {/* Section 8: Who Am I */}
-      <section id="about" className="max-sm:py-6 py-16 lg:py-20 bg-bg-main">
+      <section id="about" className="max-sm:py-6 py-16 lg:py-20" style={{ background: 'var(--gradient-brown-secondary)' }}>
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <ScrollReveal>
@@ -997,7 +995,7 @@ const Index = () => {
       </section>
 
       {/* Section 9: Contact Form */}
-      <section id="contact-form" className="max-sm:py-6 py-16 lg:py-20 bg-gradient-to-br from-bg-section-alt-2 via-bg-wood-dark to-bg-main">
+      <section id="contact-form" className="max-sm:py-6 py-16 lg:py-20" style={{ background: 'var(--gradient-brown-accent)' }}>
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <div className="max-w-2xl mx-auto text-center">
