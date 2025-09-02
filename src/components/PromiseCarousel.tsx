@@ -37,10 +37,10 @@ const PromiseCarousel = () => {
           {promises.map((promise, index) => (
             <div
               key={index}
-              className={`absolute inset-0 transition-all duration-700 ease-in-out transform ${
+              className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
                 index === currentIndex 
-                  ? 'opacity-100 translate-y-0' 
-                  : 'opacity-0 translate-y-full'
+                  ? 'opacity-100' 
+                  : 'opacity-0'
               }`}
             >
               <div className="flex flex-col h-full p-6">
