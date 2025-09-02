@@ -912,41 +912,62 @@ const Index = () => {
             </div>
           </ScrollReveal>
           
-          {/* Mobile - compact horizontal scroll */}
+          {/* Mobile - modern minimal cards */}
           <div className="max-sm:block hidden">
-            <div className="flex gap-3 overflow-x-auto pb-2">
+            <div className="flex gap-4 overflow-x-auto pb-4 px-1">
               {processSteps.map((step, index) => (
                 <ScrollReveal key={index} delay={index * 100}>
-                  <div className="flex-shrink-0 w-[180px] bg-gradient-to-br from-bg-section-alt-2/80 via-bg-wood-dark/60 to-bg-main/40 backdrop-blur-sm rounded-xl p-3 border border-accent-primary/20 text-center">
-                    <div className="w-8 h-8 bg-gradient-to-br from-accent-primary to-accent-primary/80 rounded-full flex items-center justify-center mx-auto mb-2">
-                      <span className="text-white font-heading font-bold text-sm">{step.number}</span>
+                  <div className="group flex-shrink-0 w-[160px] relative">
+                    {/* Glow effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-accent-primary/20 to-accent-secondary/20 rounded-lg blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    {/* Card */}
+                    <div className="relative bg-bg-main/90 backdrop-blur-sm rounded-lg p-4 border border-accent-primary/10 group-hover:border-accent-primary/30 transition-all duration-300 shadow-lg group-hover:shadow-accent-primary/10">
+                      {/* Modern step indicator */}
+                      <div className="flex items-center gap-2 mb-3">
+                        <div className="w-1 h-6 bg-gradient-to-b from-accent-primary to-accent-secondary rounded-full"></div>
+                        <span className="text-accent-primary font-heading font-bold text-xs">STEP {step.number}</span>
+                      </div>
+                      
+                      <h3 className="font-heading font-bold text-text-primary text-sm mb-2 leading-tight">
+                        {step.title}
+                      </h3>
+                      <p className="text-text-secondary text-xs leading-relaxed">
+                        {step.description}
+                      </p>
                     </div>
-                    <h3 className="font-heading font-bold text-text-primary text-sm mb-1">
-                      {step.title}
-                    </h3>
-                    <p className="text-text-secondary text-xs">
-                      {step.description}
-                    </p>
                   </div>
                 </ScrollReveal>
               ))}
             </div>
           </div>
 
-          {/* Desktop layout */}
-          <div className="max-sm:hidden grid md:grid-cols-4 gap-6">
+          {/* Desktop - modern grid */}
+          <div className="max-sm:hidden grid md:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
               <ScrollReveal key={index} delay={index * 150}>
-                <div className="text-center bg-gradient-to-br from-bg-section-alt-2 via-bg-wood-dark to-bg-main/50 rounded-xl p-5 border border-accent-primary/20 hover:border-accent-primary/40 transition-all duration-300">
-                  <div className="w-10 h-10 bg-gradient-to-br from-accent-primary to-accent-primary/80 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <span className="text-white font-heading font-bold text-lg">{step.number}</span>
+                <div className="group relative">
+                  {/* Glow effect */}
+                  <div className="absolute -inset-1 bg-gradient-to-r from-accent-primary/20 via-accent-secondary/20 to-accent-primary/20 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                  
+                  {/* Card */}
+                  <div className="relative bg-bg-main/95 backdrop-blur-sm rounded-xl p-6 border border-accent-primary/10 group-hover:border-accent-primary/25 transition-all duration-500 shadow-xl group-hover:shadow-accent-primary/5">
+                    {/* Modern step indicator */}
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-1.5 h-8 bg-gradient-to-b from-accent-primary to-accent-secondary rounded-full"></div>
+                      <div>
+                        <span className="text-accent-primary font-heading font-bold text-sm tracking-wider">STEP</span>
+                        <div className="text-accent-primary font-heading font-bold text-lg">{step.number}</div>
+                      </div>
+                    </div>
+                    
+                    <h3 className="font-heading font-bold text-text-primary mb-3 text-lg">
+                      {step.title}
+                    </h3>
+                    <p className="text-text-secondary text-sm leading-relaxed">
+                      {step.description}
+                    </p>
                   </div>
-                  <h3 className="font-heading font-bold text-text-primary mb-2 text-lg">
-                    {step.title}
-                  </h3>
-                  <p className="text-text-secondary text-base">
-                    {step.description}
-                  </p>
                 </div>
               </ScrollReveal>
             ))}
