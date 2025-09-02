@@ -43,16 +43,18 @@ const AnimatedProcess = ({ steps, className = '', delay = 3500 }: AnimatedProces
           }`}
         >
           <div className="space-y-6 max-w-md mx-auto">
-            {/* Step indicator */}
-            <div className="flex items-center justify-center gap-4">
-              <div className="w-1 h-16 bg-gradient-to-b from-accent-primary to-accent-secondary rounded-full"></div>
-              <div className="text-left">
-                <div className="text-accent-primary font-heading font-bold text-sm tracking-wider opacity-70">
-                  STEP
-                </div>
-                <div className="text-accent-primary font-heading font-bold text-3xl">
+            {/* Step indicator - Minimalistic glowing digit */}
+            <div className="flex items-center justify-center">
+              <div className="text-accent-primary font-heading font-light text-6xl md:text-7xl tracking-wider relative">
+                <span className="relative inline-block">
                   {currentStep.number}
-                </div>
+                  <div className="absolute inset-0 text-accent-primary opacity-40 blur-sm">
+                    {currentStep.number}
+                  </div>
+                  <div className="absolute inset-0 text-accent-primary opacity-20 blur-md">
+                    {currentStep.number}
+                  </div>
+                </span>
               </div>
             </div>
             
