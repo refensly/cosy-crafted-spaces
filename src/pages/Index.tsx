@@ -347,12 +347,12 @@ const Index = () => {
           </ScrollReveal>
           
           {/* Mobile Animated Version */}
-          <div className="md:hidden mb-12">
+          <div className="md:hidden mb-12 md:mb-16 lg:mb-20">
             <PromiseCarousel />
           </div>
           
           {/* Desktop Grid Version - Minimal */}
-          <div className="hidden md:grid md:grid-cols-3 gap-16 lg:gap-20 mb-20">
+          <div className="hidden md:grid md:grid-cols-3 gap-16 lg:gap-20 mb-12 md:mb-16 lg:mb-20">
             <ScrollReveal className="text-center">
               <div className="space-y-8">
                 <div className="w-20 h-20 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-accent-primary/20 to-accent-primary/10">
