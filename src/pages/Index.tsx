@@ -906,7 +906,7 @@ const Index = () => {
           <ScrollReveal>
             <div className="text-center max-sm:mb-6 mb-12">
               <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-3 mb-6 text-4xl md:text-5xl">
-                How we work
+                How We Work
               </h2>
               <div className="w-24 h-0.5 bg-accent-primary mx-auto"></div>
             </div>
@@ -916,8 +916,7 @@ const Index = () => {
           <div className="max-sm:block hidden">
             <div className="flex gap-4 overflow-x-auto pb-4 px-1 hide-scrollbar">
               {processSteps.map((step, index) => (
-                <ScrollReveal key={index} delay={index * 100}>
-                  <div className="group flex-shrink-0 w-[160px] relative">
+                  <div key={index} className="group flex-shrink-0 w-[160px] relative">
                     {/* Glow effect */}
                     <div className="absolute inset-0 bg-gradient-to-r from-accent-primary/20 to-accent-secondary/20 rounded-lg blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     
@@ -937,7 +936,6 @@ const Index = () => {
                       </p>
                     </div>
                   </div>
-                </ScrollReveal>
               ))}
             </div>
           </div>
@@ -945,8 +943,7 @@ const Index = () => {
           {/* Desktop - modern grid */}
           <div className="max-sm:hidden grid md:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
-              <ScrollReveal key={index} delay={index * 150}>
-                <div className="group relative">
+                <div key={index} className="group relative">
                   {/* Glow effect */}
                   <div className="absolute -inset-1 bg-gradient-to-r from-accent-primary/20 via-accent-secondary/20 to-accent-primary/20 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                   
@@ -969,7 +966,6 @@ const Index = () => {
                     </p>
                   </div>
                 </div>
-              </ScrollReveal>
             ))}
           </div>
         </div>
