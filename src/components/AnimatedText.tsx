@@ -1,7 +1,12 @@
 import { useState, useEffect } from 'react';
 
+interface AnimatedTextItem {
+  heading: string;
+  body?: string;
+}
+
 interface AnimatedTextProps {
-  texts: string[];
+  texts: (string | AnimatedTextItem)[];
   className?: string;
   delay?: number;
 }
@@ -25,12 +30,28 @@ const AnimatedText = ({ texts, className = '', delay = 3000 }: AnimatedTextProps
     return () => clearInterval(interval);
   }, [texts.length, delay]);
 
+  const currentText = texts[currentIndex];
+  const isTextObject = typeof currentText === 'object' && currentText !== null;
+
   return (
-    <span 
+    <div 
       className={`transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'} ${className}`}
     >
-      {texts[currentIndex]}
-    </span>
+      {isTextObject ? (
+        <>
+          <div className="font-heading font-light text-text-primary text-2xl md:text-4xl">
+            {currentText.heading}
+          </div>
+          {currentText.body && (
+            <p className="text-text-secondary mt-4 text-lg md:text-xl leading-relaxed">
+              {currentText.body}
+            </p>
+          )}
+        </>
+      ) : (
+        <span>{currentText as string}</span>
+      )}
+    </div>
   );
 };
 

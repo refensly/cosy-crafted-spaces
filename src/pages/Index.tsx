@@ -658,12 +658,27 @@ const Index = () => {
                 
                 {/* Main animated text */}
                 <div className="pt-8">
-                  <h3 className="font-heading font-light text-text-primary text-2xl md:text-4xl">
-                    <AnimatedText 
-                      texts={["unique every time", "local craftsmanship", "natural materials", "built to last"]}
-                      delay={2500}
-                    />
-                  </h3>
+                  <AnimatedText 
+                    texts={[
+                      {
+                        heading: "unique every time",
+                        body: "Every piece is crafted specifically for your space, ensuring no two projects are ever the same."
+                      },
+                      {
+                        heading: "local craftsmanship", 
+                        body: "Supporting skilled artisans in our community while delivering authentic, handcrafted quality."
+                      },
+                      {
+                        heading: "natural materials",
+                        body: "We source sustainable, high-quality wood and materials that age beautifully over time."
+                      },
+                      {
+                        heading: "built to last",
+                        body: "Traditional joinery techniques and attention to detail ensure your furniture becomes a family heirloom."
+                      }
+                    ]}
+                    delay={3500}
+                  />
                 </div>
               </div>
             </ScrollReveal>
