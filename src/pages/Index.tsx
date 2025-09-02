@@ -898,50 +898,35 @@ const Index = () => {
       </section>
 
       {/* Section 7: Process */}
-      <section id="process" className="max-sm:py-8 py-16 lg:py-20 bg-bg-section-alt relative overflow-hidden">
+      <section id="process" className="max-sm:py-6 py-16 lg:py-20 bg-bg-section-alt relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <img src={imageConfig.maker} alt="" className="w-full h-full object-cover" loading="lazy" />
         </div>
         <div className="container mx-auto max-sm:px-4 px-6 relative">
           <ScrollReveal>
-            <div className="text-center max-sm:mb-10 mb-16">
-              <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(24px,6vw,32px)] max-sm:font-bold max-sm:leading-tight max-sm:mb-4 mb-6 text-4xl md:text-5xl">
+            <div className="text-center max-sm:mb-6 mb-12">
+              <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-3 mb-6 text-4xl md:text-5xl">
                 How we work
               </h2>
-              <div className="w-24 h-0.5 bg-accent-primary mx-auto max-sm:mb-6 mb-8"></div>
-              <p className="text-text-secondary max-sm:text-base max-sm:px-2 max-w-2xl mx-auto text-lg">
-                Our proven 4-step process ensures exceptional results from concept to completion
-              </p>
+              <div className="w-24 h-0.5 bg-accent-primary mx-auto"></div>
             </div>
           </ScrollReveal>
           
-          {/* Mobile-optimized layout */}
+          {/* Mobile - compact horizontal scroll */}
           <div className="max-sm:block hidden">
-            <div className="space-y-6">
+            <div className="flex gap-3 overflow-x-auto pb-2">
               {processSteps.map((step, index) => (
                 <ScrollReveal key={index} delay={index * 100}>
-                  <div className="relative">
-                    {/* Connection line - except for last item */}
-                    {index < processSteps.length - 1 && (
-                      <div className="absolute left-8 top-20 w-0.5 h-8 bg-gradient-to-b from-accent-primary to-accent-primary/30"></div>
-                    )}
-                    
-                    <div className="flex items-start space-x-4 bg-gradient-to-br from-bg-section-alt-2/80 via-bg-wood-dark/60 to-bg-main/40 backdrop-blur-sm rounded-2xl p-5 border border-accent-primary/20 hover:border-accent-primary/40 transition-all duration-300 shadow-lg">
-                      {/* Step number circle */}
-                      <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-accent-primary to-accent-primary/80 rounded-full flex items-center justify-center shadow-lg shadow-accent-primary/30">
-                        <span className="text-white font-heading font-bold text-xl">{step.number}</span>
-                      </div>
-                      
-                      {/* Content */}
-                      <div className="flex-1 pt-2">
-                        <h3 className="font-heading font-bold text-text-primary text-xl mb-2">
-                          {step.title}
-                        </h3>
-                        <p className="text-text-secondary text-base leading-relaxed">
-                          {step.description}
-                        </p>
-                      </div>
+                  <div className="flex-shrink-0 w-[180px] bg-gradient-to-br from-bg-section-alt-2/80 via-bg-wood-dark/60 to-bg-main/40 backdrop-blur-sm rounded-xl p-3 border border-accent-primary/20 text-center">
+                    <div className="w-8 h-8 bg-gradient-to-br from-accent-primary to-accent-primary/80 rounded-full flex items-center justify-center mx-auto mb-2">
+                      <span className="text-white font-heading font-bold text-sm">{step.number}</span>
                     </div>
+                    <h3 className="font-heading font-bold text-text-primary text-sm mb-1">
+                      {step.title}
+                    </h3>
+                    <p className="text-text-secondary text-xs">
+                      {step.description}
+                    </p>
                   </div>
                 </ScrollReveal>
               ))}
@@ -952,13 +937,11 @@ const Index = () => {
           <div className="max-sm:hidden grid md:grid-cols-4 gap-6">
             {processSteps.map((step, index) => (
               <ScrollReveal key={index} delay={index * 150}>
-                <div className="text-center bg-gradient-to-br from-bg-section-alt-2 via-bg-wood-dark to-bg-main/50 rounded-xl p-6 border border-accent-primary/20 hover:border-accent-primary/40 transition-all duration-300 group hover:shadow-lg hover:shadow-accent-primary/20">
-                  {/* Step number */}
-                  <div className="w-12 h-12 bg-gradient-to-br from-accent-primary to-accent-primary/80 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="text-center bg-gradient-to-br from-bg-section-alt-2 via-bg-wood-dark to-bg-main/50 rounded-xl p-5 border border-accent-primary/20 hover:border-accent-primary/40 transition-all duration-300">
+                  <div className="w-10 h-10 bg-gradient-to-br from-accent-primary to-accent-primary/80 rounded-full flex items-center justify-center mx-auto mb-3">
                     <span className="text-white font-heading font-bold text-lg">{step.number}</span>
                   </div>
-                  
-                  <h3 className="font-heading font-bold text-text-primary mb-3 text-lg">
+                  <h3 className="font-heading font-bold text-text-primary mb-2 text-lg">
                     {step.title}
                   </h3>
                   <p className="text-text-secondary text-base">
