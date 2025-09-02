@@ -8,31 +8,31 @@
 
 @layer base {
   :root {
-    /* Main Backgrounds */
-    --bg-main: 210 9% 6%;              /* #0F1111 */
-    --bg-section-alt: 135 14% 11%;      /* #17221B */
-    --bg-section-alt-2: 135 20% 15%;    /* #1F2E26 */
-    --bg-blue-contrast: 200 18% 8%;     /* #101B1E - Blue-ish contrast */
-    --bg-wood-dark: 25 15% 8%;          /* #171411 - Dark wooden solid */
-    --bg-deep-green: 155 25% 10%;       /* #131F1A - Deep green with blue undertone */
+    /* Pure Dark Backgrounds - Matching Reference */
+    --bg-main: 0 0% 0%;                     /* Pure Black */
+    --bg-section-alt: 0 0% 2%;              /* Almost Black */
+    --bg-section-alt-2: 0 0% 3%;            /* Slightly lighter */
+    --bg-blue-contrast: 0 0% 1%;            /* Pure dark */
+    --bg-wood-dark: 0 0% 0%;                /* Pure black */
+    --bg-deep-green: 0 0% 1%;               /* Almost black */
     
-    /* Text Colors */
-    --text-primary: 0 0% 100%;          /* #FFFFFF */
-    --text-secondary: 0 0% 81%;         /* #CFCFCF */
-    --text-muted: 120 5% 64%;           /* #9FA8A3 */
+    /* Clean Text Colors */
+    --text-primary: 0 0% 98%;               /* Near White */
+    --text-secondary: 0 0% 70%;             /* Medium Gray */
+    --text-muted: 0 0% 50%;                 /* Muted Gray */
     
-    /* Bronze/Wood Accents */
-    --accent-primary: 39 54% 45%;       /* #B07C35 */
-    --accent-hover: 39 42% 39%;         /* #8C6A3E */
-    --accent-focus: 39 35% 54%;         /* #A88F6B */
+    /* Minimal Accents */
+    --accent-primary: 45 100% 60%;          /* Clean Gold */
+    --accent-hover: 45 100% 55%;            /* Hover Gold */
+    --accent-focus: 45 100% 65%;            /* Focus Gold */
     
     /* Neutrals */
-    --neutral-warm: 39 24% 75%;         /* #BFB5A0 */
-    --neutral-light: 46 13% 85%;        /* #D9D7CA */
+    --neutral-warm: 0 0% 80%;               /* Light Gray */
+    --neutral-light: 0 0% 90%;              /* Very Light Gray */
     
     /* Green Accents */
-    --green-dark: 78 22% 29%;           /* #4A593D */
-    --green-light: 75 24% 59%;          /* #A8B27E */
+    --green-dark: 0 0% 20%;                 /* Dark Gray */
+    --green-light: 0 0% 60%;                /* Medium Gray */
     
     /* Semantic tokens */
     --background: var(--bg-main);
@@ -64,24 +64,24 @@
     /* Gradients */
     --gradient-section: linear-gradient(135deg, hsl(var(--bg-section-alt)) 0%, hsl(var(--bg-wood-dark)) 50%, hsl(var(--bg-main)) 100%);
     
-    /* Dark Seamless Gradients */
-    --gradient-brown-primary: linear-gradient(135deg, hsl(0 0% 4%) 0%, hsl(0 0% 2%) 50%, hsl(0 0% 0%) 100%);
-    --gradient-brown-secondary: linear-gradient(135deg, hsl(0 0% 6%) 0%, hsl(0 0% 3%) 50%, hsl(0 0% 1%) 100%);
-    --gradient-brown-tertiary: linear-gradient(135deg, hsl(0 0% 5%) 0%, hsl(0 0% 2%) 50%, hsl(0 0% 0%) 100%);
-    --gradient-brown-accent: linear-gradient(135deg, hsl(0 0% 8%) 0%, hsl(0 0% 4%) 50%, hsl(0 0% 1%) 100%);
+    /* Dark Seamless Gradients - Pure Black */
+    --gradient-brown-primary: hsl(0 0% 0%);
+    --gradient-brown-secondary: hsl(0 0% 1%);
+    --gradient-brown-tertiary: hsl(0 0% 0%);
+    --gradient-brown-accent: hsl(0 0% 2%);
 
-    /* Enhanced Mobile Variables */
-    --mobile-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* Enhanced Mobile Variables - Minimal */
+    --mobile-bounce: cubic-bezier(0.4, 0, 0.2, 1);
     --mobile-smooth: cubic-bezier(0.4, 0, 0.2, 1);
-    --mobile-transition: all 0.4s var(--mobile-smooth);
-    --mobile-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.4);
-    --mobile-shadow-hover: 0 16px 48px -12px rgba(0, 0, 0, 0.5);
-    --mobile-glow: 0 0 40px rgba(184, 134, 11, 0.08);
+    --mobile-transition: all 0.3s var(--mobile-smooth);
+    --mobile-shadow: none;
+    --mobile-shadow-hover: none;
+    --mobile-glow: none;
     
-    /* Seamless Design Variables */
-    --glass-bg: rgba(255, 255, 255, 0.02);
-    --glass-border: rgba(255, 255, 255, 0.05);
-    --subtle-glow: 0 0 60px rgba(184, 134, 11, 0.03);
+    /* Seamless Design Variables - Minimal */
+    --glass-bg: transparent;
+    --glass-border: transparent;
+    --subtle-glow: none;
 
     /* Transitions */
     --transition-smooth: all 250ms cubic-bezier(0.22, 1, 0.36, 1);
@@ -132,19 +132,19 @@
     }
     
     .mobile-card {
-      background: var(--glass-bg);
-      backdrop-filter: blur(8px);
-      border-radius: 1rem;
-      padding: 1.25rem;
-      box-shadow: var(--subtle-glow);
+      background: transparent;
+      backdrop-filter: none;
+      border-radius: 0;
+      padding: 2rem 0;
+      box-shadow: none;
       transition: var(--mobile-transition);
       border: none;
     }
     
     .mobile-card:hover {
-      background: rgba(255, 255, 255, 0.03);
-      box-shadow: var(--mobile-shadow-hover);
-      transform: translateY(-4px);
+      background: transparent;
+      box-shadow: none;
+      transform: none;
     }
   }
   
@@ -155,46 +155,54 @@
     letter-spacing: -0.02em;
   }
   
-  /* Mobile-first fluid typography */
+  /* Mobile-first fluid typography - Minimal */
   h1 {
-    font-size: clamp(28px, 6vw, 36px);
-    @apply font-extrabold leading-tight;
+    font-size: clamp(32px, 8vw, 48px);
+    @apply font-light leading-tight tracking-tight;
+    font-weight: 200;
   }
   
   @media (min-width: 769px) {
     h1 {
       @apply text-6xl md:text-7xl lg:text-8xl;
+      font-weight: 200;
     }
   }
   
   h2 {
-    font-size: clamp(22px, 5vw, 28px);
-    @apply font-bold leading-snug;
+    font-size: clamp(24px, 6vw, 36px);
+    @apply font-light leading-tight tracking-tight;
+    font-weight: 300;
   }
   
   @media (min-width: 769px) {
     h2 {
       @apply text-4xl md:text-5xl;
+      font-weight: 300;
     }
   }
   
   h3 {
-    @apply text-lg font-semibold;
+    @apply text-lg font-light;
+    font-weight: 300;
   }
   
   @media (min-width: 769px) {
     h3 {
       @apply text-2xl md:text-3xl;
+      font-weight: 300;
     }
   }
   
   p {
-    @apply text-[15px] leading-relaxed text-neutral-200/90 max-w-[65ch];
+    @apply text-[16px] leading-relaxed text-text-secondary font-light;
+    font-weight: 300;
   }
   
   @media (min-width: 769px) {
     p {
-      @apply text-lg max-w-none;
+      @apply text-lg;
+      font-weight: 300;
     }
   }
   
@@ -289,20 +297,20 @@
     @apply transition-transform duration-200 hover:scale-105;
   }
   
-  /* Card Styles - No Borders */
+  /* Card Styles - Pure Minimal */
   .premium-card {
-    background: var(--glass-bg);
-    backdrop-filter: blur(12px);
-    @apply rounded-2xl p-8;
-    @apply transition-all duration-400;
-    box-shadow: var(--subtle-glow);
+    background: transparent;
+    backdrop-filter: none;
+    @apply rounded-none p-8;
+    @apply transition-none;
+    box-shadow: none;
     border: none;
   }
   
   .premium-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--mobile-shadow-hover);
-    background: rgba(255, 255, 255, 0.04);
+    transform: none;
+    box-shadow: none;
+    background: transparent;
   }
   
   /* Form Styles */
@@ -418,23 +426,23 @@
       min-width: 44px;
     }
     
-    /* Improved carousel navigation */
+    /* Minimal carousel navigation */
     .carousel-nav {
-      width: 48px;
-      height: 48px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
-      background: rgba(0, 0, 0, 0.8);
-      backdrop-filter: blur(16px);
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: none;
       border: none;
       color: white;
       transition: var(--mobile-transition);
-      box-shadow: var(--subtle-glow);
+      box-shadow: none;
     }
     
     .carousel-nav:hover {
-      background: rgba(0, 0, 0, 0.9);
-      transform: scale(1.15);
-      box-shadow: var(--mobile-shadow);
+      background: rgba(255, 255, 255, 0.2);
+      transform: none;
+      box-shadow: none;
     }
   }
 }

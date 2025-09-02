@@ -33,7 +33,7 @@ const PromiseCarousel = () => {
   return (
     <div className="relative">
       <ScrollReveal>
-        <div className="relative h-80 bg-gradient-to-br from-black/20 to-transparent rounded-2xl overflow-hidden backdrop-blur-sm">
+        <div className="relative h-80 bg-black/5 rounded-none overflow-hidden backdrop-blur-none border-none">
           {promises.map((promise, index) => (
             <div
               key={index}
@@ -47,7 +47,7 @@ const PromiseCarousel = () => {
             >
               <div className="flex flex-col h-full p-6">
                 <div className="flex-1 flex items-center justify-center mb-4">
-                  <div className="w-32 h-32 rounded-full overflow-hidden bg-gradient-to-br from-amber-600/30 to-amber-800/30 p-1 shadow-2xl backdrop-blur-sm">
+                  <div className="w-24 h-24 rounded-full overflow-hidden bg-accent-primary/10 shadow-none">
                     <div className="w-full h-full rounded-full overflow-hidden">
                       <img 
                         src={promise.image} 
@@ -59,10 +59,10 @@ const PromiseCarousel = () => {
                 </div>
                 
                 <div className="text-center">
-                  <h3 className="font-heading font-bold text-text-primary text-2xl mb-3">
+                  <h3 className="font-heading text-text-primary text-xl mb-3 font-light">
                     {promise.title}
                   </h3>
-                  <p className="text-text-secondary text-base leading-relaxed">
+                  <p className="text-text-secondary text-base leading-relaxed font-light">
                     {promise.description}
                   </p>
                 </div>

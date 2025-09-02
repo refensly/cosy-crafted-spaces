@@ -296,29 +296,25 @@ const Index = () => {
         <Hero />
       </div>
 
-      {/* Section 2: Pain → Value - Enhanced Mobile */}
-      <section id="pain-value-section" className="max-sm:pt-8 max-sm:pb-6 pt-12 pb-6 lg:pt-16 lg:pb-8" style={{ background: 'var(--gradient-brown-primary)' }}>
-        <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      {/* Section 2: Pain → Value - Minimal Style */}
+      <section id="pain-value-section" className="max-sm:pt-16 max-sm:pb-16 pt-20 pb-20 lg:pt-32 lg:pb-32" style={{ background: 'var(--gradient-brown-primary)' }}>
+        <div className="container mx-auto px-6 max-w-6xl">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <ScrollReveal>
-              <div>
-                <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(24px,6vw,32px)] max-sm:font-bold max-sm:leading-tight max-sm:mb-4 mb-4 text-4xl md:text-5xl">
+              <div className="space-y-8">
+                <h2 className="font-heading text-text-primary max-sm:text-[clamp(28px,8vw,40px)] max-sm:leading-tight mb-8 text-5xl md:text-6xl font-light tracking-tight">
                   Not another mass-production look
                 </h2>
-                <p className="max-sm:text-[16px] max-sm:leading-relaxed text-lg text-text-secondary max-sm:mb-6 mb-6">
+                <p className="max-sm:text-[18px] max-sm:leading-relaxed text-xl text-text-secondary font-light leading-relaxed">
                   If you want something nobody else has, we design and build it for you. 
                   Premium materials, made locally.
                 </p>
-                <div className="max-sm:space-y-3 space-y-3">
+                <div className="space-y-6 mt-12">
                   {["One-of-a-kind design (never repeated)", "Premium hardwoods & brass", "Built in Ireland, built to last"].map((item, index) => 
                     <ScrollReveal key={index} delay={index * 100}>
-                      <div className="relative group">
-                        <div className="mobile-card hover:scale-[1.02]">
-                          <div className="flex items-center">
-                            <div className="w-2 h-2 bg-accent-primary rounded-full mr-4 opacity-80 animate-pulse"></div>
-                            <span className="text-text-primary font-medium max-sm:text-[15px] text-sm">{item}</span>
-                          </div>
-                        </div>
+                      <div className="flex items-center space-x-4">
+                        <div className="w-1 h-1 bg-accent-primary rounded-full opacity-60"></div>
+                        <span className="text-text-primary font-light max-sm:text-[16px] text-lg">{item}</span>
                       </div>
                     </ScrollReveal>
                   )}
@@ -326,10 +322,10 @@ const Index = () => {
               </div>
             </ScrollReveal>
             <ScrollReveal delay={200}>
-              <div className="relative max-sm:mt-6">
-                <div className="w-full rounded-2xl overflow-hidden shadow-2xl backdrop-blur-sm">
+              <div className="relative max-sm:mt-12">
+                <div className="w-full rounded-none overflow-hidden">
                   <ScrollReveal delay={250}>
-                     <img src="/images/custom-bar-interior.png" alt="Custom bar interior with warm lighting and wood finishes" className="w-full max-sm:h-64 h-48 sm:h-56 md:h-64 object-cover object-center bg-gray-900" loading="lazy" />
+                     <img src="/images/custom-bar-interior.png" alt="Custom bar interior with warm lighting and wood finishes" className="w-full max-sm:h-80 h-96 object-cover object-center" loading="lazy" />
                   </ScrollReveal>
                 </div>
               </div>
@@ -338,83 +334,84 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Our Promise Section - Mobile Animated */}
-      <section className="max-sm:py-8 py-16 lg:py-20" style={{ background: 'var(--gradient-brown-primary)' }}>
-        <div className="container mx-auto px-6">
+      {/* Our Promise Section - Minimal Clean */}
+      <section className="max-sm:py-20 py-32 lg:py-40" style={{ background: 'var(--gradient-brown-primary)' }}>
+        <div className="container mx-auto px-6 max-w-6xl">
           <ScrollReveal>
-            <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(24px,6vw,32px)] max-sm:font-bold max-sm:leading-tight max-sm:mb-6 mb-6 text-4xl md:text-5xl">Our Promise</h2>
-            <div className="w-24 h-0.5 bg-accent-primary mx-auto max-sm:mb-6 mb-8"></div>
+            <div className="text-center mb-20">
+              <h2 className="font-heading text-text-primary text-center max-sm:text-[clamp(28px,8vw,40px)] max-sm:leading-tight mb-8 text-5xl md:text-6xl font-light tracking-tight">Our Promise</h2>
+            </div>
           </ScrollReveal>
           
           {/* Mobile Animated Version */}
-          <div className="md:hidden mb-8">
+          <div className="md:hidden mb-16">
             <PromiseCarousel />
           </div>
           
-          {/* Desktop Grid Version */}
-          <div className="hidden md:grid md:grid-cols-3 gap-6 lg:gap-8 mb-8">
-            <ScrollReveal className="flex flex-col items-center text-center">
-              <div className="w-24 h-24 lg:w-32 lg:h-32 mb-4 rounded-full overflow-hidden bg-gradient-to-br from-amber-600 to-amber-800 p-1">
-                <div className="w-full h-full rounded-full overflow-hidden">
+          {/* Desktop Grid Version - Minimal */}
+          <div className="hidden md:grid md:grid-cols-3 gap-16 lg:gap-20 mb-20">
+            <ScrollReveal className="text-center">
+              <div className="space-y-8">
+                <div className="w-20 h-20 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-accent-primary/20 to-accent-primary/10">
                   <img 
                     src="/images/promise-precision.png" 
                     alt="Precision craftsmanship tools and measurements" 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover opacity-80"
                   />
                 </div>
+                <h3 className="font-heading text-text-primary text-2xl font-light">Precision</h3>
+                <p className="text-text-secondary text-base font-light leading-relaxed">
+                  Every measurement, every cut, every joint crafted with meticulous attention to detail.
+                </p>
               </div>
-              <h3 className="font-heading font-semibold text-text-primary text-xl lg:text-2xl mb-3">Precision</h3>
-              <p className="text-text-secondary text-base leading-relaxed">
-                Every measurement, every cut, every joint crafted with meticulous attention to detail for perfect results.
-              </p>
             </ScrollReveal>
-            <ScrollReveal className="flex flex-col items-center text-center">
-              <div className="w-24 h-24 lg:w-32 lg:h-32 mb-4 rounded-full overflow-hidden bg-gradient-to-br from-amber-600 to-amber-800 p-1">
-                <div className="w-full h-full rounded-full overflow-hidden">
+            <ScrollReveal className="text-center" delay={100}>
+              <div className="space-y-8">
+                <div className="w-20 h-20 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-accent-primary/20 to-accent-primary/10">
                   <img 
                     src="/images/promise-real-spaces.png" 
                     alt="Real customer spaces transformed with custom woodwork" 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover opacity-80"
                   />
                 </div>
+                <h3 className="font-heading text-text-primary text-2xl font-light">Real Spaces</h3>
+                <p className="text-text-secondary text-base font-light leading-relaxed">
+                  We work in your actual space, ensuring perfect fit and functionality.
+                </p>
               </div>
-              <h3 className="font-heading font-semibold text-text-primary text-xl lg:text-2xl mb-3">Real Spaces</h3>
-              <p className="text-text-secondary text-base leading-relaxed">
-                We work in your actual space, ensuring perfect fit and functionality that transforms your environment.
-              </p>
             </ScrollReveal>
-            <ScrollReveal className="flex flex-col items-center text-center">
-              <div className="w-24 h-24 lg:w-32 lg:h-32 mb-4 rounded-full overflow-hidden bg-gradient-to-br from-amber-600 to-amber-800 p-1">
-                <div className="w-full h-full rounded-full overflow-hidden">
+            <ScrollReveal className="text-center" delay={200}>
+              <div className="space-y-8">
+                <div className="w-20 h-20 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-accent-primary/20 to-accent-primary/10">
                   <img 
                     src="/images/promise-unique-results.png" 
                     alt="Unique custom woodwork designs showcasing creativity" 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover opacity-80"
                   />
                 </div>
+                <h3 className="font-heading text-text-primary text-2xl font-light">Unique Results</h3>
+                <p className="text-text-secondary text-base font-light leading-relaxed">
+                  No cookie-cutter solutions. Each piece is uniquely designed to match your style.
+                </p>
               </div>
-              <h3 className="font-heading font-semibold text-text-primary text-xl lg:text-2xl mb-3">Unique Results</h3>
-              <p className="text-text-secondary text-base leading-relaxed">
-                No cookie-cutter solutions. Each piece is uniquely designed to match your style and needs.
-              </p>
             </ScrollReveal>
           </div>
 
           <ScrollReveal>
-            <div className="mobile-card text-center max-sm:mb-6 mb-8">
-              <h3 className="font-heading font-bold text-text-primary max-sm:text-lg max-sm:mb-3 mb-4 text-2xl md:text-3xl">
+            <div className="text-center space-y-6 mb-16">
+              <h3 className="font-heading text-text-primary max-sm:text-xl text-2xl md:text-3xl font-light">
                 Producing Quality Results
               </h3>
-              <p className="max-sm:text-sm max-sm:leading-relaxed text-lg text-text-secondary max-w-4xl mx-auto">
+              <p className="max-sm:text-base text-lg text-text-secondary font-light max-w-4xl mx-auto leading-relaxed">
                 Careful planning, premium materials, and meticulous handcrafting.
               </p>
             </div>
           </ScrollReveal>
 
-          {/* CTA Button */}
+          {/* CTA Button - Minimal */}
           <div className="text-center">
             <ScrollReveal delay={250}>
-                <Button onClick={scrollToContact} variant="outline" size="mobile-compact" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 max-sm:w-full max-sm:max-w-[300px] max-sm:mx-auto max-sm:py-3 max-sm:text-base bg-[#0F1111] border border-accent px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
+                <Button onClick={scrollToContact} variant="outline" className="border border-accent-primary/30 text-accent-primary hover:bg-accent-primary/10 hover:border-accent-primary/50 transition-all duration-300 max-sm:w-full max-sm:max-w-[300px] max-sm:mx-auto max-sm:py-4 max-sm:text-base bg-transparent px-12 py-6 rounded-none text-lg font-light tracking-wide">
                 Start Your Project
               </Button>
             </ScrollReveal>
