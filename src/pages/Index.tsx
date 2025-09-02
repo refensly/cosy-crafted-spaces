@@ -445,7 +445,7 @@ const Index = () => {
                     {/* Accordion Content */}
                     <div className={`transition-all duration-500 ease-in-out overflow-hidden ${expandedCategory === category.id ? 'max-h-[1500px] opacity-100 mt-8' : 'max-h-0 opacity-0'}`}>
                       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {(category.id === 'bars-restaurants' && isMobile ? 
+                        {(category.id === 'bars-restaurants' && isMobile === true ? 
                           // On mobile, show only 3 specific projects for hospitality spaces
                           category.projects.filter(p => ['summit-inn', 'riverside-bar', 'peggys'].includes(p.id)) 
                           : category.projects
