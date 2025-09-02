@@ -686,7 +686,7 @@ const Index = () => {
             {/* CTA Button - After comparison table */}
             <ScrollReveal delay={400}>
               <div className="text-center">
-                <button onClick={scrollToContact} className="btn-primary text-xl md:text-2xl">
+                <button onClick={scrollToContact} className="btn-rounded">
                   get free consultation
                 </button>
               </div>
