@@ -42,10 +42,10 @@ const AnimatedProcess = ({ steps, className = '', delay = 3500 }: AnimatedProces
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}
         >
-          <div className="space-y-6 max-w-md mx-auto">
+          <div className="space-y-8 max-w-lg mx-auto">
             {/* Step indicator - Minimalistic glowing digit */}
             <div className="flex items-center justify-center">
-              <div className="text-accent-primary font-heading font-light text-6xl md:text-7xl tracking-wider relative">
+              <div className="text-accent-primary font-heading font-light text-4xl md:text-5xl tracking-wider relative">
                 <span className="relative inline-block">
                   {currentStep.number}
                   <div className="absolute inset-0 text-accent-primary opacity-40 blur-sm">
@@ -59,11 +59,11 @@ const AnimatedProcess = ({ steps, className = '', delay = 3500 }: AnimatedProces
             </div>
             
             {/* Content */}
-            <div className="space-y-4">
-              <h3 className="font-heading font-light text-text-primary text-2xl md:text-3xl">
+            <div className="space-y-4 text-center">
+              <h3 className="font-heading font-light text-text-primary text-3xl md:text-4xl">
                 {currentStep.title}
               </h3>
-              <p className="text-text-secondary text-lg font-light leading-relaxed">
+              <p className="text-text-secondary text-base md:text-lg font-light leading-relaxed max-w-md mx-auto">
                 {currentStep.description}
               </p>
             </div>
