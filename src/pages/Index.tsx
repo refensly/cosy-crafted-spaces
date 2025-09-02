@@ -650,7 +650,6 @@ const Index = () => {
                             className="block"
                           />
                         </h4>
-                        <p className="text-text-secondary text-sm md:text-base font-light">{benefit.subtitle}</p>
                       </div>
                     </ScrollReveal>
                   ))}
