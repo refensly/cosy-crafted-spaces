@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import { useIsMobile } from '@/hooks/use-mobile';
 import { useMobileMenu } from '@/contexts/MobileMenuContext';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
@@ -15,6 +16,7 @@ const Index = () => {
   const {
     mobileMenuOpen
   } = useMobileMenu();
+  const isMobile = useIsMobile();
   const [formData, setFormData] = useState({
     name: '',
     contact: '',
@@ -443,7 +445,11 @@ const Index = () => {
                     {/* Accordion Content */}
                     <div className={`transition-all duration-500 ease-in-out overflow-hidden ${expandedCategory === category.id ? 'max-h-[1500px] opacity-100 mt-8' : 'max-h-0 opacity-0'}`}>
                       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {category.projects.map((project, projectIndex) => <div key={project.id} className="bg-bg-section-alt/50 rounded-xl overflow-hidden cursor-pointer group hover:bg-bg-section-alt/75 transition-all duration-300 border border-bg-section-alt/30 hover:border-accent-primary/50 border-b-2 border-b-accent-primary/40 hover:border-b-accent-primary/70 p-1 hover:shadow-lg hover:shadow-accent-primary/20" onClick={e => {
+                        {(category.id === 'bars-restaurants' && isMobile ? 
+                          // On mobile, show only 3 specific projects for hospitality spaces
+                          category.projects.filter(p => ['summit-inn', 'riverside-bar', 'peggys'].includes(p.id)) 
+                          : category.projects
+                        ).map((project, projectIndex) => <div key={project.id} className="bg-bg-section-alt/50 rounded-xl overflow-hidden cursor-pointer group hover:bg-bg-section-alt/75 transition-all duration-300 border border-bg-section-alt/30 hover:border-accent-primary/50 border-b-2 border-b-accent-primary/40 hover:border-b-accent-primary/70 p-1 hover:shadow-lg hover:shadow-accent-primary/20" onClick={e => {
                         e.stopPropagation();
                         handleProjectClick(project);
                       }}>
