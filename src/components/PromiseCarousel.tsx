@@ -70,19 +70,6 @@ const PromiseCarousel = () => {
             </div>
           ))}
           
-          {/* Progress indicators */}
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-            {promises.map((_, index) => (
-              <div
-                key={index}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === currentIndex 
-                    ? 'bg-accent-primary shadow-lg' 
-                    : 'bg-white/30'
-                }`}
-              />
-            ))}
-          </div>
         </div>
       </ScrollReveal>
     </div>
