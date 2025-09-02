@@ -8,6 +8,8 @@ import { useMobileMenu } from '@/contexts/MobileMenuContext';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import ScrollReveal from '@/components/ScrollReveal';
+import PromiseCarousel from '@/components/PromiseCarousel';
+import CapabilitiesCarousel from '@/components/CapabilitiesCarousel';
 import { imageConfig } from '@/lib/imageConfig';
 const Index = () => {
   const {
@@ -294,38 +296,40 @@ const Index = () => {
         <Hero />
       </div>
 
-      {/* Section 2: Pain → Value */}
-      <section id="pain-value-section" className="max-sm:pt-4 max-sm:pb-2 pt-12 pb-6 lg:pt-16 lg:pb-8" style={{ background: 'var(--gradient-brown-primary)' }}>
+      {/* Section 2: Pain → Value - Enhanced Mobile */}
+      <section id="pain-value-section" className="max-sm:pt-8 max-sm:pb-6 pt-12 pb-6 lg:pt-16 lg:pb-8" style={{ background: 'var(--gradient-brown-primary)' }}>
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <ScrollReveal>
               <div>
-                <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-3 mb-4 text-4xl md:text-5xl">
+                <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(24px,6vw,32px)] max-sm:font-bold max-sm:leading-tight max-sm:mb-4 mb-4 text-4xl md:text-5xl">
                   Not another mass-production look
                 </h2>
-                <p className="max-sm:text-[15px] max-sm:leading-relaxed text-lg text-text-secondary max-sm:mb-4 mb-6">
+                <p className="max-sm:text-[16px] max-sm:leading-relaxed text-lg text-text-secondary max-sm:mb-6 mb-6">
                   If you want something nobody else has, we design and build it for you. 
                   Premium materials, made locally.
                 </p>
-                <div className="max-sm:space-y-2 space-y-3">
+                <div className="max-sm:space-y-3 space-y-3">
                   {["One-of-a-kind design (never repeated)", "Premium hardwoods & brass", "Built in Ireland, built to last"].map((item, index) => 
-                    <div key={index} className="relative group">
-                      <div className="bg-gradient-to-r from-bg-section-alt/30 via-bg-section-alt/50 to-bg-section-alt/30 backdrop-blur-sm border border-accent-primary/20 rounded-lg max-sm:p-3 p-4 shadow-md shadow-accent-primary/5 hover:shadow-accent-primary/15 transition-all duration-300 hover:border-accent-primary/40 hover:scale-[1.01]">
-                        <div className="flex items-center">
-                          <div className="w-1.5 h-1.5 bg-accent-primary rounded-full mr-3 opacity-80"></div>
-                          <span className="text-text-primary font-medium max-sm:text-[14px] text-sm">{item}</span>
+                    <ScrollReveal key={index} delay={index * 100}>
+                      <div className="relative group">
+                        <div className="bg-gradient-to-r from-bg-section-alt/30 via-bg-section-alt/50 to-bg-section-alt/30 backdrop-blur-sm border border-accent-primary/20 rounded-lg max-sm:p-4 p-4 shadow-md shadow-accent-primary/5 hover:shadow-accent-primary/15 transition-all duration-300 hover:border-accent-primary/40 hover:scale-[1.01]">
+                          <div className="flex items-center">
+                            <div className="w-2 h-2 bg-accent-primary rounded-full mr-4 opacity-80 animate-pulse"></div>
+                            <span className="text-text-primary font-medium max-sm:text-[15px] text-sm">{item}</span>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </ScrollReveal>
                   )}
                 </div>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={200}>
-              <div className="relative">
+              <div className="relative max-sm:mt-6">
                 <div className="w-full rounded-xl overflow-hidden shadow-xl shadow-accent-primary/15 border border-accent-primary/15">
                   <ScrollReveal delay={250}>
-                     <img src="/images/custom-bar-interior.png" alt="Custom bar interior with warm lighting and wood finishes" className="w-full h-48 sm:h-56 md:h-64 object-cover object-center bg-gray-900" loading="lazy" />
+                     <img src="/images/custom-bar-interior.png" alt="Custom bar interior with warm lighting and wood finishes" className="w-full max-sm:h-64 h-48 sm:h-56 md:h-64 object-cover object-center bg-gray-900" loading="lazy" />
                   </ScrollReveal>
                 </div>
               </div>
@@ -334,60 +338,83 @@ const Index = () => {
         </div>
       </section>
 
-      {/* New Section: Handmade Quality Examples */}
-      <section className="max-sm:py-4 py-16 lg:py-20" style={{ background: 'var(--gradient-brown-primary)' }}>
+      {/* Our Promise Section - Mobile Animated */}
+      <section className="max-sm:py-8 py-16 lg:py-20" style={{ background: 'var(--gradient-brown-primary)' }}>
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-3 mb-6 text-4xl md:text-5xl">Our Promise</h2>
-            <div className="w-24 h-0.5 bg-accent-primary mx-auto max-sm:mb-4 mb-8"></div>
+            <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(24px,6vw,32px)] max-sm:font-bold max-sm:leading-tight max-sm:mb-6 mb-6 text-4xl md:text-5xl">Our Promise</h2>
+            <div className="w-24 h-0.5 bg-accent-primary mx-auto max-sm:mb-6 mb-8"></div>
           </ScrollReveal>
           
-          {/* Mobile: Horizontal scroll, Desktop: Grid */}
-          <div className="md:grid md:grid-cols-3 md:gap-6 max-sm:flex max-sm:gap-3 max-sm:overflow-x-auto max-sm:pb-2 max-sm:mb-4 mb-8 hide-scrollbar">
-            {[{
-            title: "Real Spaces",
-            image: "/images/promise-real-spaces.png",
-            description: "Transforms pubs, homes & outdoor areas"
-          }, {
-            title: "Precision Built",
-            image: "/images/promise-precision.png", 
-            description: "Premium materials & joinery details"
-          }, {
-            title: "One-of-a-Kind",
-            image: "/images/promise-unique-results.png",
-            description: "Always designed for your exact space"
-          }].map((example, index) => <ScrollReveal key={index} delay={index * 100}>
-                <div className="text-center max-sm:flex-shrink-0 max-sm:w-48">
-                  <div className="relative max-sm:mb-1 mb-2">
-                     <div className="w-full rounded-lg overflow-hidden shadow-md bg-bg-secondary">
-                       <ScrollReveal delay={index * 100 + 50}>
-                         <img src={example.image} alt="Custom craftsmanship and interior design" className="w-full h-32 object-cover object-center" loading="lazy" />
-                       </ScrollReveal>
-                     </div>
-                  </div>
-                  <h3 className="font-heading font-bold text-text-primary max-sm:text-sm max-sm:mt-1 max-sm:mb-1 mt-2 mb-1 text-xl">
-                    {example.title}
-                  </h3>
-                  <p className="text-text-secondary max-sm:text-xs max-sm:leading-tight text-base">{example.description}</p>
+          {/* Mobile Animated Version */}
+          <div className="md:hidden mb-8">
+            <PromiseCarousel />
+          </div>
+          
+          {/* Desktop Grid Version */}
+          <div className="hidden md:grid md:grid-cols-3 gap-6 lg:gap-8 mb-8">
+            <ScrollReveal className="flex flex-col items-center text-center">
+              <div className="w-24 h-24 lg:w-32 lg:h-32 mb-4 rounded-full overflow-hidden bg-gradient-to-br from-amber-600 to-amber-800 p-1">
+                <div className="w-full h-full rounded-full overflow-hidden">
+                  <img 
+                    src="/images/promise-precision.png" 
+                    alt="Precision craftsmanship tools and measurements" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-              </ScrollReveal>)}
+              </div>
+              <h3 className="font-heading font-semibold text-text-primary text-xl lg:text-2xl mb-3">Precision</h3>
+              <p className="text-text-secondary text-base leading-relaxed">
+                Every measurement, every cut, every joint crafted with meticulous attention to detail for perfect results.
+              </p>
+            </ScrollReveal>
+            <ScrollReveal className="flex flex-col items-center text-center">
+              <div className="w-24 h-24 lg:w-32 lg:h-32 mb-4 rounded-full overflow-hidden bg-gradient-to-br from-amber-600 to-amber-800 p-1">
+                <div className="w-full h-full rounded-full overflow-hidden">
+                  <img 
+                    src="/images/promise-real-spaces.png" 
+                    alt="Real customer spaces transformed with custom woodwork" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              <h3 className="font-heading font-semibold text-text-primary text-xl lg:text-2xl mb-3">Real Spaces</h3>
+              <p className="text-text-secondary text-base leading-relaxed">
+                We work in your actual space, ensuring perfect fit and functionality that transforms your environment.
+              </p>
+            </ScrollReveal>
+            <ScrollReveal className="flex flex-col items-center text-center">
+              <div className="w-24 h-24 lg:w-32 lg:h-32 mb-4 rounded-full overflow-hidden bg-gradient-to-br from-amber-600 to-amber-800 p-1">
+                <div className="w-full h-full rounded-full overflow-hidden">
+                  <img 
+                    src="/images/promise-unique-results.png" 
+                    alt="Unique custom woodwork designs showcasing creativity" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              <h3 className="font-heading font-semibold text-text-primary text-xl lg:text-2xl mb-3">Unique Results</h3>
+              <p className="text-text-secondary text-base leading-relaxed">
+                No cookie-cutter solutions. Each piece is uniquely designed to match your style and needs.
+              </p>
+            </ScrollReveal>
           </div>
 
           <ScrollReveal>
-            <div className="bg-bg-section-alt rounded-xl max-sm:p-3 p-8 text-center max-sm:mb-4 mb-8">
-              <h3 className="font-heading font-bold text-text-primary max-sm:text-base max-sm:mb-2 mb-4 text-2xl md:text-3xl">
+            <div className="bg-bg-section-alt rounded-xl max-sm:p-4 p-8 text-center max-sm:mb-6 mb-8">
+              <h3 className="font-heading font-bold text-text-primary max-sm:text-lg max-sm:mb-3 mb-4 text-2xl md:text-3xl">
                 Producing Quality Results
               </h3>
-              <p className="max-sm:text-xs max-sm:leading-snug text-lg text-text-secondary max-w-4xl mx-auto">
+              <p className="max-sm:text-sm max-sm:leading-relaxed text-lg text-text-secondary max-w-4xl mx-auto">
                 Careful planning, premium materials, and meticulous handcrafting.
               </p>
             </div>
           </ScrollReveal>
 
           {/* CTA Button */}
-          <div className="max-sm:mt-0 mt-16 text-center">
+          <div className="text-center">
             <ScrollReveal delay={250}>
-                <Button onClick={scrollToContact} variant="outline" size="mobile-compact" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 max-sm:w-full max-sm:max-w-[280px] max-sm:mx-auto max-sm:py-2 max-sm:text-sm bg-[#0F1111] border border-accent px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
+                <Button onClick={scrollToContact} variant="outline" size="mobile-compact" className="border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 max-sm:w-full max-sm:max-w-[300px] max-sm:mx-auto max-sm:py-3 max-sm:text-base bg-[#0F1111] border border-accent px-8 py-4 md:px-16 md:py-6 rounded-lg text-lg md:text-2xl min-w-[240px] md:min-w-[280px] text-center">
                 Start Your Project
               </Button>
             </ScrollReveal>
