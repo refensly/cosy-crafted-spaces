@@ -406,7 +406,7 @@ const Index = () => {
             </div>
           </ScrollReveal>
           
-          <div className="max-sm:space-y-2 space-y-3 max-w-3xl mx-auto">
+          <div className="max-sm:space-y-2 space-y-3 max-w-3xl lg:max-w-5xl mx-auto">
             {portfolioCategories.map((category, categoryIndex) => <div key={category.id} className="w-full">
                 <ScrollReveal delay={categoryIndex * 100}>
                   <div className={`
