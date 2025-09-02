@@ -343,7 +343,7 @@ const Index = () => {
           </ScrollReveal>
           
           {/* Mobile: Horizontal scroll, Desktop: Grid */}
-          <div className="md:grid md:grid-cols-3 md:gap-6 max-sm:flex max-sm:gap-3 max-sm:overflow-x-auto max-sm:pb-2 max-sm:mb-4 mb-8">
+          <div className="md:grid md:grid-cols-3 md:gap-6 max-sm:flex max-sm:gap-3 max-sm:overflow-x-auto max-sm:pb-2 max-sm:mb-4 mb-8 hide-scrollbar">
             {[{
             title: "Real Spaces",
             image: "/images/promise-real-spaces.png",
@@ -914,7 +914,7 @@ const Index = () => {
           
           {/* Mobile - modern minimal cards */}
           <div className="max-sm:block hidden">
-            <div className="flex gap-4 overflow-x-auto pb-4 px-1">
+            <div className="flex gap-4 overflow-x-auto pb-4 px-1 hide-scrollbar">
               {processSteps.map((step, index) => (
                 <ScrollReveal key={index} delay={index * 100}>
                   <div className="group flex-shrink-0 w-[160px] relative">

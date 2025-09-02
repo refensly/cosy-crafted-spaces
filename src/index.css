@@ -300,6 +300,17 @@
     }
   }
   
+  /* Hide scrollbars while maintaining functionality */
+  .hide-scrollbar {
+    -webkit-scrollbar: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
   /* Divider Line */
   .brass-divider {
     @apply w-full h-px;
