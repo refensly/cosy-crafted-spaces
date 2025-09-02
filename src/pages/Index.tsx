@@ -313,7 +313,7 @@ const Index = () => {
                   {["One-of-a-kind design (never repeated)", "Premium hardwoods & brass", "Built in Ireland, built to last"].map((item, index) => 
                     <ScrollReveal key={index} delay={index * 100}>
                       <div className="relative group">
-                        <div className="bg-gradient-to-r from-bg-section-alt/30 via-bg-section-alt/50 to-bg-section-alt/30 backdrop-blur-sm border border-accent-primary/20 rounded-lg max-sm:p-4 p-4 shadow-md shadow-accent-primary/5 hover:shadow-accent-primary/15 transition-all duration-300 hover:border-accent-primary/40 hover:scale-[1.01]">
+                        <div className="mobile-card hover:scale-[1.02]">
                           <div className="flex items-center">
                             <div className="w-2 h-2 bg-accent-primary rounded-full mr-4 opacity-80 animate-pulse"></div>
                             <span className="text-text-primary font-medium max-sm:text-[15px] text-sm">{item}</span>
@@ -327,7 +327,7 @@ const Index = () => {
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <div className="relative max-sm:mt-6">
-                <div className="w-full rounded-xl overflow-hidden shadow-xl shadow-accent-primary/15 border border-accent-primary/15">
+                <div className="w-full rounded-2xl overflow-hidden shadow-2xl backdrop-blur-sm">
                   <ScrollReveal delay={250}>
                      <img src="/images/custom-bar-interior.png" alt="Custom bar interior with warm lighting and wood finishes" className="w-full max-sm:h-64 h-48 sm:h-56 md:h-64 object-cover object-center bg-gray-900" loading="lazy" />
                   </ScrollReveal>
@@ -401,7 +401,7 @@ const Index = () => {
           </div>
 
           <ScrollReveal>
-            <div className="bg-bg-section-alt rounded-xl max-sm:p-4 p-8 text-center max-sm:mb-6 mb-8">
+            <div className="mobile-card text-center max-sm:mb-6 mb-8">
               <h3 className="font-heading font-bold text-text-primary max-sm:text-lg max-sm:mb-3 mb-4 text-2xl md:text-3xl">
                 Producing Quality Results
               </h3>

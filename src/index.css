@@ -64,19 +64,24 @@
     /* Gradients */
     --gradient-section: linear-gradient(135deg, hsl(var(--bg-section-alt)) 0%, hsl(var(--bg-wood-dark)) 50%, hsl(var(--bg-main)) 100%);
     
-    /* Dark Brown-Black Gradients */
-    --gradient-brown-primary: linear-gradient(135deg, hsl(25 30% 8%) 0%, hsl(20 25% 6%) 35%, hsl(0 0% 0%) 100%);
-    --gradient-brown-secondary: linear-gradient(135deg, hsl(30 25% 10%) 0%, hsl(25 20% 8%) 35%, hsl(15 15% 5%) 100%);
-    --gradient-brown-tertiary: linear-gradient(135deg, hsl(20 35% 12%) 0%, hsl(25 30% 9%) 40%, hsl(10 20% 6%) 100%);
-    --gradient-brown-accent: linear-gradient(135deg, hsl(35 20% 9%) 0%, hsl(30 15% 7%) 35%, hsl(20 10% 4%) 100%);
+    /* Dark Seamless Gradients */
+    --gradient-brown-primary: linear-gradient(135deg, hsl(0 0% 4%) 0%, hsl(0 0% 2%) 50%, hsl(0 0% 0%) 100%);
+    --gradient-brown-secondary: linear-gradient(135deg, hsl(0 0% 6%) 0%, hsl(0 0% 3%) 50%, hsl(0 0% 1%) 100%);
+    --gradient-brown-tertiary: linear-gradient(135deg, hsl(0 0% 5%) 0%, hsl(0 0% 2%) 50%, hsl(0 0% 0%) 100%);
+    --gradient-brown-accent: linear-gradient(135deg, hsl(0 0% 8%) 0%, hsl(0 0% 4%) 50%, hsl(0 0% 1%) 100%);
 
     /* Enhanced Mobile Variables */
     --mobile-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
     --mobile-smooth: cubic-bezier(0.4, 0, 0.2, 1);
-    --mobile-transition: all 0.3s var(--mobile-smooth);
-    --mobile-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.1);
-    --mobile-shadow-hover: 0 8px 24px -4px rgba(0, 0, 0, 0.15);
-    --mobile-glow: 0 0 20px rgba(184, 134, 11, 0.15);
+    --mobile-transition: all 0.4s var(--mobile-smooth);
+    --mobile-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.4);
+    --mobile-shadow-hover: 0 16px 48px -12px rgba(0, 0, 0, 0.5);
+    --mobile-glow: 0 0 40px rgba(184, 134, 11, 0.08);
+    
+    /* Seamless Design Variables */
+    --glass-bg: rgba(255, 255, 255, 0.02);
+    --glass-border: rgba(255, 255, 255, 0.05);
+    --subtle-glow: 0 0 60px rgba(184, 134, 11, 0.03);
 
     /* Transitions */
     --transition-smooth: all 250ms cubic-bezier(0.22, 1, 0.36, 1);
@@ -127,17 +132,19 @@
     }
     
     .mobile-card {
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(184, 134, 11, 0.1);
-      border-radius: 0.75rem;
-      padding: 1rem;
-      box-shadow: var(--mobile-shadow);
+      background: var(--glass-bg);
+      backdrop-filter: blur(8px);
+      border-radius: 1rem;
+      padding: 1.25rem;
+      box-shadow: var(--subtle-glow);
       transition: var(--mobile-transition);
+      border: none;
     }
     
     .mobile-card:hover {
+      background: rgba(255, 255, 255, 0.03);
       box-shadow: var(--mobile-shadow-hover);
-      transform: translateY(-2px);
+      transform: translateY(-4px);
     }
   }
   
@@ -282,16 +289,20 @@
     @apply transition-transform duration-200 hover:scale-105;
   }
   
-  /* Card Styles */
+  /* Card Styles - No Borders */
   .premium-card {
-    @apply bg-card rounded-xl p-6;
-    @apply transition-all duration-200;
-    box-shadow: var(--shadow-card);
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    @apply rounded-2xl p-8;
+    @apply transition-all duration-400;
+    box-shadow: var(--subtle-glow);
+    border: none;
   }
   
   .premium-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-elevated);
+    transform: translateY(-6px);
+    box-shadow: var(--mobile-shadow-hover);
+    background: rgba(255, 255, 255, 0.04);
   }
   
   /* Form Styles */
@@ -412,16 +423,18 @@
       width: 48px;
       height: 48px;
       border-radius: 50%;
-      background: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(16px);
+      border: none;
       color: white;
       transition: var(--mobile-transition);
+      box-shadow: var(--subtle-glow);
     }
     
     .carousel-nav:hover {
-      background: rgba(0, 0, 0, 0.7);
-      transform: scale(1.1);
+      background: rgba(0, 0, 0, 0.9);
+      transform: scale(1.15);
+      box-shadow: var(--mobile-shadow);
     }
   }
 }

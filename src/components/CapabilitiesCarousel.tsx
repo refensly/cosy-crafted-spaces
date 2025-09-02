@@ -38,7 +38,7 @@ const CapabilitiesCarousel = () => {
   return (
     <div className="relative">
       <ScrollReveal>
-        <div className="relative h-96 bg-gradient-to-br from-accent-primary/10 to-accent-primary/5 rounded-2xl overflow-hidden border border-accent-primary/20">
+        <div className="relative h-96 bg-gradient-to-br from-black/30 to-transparent rounded-2xl overflow-hidden backdrop-blur-sm">
           {capabilities.map((capability, index) => (
             <div
               key={index}
@@ -94,7 +94,7 @@ const CapabilitiesCarousel = () => {
       {/* Navigation arrows */}
       <button
         onClick={() => setCurrentIndex((prev) => (prev - 1 + capabilities.length) % capabilities.length)}
-        className="absolute left-3 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black/30 hover:bg-black/50 rounded-full flex items-center justify-center transition-all duration-200 text-white hover:scale-110 z-20"
+        className="carousel-nav absolute left-4 top-1/2 transform -translate-y-1/2 flex items-center justify-center z-20"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -103,7 +103,7 @@ const CapabilitiesCarousel = () => {
       
       <button
         onClick={() => setCurrentIndex((prev) => (prev + 1) % capabilities.length)}
-        className="absolute right-3 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black/30 hover:bg-black/50 rounded-full flex items-center justify-center transition-all duration-200 text-white hover:scale-110 z-20"
+        className="carousel-nav absolute right-4 top-1/2 transform -translate-y-1/2 flex items-center justify-center z-20"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

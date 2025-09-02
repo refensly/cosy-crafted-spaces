@@ -33,7 +33,7 @@ const PromiseCarousel = () => {
   return (
     <div className="relative">
       <ScrollReveal>
-        <div className="relative h-80 bg-gradient-to-br from-accent-primary/10 to-accent-primary/5 rounded-2xl overflow-hidden border border-accent-primary/20">
+        <div className="relative h-80 bg-gradient-to-br from-black/20 to-transparent rounded-2xl overflow-hidden backdrop-blur-sm">
           {promises.map((promise, index) => (
             <div
               key={index}
@@ -47,7 +47,7 @@ const PromiseCarousel = () => {
             >
               <div className="flex flex-col h-full p-6">
                 <div className="flex-1 flex items-center justify-center mb-4">
-                  <div className="w-32 h-32 rounded-full overflow-hidden bg-gradient-to-br from-amber-600 to-amber-800 p-1 shadow-xl">
+                  <div className="w-32 h-32 rounded-full overflow-hidden bg-gradient-to-br from-amber-600/30 to-amber-800/30 p-1 shadow-2xl backdrop-blur-sm">
                     <div className="w-full h-full rounded-full overflow-hidden">
                       <img 
                         src={promise.image} 
@@ -90,7 +90,7 @@ const PromiseCarousel = () => {
       {/* Navigation arrows */}
       <button
         onClick={() => setCurrentIndex((prev) => (prev - 1 + promises.length) % promises.length)}
-        className="absolute left-2 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-black/20 hover:bg-black/40 rounded-full flex items-center justify-center transition-all duration-200 text-white hover:scale-110"
+        className="carousel-nav absolute left-3 top-1/2 transform -translate-y-1/2 flex items-center justify-center"
       >
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -99,7 +99,7 @@ const PromiseCarousel = () => {
       
       <button
         onClick={() => setCurrentIndex((prev) => (prev + 1) % promises.length)}
-        className="absolute right-2 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-black/20 hover:bg-black/40 rounded-full flex items-center justify-center transition-all duration-200 text-white hover:scale-110"
+        className="carousel-nav absolute right-3 top-1/2 transform -translate-y-1/2 flex items-center justify-center"
       >
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
