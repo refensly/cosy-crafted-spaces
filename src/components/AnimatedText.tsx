@@ -48,9 +48,7 @@ const AnimatedText = ({ texts, className = '', delay = 3000 }: AnimatedTextProps
             </p>
           )}
         </>
-      ) : (
-        <span>{currentText as string}</span>
-      )}
+      ) : null}
     </div>
   );
 };
