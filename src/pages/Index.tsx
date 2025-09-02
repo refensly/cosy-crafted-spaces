@@ -625,6 +625,64 @@ const Index = () => {
               </div>
             </ScrollReveal>
 
+            {/* 2025 Animated Benefits - Clean, Borderless */}
+            <ScrollReveal delay={300}>
+              <div className="text-center space-y-12 mb-6">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-16">
+                  {[{
+                    title: "unique every time",
+                    subtitle: "never repeated design"
+                  }, {
+                    title: "local craftsmanship", 
+                    subtitle: "made in ireland"
+                  }, {
+                    title: "natural materials",
+                    subtitle: "oak. walnut. brass."
+                  }, {
+                    title: "built to last",
+                    subtitle: "decades, not years"
+                  }].map((benefit, index) => (
+                    <ScrollReveal key={index} delay={350 + index * 100}>
+                      <div className="text-center space-y-3 hover:transform hover:-translate-y-1 transition-transform duration-300">
+                        <h4 className="font-heading font-light text-text-primary text-lg md:text-xl">
+                          <AnimatedText 
+                            texts={[benefit.title]}
+                            className="block"
+                          />
+                        </h4>
+                        <p className="text-text-secondary text-sm md:text-base font-light">{benefit.subtitle}</p>
+                      </div>
+                    </ScrollReveal>
+                  ))}
+                </div>
+                
+                {/* Main animated text */}
+                <div className="pt-8">
+                  <AnimatedText 
+                    texts={[
+                      {
+                        heading: "unique every time",
+                        body: "Every piece is crafted specifically for your space, ensuring no two projects are ever the same."
+                      },
+                      {
+                        heading: "local craftsmanship", 
+                        body: "Supporting skilled artisans in our community while delivering authentic, handcrafted quality."
+                      },
+                      {
+                        heading: "natural materials",
+                        body: "We source sustainable, high-quality wood and materials that age beautifully over time."
+                      },
+                      {
+                        heading: "built to last",
+                        body: "Traditional joinery techniques and attention to detail ensure your furniture becomes a family heirloom."
+                      }
+                    ]}
+                    delay={3500}
+                  />
+                </div>
+              </div>
+            </ScrollReveal>
+
             {/* CTA Button - After comparison table */}
             <ScrollReveal delay={400}>
               <div className="text-center">
