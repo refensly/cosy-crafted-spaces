@@ -67,21 +67,6 @@ const AnimatedProcess = ({ steps, className = '', delay = 3500 }: AnimatedProces
             </div>
           </div>
         </div>
-        
-        {/* Progress indicators */}
-        <div className="flex justify-center gap-2 mt-8">
-          {steps.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                index === currentIndex 
-                  ? 'bg-accent-primary w-8' 
-                  : 'bg-accent-primary/30 hover:bg-accent-primary/50'
-              }`}
-            />
-          ))}
-        </div>
       </div>
     </ScrollReveal>
   );
