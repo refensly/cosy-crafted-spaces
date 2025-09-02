@@ -335,7 +335,7 @@ const Index = () => {
       </section>
 
       {/* New Section: Handmade Quality Examples */}
-      <section className="max-sm:py-4 py-16 lg:py-20" style={{ background: 'var(--gradient-brown-secondary)' }}>
+      <section className="max-sm:py-4 py-16 lg:py-20" style={{ background: 'var(--gradient-brown-primary)' }}>
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-3 mb-6 text-4xl md:text-5xl">Our Promise</h2>
@@ -396,7 +396,7 @@ const Index = () => {
       </section>
 
       {/* Section 3: Interactive Portfolio */}
-      <section id="work" className="max-sm:py-6 py-16 lg:py-20 relative overflow-hidden" style={{ background: 'var(--gradient-brown-tertiary)' }}>
+      <section id="work" className="max-sm:py-6 py-16 lg:py-20 relative overflow-hidden" style={{ background: 'var(--gradient-brown-primary)' }}>
         
         <div className="container mx-auto px-6 md:px-12 lg:px-16 relative z-10">
           <ScrollReveal>
@@ -529,9 +529,7 @@ const Index = () => {
       </section>
 
       {/* Section 4: Why Custom > Standard */}
-      <section className="max-sm:py-8 py-16 lg:py-20" style={{
-      background: 'var(--gradient-section)'
-    }}>
+      <section className="max-sm:py-8 py-16 lg:py-20" style={{ background: 'var(--gradient-brown-primary)' }}>
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
             
@@ -725,7 +723,7 @@ const Index = () => {
       </section>
 
       {/* Reviews Section */}
-      <section id="reviews" className="max-sm:py-4 py-12 lg:py-16" style={{ background: 'var(--gradient-brown-secondary)' }}>
+      <section id="reviews" className="max-sm:py-4 py-12 lg:py-16" style={{ background: 'var(--gradient-brown-primary)' }}>
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">
@@ -828,7 +826,7 @@ const Index = () => {
       </section>
 
       {/* New Section: What We Build */}
-      <section className="max-sm:py-6 py-16 lg:py-20" style={{ background: 'var(--gradient-brown-tertiary)' }}>
+      <section className="max-sm:py-6 py-16 lg:py-20" style={{ background: 'var(--gradient-brown-primary)' }}>
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 max-sm:gap-4 gap-6 lg:gap-8 items-center">
             <ScrollReveal>
@@ -867,7 +865,7 @@ const Index = () => {
       </section>
 
       {/* New Section: FAQ */}
-      <section className="max-sm:py-6 py-16 lg:py-20" style={{ background: 'var(--gradient-brown-accent)' }}>
+      <section className="max-sm:py-6 py-16 lg:py-20" style={{ background: 'var(--gradient-brown-primary)' }}>
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <ScrollReveal>
@@ -970,7 +968,7 @@ const Index = () => {
       </section>
 
       {/* Section 8: Who Am I */}
-      <section id="about" className="max-sm:py-6 py-16 lg:py-20" style={{ background: 'var(--gradient-brown-secondary)' }}>
+      <section id="about" className="max-sm:py-6 py-16 lg:py-20" style={{ background: 'var(--gradient-brown-primary)' }}>
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <ScrollReveal>
@@ -995,7 +993,7 @@ const Index = () => {
       </section>
 
       {/* Section 9: Contact Form */}
-      <section id="contact-form" className="max-sm:py-6 py-16 lg:py-20" style={{ background: 'var(--gradient-brown-accent)' }}>
+      <section id="contact-form" className="max-sm:py-6 py-16 lg:py-20" style={{ background: 'var(--gradient-brown-primary)' }}>
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <div className="max-w-2xl mx-auto text-center">
