@@ -352,8 +352,8 @@ const Index = () => {
           <div className="hidden md:grid md:grid-cols-3 gap-16 lg:gap-20 mb-12 md:mb-16 lg:mb-20">
             <ScrollReveal className="text-center">
               <div className="space-y-8">
-                <div className="w-20 h-20 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-accent-primary/20 to-accent-primary/10">
-                  <img src="/images/promise-precision.png" alt="Precision craftsmanship tools and measurements" className="w-full h-full object-cover opacity-80" />
+                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-accent-primary/20 to-accent-primary/10">
+                  <img src="/images/promise-precision.png" alt="Precision craftsmanship tools and measurements" className="w-full h-full object-cover opacity-80 scale-125" />
                 </div>
                 <h3 className="font-heading text-text-primary text-2xl font-light">Precision</h3>
                 <p className="text-text-secondary text-base font-light leading-relaxed">
@@ -363,8 +363,8 @@ const Index = () => {
             </ScrollReveal>
             <ScrollReveal className="text-center" delay={100}>
               <div className="space-y-8">
-                <div className="w-20 h-20 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-accent-primary/20 to-accent-primary/10">
-                  <img src="/images/promise-real-spaces.png" alt="Real customer spaces transformed with custom woodwork" className="w-full h-full object-cover opacity-80" />
+                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-accent-primary/20 to-accent-primary/10">
+                  <img src="/images/promise-real-spaces.png" alt="Real customer spaces transformed with custom woodwork" className="w-full h-full object-cover opacity-80 scale-125" />
                 </div>
                 <h3 className="font-heading text-text-primary text-2xl font-light">Real Spaces</h3>
                 <p className="text-text-secondary text-base font-light leading-relaxed">
@@ -374,8 +374,8 @@ const Index = () => {
             </ScrollReveal>
             <ScrollReveal className="text-center" delay={200}>
               <div className="space-y-8">
-                <div className="w-20 h-20 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-accent-primary/20 to-accent-primary/10">
-                  <img src="/images/promise-unique-results.png" alt="Unique custom woodwork designs showcasing creativity" className="w-full h-full object-cover opacity-80" />
+                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-accent-primary/20 to-accent-primary/10">
+                  <img src="/images/promise-unique-results.png" alt="Unique custom woodwork designs showcasing creativity" className="w-full h-full object-cover opacity-80 scale-125" />
                 </div>
                 <h3 className="font-heading text-text-primary text-2xl font-light">Unique Results</h3>
                 <p className="text-text-secondary text-base font-light leading-relaxed">
