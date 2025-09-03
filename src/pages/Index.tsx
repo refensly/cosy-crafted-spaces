@@ -349,7 +349,7 @@ const Index = () => {
           </ScrollReveal>
           
           {/* Mobile Animated Version */}
-          <div className="md:hidden mb-12 md:mb-16 lg:mb-20">
+          <div className="md:hidden mb-20 md:mb-16 lg:mb-20">
             <PromiseCarousel />
           </div>
           
@@ -395,7 +395,7 @@ const Index = () => {
               <h3 className="font-heading text-text-primary text-xl md:text-2xl lg:text-3xl font-light">
                 Producing Quality Results
               </h3>
-              <p className="text-base md:text-lg text-text-secondary font-light max-w-4xl mx-auto leading-relaxed px-[28px] my-[10px]">
+              <p className="text-base md:text-lg text-text-secondary font-light max-w-4xl mx-auto leading-relaxed px-[28px] mt-[10px] mb-2 md:my-[10px]">
                 Careful planning, premium materials, and meticulous handcrafting.
               </p>
             </div>
