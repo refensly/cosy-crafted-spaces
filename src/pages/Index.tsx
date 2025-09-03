@@ -865,45 +865,59 @@ const Index = () => {
               <h2 className="font-heading font-bold text-text-primary text-2xl md:text-4xl lg:text-5xl font-bold leading-snug mb-4 md:mb-6">Ready To Start?</h2>
               <div className="w-16 md:w-24 h-0.5 bg-accent-primary mx-auto mb-6 md:mb-8"></div>
               
-              {formSubmitted ? <div className="bg-neutral-light/10 border border-neutral-light/20 rounded-xl p-8 md:p-12 text-center">
-                  <h3 className="text-lg md:text-2xl font-semibold text-text-primary mb-3 md:mb-4">
-                    Thanks for reaching out!
-                  </h3>
-                  <p className="text-text-secondary text-base md:text-lg">
-                    We'll get back to you within 24 hours.
-                  </p>
-                </div> : <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
-                  <div>
-                    <Input type="text" placeholder="Your name" className="form-field h-12 md:h-16 text-base md:text-lg px-4 md:px-6 py-3 md:py-4 rounded-xl border-2 border-input/50 focus:border-accent-primary/60 bg-bg-main/50" value={formData.name} onChange={e => setFormData({
-                  ...formData,
-                  name: e.target.value
-                })} required />
-                  </div>
-                  <div>
-                    <Input type="text" placeholder="Email or phone" className="form-field h-12 md:h-16 text-base md:text-lg px-4 md:px-6 py-3 md:py-4 rounded-xl border-2 border-input/50 focus:border-accent-primary/60 bg-bg-main/50" value={formData.contact} onChange={e => setFormData({
-                  ...formData,
-                  contact: e.target.value
-                })} required />
-                  </div>
-                  <div>
-                    <Textarea placeholder="Tell us about your project" className="form-field min-h-[120px] md:min-h-[160px] text-base md:text-lg px-4 md:px-6 py-3 md:py-4 rounded-xl border-2 border-input/50 focus:border-accent-primary/60 bg-bg-main/50 resize-none" value={formData.message} onChange={e => setFormData({
-                  ...formData,
-                  message: e.target.value
-                })} />
-                  </div>
-                  <div className="space-y-4 md:space-y-6 pt-4">
-                     <button type="submit" disabled={isSubmitting} className="btn-rounded w-full max-w-[280px] md:max-w-[320px] mx-auto disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-[#2D2D2D]">
-                       {isSubmitting ? "Sending..." : "Send Message"}
-                     </button>
-                    
-                    <div className="text-center pt-2">
-                      <p className="text-text-secondary text-sm md:text-base mb-3 md:mb-4">Or send directly via WhatsApp instead</p>
-                      <Button variant="glow" className="w-full max-w-[280px] md:max-w-[320px] mx-auto" asChild>
-                        <a href="https://wa.me/353879380494" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
-                      </Button>
+                {formSubmitted ? 
+                  <ScrollReveal delay={100}>
+                    <div className="bg-neutral-light/10 border border-neutral-light/20 rounded-xl p-8 md:p-12 text-center">
+                      <h3 className="text-lg md:text-2xl font-semibold text-text-primary mb-3 md:mb-4">
+                        Thanks for reaching out!
+                      </h3>
+                      <p className="text-text-secondary text-base md:text-lg">
+                        We'll get back to you within 24 hours.
+                      </p>
                     </div>
-                  </div>
-                </form>}
+                  </ScrollReveal>
+                : 
+                  <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
+                    <ScrollReveal delay={100}>
+                      <div>
+                        <Input type="text" placeholder="Your name" className="form-field h-12 md:h-16 text-base md:text-lg px-4 md:px-6 py-3 md:py-4 rounded-xl border-2 border-input/50 focus:border-accent-primary/60 bg-bg-main/50" value={formData.name} onChange={e => setFormData({
+                      ...formData,
+                      name: e.target.value
+                    })} required />
+                      </div>
+                    </ScrollReveal>
+                    <ScrollReveal delay={150}>
+                      <div>
+                        <Input type="text" placeholder="Email or phone" className="form-field h-12 md:h-16 text-base md:text-lg px-4 md:px-6 py-3 md:py-4 rounded-xl border-2 border-input/50 focus:border-accent-primary/60 bg-bg-main/50" value={formData.contact} onChange={e => setFormData({
+                      ...formData,
+                      contact: e.target.value
+                    })} required />
+                      </div>
+                    </ScrollReveal>
+                    <ScrollReveal delay={200}>
+                      <div>
+                        <Textarea placeholder="Tell us about your project" className="form-field min-h-[120px] md:min-h-[160px] text-base md:text-lg px-4 md:px-6 py-3 md:py-4 rounded-xl border-2 border-input/50 focus:border-accent-primary/60 bg-bg-main/50 resize-none" value={formData.message} onChange={e => setFormData({
+                      ...formData,
+                      message: e.target.value
+                    })} />
+                      </div>
+                    </ScrollReveal>
+                    <ScrollReveal delay={250}>
+                      <div className="space-y-4 md:space-y-6 pt-4">
+                         <button type="submit" disabled={isSubmitting} className="btn-rounded w-full max-w-[280px] md:max-w-[320px] mx-auto disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-[#2D2D2D]">
+                           {isSubmitting ? "Sending..." : "Send Message"}
+                         </button>
+                        
+                        <div className="text-center pt-2">
+                          <p className="text-text-secondary text-sm md:text-base mb-3 md:mb-4">Or send directly via WhatsApp instead</p>
+                          <Button variant="glow" className="w-full max-w-[280px] md:max-w-[320px] mx-auto" asChild>
+                            <a href="https://wa.me/353879380494" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+                          </Button>
+                        </div>
+                      </div>
+                    </ScrollReveal>
+                  </form>
+                }
             </div>
           </ScrollReveal>
         </div>
@@ -915,77 +929,93 @@ const Index = () => {
           {/* Main Footer Content */}
           <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8 lg:gap-12 mb-8 md:mb-12">
             {/* Company Branding */}
-            <div className="col-span-2 lg:col-span-1">
-              <h3 className="text-lg md:text-2xl font-heading font-bold mb-2">Tiny Outdoor Spaces</h3>
-              
-            </div>
+            <ScrollReveal delay={50}>
+              <div className="col-span-2 lg:col-span-1">
+                <h3 className="text-lg md:text-2xl font-heading font-bold mb-2">Tiny Outdoor Spaces</h3>
+                
+              </div>
+            </ScrollReveal>
 
             {/* Services Column */}
-            <div>
-              <h4 className="text-white font-semibold text-sm tracking-wider mb-4">SERVICES</h4>
-              <ul className="space-y-2">
-                <li><button onClick={() => scrollToSection('work')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">CUSTOM BARS</button></li>
-                
-                <li><button onClick={() => scrollToSection('work')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">OUTDOOR SPACES</button></li>
-                <li><button onClick={() => scrollToSection('work')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">HOME BARS</button></li>
-              </ul>
-            </div>
+            <ScrollReveal delay={100}>
+              <div>
+                <h4 className="text-white font-semibold text-sm tracking-wider mb-4">SERVICES</h4>
+                <ul className="space-y-2">
+                  <li><button onClick={() => scrollToSection('work')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">CUSTOM BARS</button></li>
+                  
+                  <li><button onClick={() => scrollToSection('work')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">OUTDOOR SPACES</button></li>
+                  <li><button onClick={() => scrollToSection('work')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">HOME BARS</button></li>
+                </ul>
+              </div>
+            </ScrollReveal>
 
             {/* Portfolio Column */}
-            <div>
-              <h4 className="text-white font-semibold text-sm tracking-wider mb-4">PORTFOLIO</h4>
-              <ul className="space-y-2">
-                <li><button onClick={() => scrollToSection('work')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">RECENT WORK</button></li>
-                <li><button onClick={() => scrollToSection('work')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">COMMERCIAL</button></li>
-                
-                <li><button onClick={() => scrollToSection('work')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">GALLERY</button></li>
-              </ul>
-            </div>
+            <ScrollReveal delay={150}>
+              <div>
+                <h4 className="text-white font-semibold text-sm tracking-wider mb-4">PORTFOLIO</h4>
+                <ul className="space-y-2">
+                  <li><button onClick={() => scrollToSection('work')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">RECENT WORK</button></li>
+                  <li><button onClick={() => scrollToSection('work')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">COMMERCIAL</button></li>
+                  
+                  <li><button onClick={() => scrollToSection('work')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">GALLERY</button></li>
+                </ul>
+              </div>
+            </ScrollReveal>
 
             {/* About Column */}
-            <div>
-              <h4 className="text-white font-semibold text-sm tracking-wider mb-4">ABOUT US</h4>
-              <ul className="space-y-2">
-                
-                <li><button onClick={() => scrollToSection('about')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">THE MAKER</button></li>
-                <li><button onClick={() => scrollToSection('process')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">PROCESS</button></li>
-                <li><button onClick={() => scrollToSection('reviews')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">TESTIMONIALS</button></li>
-              </ul>
-            </div>
+            <ScrollReveal delay={200}>
+              <div>
+                <h4 className="text-white font-semibold text-sm tracking-wider mb-4">ABOUT US</h4>
+                <ul className="space-y-2">
+                  
+                  <li><button onClick={() => scrollToSection('about')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">THE MAKER</button></li>
+                  <li><button onClick={() => scrollToSection('process')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">PROCESS</button></li>
+                  <li><button onClick={() => scrollToSection('reviews')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">TESTIMONIALS</button></li>
+                </ul>
+              </div>
+            </ScrollReveal>
 
             {/* Contact Column */}
-            <div>
-              <h4 className="text-white font-semibold text-sm tracking-wider mb-4">CONTACT</h4>
-              <ul className="space-y-2">
-                <li><button onClick={() => scrollToSection('contact-form')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">GET QUOTE</button></li>
-                <li><a href="https://wa.me/353879380494" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide">WHATSAPP</a></li>
-                <li><button onClick={() => scrollToSection('contact-form')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">EMAIL</button></li>
-                
-              </ul>
-            </div>
+            <ScrollReveal delay={250}>
+              <div>
+                <h4 className="text-white font-semibold text-sm tracking-wider mb-4">CONTACT</h4>
+                <ul className="space-y-2">
+                  <li><button onClick={() => scrollToSection('contact-form')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">GET QUOTE</button></li>
+                  <li><a href="https://wa.me/353879380494" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide">WHATSAPP</a></li>
+                  <li><button onClick={() => scrollToSection('contact-form')} className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide text-left">EMAIL</button></li>
+                  
+                </ul>
+              </div>
+            </ScrollReveal>
           </div>
 
           {/* Divider Line */}
-          <div className="border-t border-gray-800 mb-8"></div>
+          <ScrollReveal delay={300}>
+            <div className="border-t border-gray-800 mb-8"></div>
+          </ScrollReveal>
 
           {/* Social Media & Copyright */}
           <div className="flex flex-col items-center space-y-6">
             {/* Social Media Icons */}
-            <div className="flex justify-center gap-4">
-              <a href="https://www.instagram.com/tiny_outdoor_spaces" className="w-12 h-12 rounded-full border border-gray-600 flex items-center justify-center hover:border-white hover:bg-white/10 transition-all duration-300" target="_blank" rel="noopener noreferrer">
-                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                </svg>
-              </a>
-              <a href="mailto:info@tinyoutdoorspaces.com" className="w-12 h-12 rounded-full border border-gray-600 flex items-center justify-center hover:border-white hover:bg-white/10 transition-all duration-300">
-                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                </svg>
-              </a>
-            </div>
+            <ScrollReveal delay={350}>
+              <div className="flex justify-center gap-4">
+                <a href="https://www.instagram.com/tiny_outdoor_spaces" className="w-12 h-12 rounded-full border border-gray-600 flex items-center justify-center hover:border-white hover:bg-white/10 transition-all duration-300" target="_blank" rel="noopener noreferrer">
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                  </svg>
+                </a>
+                <a href="mailto:info@tinyoutdoorspaces.com" className="w-12 h-12 rounded-full border border-gray-600 flex items-center justify-center hover:border-white hover:bg-white/10 transition-all duration-300">
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                  </svg>
+                </a>
+              </div>
+            </ScrollReveal>
 
             {/* Copyright */}
-            <p className="text-gray-500 text-sm text-center">©Copyright Tiny Outdoor Spaces. All rights reserved.</p>
+            <ScrollReveal delay={400}>
+              <p className="text-gray-500 text-sm text-center">©Copyright Tiny Outdoor Spaces. All rights reserved.</p>
+            </ScrollReveal>
           </div>
         </div>
       </footer>
