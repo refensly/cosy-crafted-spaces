@@ -235,8 +235,8 @@ const Index = () => {
     title: "Decking",
     subtitle: "Custom Bar Design and Production",
     caption: "Premium walnut bar with brass fixtures and custom lighting design",
-    image: imageConfig.projects.summit,
-    images: ['summit1.jpg', 'summit2.jpg', 'summit3.jpg', 'summit4.jpg']
+    image: '/lovable-uploads/cd3489eb-fcdb-4052-b091-6a0016b01f1c.png',
+    images: ['/lovable-uploads/cd3489eb-fcdb-4052-b091-6a0016b01f1c.png', '/lovable-uploads/809cf21f-0d81-4900-8f48-0d0baa1e69a2.png', '/lovable-uploads/2f57c305-f60e-46b6-9d44-80888f399268.png']
   }, {
     id: 'abbey-tavern-recent',
     title: "The Green Phone Box",
