@@ -101,11 +101,11 @@ const Hero = () => {
     {/* Center Content */}
     <div className={`relative z-30 ${isMobile ? 'min-h-[90vh]' : 'min-h-screen'} flex items-center justify-center px-4 sm:px-6 ${isMobile ? 'py-8' : ''}`}>
       <div className="text-center max-w-none mx-auto px-2 sm:px-4">
-        <h1 className={`font-grifter text-text-primary ${isMobile ? 'mb-4' : 'mb-4 sm:mb-6'} ${animationsStarted ? 'animate-fade-up animation-delay-500' : 'opacity-0'}`}>
-          <div className={`${isMobile ? 'text-[clamp(28px,6vw,36px)] font-extrabold leading-tight' : 'text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[120px]'} ${animationsStarted ? 'animate-fade-up animation-delay-700' : 'opacity-0'}`}>Unique Handmade</div>
-          <div className={`${isMobile ? 'text-[clamp(28px,6vw,36px)] font-extrabold leading-tight px-1' : 'text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[120px] px-2 sm:px-8 md:px-16'} ${animationsStarted ? 'animate-fade-up animation-delay-900' : 'opacity-0'}`}>Furniture from Dublin</div>
+        <h1 className={`font-grifter text-text-primary ${isMobile ? 'mb-6' : 'mb-6 sm:mb-8'} ${animationsStarted ? 'animate-fade-up animation-delay-500' : 'opacity-0'}`}>
+          <div className={`${isMobile ? 'text-[clamp(36px,8vw,48px)] font-extrabold leading-[1.1]' : 'text-5xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[140px]'} ${animationsStarted ? 'animate-fade-up animation-delay-700' : 'opacity-0'}`}>Unique Handmade</div>
+          <div className={`${isMobile ? 'text-[clamp(36px,8vw,48px)] font-extrabold leading-[1.1] px-1' : 'text-5xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[140px] px-2 sm:px-8 md:px-16'} ${animationsStarted ? 'animate-fade-up animation-delay-900' : 'opacity-0'}`}>Furniture from Dublin</div>
         </h1>
-        <div className={`${isMobile ? 'text-[15px] leading-relaxed px-4 max-w-[65ch] mx-auto' : 'text-lg sm:text-xl md:text-2xl'} text-text-secondary ${isMobile ? 'mb-6' : 'mb-6 sm:mb-8'} max-w-2xl mx-auto leading-relaxed px-2 ${animationsStarted ? 'animate-fade-up animation-delay-1100' : 'opacity-0'}`}>
+        <div className={`${isMobile ? 'text-[16px] leading-relaxed px-6 max-w-[70ch] mx-auto' : 'text-xl sm:text-2xl md:text-3xl'} text-text-secondary ${isMobile ? 'mb-8' : 'mb-8 sm:mb-10'} max-w-3xl mx-auto leading-relaxed px-4 ${animationsStarted ? 'animate-fade-up animation-delay-1100' : 'opacity-0'}`}>
           <div className="font-body font-normal text-white">Handcrafted bars, restaurants, outdoor living spaces and furniture.</div>
           <div className="text-white">Designed once, built to last.</div>
         </div>
