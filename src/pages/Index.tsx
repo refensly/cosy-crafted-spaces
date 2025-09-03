@@ -647,7 +647,7 @@ const Index = () => {
                 <div className="group cursor-pointer bg-gradient-to-br from-bg-section-alt/60 via-bg-section-alt-2/50 to-bg-section-alt/60 backdrop-blur-sm border border-accent-primary/30 rounded-2xl shadow-xl shadow-accent-primary/30 hover:shadow-2xl hover:shadow-accent-primary/50 hover:border-accent-primary/60 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1 overflow-hidden" onClick={() => handleProjectClick(project)}>
                   <div className="relative overflow-hidden">
                     <ScrollReveal delay={index * 100}>
-                      <img src={project.image} alt={project.title} className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
+                      <img src={project.image} alt={project.title} className="w-full h-64 object-fill transition-transform duration-500 group-hover:scale-110" loading="lazy" />
                     </ScrollReveal>
                     <div className="absolute inset-0 bg-gradient-to-t from-bg-main/95 via-bg-main/40 to-transparent opacity-100 transition-opacity duration-300 flex items-end">
                       <div className="max-sm:p-5 p-6 w-full">
