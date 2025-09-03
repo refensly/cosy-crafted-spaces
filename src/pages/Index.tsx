@@ -286,17 +286,17 @@ const Index = () => {
       background: 'var(--gradient-brown-primary)'
     }}>
         <div className="container mx-auto px-4 md:px-6 max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-8 md:gap-16 lg:gap-24 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-16 lg:gap-24 items-center mx-[28px]">
             <ScrollReveal>
               <div className="space-y-6 md:space-y-8">
-                <h2 className="font-heading text-text-primary text-3xl md:text-5xl lg:text-6xl font-light tracking-tight leading-tight">
+                <h2 className="font-heading text-text-primary text-3xl md:text-5xl lg:text-6xl font-light tracking-tight leading-tight mx-0">
                   Not another mass-production look
                 </h2>
-                <p className="text-lg md:text-xl text-text-secondary font-light leading-relaxed">
+                <p className="text-lg md:text-xl text-text-secondary font-light leading-relaxed mx-0">
                   If you want something nobody else has, we design and build it for you. 
                   Premium materials, made locally.
                 </p>
-                <div className="space-y-4 md:space-y-6 mt-8 md:mt-12">
+                <div className="space-y-4 md:space-y-6 mt-8 md:mt-12 mx-0 my-[22px]">
                   {["One-of-a-kind design (never repeated)", "Premium hardwoods & brass", "Built in Ireland, built to last"].map((item, index) => <ScrollReveal key={index} delay={index * 100}>
                       <div className="flex items-center space-x-3 md:space-x-4">
                         <div className="w-1 h-1 bg-accent-primary rounded-full opacity-60 flex-shrink-0"></div>
@@ -310,10 +310,10 @@ const Index = () => {
               <div className="relative mt-8 lg:mt-0">
                 <div className="relative w-full rounded-xl overflow-hidden shadow-2xl shadow-amber-500/50 border border-amber-200/20">
                   <ScrollReveal delay={250}>
-                     <img src="/images/custom-bar-interior.png" alt="Custom bar interior with warm lighting and wood finishes" className="w-full h-64 md:h-80 lg:h-96 object-cover object-center scale-125" loading="lazy" />
+                     <img src="/images/custom-bar-interior.png" alt="Custom bar interior with warm lighting and wood finishes" className="w-full h-64 md:h-80 lg:h-96 object-cover object-center" loading="lazy" />
                   </ScrollReveal>
                   {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent mx-0"></div>
                   {/* Card Content Overlay */}
                   <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
                     <div className="space-y-2 md:space-y-3">
@@ -336,7 +336,7 @@ const Index = () => {
       <section className="py-16 md:py-32 lg:py-40" style={{
       background: 'var(--gradient-brown-primary)'
     }}>
-        <div className="container mx-auto md:px-6 max-w-6xl px-[28px] my-[3px]">
+        <div className="container mx-auto md:px-6 max-w-6xl my-[3px] px-[27px]">
           <ScrollReveal>
             <div className="text-center mb-12 md:mb-20 my-[30px]">
               <h2 className="font-heading text-text-primary text-center text-3xl md:text-5xl lg:text-6xl font-light tracking-tight mb-6 md:mb-8">Our Promise</h2>
@@ -412,7 +412,7 @@ const Index = () => {
       background: 'var(--gradient-brown-primary)'
     }}>
         
-        <div className="container mx-auto px-4 md:px-12 lg:px-16 relative z-10">
+        <div className="container mx-auto md:px-12 lg:px-16 relative z-10 px-[28px]">
           <ScrollReveal>
             <div className="text-center mb-8 md:mb-16">
               <h2 className="font-heading font-bold text-text-primary text-center text-2xl md:text-4xl lg:text-5xl font-bold leading-snug mb-4 md:mb-6">
@@ -529,9 +529,9 @@ const Index = () => {
       </section>
 
       {/* Section 4: Why Custom > Standard */}
-      <section className="py-12 md:py-16 lg:py-20" style={{
+      <section style={{
       background: 'var(--gradient-brown-primary)'
-    }}>
+    }} className="py-12 md:py-16 lg:py-20 px-[28px]">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-5xl mx-auto">
             
@@ -635,7 +635,7 @@ const Index = () => {
       <section className="max-sm:py-6 py-16 lg:py-20" style={{
       background: 'var(--gradient-brown-primary)'
     }}>
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-[46px]">
           <ScrollReveal>
             <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">
               Recent projects
@@ -678,9 +678,9 @@ const Index = () => {
       </section>
 
       {/* 2025 Reviews Section - Animated, Clean */}
-      <section id="reviews" className="py-16 md:py-24" style={{
+      <section id="reviews" style={{
       background: 'var(--gradient-brown-primary)'
-    }}>
+    }} className="py-16 md:py-24 px-[28px]">
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <h2 className="font-heading font-light text-text-primary text-center text-4xl md:text-6xl mb-16">
@@ -721,9 +721,9 @@ const Index = () => {
       </section>
 
       {/* New Section: What We Build */}
-      <section className="max-sm:py-6 py-16 lg:py-20" style={{
+      <section style={{
       background: 'var(--gradient-brown-primary)'
-    }}>
+    }} className="max-sm:py-6 py-16 lg:py-20 px-[28px]">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 max-sm:gap-4 gap-6 lg:gap-8 items-center">
             <ScrollReveal>
@@ -765,7 +765,7 @@ const Index = () => {
       <section className="max-sm:py-6 py-16 lg:py-20" style={{
       background: 'var(--gradient-brown-primary)'
     }}>
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-[28px]">
           <div className="max-w-4xl mx-auto">
             <ScrollReveal>
               <div className="bg-bg-main rounded-xl max-sm:p-5 p-8">
@@ -793,9 +793,9 @@ const Index = () => {
       </section>
 
       {/* 2025 Process Section - Animated, Clean */}
-      <section id="process" className="py-12 md:py-16 lg:py-24" style={{
+      <section id="process" style={{
       background: 'var(--gradient-brown-primary)'
-    }}>
+    }} className="py-12 md:py-16 lg:py-24 px-[28px]">
         <div className="container mx-auto px-4 md:px-6">
           <ScrollReveal>
             <h2 className="font-heading font-light text-text-primary text-center text-3xl md:text-4xl lg:text-6xl mb-12 md:mb-16">
@@ -811,9 +811,9 @@ const Index = () => {
       </section>
 
       {/* Section 8: Who Am I */}
-      <section id="about" className="py-12 md:py-16 lg:py-20" style={{
+      <section id="about" style={{
       background: 'var(--gradient-brown-primary)'
-    }}>
+    }} className="py-12 md:py-16 lg:py-20 px-[28px]">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
             <ScrollReveal>
@@ -843,12 +843,11 @@ const Index = () => {
     }}>
         <div className="container mx-auto px-4 md:px-6">
           <ScrollReveal>
-            <div className="max-w-2xl mx-auto text-center">
+            <div className="max-w-2xl mx-auto text-center px-[28px]">
               <h2 className="font-heading font-bold text-text-primary text-2xl md:text-4xl lg:text-5xl font-bold leading-snug mb-4 md:mb-6">Ready To Start?</h2>
               <div className="w-16 md:w-24 h-0.5 bg-accent-primary mx-auto mb-6 md:mb-8"></div>
               
-                {formSubmitted ? 
-                  <ScrollReveal delay={100}>
+                {formSubmitted ? <ScrollReveal delay={100}>
                     <div className="bg-neutral-light/10 border border-neutral-light/20 rounded-xl p-8 md:p-12 text-center">
                       <h3 className="text-lg md:text-2xl font-semibold text-text-primary mb-3 md:mb-4">
                         Thanks for reaching out!
@@ -857,31 +856,29 @@ const Index = () => {
                         We'll get back to you within 24 hours.
                       </p>
                     </div>
-                  </ScrollReveal>
-                : 
-                  <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
+                  </ScrollReveal> : <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
                     <ScrollReveal delay={100}>
                       <div>
                         <Input type="text" placeholder="Your name" className="form-field h-12 md:h-16 text-base md:text-lg px-4 md:px-6 py-3 md:py-4 rounded-xl border-2 border-input/50 focus:border-accent-primary/60 bg-bg-main/50" value={formData.name} onChange={e => setFormData({
-                      ...formData,
-                      name: e.target.value
-                    })} required />
+                    ...formData,
+                    name: e.target.value
+                  })} required />
                       </div>
                     </ScrollReveal>
                     <ScrollReveal delay={150}>
                       <div>
                         <Input type="text" placeholder="Email or phone" className="form-field h-12 md:h-16 text-base md:text-lg px-4 md:px-6 py-3 md:py-4 rounded-xl border-2 border-input/50 focus:border-accent-primary/60 bg-bg-main/50" value={formData.contact} onChange={e => setFormData({
-                      ...formData,
-                      contact: e.target.value
-                    })} required />
+                    ...formData,
+                    contact: e.target.value
+                  })} required />
                       </div>
                     </ScrollReveal>
                     <ScrollReveal delay={200}>
                       <div>
                         <Textarea placeholder="Tell us about your project" className="form-field min-h-[120px] md:min-h-[160px] text-base md:text-lg px-4 md:px-6 py-3 md:py-4 rounded-xl border-2 border-input/50 focus:border-accent-primary/60 bg-bg-main/50 resize-none" value={formData.message} onChange={e => setFormData({
-                      ...formData,
-                      message: e.target.value
-                    })} />
+                    ...formData,
+                    message: e.target.value
+                  })} />
                       </div>
                     </ScrollReveal>
                     <ScrollReveal delay={250}>
@@ -898,15 +895,14 @@ const Index = () => {
                         </div>
                       </div>
                     </ScrollReveal>
-                  </form>
-                }
+                  </form>}
             </div>
           </ScrollReveal>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#0F0F0F] text-white py-12 md:py-16">
+      <footer className="bg-[#0F0F0F] text-white py-12 md:py-16 px-[28px]">
         <div className="container mx-auto px-4 md:px-6">
           {/* Main Footer Content */}
           <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8 lg:gap-12 mb-8 md:mb-12">
