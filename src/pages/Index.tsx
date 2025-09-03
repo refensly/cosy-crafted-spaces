@@ -509,10 +509,6 @@ const Index = () => {
                     <img src={selectedProject.images[currentImageIndex]} alt={`${selectedProject.title} - Image ${currentImageIndex + 1}`} className="w-full h-full object-cover transform scale-110" />
                   </div>
                   
-                  {/* 2025 Navigation - Clean Indicators */}
-                  {selectedProject.images.length > 1 && <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-                      {selectedProject.images.map((_, index) => <button key={index} onClick={() => setCurrentImageIndex(index)} className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentImageIndex ? 'bg-white w-8' : 'bg-white/40 hover:bg-white/60'}`} />)}
-                    </div>}
                 </div>
                 
                 {/* Image Thumbnails */}

@@ -74,20 +74,6 @@ const CapabilitiesCarousel = () => {
             </div>
           ))}
           
-          {/* Progress indicators */}
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
-            {capabilities.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentIndex 
-                    ? 'bg-accent-primary shadow-lg scale-110' 
-                    : 'bg-white/40 hover:bg-white/60'
-                }`}
-              />
-            ))}
-          </div>
         </div>
       </ScrollReveal>
       
