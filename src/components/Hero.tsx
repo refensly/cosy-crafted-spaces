@@ -120,9 +120,7 @@ const Hero = () => {
         <div className={`${isMobile ? 'space-y-6 px-6' : 'space-y-10'}`}>
           {/* Main CTA */}
           <div className={`${isMobile ? 'mt-8' : 'flex justify-center'} ${animationsStarted ? 'animate-fade-up animation-delay-1500' : 'opacity-0'}`}>
-            <Button variant="outline" className={`${isMobile ? 'border-accent-primary border-2 text-white font-semibold hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out w-full max-w-[320px] mx-auto flex items-center justify-center text-[15px] px-5 py-3 rounded-xl min-h-[48px]' : 'btn-primary font-medium bg-transparent text-white uppercase border-2 border-white hover:bg-white/10 transition-all duration-300 ease-in-out shadow-xl hover-scale w-auto text-lg sm:text-xl md:text-2xl px-6 sm:px-12 md:px-18 py-6 sm:py-10 md:py-14'}`} style={isMobile ? {} : {
-              boxShadow: '0 0 30px hsl(39 54% 45% / 0.6)'
-            }} onClick={scrollToContact}>
+            <Button variant="glow" className={`${isMobile ? 'w-full max-w-[320px] mx-auto flex items-center justify-center text-[15px] px-5 py-3 rounded-xl min-h-[48px]' : 'w-auto text-lg sm:text-xl md:text-2xl px-6 sm:px-12 md:px-18 py-6 sm:py-10 md:py-14'}`} onClick={scrollToContact}>
               <span className="block sm:hidden">FREE CONSULTATION</span>
               <span className="hidden sm:block">GET FREE CONSULTATION NOW</span>
             </Button>
@@ -130,7 +128,7 @@ const Hero = () => {
           
           {/* Secondary CTAs */}
           <div className={`${isMobile ? 'flex flex-col gap-4' : 'flex flex-col gap-5 items-center'} ${animationsStarted ? 'animate-fade-up animation-delay-1700' : 'opacity-0'}`}>
-            <Button variant="outline" className={`border-accent-primary text-white hover:bg-accent-primary/20 hover:border-accent-primary/80 transition-all duration-500 ease-out hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25 ${isMobile ? 'w-full max-w-[320px] mx-auto text-[15px] font-medium px-6 py-3.5 rounded-xl min-h-[50px]' : 'w-auto px-8 sm:px-12 md:px-16 py-3.5 sm:py-4.5 md:py-5 text-base sm:text-lg md:text-xl'}`} onClick={scrollToContact}>
+            <Button variant="glow" className={`${isMobile ? 'w-full max-w-[320px] mx-auto text-[15px] font-medium px-6 py-3.5 rounded-xl min-h-[50px]' : 'w-auto px-8 sm:px-12 md:px-16 py-3.5 sm:py-4.5 md:py-5 text-base sm:text-lg md:text-xl'}`} onClick={scrollToContact}>
               <span className="block sm:hidden">GET A QUOTE</span>
               <span className="hidden sm:block">GET A QUOTE</span>
             </Button>

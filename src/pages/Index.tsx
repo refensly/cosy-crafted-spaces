@@ -898,7 +898,9 @@ const Index = () => {
                     
                     <div className="text-center pt-2">
                       <p className="text-text-secondary text-sm md:text-base mb-3 md:mb-4">Or send directly via WhatsApp instead</p>
-                      <a href="https://wa.me/353879380494" target="_blank" rel="noopener noreferrer" className="btn-rounded w-full max-w-[280px] md:max-w-[320px] mx-auto">WhatsApp Us</a>
+                      <Button variant="glow" className="w-full max-w-[280px] md:max-w-[320px] mx-auto" asChild>
+                        <a href="https://wa.me/353879380494" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+                      </Button>
                     </div>
                   </div>
                 </form>}

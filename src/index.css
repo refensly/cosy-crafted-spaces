@@ -298,29 +298,19 @@
     transform: none;
   }
 
-  /* 2025 Rounded Button Style - Based on reference */
+  /* 2025 Rounded Button Style - Glowing border */
   .btn-rounded {
     @apply font-body inline-flex items-center justify-center;
-    background: #2D2D2D;
+    background: transparent;
     color: white;
-    border: none;
+    border: 1px solid hsl(var(--accent-primary));
     border-radius: 24px;
     padding: 1rem 2rem;
     font-size: clamp(1rem, 2.5vw, 1.25rem);
     font-weight: 400;
     letter-spacing: 0.02em;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .btn-rounded:hover {
-    background: #3D3D3D;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  }
-
-  .btn-rounded:active {
-    transform: translateY(0);
+    box-shadow: 0 0 20px hsl(var(--accent-primary) / 0.3);
   }
 
   .btn-secondary {
