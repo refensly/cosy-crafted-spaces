@@ -107,8 +107,8 @@ const Hero = () => {
           <div className={`${isMobile ? 'text-[clamp(36px,8vw,48px)] font-extrabold leading-[1.1] px-1' : 'text-5xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[140px] px-2 sm:px-8 md:px-16'} ${animationsStarted ? 'animate-fade-up animation-delay-900' : 'opacity-0'}`}>Furniture from Dublin</div>
         </h1>
         <div className={`${isMobile ? 'text-[16px] leading-relaxed px-6 max-w-[70ch] mx-auto' : 'text-xl sm:text-2xl md:text-3xl'} text-text-secondary ${isMobile ? 'mb-8' : 'mb-8 sm:mb-10'} max-w-3xl mx-auto leading-relaxed px-4 ${animationsStarted ? 'animate-fade-up animation-delay-1100' : 'opacity-0'}`}>
-          <div className="font-body font-normal text-white">Handcrafted bars, restaurants, outdoor living spaces and furniture.</div>
-          <div className="text-white">Designed once, built to last.</div>
+          <div className="font-body font-normal text-white mx-0">Handcrafted bars, restaurants, outdoor living spaces and furniture.</div>
+          <div className="text-white mx-0">Designed once, built to last.</div>
         </div>
         
         {/* Unique Badge - Desktop Only */}
