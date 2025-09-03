@@ -27,7 +27,7 @@ const PromiseCarousel = () => {
           {promises.map((promise, index) => <div key={index} className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${index === currentIndex ? 'opacity-100' : 'opacity-0'}`}>
               <div className="flex flex-col h-full p-6">
                 <div className="flex-1 flex items-center justify-center mb-6">
-                  <div className="w-40 h-40 rounded-full overflow-hidden bg-accent-primary/10 shadow-none">
+                  <div className="w-40 h-40 rounded-full overflow-hidden bg-accent-primary/10 shadow-2xl shadow-amber-500/50">
                     <div className="w-full h-full rounded-full overflow-hidden">
                       <img src={promise.image} alt={`${promise.title} craftsmanship example`} className="w-full h-full object-cover scale-110" />
                     </div>
