@@ -59,11 +59,12 @@ const Hero = () => {
       block: 'start'
     });
   };
-
   const scrollToNextSection = () => {
     const element = document.getElementById('pain-value-section');
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
   return <section className={`relative ${isMobile ? 'min-h-[90vh]' : 'min-h-screen'} overflow-hidden animate-fade-in`} style={{
@@ -127,10 +128,7 @@ const Hero = () => {
           
           {/* Secondary CTAs */}
           <div className={`${isMobile ? 'flex flex-col gap-4' : 'flex flex-col gap-5 items-center'} ${animationsStarted ? 'animate-fade-up animation-delay-1700' : 'opacity-0'}`}>
-            <Button variant="glow" size="mobile-compact" className="w-full max-w-[320px] mx-auto sm:w-auto" onClick={scrollToContact}>
-              <span className="block sm:hidden">get a quote</span>
-              <span className="hidden sm:block">get a quote</span>
-            </Button>
+            
 
             <Button variant="glow" size="mobile-compact" className="w-full max-w-[320px] mx-auto sm:w-auto" onClick={scrollToContact}>
               <span className="block sm:hidden">whatsapp us</span>
@@ -142,19 +140,12 @@ const Hero = () => {
     </div>
     
     {/* Scroll indicator */}
-    <div 
-      className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30 transition-opacity duration-500 cursor-pointer hover:scale-110 transition-transform ${animationsStarted ? 'opacity-100 animate-[pulse-glow_2s_ease-in-out_infinite]' : 'opacity-0'}`}
-      onClick={scrollToNextSection}
-      role="button"
-      aria-label="Scroll to next section"
-      tabIndex={0}
-      onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          scrollToNextSection();
-        }
-      }}
-    >
+    <div className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30 transition-opacity duration-500 cursor-pointer hover:scale-110 transition-transform ${animationsStarted ? 'opacity-100 animate-[pulse-glow_2s_ease-in-out_infinite]' : 'opacity-0'}`} onClick={scrollToNextSection} role="button" aria-label="Scroll to next section" tabIndex={0} onKeyDown={e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        scrollToNextSection();
+      }
+    }}>
       <div className="w-8 h-8 border-2 border-white rounded-full flex items-center justify-center">
         <div className="w-1 h-3 bg-white rounded-full"></div>
       </div>
