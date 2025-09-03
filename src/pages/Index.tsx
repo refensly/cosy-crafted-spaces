@@ -326,10 +326,23 @@ const Index = () => {
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <div className="relative mt-8 lg:mt-0">
-                <div className="w-full rounded-none overflow-hidden">
+                <div className="relative w-full rounded-xl overflow-hidden shadow-lg border border-white/10">
                   <ScrollReveal delay={250}>
                      <img src="/images/custom-bar-interior.png" alt="Custom bar interior with warm lighting and wood finishes" className="w-full h-64 md:h-80 lg:h-96 object-cover object-center" loading="lazy" />
                   </ScrollReveal>
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+                  {/* Card Content Overlay */}
+                  <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                    <div className="space-y-2 md:space-y-3">
+                      <h3 className="font-heading text-white text-xl md:text-2xl lg:text-3xl font-light tracking-tight">
+                        Premium Craftsmanship
+                      </h3>
+                      <p className="text-white/90 text-sm md:text-base font-light leading-relaxed">
+                        Handcrafted with attention to detail
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </ScrollReveal>
