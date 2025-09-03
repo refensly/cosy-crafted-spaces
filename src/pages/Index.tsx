@@ -39,24 +39,6 @@ const Index = () => {
     title: 'Hospitality Spaces',
     description: 'Commercial hospitality spaces',
     projects: [{
-      id: 'summit-inn',
-      title: 'The Summit Inn',
-      subtitle: 'Custom bar design and production',
-      caption: 'Premium walnut bar with brass fixtures',
-      images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg']
-    }, {
-      id: 'mamo',
-      title: 'MAMO',
-      subtitle: 'Contemporary restaurant interior',
-      caption: 'Modern dining space with custom furnishings',
-      images: ['/images/project-mamo-1.png', '/images/project-mamo-2.png', '/images/project-mamo-3.png', '/images/project-mamo-4.png']
-    }, {
-      id: 'riverside-bar',
-      title: 'Riverside Bar',
-      subtitle: 'Waterfront bar installation',
-      caption: 'Outdoor-inspired bar design',
-      images: ['/images/project-riverside-bar-1.png', '/images/project-riverside-bar-2.png', '/images/project-riverside-bar-3.png']
-    }, {
       id: 'peggys',
       title: 'Peggy\'s St Stephens',
       subtitle: 'Traditional pub refurbishment',
@@ -475,9 +457,9 @@ const Index = () => {
                     {/* Accordion Content */}
                     <div className={`transition-all duration-500 ease-in-out overflow-hidden ${expandedCategory === category.id ? 'max-h-[1500px] opacity-100 mt-6 md:mt-8' : 'max-h-0 opacity-0'}`}>
                       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-                        {(category.id === 'bars-restaurants' && isMobile === true ?
-                      // On mobile, show only 3 specific projects for hospitality spaces
-                      category.projects.filter(p => ['summit-inn', 'riverside-bar', 'peggys'].includes(p.id)) : category.id === 'outdoor-spaces' && isMobile === true ?
+                         {(category.id === 'bars-restaurants' && isMobile === true ?
+                      // On mobile, show only specific projects for hospitality spaces
+                      category.projects.filter(p => ['peggys'].includes(p.id)) : category.id === 'outdoor-spaces' && isMobile === true ?
                       // On mobile, show only 4 specific projects for outdoor spaces
                       category.projects.filter(p => ['thormanby-lawns', 'pergola-decking', 'howth-decking', 'raheny-patio'].includes(p.id)) : category.projects).map((project, projectIndex) => <div key={project.id} className="bg-bg-section-alt/50 rounded-xl overflow-hidden cursor-pointer group hover:bg-bg-section-alt/75 transition-all duration-300 border border-bg-section-alt/30 hover:border-accent-primary/50 border-b-2 border-b-accent-primary/40 hover:border-b-accent-primary/70 p-1 hover:shadow-lg hover:shadow-accent-primary/20" onClick={e => {
                         e.stopPropagation();
