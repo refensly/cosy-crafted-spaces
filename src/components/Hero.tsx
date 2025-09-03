@@ -100,7 +100,7 @@ const Hero = () => {
     <div className={`absolute inset-0 z-20 ${isMobile ? 'bg-gradient-to-r from-transparent via-black/50 to-transparent' : 'bg-gradient-to-r from-transparent via-black/30 to-transparent'}`} />
     
     {/* Center Content */}
-    <div className={`relative z-30 ${isMobile ? 'min-h-[90vh]' : 'min-h-screen'} flex items-end justify-center px-4 sm:px-6 ${isMobile ? 'py-8 pb-32' : 'pb-32'}`}>
+    <div className={`relative z-30 ${isMobile ? 'min-h-[90vh]' : 'min-h-screen'} flex ${isMobile ? 'items-end' : 'items-center'} justify-center px-4 sm:px-6 ${isMobile ? 'py-8 pb-32' : ''}`}>
       <div className="text-center max-w-none mx-auto px-2 sm:px-4">
         <h1 className={`font-grifter text-text-primary ${isMobile ? 'mb-6' : 'mb-6 sm:mb-8'} ${animationsStarted ? 'animate-fade-up animation-delay-500' : 'opacity-0'}`}>
           <div className={`${isMobile ? 'text-[clamp(36px,8vw,48px)] font-extrabold leading-[1.1]' : 'text-5xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[140px]'} ${animationsStarted ? 'animate-fade-up animation-delay-700' : 'opacity-0'}`}>Unique Handmade</div>
