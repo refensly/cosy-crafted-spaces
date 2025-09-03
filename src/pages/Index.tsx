@@ -235,8 +235,8 @@ const Index = () => {
     title: "Decking",
     subtitle: "Custom Bar Design and Production",
     caption: "Premium walnut bar with brass fixtures and custom lighting design",
-    image: '/lovable-uploads/cd3489eb-fcdb-4052-b091-6a0016b01f1c.png',
-    images: ['/lovable-uploads/cd3489eb-fcdb-4052-b091-6a0016b01f1c.png', '/lovable-uploads/809cf21f-0d81-4900-8f48-0d0baa1e69a2.png', '/lovable-uploads/2f57c305-f60e-46b6-9d44-80888f399268.png']
+    image: '/lovable-uploads/d365de70-97bc-4772-8043-33306714f0e8.png',
+    images: ['/lovable-uploads/d365de70-97bc-4772-8043-33306714f0e8.png', '/lovable-uploads/809cf21f-0d81-4900-8f48-0d0baa1e69a2.png', '/lovable-uploads/2f57c305-f60e-46b6-9d44-80888f399268.png']
   }, {
     id: 'abbey-tavern-recent',
     title: "The Green Phone Box",
@@ -249,8 +249,8 @@ const Index = () => {
     title: "Home Container",
     subtitle: "Interior Shelving in Solid Oak",
     caption: "Custom solid oak shelving system with precision joinery and natural finish",
-    image: '/lovable-uploads/8377f438-0f46-4627-88ee-cf10992d89ef.png',
-    images: ['/lovable-uploads/8377f438-0f46-4627-88ee-cf10992d89ef.png', '/lovable-uploads/bbb9e0f0-047a-4dd3-9269-37913f6d3ae3.png', '/lovable-uploads/2bde928f-03af-4cbf-9149-c9a73b4166ba.png']
+    image: '/lovable-uploads/4a4f91cb-5dd1-44e9-b7cd-372112468fc1.png',
+    images: ['/lovable-uploads/4a4f91cb-5dd1-44e9-b7cd-372112468fc1.png', '/lovable-uploads/bbb9e0f0-047a-4dd3-9269-37913f6d3ae3.png', '/lovable-uploads/2bde928f-03af-4cbf-9149-c9a73b4166ba.png']
   }];
   const processSteps = [{
     number: "1",
