@@ -326,7 +326,7 @@ const Index = () => {
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <div className="relative mt-8 lg:mt-0">
-                <div className="relative w-full rounded-xl overflow-hidden shadow-lg border border-white/10">
+                <div className="relative w-full rounded-xl overflow-hidden shadow-2xl shadow-black/30 border border-white/20 hover:shadow-2xl hover:shadow-black/40 transition-all duration-300">
                   <ScrollReveal delay={250}>
                      <img src="/images/custom-bar-interior.png" alt="Custom bar interior with warm lighting and wood finishes" className="w-full h-64 md:h-80 lg:h-96 object-cover object-center" loading="lazy" />
                   </ScrollReveal>
