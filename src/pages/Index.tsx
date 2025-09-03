@@ -310,7 +310,7 @@ const Index = () => {
               <div className="relative mt-8 lg:mt-0">
                 <div className="relative w-full rounded-xl overflow-hidden shadow-2xl shadow-amber-500/50 border border-amber-200/20">
                   <ScrollReveal delay={250}>
-                     <img src="/images/custom-bar-interior.png" alt="Custom bar interior with warm lighting and wood finishes" className="w-full h-64 md:h-80 lg:h-96 object-cover object-center" loading="lazy" />
+                     <img src="/images/custom-bar-interior.png" alt="Custom bar interior with warm lighting and wood finishes" className="w-full h-64 md:h-80 lg:h-96 object-cover object-center scale-125" loading="lazy" />
                   </ScrollReveal>
                   {/* Gradient Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
