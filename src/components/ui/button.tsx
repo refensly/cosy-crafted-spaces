@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 lowercase",
   {
     variants: {
       variant: {
@@ -18,16 +18,16 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        glow: "bg-transparent border border-amber-500/50 text-white shadow-xl shadow-amber-500/30 transition-all duration-300",
+        glow: "bg-transparent border border-accent-primary text-white shadow-xl shadow-accent-primary/30 transition-all duration-300 hover:bg-accent-primary/20 hover:border-accent-primary/80 hover:scale-105 hover:shadow-lg hover:shadow-accent-primary/25",
       },
       size: {
-        default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
+        default: "px-6 py-3 text-base",
+        sm: "px-4 py-2 text-sm",
+        lg: "px-8 py-4 text-lg", 
         icon: "h-10 w-10",
-        "mobile-compact": "max-sm:text-[15px] max-sm:font-semibold max-sm:px-5 max-sm:py-3 max-sm:rounded-xl max-sm:min-h-[44px] sm:px-6 sm:py-3 sm:text-base md:px-8 md:py-4 md:text-lg",
-        "mobile-secondary": "max-sm:text-[14px] max-sm:font-medium max-sm:px-5 max-sm:py-3 max-sm:rounded-xl max-sm:min-h-[44px] sm:px-6 sm:py-3 sm:text-base md:px-8 md:py-4 md:text-lg md:font-semibold",
-        "project-card": "text-xs font-medium px-3 py-2 rounded-md sm:px-4 sm:py-2 sm:text-sm md:px-5 md:py-2.5 md:text-sm md:font-semibold",
+        "mobile-compact": "max-sm:text-[15px] max-sm:px-5 max-sm:py-3 max-sm:rounded-xl max-sm:min-h-[44px] sm:px-6 sm:py-3 sm:text-base md:px-8 md:py-4 md:text-lg",
+        "mobile-secondary": "max-sm:text-[14px] max-sm:px-5 max-sm:py-3 max-sm:rounded-xl max-sm:min-h-[44px] sm:px-6 sm:py-3 sm:text-base md:px-8 md:py-4 md:text-lg",
+        "project-card": "text-xs px-3 py-2 sm:px-4 sm:py-2 sm:text-sm md:px-5 md:py-2.5 md:text-sm",
       },
     },
     defaultVariants: {

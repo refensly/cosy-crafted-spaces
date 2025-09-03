@@ -68,10 +68,12 @@ const Header = () => {
           </button>
           
           <Button 
-            className="bg-transparent text-white font-normal uppercase border border-neutral-light hover:bg-white/10 transition-all duration-300"
+            variant="glow"
+            size="default"
+            className="bg-transparent text-white font-normal border border-neutral-light hover:bg-white/10 transition-all duration-300"
             onClick={() => scrollToSection('contact-form')}
           >
-            Let's build yours
+            let's build yours
           </Button>
         </div>
 
@@ -139,13 +141,15 @@ const Header = () => {
             Contact
           </button>
           <Button 
-            className="w-full bg-transparent text-white font-normal uppercase border border-neutral-light hover:bg-white/10 transition-all duration-300 mt-4"
+            variant="glow"
+            size="default"
+            className="w-full bg-transparent text-white font-normal border border-neutral-light hover:bg-white/10 transition-all duration-300 mt-4"
             onClick={() => {
               scrollToSection('contact-form');
               setMobileMenuOpen(false);
             }}
           >
-            Let's build yours
+            let's build yours
           </Button>
         </div>
       </div>

@@ -886,14 +886,14 @@ const Index = () => {
                     </ScrollReveal>
                     <ScrollReveal delay={250}>
                       <div className="space-y-4 md:space-y-6 pt-4">
-                         <button type="submit" disabled={isSubmitting} className="btn-rounded w-full max-w-[280px] md:max-w-[320px] mx-auto disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-[#2D2D2D]">
-                           {isSubmitting ? "Sending..." : "Send Message"}
-                         </button>
+                          <Button type="submit" variant="glow" size="mobile-compact" disabled={isSubmitting} className="w-full max-w-[280px] md:max-w-[320px] mx-auto disabled:opacity-50 disabled:cursor-not-allowed">
+                            {isSubmitting ? "sending..." : "send message"}
+                          </Button>
                         
                         <div className="text-center pt-2">
                           <p className="text-text-secondary text-sm md:text-base mb-3 md:mb-4">Or send directly via WhatsApp instead</p>
-                          <Button variant="glow" className="w-full max-w-[280px] md:max-w-[320px] mx-auto" asChild>
-                            <a href="https://wa.me/353879380494" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+                          <Button variant="glow" size="mobile-compact" className="w-full max-w-[280px] md:max-w-[320px] mx-auto" asChild>
+                            <a href="https://wa.me/353879380494" target="_blank" rel="noopener noreferrer">whatsapp us</a>
                           </Button>
                         </div>
                       </div>

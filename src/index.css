@@ -268,8 +268,8 @@
     color: hsl(var(--text-primary));
     border: none;
     border-radius: 0;
-    padding: 1.5rem 3rem;
-    font-size: clamp(1.125rem, 3vw, 1.5rem);
+    padding: 1rem 2rem;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
     font-weight: 200;
     letter-spacing: 0.05em;
     text-transform: lowercase;
@@ -309,6 +309,7 @@
     font-size: clamp(1rem, 2.5vw, 1.25rem);
     font-weight: 400;
     letter-spacing: 0.02em;
+    text-transform: lowercase;
     transition: all 0.3s ease;
     box-shadow: 0 0 20px hsl(var(--accent-primary) / 0.3);
   }
@@ -383,19 +384,22 @@
   /* Mobile button styles */
   @media (max-width: 768px) {
     .btn-primary {
-      @apply text-[15px] font-semibold px-5 py-3 rounded-xl;
+      @apply text-[15px] px-5 py-3 rounded-xl;
       letter-spacing: normal;
+      text-transform: lowercase;
     }
     
     .btn-secondary {
-      @apply text-[14px] font-medium px-5 py-3 rounded-xl;
+      @apply text-[14px] px-5 py-3 rounded-xl;
       letter-spacing: normal;
+      text-transform: lowercase;
     }
 
     .btn-rounded {
       padding: 0.75rem 1.5rem;
       font-size: 1rem;
       border-radius: 20px;
+      text-transform: lowercase;
     }
   }
   
