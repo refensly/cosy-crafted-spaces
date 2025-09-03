@@ -401,7 +401,7 @@ const Index = () => {
           </div>
 
           <ScrollReveal>
-            <div className="text-center space-y-4 md:space-y-6 mb-12 md:mb-16 mt-20 md:mt-24 lg:mt-32">
+            <div className="text-center space-y-4 md:space-y-6 mb-12 md:mb-16 mt-24 md:mt-32 lg:mt-40">
               <h3 className="font-heading text-text-primary text-xl md:text-2xl lg:text-3xl font-light">
                 Producing Quality Results
               </h3>
