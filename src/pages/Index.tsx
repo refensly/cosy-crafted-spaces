@@ -300,7 +300,9 @@ const Index = () => {
       </div>
 
       {/* Section 2: Pain → Value - Minimal Style */}
-      <section id="pain-value-section" className="py-12 md:pt-20 md:pb-20 lg:pt-32 lg:pb-32" style={{ background: 'var(--gradient-brown-primary)' }}>
+      <section id="pain-value-section" className="py-12 md:pt-20 md:pb-20 lg:pt-32 lg:pb-32" style={{
+      background: 'var(--gradient-brown-primary)'
+    }}>
         <div className="container mx-auto px-4 md:px-6 max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-16 lg:gap-24 items-center">
             <ScrollReveal>
@@ -313,14 +315,12 @@ const Index = () => {
                   Premium materials, made locally.
                 </p>
                 <div className="space-y-4 md:space-y-6 mt-8 md:mt-12">
-                  {["One-of-a-kind design (never repeated)", "Premium hardwoods & brass", "Built in Ireland, built to last"].map((item, index) => 
-                    <ScrollReveal key={index} delay={index * 100}>
+                  {["One-of-a-kind design (never repeated)", "Premium hardwoods & brass", "Built in Ireland, built to last"].map((item, index) => <ScrollReveal key={index} delay={index * 100}>
                       <div className="flex items-center space-x-3 md:space-x-4">
                         <div className="w-1 h-1 bg-accent-primary rounded-full opacity-60 flex-shrink-0"></div>
                         <span className="text-text-primary font-light text-base md:text-lg">{item}</span>
                       </div>
-                    </ScrollReveal>
-                  )}
+                    </ScrollReveal>)}
                 </div>
               </div>
             </ScrollReveal>
@@ -338,8 +338,10 @@ const Index = () => {
       </section>
 
       {/* Our Promise Section - Minimal Clean */}
-      <section className="py-16 md:py-32 lg:py-40" style={{ background: 'var(--gradient-brown-primary)' }}>
-        <div className="container mx-auto px-4 md:px-6 max-w-6xl">
+      <section className="py-16 md:py-32 lg:py-40" style={{
+      background: 'var(--gradient-brown-primary)'
+    }}>
+        <div className="container mx-auto md:px-6 max-w-6xl px-[28px] my-[3px]">
           <ScrollReveal>
             <div className="text-center mb-12 md:mb-20">
               <h2 className="font-heading text-text-primary text-center text-3xl md:text-5xl lg:text-6xl font-light tracking-tight mb-6 md:mb-8">Our Promise</h2>
@@ -356,11 +358,7 @@ const Index = () => {
             <ScrollReveal className="text-center">
               <div className="space-y-8">
                 <div className="w-20 h-20 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-accent-primary/20 to-accent-primary/10">
-                  <img 
-                    src="/images/promise-precision.png" 
-                    alt="Precision craftsmanship tools and measurements" 
-                    className="w-full h-full object-cover opacity-80"
-                  />
+                  <img src="/images/promise-precision.png" alt="Precision craftsmanship tools and measurements" className="w-full h-full object-cover opacity-80" />
                 </div>
                 <h3 className="font-heading text-text-primary text-2xl font-light">Precision</h3>
                 <p className="text-text-secondary text-base font-light leading-relaxed">
@@ -371,11 +369,7 @@ const Index = () => {
             <ScrollReveal className="text-center" delay={100}>
               <div className="space-y-8">
                 <div className="w-20 h-20 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-accent-primary/20 to-accent-primary/10">
-                  <img 
-                    src="/images/promise-real-spaces.png" 
-                    alt="Real customer spaces transformed with custom woodwork" 
-                    className="w-full h-full object-cover opacity-80"
-                  />
+                  <img src="/images/promise-real-spaces.png" alt="Real customer spaces transformed with custom woodwork" className="w-full h-full object-cover opacity-80" />
                 </div>
                 <h3 className="font-heading text-text-primary text-2xl font-light">Real Spaces</h3>
                 <p className="text-text-secondary text-base font-light leading-relaxed">
@@ -386,11 +380,7 @@ const Index = () => {
             <ScrollReveal className="text-center" delay={200}>
               <div className="space-y-8">
                 <div className="w-20 h-20 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-accent-primary/20 to-accent-primary/10">
-                  <img 
-                    src="/images/promise-unique-results.png" 
-                    alt="Unique custom woodwork designs showcasing creativity" 
-                    className="w-full h-full object-cover opacity-80"
-                  />
+                  <img src="/images/promise-unique-results.png" alt="Unique custom woodwork designs showcasing creativity" className="w-full h-full object-cover opacity-80" />
                 </div>
                 <h3 className="font-heading text-text-primary text-2xl font-light">Unique Results</h3>
                 <p className="text-text-secondary text-base font-light leading-relaxed">
@@ -401,20 +391,20 @@ const Index = () => {
           </div>
 
           <ScrollReveal>
-            <div className="text-center space-y-4 md:space-y-6 mb-12 md:mb-16 mt-24 md:mt-32 lg:mt-40">
+            <div className="text-center space-y-4 md:space-y-6 mb-12 md:mb-16">
               <h3 className="font-heading text-text-primary text-xl md:text-2xl lg:text-3xl font-light">
                 Producing Quality Results
               </h3>
-              <p className="text-base md:text-lg text-text-secondary font-light max-w-4xl mx-auto leading-relaxed">
+              <p className="text-base md:text-lg text-text-secondary font-light max-w-4xl mx-auto leading-relaxed px-[28px] my-[10px]">
                 Careful planning, premium materials, and meticulous handcrafting.
               </p>
             </div>
           </ScrollReveal>
 
           {/* CTA Button - Minimal */}
-          <div className="text-center mt-4">
+          <div className="text-center">
             <ScrollReveal delay={250}>
-              <button onClick={scrollToContact} className="btn-rounded">
+              <button onClick={scrollToContact} className="btn-rounded py-[4px] mx-[3px] my-[4px]">
                 Start Your Project
               </button>
             </ScrollReveal>
@@ -423,7 +413,9 @@ const Index = () => {
       </section>
 
       {/* Section 3: Interactive Portfolio */}
-      <section id="work" className="py-12 md:py-16 lg:py-20 relative overflow-hidden" style={{ background: 'var(--gradient-brown-primary)' }}>
+      <section id="work" className="py-12 md:py-16 lg:py-20 relative overflow-hidden" style={{
+      background: 'var(--gradient-brown-primary)'
+    }}>
         
         <div className="container mx-auto px-4 md:px-12 lg:px-16 relative z-10">
           <ScrollReveal>
@@ -470,14 +462,11 @@ const Index = () => {
                     {/* Accordion Content */}
                     <div className={`transition-all duration-500 ease-in-out overflow-hidden ${expandedCategory === category.id ? 'max-h-[1500px] opacity-100 mt-6 md:mt-8' : 'max-h-0 opacity-0'}`}>
                       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-                        {((category.id === 'bars-restaurants' && isMobile === true) ? 
-                          // On mobile, show only 3 specific projects for hospitality spaces
-                          category.projects.filter(p => ['summit-inn', 'riverside-bar', 'peggys'].includes(p.id))
-                          : (category.id === 'outdoor-spaces' && isMobile === true) ?
-                          // On mobile, show only 4 specific projects for outdoor spaces
-                          category.projects.filter(p => ['thormanby-lawns', 'pergola-decking', 'howth-decking', 'raheny-patio'].includes(p.id))
-                          : category.projects
-                        ).map((project, projectIndex) => <div key={project.id} className="bg-bg-section-alt/50 rounded-xl overflow-hidden cursor-pointer group hover:bg-bg-section-alt/75 transition-all duration-300 border border-bg-section-alt/30 hover:border-accent-primary/50 border-b-2 border-b-accent-primary/40 hover:border-b-accent-primary/70 p-1 hover:shadow-lg hover:shadow-accent-primary/20" onClick={e => {
+                        {(category.id === 'bars-restaurants' && isMobile === true ?
+                      // On mobile, show only 3 specific projects for hospitality spaces
+                      category.projects.filter(p => ['summit-inn', 'riverside-bar', 'peggys'].includes(p.id)) : category.id === 'outdoor-spaces' && isMobile === true ?
+                      // On mobile, show only 4 specific projects for outdoor spaces
+                      category.projects.filter(p => ['thormanby-lawns', 'pergola-decking', 'howth-decking', 'raheny-patio'].includes(p.id)) : category.projects).map((project, projectIndex) => <div key={project.id} className="bg-bg-section-alt/50 rounded-xl overflow-hidden cursor-pointer group hover:bg-bg-section-alt/75 transition-all duration-300 border border-bg-section-alt/30 hover:border-accent-primary/50 border-b-2 border-b-accent-primary/40 hover:border-b-accent-primary/70 p-1 hover:shadow-lg hover:shadow-accent-primary/20" onClick={e => {
                         e.stopPropagation();
                         handleProjectClick(project);
                       }}>
@@ -526,21 +515,9 @@ const Index = () => {
                   </div>
                   
                   {/* 2025 Navigation - Clean Indicators */}
-                  {selectedProject.images.length > 1 && (
-                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-                      {selectedProject.images.map((_, index) => (
-                        <button
-                          key={index}
-                          onClick={() => setCurrentImageIndex(index)}
-                          className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                            index === currentImageIndex 
-                              ? 'bg-white w-8' 
-                              : 'bg-white/40 hover:bg-white/60'
-                          }`}
-                        />
-                      ))}
-                    </div>
-                  )}
+                  {selectedProject.images.length > 1 && <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                      {selectedProject.images.map((_, index) => <button key={index} onClick={() => setCurrentImageIndex(index)} className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentImageIndex ? 'bg-white w-8' : 'bg-white/40 hover:bg-white/60'}`} />)}
+                    </div>}
                 </div>
                 
                 {/* Image Thumbnails */}
@@ -557,7 +534,9 @@ const Index = () => {
       </section>
 
       {/* Section 4: Why Custom > Standard */}
-      <section className="py-12 md:py-16 lg:py-20" style={{ background: 'var(--gradient-brown-primary)' }}>
+      <section className="py-12 md:py-16 lg:py-20" style={{
+      background: 'var(--gradient-brown-primary)'
+    }}>
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-5xl mx-auto">
             
@@ -592,22 +571,21 @@ const Index = () => {
                 {/* Comparison rows - Clean spacing */}
                 <div className="space-y-4 md:space-y-6">
                   {[{
-                    standard: "same as everyone",
-                    custom: "one-of-a-kind design"
-                  }, {
-                    standard: "machine produced",
-                    custom: "hand crafted"
-                  }, {
-                    standard: "cheap materials",
-                    custom: "premium oak, walnut, brass"
-                  }, {
-                    standard: "disposable",
-                    custom: "heirloom quality"
-                  }, {
-                    standard: "flat-packed",
-                    custom: "installed by craftsmen"
-                  }].map((row, index) => (
-                    <ScrollReveal key={index} delay={250 + index * 100}>
+                  standard: "same as everyone",
+                  custom: "one-of-a-kind design"
+                }, {
+                  standard: "machine produced",
+                  custom: "hand crafted"
+                }, {
+                  standard: "cheap materials",
+                  custom: "premium oak, walnut, brass"
+                }, {
+                  standard: "disposable",
+                  custom: "heirloom quality"
+                }, {
+                  standard: "flat-packed",
+                  custom: "installed by craftsmen"
+                }].map((row, index) => <ScrollReveal key={index} delay={250 + index * 100}>
                       <div className="grid grid-cols-2 gap-8 md:gap-16 lg:gap-32 text-center py-4 md:py-6 hover:bg-text-primary/[0.02] transition-colors duration-300">
                         <div className="text-text-muted font-light text-base md:text-lg lg:text-xl">
                           {row.standard}
@@ -616,11 +594,8 @@ const Index = () => {
                           {row.custom}
                         </div>
                       </div>
-                      {index < 4 && (
-                        <div className="w-full h-px bg-gradient-to-r from-transparent via-text-primary/10 to-transparent"></div>
-                      )}
-                    </ScrollReveal>
-                  ))}
+                      {index < 4 && <div className="w-full h-px bg-gradient-to-r from-transparent via-text-primary/10 to-transparent"></div>}
+                    </ScrollReveal>)}
                 </div>
               </div>
             </ScrollReveal>
@@ -631,27 +606,19 @@ const Index = () => {
                 
                 {/* Main animated text */}
                 <div className="pt-8">
-                  <AnimatedText 
-                    texts={[
-                      {
-                        heading: "unique every time",
-                        body: "Every piece is crafted specifically for your space, ensuring no two projects are ever the same."
-                      },
-                      {
-                        heading: "local craftsmanship", 
-                        body: "Supporting skilled artisans in our community while delivering authentic, handcrafted quality."
-                      },
-                      {
-                        heading: "natural materials",
-                        body: "We source sustainable, high-quality wood and materials that age beautifully over time."
-                      },
-                      {
-                        heading: "built to last",
-                        body: "Traditional joinery techniques and attention to detail ensure your furniture becomes a family heirloom."
-                      }
-                    ]}
-                    delay={3500}
-                  />
+                  <AnimatedText texts={[{
+                  heading: "unique every time",
+                  body: "Every piece is crafted specifically for your space, ensuring no two projects are ever the same."
+                }, {
+                  heading: "local craftsmanship",
+                  body: "Supporting skilled artisans in our community while delivering authentic, handcrafted quality."
+                }, {
+                  heading: "natural materials",
+                  body: "We source sustainable, high-quality wood and materials that age beautifully over time."
+                }, {
+                  heading: "built to last",
+                  body: "Traditional joinery techniques and attention to detail ensure your furniture becomes a family heirloom."
+                }]} delay={3500} />
                 </div>
               </div>
             </ScrollReveal>
@@ -670,7 +637,9 @@ const Index = () => {
       </section>
 
       {/* Section 5: Portfolio */}
-      <section className="max-sm:py-6 py-16 lg:py-20" style={{ background: 'var(--gradient-brown-primary)' }}>
+      <section className="max-sm:py-6 py-16 lg:py-20" style={{
+      background: 'var(--gradient-brown-primary)'
+    }}>
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">
@@ -714,7 +683,9 @@ const Index = () => {
       </section>
 
       {/* 2025 Reviews Section - Animated, Clean */}
-      <section id="reviews" className="py-16 md:py-24" style={{ background: 'var(--gradient-brown-primary)' }}>
+      <section id="reviews" className="py-16 md:py-24" style={{
+      background: 'var(--gradient-brown-primary)'
+    }}>
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <h2 className="font-heading font-light text-text-primary text-center text-4xl md:text-6xl mb-16">
@@ -724,40 +695,29 @@ const Index = () => {
 
           {/* Animated Reviews */}
           <div className="max-w-5xl mx-auto mb-16">
-            <AnimatedReviews 
-              reviews={[
-                {
-                  text: "Absolutely stunning work. The attention to detail and quality of craftsmanship exceeded our expectations. This bar is the centerpiece of our venue.",
-                  author: "The Summit Inn",
-                  rating: 5
-                },
-                {
-                  text: "Perfect craftsmanship. Built exactly to our specifications.",
-                  author: "Abbey Tavern",
-                  rating: 5
-                },
-                {
-                  text: "Our customers constantly compliment the bar design.",
-                  author: "Findlaters",
-                  rating: 5
-                },
-                {
-                  text: "Exceptional attention to detail. Worth every penny.",
-                  author: "Private Client",
-                  rating: 5
-                }
-              ]}
-              delay={4000}
-            />
+            <AnimatedReviews reviews={[{
+            text: "Absolutely stunning work. The attention to detail and quality of craftsmanship exceeded our expectations. This bar is the centerpiece of our venue.",
+            author: "The Summit Inn",
+            rating: 5
+          }, {
+            text: "Perfect craftsmanship. Built exactly to our specifications.",
+            author: "Abbey Tavern",
+            rating: 5
+          }, {
+            text: "Our customers constantly compliment the bar design.",
+            author: "Findlaters",
+            rating: 5
+          }, {
+            text: "Exceptional attention to detail. Worth every penny.",
+            author: "Private Client",
+            rating: 5
+          }]} delay={4000} />
           </div>
 
           {/* CTA Button - 2025 Style */}
           <ScrollReveal delay={400}>
             <div className="text-center">
-              <button 
-                onClick={() => scrollToContact()} 
-                className="btn-rounded"
-              >
+              <button onClick={() => scrollToContact()} className="btn-rounded">
                 Let's Build Yours
               </button>
             </div>
@@ -766,7 +726,9 @@ const Index = () => {
       </section>
 
       {/* New Section: What We Build */}
-      <section className="max-sm:py-6 py-16 lg:py-20" style={{ background: 'var(--gradient-brown-primary)' }}>
+      <section className="max-sm:py-6 py-16 lg:py-20" style={{
+      background: 'var(--gradient-brown-primary)'
+    }}>
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 max-sm:gap-4 gap-6 lg:gap-8 items-center">
             <ScrollReveal>
@@ -805,7 +767,9 @@ const Index = () => {
       </section>
 
       {/* New Section: FAQ */}
-      <section className="max-sm:py-6 py-16 lg:py-20" style={{ background: 'var(--gradient-brown-primary)' }}>
+      <section className="max-sm:py-6 py-16 lg:py-20" style={{
+      background: 'var(--gradient-brown-primary)'
+    }}>
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <ScrollReveal>
@@ -834,7 +798,9 @@ const Index = () => {
       </section>
 
       {/* 2025 Process Section - Animated, Clean */}
-      <section id="process" className="py-12 md:py-16 lg:py-24" style={{ background: 'var(--gradient-brown-primary)' }}>
+      <section id="process" className="py-12 md:py-16 lg:py-24" style={{
+      background: 'var(--gradient-brown-primary)'
+    }}>
         <div className="container mx-auto px-4 md:px-6">
           <ScrollReveal>
             <h2 className="font-heading font-light text-text-primary text-center text-3xl md:text-4xl lg:text-6xl mb-12 md:mb-16">
@@ -844,16 +810,15 @@ const Index = () => {
           
           {/* Animated Process - All Devices */}
           <div className="max-w-2xl mx-auto">
-            <AnimatedProcess 
-              steps={processSteps}
-              delay={3500}
-            />
+            <AnimatedProcess steps={processSteps} delay={3500} />
           </div>
         </div>
       </section>
 
       {/* Section 8: Who Am I */}
-      <section id="about" className="py-12 md:py-16 lg:py-20" style={{ background: 'var(--gradient-brown-primary)' }}>
+      <section id="about" className="py-12 md:py-16 lg:py-20" style={{
+      background: 'var(--gradient-brown-primary)'
+    }}>
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
             <ScrollReveal>
@@ -878,7 +843,9 @@ const Index = () => {
       </section>
 
       {/* Section 9: Contact Form */}
-      <section id="contact-form" className="py-12 md:py-16 lg:py-20" style={{ background: 'var(--gradient-brown-primary)' }}>
+      <section id="contact-form" className="py-12 md:py-16 lg:py-20" style={{
+      background: 'var(--gradient-brown-primary)'
+    }}>
         <div className="container mx-auto px-4 md:px-6">
           <ScrollReveal>
             <div className="max-w-2xl mx-auto text-center">
