@@ -655,7 +655,7 @@ const Index = () => {
                           {project.title}
                         </h3>
                         <p className="text-text-secondary max-sm:text-[14px] max-sm:mb-3 text-sm mb-4 leading-relaxed">{project.subtitle}</p>
-                        <Button variant="glow" size="mobile-compact">
+                        <Button variant="glow" size="sm">
                           view project
                         </Button>
                       </div>
