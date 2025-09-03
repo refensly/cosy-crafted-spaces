@@ -73,7 +73,6 @@ const Hero = () => {
   }}>
       {/* Optimized Hero Background */}
       <OptimizedHeroImage style={{
-      transform: isDesktop ? `translateY(${scrollY * 0.1}px)` : 'none',
       backgroundAttachment: isMobileOrTablet ? 'scroll' : 'fixed'
     }} />
     
@@ -144,7 +143,7 @@ const Hero = () => {
     
     {/* Scroll indicator */}
     <div 
-      className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-30 transition-opacity duration-500 cursor-pointer hover:scale-110 transition-transform ${animationsStarted ? 'opacity-100' : 'opacity-0'}`}
+      className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30 transition-opacity duration-500 cursor-pointer hover:scale-110 transition-transform ${animationsStarted ? 'opacity-100 animate-[pulse-glow_2s_ease-in-out_infinite]' : 'opacity-0'}`}
       onClick={scrollToNextSection}
       role="button"
       aria-label="Scroll to next section"
