@@ -38,7 +38,7 @@ const PromiseCarousel = () => {
                   <h3 className="font-heading text-text-primary text-xl mb-3 font-light">
                     {promise.title}
                   </h3>
-                  <p className="text-text-secondary text-base leading-relaxed font-light my-[10px]">
+                  <p className="text-text-secondary text-base leading-relaxed font-light mt-[10px] mb-16">
                     {promise.description}
                   </p>
                 </div>
