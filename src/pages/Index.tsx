@@ -249,8 +249,8 @@ const Index = () => {
     title: "Home Container",
     subtitle: "Interior Shelving in Solid Oak",
     caption: "Custom solid oak shelving system with precision joinery and natural finish",
-    image: imageConfig.projects.findlaters,
-    images: ['/images/project-mamo-1.png', '/images/project-findlaters-2.png', 'findlaters3.jpg', 'findlaters4.jpg']
+    image: '/lovable-uploads/8377f438-0f46-4627-88ee-cf10992d89ef.png',
+    images: ['/lovable-uploads/8377f438-0f46-4627-88ee-cf10992d89ef.png', '/lovable-uploads/bbb9e0f0-047a-4dd3-9269-37913f6d3ae3.png', '/lovable-uploads/2bde928f-03af-4cbf-9149-c9a73b4166ba.png']
   }];
   const processSteps = [{
     number: "1",
