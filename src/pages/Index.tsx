@@ -412,7 +412,7 @@ const Index = () => {
           </ScrollReveal>
 
           {/* CTA Button - Minimal */}
-          <div className="text-center mt-8 md:mt-10">
+          <div className="text-center mt-4">
             <ScrollReveal delay={250}>
               <button onClick={scrollToContact} className="btn-rounded">
                 Start Your Project
