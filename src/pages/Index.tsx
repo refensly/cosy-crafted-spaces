@@ -343,7 +343,7 @@ const Index = () => {
     }}>
         <div className="container mx-auto md:px-6 max-w-6xl px-[28px] my-[3px]">
           <ScrollReveal>
-            <div className="text-center mb-12 md:mb-20">
+            <div className="text-center mb-12 md:mb-20 my-[30px]">
               <h2 className="font-heading text-text-primary text-center text-3xl md:text-5xl lg:text-6xl font-light tracking-tight mb-6 md:mb-8">Our Promise</h2>
             </div>
           </ScrollReveal>
@@ -391,18 +391,24 @@ const Index = () => {
           </div>
 
           <ScrollReveal>
-            <div className="text-center space-y-4 md:space-y-6">
+            <div className="text-center space-y-4 md:space-y-6 mb-12 md:mb-16">
               <h3 className="font-heading text-text-primary text-xl md:text-2xl lg:text-3xl font-light">
                 Producing Quality Results
               </h3>
               <p className="text-base md:text-lg text-text-secondary font-light max-w-4xl mx-auto leading-relaxed px-[28px] my-[10px]">
                 Careful planning, premium materials, and meticulous handcrafting.
               </p>
+            </div>
+          </ScrollReveal>
+
+          {/* CTA Button - Minimal */}
+          <div className="text-center">
+            <ScrollReveal delay={250}>
               <button onClick={scrollToContact} className="btn-rounded py-[4px] mx-[3px] my-[4px]">
                 Start Your Project
               </button>
-            </div>
-          </ScrollReveal>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
 
