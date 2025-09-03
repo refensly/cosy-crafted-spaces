@@ -391,24 +391,18 @@ const Index = () => {
           </div>
 
           <ScrollReveal>
-            <div className="text-center space-y-4 md:space-y-6 mb-12 md:mb-16">
+            <div className="text-center space-y-4 md:space-y-6">
               <h3 className="font-heading text-text-primary text-xl md:text-2xl lg:text-3xl font-light">
                 Producing Quality Results
               </h3>
               <p className="text-base md:text-lg text-text-secondary font-light max-w-4xl mx-auto leading-relaxed px-[28px] my-[10px]">
                 Careful planning, premium materials, and meticulous handcrafting.
               </p>
-            </div>
-          </ScrollReveal>
-
-          {/* CTA Button - Minimal */}
-          <div className="text-center">
-            <ScrollReveal delay={250}>
               <button onClick={scrollToContact} className="btn-rounded py-[4px] mx-[3px] my-[4px]">
                 Start Your Project
               </button>
-            </ScrollReveal>
-          </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
