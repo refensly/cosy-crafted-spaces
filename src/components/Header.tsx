@@ -69,7 +69,7 @@ const Header = () => {
           
           <Button 
             variant="glow"
-            size="default"
+            size="mobile-compact"
             className="bg-transparent text-white font-normal border border-neutral-light hover:bg-white/10 transition-all duration-300"
             onClick={() => scrollToSection('contact-form')}
           >
@@ -142,7 +142,7 @@ const Header = () => {
           </button>
           <Button 
             variant="glow"
-            size="default"
+            size="mobile-compact"
             className="w-full bg-transparent text-white font-normal border border-neutral-light hover:bg-white/10 transition-all duration-300 mt-4"
             onClick={() => {
               scrollToSection('contact-form');

@@ -399,9 +399,9 @@ const Index = () => {
           {/* CTA Button - Minimal */}
           <div className="text-center">
             <ScrollReveal delay={250}>
-              <button onClick={scrollToContact} className="btn-rounded py-[4px] mx-[3px] my-[4px]">
-                Start Your Project
-              </button>
+              <Button variant="glow" size="mobile-compact" onClick={scrollToContact}>
+                start your project
+              </Button>
             </ScrollReveal>
           </div>
         </div>
@@ -621,9 +621,9 @@ const Index = () => {
             {/* CTA Button - After comparison table */}
             <ScrollReveal delay={400}>
               <div className="text-center">
-                <button onClick={scrollToContact} className="btn-rounded">
+                <Button variant="glow" size="mobile-compact" onClick={scrollToContact}>
                   get free consultation
-                </button>
+                </Button>
               </div>
             </ScrollReveal>
 
@@ -655,9 +655,9 @@ const Index = () => {
                           {project.title}
                         </h3>
                         <p className="text-text-secondary max-sm:text-[14px] max-sm:mb-3 text-sm mb-4 leading-relaxed">{project.subtitle}</p>
-                        <button className="btn-rounded">
-                          View Project
-                        </button>
+                        <Button variant="glow" size="mobile-compact">
+                          view project
+                        </Button>
                       </div>
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -669,9 +669,9 @@ const Index = () => {
           {/* CTA Button */}
           <div className="text-center mt-16">
             <ScrollReveal delay={300}>
-               <button onClick={scrollToContact} className="btn-rounded">
-                 Start Your Project
-               </button>
+               <Button variant="glow" size="mobile-compact" onClick={scrollToContact}>
+                 start your project
+               </Button>
             </ScrollReveal>
           </div>
         </div>
@@ -712,9 +712,9 @@ const Index = () => {
           {/* CTA Button - 2025 Style */}
           <ScrollReveal delay={400}>
             <div className="text-center">
-              <button onClick={() => scrollToContact()} className="btn-rounded">
-                Let's Build Yours
-              </button>
+              <Button variant="glow" size="mobile-compact" onClick={() => scrollToContact()}>
+                let's build yours
+              </Button>
             </div>
           </ScrollReveal>
         </div>
@@ -753,9 +753,9 @@ const Index = () => {
           {/* CTA Button after What We Build */}
           <div className="text-center mt-16">
             <ScrollReveal delay={300}>
-               <button onClick={scrollToContact} className="btn-rounded">
-                 Let's Build Yours
-               </button>
+               <Button variant="glow" size="mobile-compact" onClick={scrollToContact}>
+                 let's build yours
+               </Button>
             </ScrollReveal>
           </div>
         </div>
@@ -784,9 +784,9 @@ const Index = () => {
           {/* CTA Button - After FAQ */}
           <div className="text-center mt-12">
             <ScrollReveal delay={100}>
-               <button onClick={scrollToContact} className="btn-rounded">
-                 Get Your Quote
-               </button>
+               <Button variant="glow" size="mobile-compact" onClick={scrollToContact}>
+                 get your quote
+               </Button>
             </ScrollReveal>
           </div>
         </div>
