@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { useBreakpoints } from '@/hooks/use-breakpoints';
 import { OptimizedHeroImage } from '@/components/OptimizedHeroImage';
+import { scrollToContact as scrollToContactWithOffset, scrollToSection } from '@/lib/scrollUtils';
 // Using organized door textures
 const doorLeft = '/images/hero-door-left.png';
 const doorRight = '/images/hero-door-right.png';
@@ -54,18 +55,10 @@ const Hero = () => {
     };
   }, [panelsOpened, isMobile, isDesktop]);
   const scrollToContact = () => {
-    document.getElementById('contact-form')?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
+    scrollToContactWithOffset();
   };
   const scrollToNextSection = () => {
-    const element = document.getElementById('pain-value-section');
-    if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
+    scrollToSection('pain-value-section');
   };
   return <section className={`relative ${isMobile ? 'min-h-[90vh]' : 'min-h-screen'} overflow-hidden animate-fade-in`} style={{
     animationDuration: '0.5s',

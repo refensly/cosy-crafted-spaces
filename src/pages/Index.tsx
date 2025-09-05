@@ -5,6 +5,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { useMobileMenu } from '@/contexts/MobileMenuContext';
+import { scrollToContact as scrollToContactWithOffset, scrollToSection as scrollToSectionWithOffset } from '@/lib/scrollUtils';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import ScrollReveal from '@/components/ScrollReveal';
@@ -150,15 +151,10 @@ const Index = () => {
     }
   };
   const scrollToContact = () => {
-    document.getElementById('contact-form')?.scrollIntoView({
-      behavior: 'smooth'
-    });
+    scrollToContactWithOffset(mobileMenuOpen);
   };
   const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
+    scrollToSectionWithOffset(sectionId, mobileMenuOpen);
   };
 
   // Keyboard navigation for modal

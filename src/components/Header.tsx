@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { useMobileMenu } from '@/contexts/MobileMenuContext';
+import { scrollToSection as scrollToSectionWithOffset } from '@/lib/scrollUtils';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,10 +17,7 @@ const Header = () => {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ 
-      behavior: 'smooth',
-      block: 'start'
-    });
+    scrollToSectionWithOffset(sectionId, mobileMenuOpen);
   };
 
   return (
