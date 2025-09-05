@@ -26,12 +26,15 @@ export const OptimizedHeroImage: React.FC<OptimizedHeroImageProps> = ({
 
   return (
     <div 
-      className={`absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-500 ${className}`}
+      className={`absolute inset-0 w-full h-full transition-opacity duration-500 ${className}`}
       style={{
         ...style,
         backgroundImage: imageLoaded 
           ? `url('${heroImageUrl}')`
           : `url('${LQIP_BASE64}')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center center',
+        backgroundRepeat: 'no-repeat',
         filter: imageLoaded ? 'none' : 'blur(2px)',
       }}
     />
