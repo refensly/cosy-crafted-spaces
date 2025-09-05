@@ -154,19 +154,41 @@
     color: hsl(var(--text-primary));
   }
 
-  /* Hero-specific fluid typography */
+  /* Hero-specific fluid typography - aspect ratio aware */
   .hero-title {
-    font-size: clamp(2.25rem, 8vw, 8rem);
+    font-size: clamp(2.25rem, 6vmin, 5rem);
     font-weight: 800;
     line-height: 1.1;
     letter-spacing: -0.04em;
   }
 
   .hero-subtitle {
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-size: clamp(1rem, 2vmin, 1.25rem);
     font-weight: 400;
     line-height: 1.6;
     letter-spacing: 0.01em;
+  }
+
+  /* Landscape-specific adjustments for wide but short screens */
+  @media (min-aspect-ratio: 3/2) and (max-height: 800px) {
+    .hero-title {
+      font-size: clamp(2rem, 5vh, 4rem);
+    }
+    
+    .hero-subtitle {
+      font-size: clamp(0.9rem, 1.8vh, 1.1rem);
+    }
+  }
+
+  /* Ultra-wide landscape screens */
+  @media (min-aspect-ratio: 16/9) and (max-height: 720px) {
+    .hero-title {
+      font-size: clamp(1.8rem, 4.5vh, 3.5rem);
+    }
+    
+    .hero-subtitle {
+      font-size: clamp(0.85rem, 1.6vh, 1rem);
+    }
   }
 
   h2 {

@@ -20,14 +20,18 @@ export function useBreakpoints() {
     const updateBreakpoints = () => {
       const width = window.innerWidth
       const height = window.innerHeight
+      const aspectRatio = width / height
       
       // Detect iPad specifically (810x1080 or similar portrait orientations)
       const isIpad = (width >= 768 && width <= 820 && height >= 1000) || 
                      (height >= 768 && height <= 820 && width >= 1000)
       
+      // Landscape detection for better text scaling
+      const isLandscape = aspectRatio >= 1.5 && height <= 800
+      
       const isMobile = width < MOBILE_BREAKPOINT && !isIpad
-      const isTablet = (width >= MOBILE_BREAKPOINT && width <= TABLET_BREAKPOINT) || isIpad
-      const isDesktop = width > TABLET_BREAKPOINT && !isIpad
+      const isTablet = (width >= MOBILE_BREAKPOINT && width <= TABLET_BREAKPOINT) || isIpad || isLandscape
+      const isDesktop = width > TABLET_BREAKPOINT && !isIpad && !isLandscape
       
       setBreakpoints({ isMobile, isTablet, isDesktop, isIpad })
     }
