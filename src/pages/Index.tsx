@@ -242,9 +242,9 @@ const Index = () => {
     images: ['/lovable-uploads/d330cf4a-43dd-4e9b-8b96-e51fd726e67b.png', '/lovable-uploads/a848f9d9-a299-481d-9415-4cb0bb8d13f9.png', '/lovable-uploads/1b5dba24-a148-4beb-8372-9fcfa8f346c6.png', '/lovable-uploads/128fda22-5ee7-4e48-b4a2-6125150d0cfc.png', '/lovable-uploads/b55387ee-35ae-4201-ae13-dfe026897ae7.png']
   }, {
     id: 'findlaters-recent',
-    title: "Home Container",
+    title: "Wood Interior",
     subtitle: "Interior Shelving in Solid Oak",
-    caption: "Custom solid oak shelving system with precision joinery and natural finish",
+    caption: "Solid oak interior elements: shelving, wall panels, and ceiling cladding",
     image: '/lovable-uploads/4a4f91cb-5dd1-44e9-b7cd-372112468fc1.png',
     images: ['/lovable-uploads/4a4f91cb-5dd1-44e9-b7cd-372112468fc1.png', '/lovable-uploads/bbb9e0f0-047a-4dd3-9269-37913f6d3ae3.png', '/lovable-uploads/2bde928f-03af-4cbf-9149-c9a73b4166ba.png']
   }];
