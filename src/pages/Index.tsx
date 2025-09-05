@@ -13,7 +13,7 @@ import PromiseCarousel from '@/components/PromiseCarousel';
 import CapabilitiesCarousel from '@/components/CapabilitiesCarousel';
 import AnimatedText from '@/components/AnimatedText';
 import AnimatedReviews from '@/components/AnimatedReviews';
-import AnimatedProcess from '@/components/AnimatedProcess';
+import ProcessSteps from '@/components/ProcessSteps';
 import { imageConfig } from '@/lib/imageConfig';
 const Index = () => {
   const {
@@ -795,10 +795,10 @@ const Index = () => {
             </h2>
           </ScrollReveal>
           
-          {/* Animated Process - All Devices */}
-          <div className="max-w-2xl mx-auto">
-            <AnimatedProcess steps={processSteps} delay={2500} />
-          </div>
+          {/* Process Steps - Static Display */}
+          <ScrollReveal>
+            <ProcessSteps steps={processSteps} />
+          </ScrollReveal>
         </div>
       </section>
 
