@@ -13,6 +13,8 @@ interface AnimatedProcessProps {
 }
 
 const AnimatedProcess = ({ steps, className = '', delay = 2500 }: AnimatedProcessProps) => {
+  console.log('AnimatedProcess render - steps:', steps, 'length:', steps?.length);
+  
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
   const ref = useRef<HTMLDivElement>(null);
@@ -86,6 +88,12 @@ const AnimatedProcess = ({ steps, className = '', delay = 2500 }: AnimatedProces
   }, []);
 
   const currentStep = steps[currentIndex];
+  console.log('Current step:', currentStep, 'currentIndex:', currentIndex);
+
+  if (!currentStep) {
+    console.error('No current step found!', { steps, currentIndex });
+    return <div>Error: No steps data</div>;
+  }
 
   return (
     <div ref={ref} className={`scroll-reveal ${className}`}>
