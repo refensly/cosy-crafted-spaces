@@ -466,9 +466,6 @@ const Index = () => {
                                 <img src={project.images[0]} alt={`${project.title} preview`} className="w-full h-full object-cover transform scale-110" loading="lazy" />
                               </ScrollReveal>
                               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-                              <div className="absolute bottom-4 left-4 right-4">
-                                <div className="text-white font-medium text-sm opacity-70">Preview Image</div>
-                              </div>
                             </div>
                             <div className="p-6">
                               <h4 className="font-heading font-bold text-text-primary mb-1 group-hover:text-accent-primary transition-colors">{project.title}</h4>
