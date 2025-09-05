@@ -96,8 +96,8 @@ const Hero = () => {
     <div className={`relative z-30 ${isMobile ? 'min-h-[90vh]' : 'min-h-screen'} flex ${isMobile ? 'items-end' : 'items-center'} justify-center px-4 sm:px-6 ${isMobile ? 'py-8 pb-32' : ''}`}>
       <div className="text-center max-w-none mx-auto px-2 sm:px-4">
         <h1 className={`font-grifter text-text-primary ${isMobile ? 'mb-6' : 'mb-6 sm:mb-8'} ${animationsStarted ? 'animate-fade-up animation-delay-500' : 'opacity-0'}`}>
-          <div className={`${isMobile ? 'text-[clamp(36px,8vw,48px)] font-extrabold leading-[1.1]' : 'text-5xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[140px]'} ${animationsStarted ? 'animate-fade-up animation-delay-700' : 'opacity-0'}`}>Unique Handmade</div>
-          <div className={`${isMobile ? 'text-[clamp(36px,8vw,48px)] font-extrabold leading-[1.1] px-1' : 'text-5xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[140px] px-2 sm:px-8 md:px-16'} ${animationsStarted ? 'animate-fade-up animation-delay-900' : 'opacity-0'}`}>Furniture from Dublin</div>
+          <div className={`${isMobile ? 'text-[clamp(36px,8vw,48px)] font-extrabold leading-[1.1]' : 'text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl 3xl:text-[120px] 4xl:text-[140px]'} ${animationsStarted ? 'animate-fade-up animation-delay-700' : 'opacity-0'}`}>Unique Handmade</div>
+          <div className={`${isMobile ? 'text-[clamp(36px,8vw,48px)] font-extrabold leading-[1.1] px-1' : 'text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl 3xl:text-[120px] 4xl:text-[140px] px-2 sm:px-4 md:px-8 lg:px-12 xl:px-16'} ${animationsStarted ? 'animate-fade-up animation-delay-900' : 'opacity-0'}`}>Furniture from Dublin</div>
         </h1>
         <div className={`${isMobile ? 'text-[16px] leading-relaxed px-6 max-w-[70ch] mx-auto' : 'text-xl sm:text-2xl md:text-3xl'} text-text-secondary ${isMobile ? 'mb-8' : 'mb-8 sm:mb-10'} max-w-3xl mx-auto leading-relaxed px-4 ${animationsStarted ? 'animate-fade-up animation-delay-1100' : 'opacity-0'}`}>
           <div className="font-body font-normal text-white mx-0">Handcrafted bars, restaurants, outdoor living spaces and furniture.</div>
