@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 
 interface ProcessStep {
   number: string;
@@ -19,7 +19,7 @@ const AnimatedProcess = ({ steps, className = '', delay = 2500 }: AnimatedProces
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   // Start animation cycle
-  const startAnimationCycle = () => {
+  const startAnimationCycle = useCallback(() => {
     if (steps.length <= 1) return;
     
     // Clear any existing interval
@@ -35,7 +35,7 @@ const AnimatedProcess = ({ steps, className = '', delay = 2500 }: AnimatedProces
         setIsVisible(true);
       }, 400);
     }, delay);
-  };
+  }, [steps.length, delay]);
 
   // Reset animation when component comes into view
   useEffect(() => {
@@ -69,7 +69,7 @@ const AnimatedProcess = ({ steps, className = '', delay = 2500 }: AnimatedProces
         clearInterval(intervalRef.current);
       }
     };
-  }, [steps.length, delay]);
+  }, [startAnimationCycle]);
 
   // Cleanup interval on unmount
   useEffect(() => {
