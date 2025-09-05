@@ -64,10 +64,10 @@ const Index = () => {
     description: 'Gardens, decking, and outdoor living',
     projects: [{
       id: 'thormanby-lawns',
-      title: 'Thormanby Lawns',
-      subtitle: 'Landscape garden design',
-      caption: 'Extensive outdoor living space',
-      images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg']
+      title: 'Garden Pavilion & BBQ Area',
+      subtitle: 'Outdoor Entertaining Space',
+      caption: 'Modern garden structure with timber detailing, covered seating, and built-in lighting for evening use',
+      images: ['/lovable-uploads/d330cf4a-43dd-4e9b-8b96-e51fd726e67b.png', '/lovable-uploads/a848f9d9-a299-481d-9415-4cb0bb8d13f9.png', '/lovable-uploads/1b5dba24-a148-4beb-8372-9fcfa8f346c6.png', '/lovable-uploads/128fda22-5ee7-4e48-b4a2-6125150d0cfc.png', '/lovable-uploads/b55387ee-35ae-4201-ae13-dfe026897ae7.png']
     }, {
       id: 'pergola-decking',
       title: 'Pergola Decking',
