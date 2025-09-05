@@ -37,7 +37,7 @@ const AnimatedReviews = ({ reviews, className = '', delay = 4000 }: AnimatedRevi
   return (
     <ScrollReveal className={className}>
       {/* Fixed height container to prevent layout shifts */}
-      <div className="relative min-h-[200px] md:min-h-[240px] flex items-center justify-center">
+      <div className="relative h-[300px] md:h-[280px] flex items-center justify-center">
         <div 
           className={`transition-opacity duration-400 ${
             isVisible ? 'opacity-100' : 'opacity-0'
