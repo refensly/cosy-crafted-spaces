@@ -71,6 +71,11 @@ const AnimatedProcess = ({ steps, className = '', delay = 2500 }: AnimatedProces
     };
   }, [startAnimationCycle]);
 
+  // Start animation on mount
+  useEffect(() => {
+    startAnimationCycle();
+  }, [startAnimationCycle]);
+
   // Cleanup interval on unmount
   useEffect(() => {
     return () => {
