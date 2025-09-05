@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react';
-import ScrollReveal from './ScrollReveal';
+import { useState, useEffect, useRef } from 'react';
 
 interface ProcessStep {
   number: string;
@@ -13,14 +12,22 @@ interface AnimatedProcessProps {
   delay?: number;
 }
 
-const AnimatedProcess = ({ steps, className = '', delay = 3500 }: AnimatedProcessProps) => {
+const AnimatedProcess = ({ steps, className = '', delay = 2500 }: AnimatedProcessProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
+  const ref = useRef<HTMLDivElement>(null);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  useEffect(() => {
+  // Start animation cycle
+  const startAnimationCycle = () => {
     if (steps.length <= 1) return;
+    
+    // Clear any existing interval
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
 
-    const interval = setInterval(() => {
+    intervalRef.current = setInterval(() => {
       setIsVisible(false);
       
       setTimeout(() => {
@@ -28,14 +35,55 @@ const AnimatedProcess = ({ steps, className = '', delay = 3500 }: AnimatedProces
         setIsVisible(true);
       }, 400);
     }, delay);
+  };
 
-    return () => clearInterval(interval);
+  // Reset animation when component comes into view
+  useEffect(() => {
+    const element = ref.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Reset to first step and restart animation
+            setCurrentIndex(0);
+            setIsVisible(true);
+            startAnimationCycle();
+          } else {
+            // Clear interval when not visible to save resources
+            if (intervalRef.current) {
+              clearInterval(intervalRef.current);
+              intervalRef.current = null;
+            }
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '-50px' }
+    );
+
+    observer.observe(element);
+    return () => {
+      observer.disconnect();
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
   }, [steps.length, delay]);
+
+  // Cleanup interval on unmount
+  useEffect(() => {
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, []);
 
   const currentStep = steps[currentIndex];
 
   return (
-    <ScrollReveal className={className}>
+    <div ref={ref} className={`scroll-reveal ${className}`}>
       <div className="text-center">
         {/* Fixed height container to prevent layout shifts */}
         <div className="relative min-h-[320px] md:min-h-[360px] flex items-center justify-center">
@@ -73,7 +121,7 @@ const AnimatedProcess = ({ steps, className = '', delay = 3500 }: AnimatedProces
           </div>
         </div>
       </div>
-    </ScrollReveal>
+    </div>
   );
 };
 

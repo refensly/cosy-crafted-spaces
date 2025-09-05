@@ -797,7 +797,7 @@ const Index = () => {
           
           {/* Animated Process - All Devices */}
           <div className="max-w-2xl mx-auto">
-            <AnimatedProcess steps={processSteps} delay={3500} />
+            <AnimatedProcess steps={processSteps} delay={2500} />
           </div>
         </div>
       </section>
