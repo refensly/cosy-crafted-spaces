@@ -70,10 +70,10 @@ const Index = () => {
       images: ['/lovable-uploads/d330cf4a-43dd-4e9b-8b96-e51fd726e67b.png', '/lovable-uploads/a848f9d9-a299-481d-9415-4cb0bb8d13f9.png', '/lovable-uploads/1b5dba24-a148-4beb-8372-9fcfa8f346c6.png', '/lovable-uploads/128fda22-5ee7-4e48-b4a2-6125150d0cfc.png', '/lovable-uploads/b55387ee-35ae-4201-ae13-dfe026897ae7.png']
     }, {
       id: 'pergola-decking',
-      title: 'Pergola Decking',
-      subtitle: 'Covered outdoor area',
-      caption: 'Timber pergola with integrated seating',
-      images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg', 'placeholder4.jpg']
+      title: 'Outdoor Decking',
+      subtitle: 'Modern Garden Deck Installation',
+      caption: 'Contemporary garden deck featuring composite boards, custom timber cladding, and a covered BBQ area',
+      images: ['/lovable-uploads/d365de70-97bc-4772-8043-33306714f0e8.png', '/lovable-uploads/809cf21f-0d81-4900-8f48-0d0baa1e69a2.png', '/lovable-uploads/2f57c305-f60e-46b6-9d44-80888f399268.png', 'placeholder4.jpg']
     }, {
       id: 'howth-decking',
       title: 'Howth Decking',
