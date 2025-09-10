@@ -656,14 +656,14 @@ const Index = () => {
             rating: 5
           }, {
             text: "Perfect craftsmanship. Built exactly to our specifications.",
-            author: "Abbey Tavern",
+            author: "Private Client",
             rating: 5
           }, {
             text: "Our customers constantly compliment the bar design.",
-            author: "Findlaters",
+            author: "Riverside Bar",
             rating: 5
           }, {
-            text: "Exceptional attention to detail. Worth every penny.",
+            text: "Exceptional attention to detail. Worth every cent.",
             author: "Private Client",
             rating: 5
           }]} delay={4000} />
