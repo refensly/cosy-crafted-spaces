@@ -44,7 +44,7 @@ const Index = () => {
       title: 'Riverside Bar',
       subtitle: 'Traditional pub refurbishment',
       caption: 'Complete redesign featuring a custom wooden bar, new flooring and lighting, and updated finishes',
-      images: ['/images/project-riverside-bar-1.png', 'placeholder2.jpg', 'placeholder3.jpg', 'placeholder4.jpg', 'placeholder5.jpg']
+      images: ['/images/project-riverside-bar-1.png', '/images/project-riverside-bar-2.png', '/images/project-riverside-bar-3.png', 'placeholder4.jpg', 'placeholder5.jpg']
     }, {
       id: 'casa-clontarf',
       title: 'Casa Clontarf',
