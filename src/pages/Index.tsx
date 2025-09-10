@@ -89,15 +89,9 @@ const Index = () => {
     }, {
       id: 'raheny-garage',
       title: 'Raheny Garage',
-      subtitle: 'Garage conversion project',
-      caption: 'Multi-purpose outdoor building',
-      images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg']
-    }, {
-      id: 'container-home',
-      title: 'Container Home',
-      subtitle: 'Shipping container conversion',
-      caption: 'Innovative living space solution',
-      images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg', 'placeholder4.jpg']
+      subtitle: 'Garage conversion into modern studio space',
+      caption: 'Complete garage conversion with full insulation, flooring, and custom joinery. Includes fitted kitchen, integrated storage, fold-out furniture, and a clean modern finish',
+      images: ['/images/project-rahenygarage-1.jpg', '/images/project-rahenygarage-2.jpg', '/images/project-rahenygarage-3.jpg']
     }]
   }, {
     id: 'custom-pieces',
