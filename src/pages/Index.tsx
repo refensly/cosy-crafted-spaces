@@ -73,7 +73,7 @@ const Index = () => {
       title: 'Outdoor Decking',
       subtitle: 'Modern Garden Deck Installation',
       caption: 'Contemporary garden deck featuring composite boards, custom timber cladding, and a covered BBQ area',
-      images: ['/lovable-uploads/d365de70-97bc-4772-8043-33306714f0e8.png', '/lovable-uploads/809cf21f-0d81-4900-8f48-0d0baa1e69a2.png', '/lovable-uploads/2f57c305-f60e-46b6-9d44-80888f399268.png', 'placeholder4.jpg']
+      images: ['/lovable-uploads/d365de70-97bc-4772-8043-33306714f0e8.png', '/lovable-uploads/809cf21f-0d81-4900-8f48-0d0baa1e69a2.png', '/lovable-uploads/2f57c305-f60e-46b6-9d44-80888f399268.png', '/images/project-outdoordecking-4.jpg']
     }, {
       id: 'howth-decking',
       title: 'Howth Decking',
