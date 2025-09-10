@@ -50,7 +50,7 @@ const Index = () => {
       title: 'Casa Clontarf',
       subtitle: 'Italian restaurant',
       caption: 'Interior update with timber paneling, new ceiling finish, and warm lighting accents',
-      images: ['/images/project-casaclontarf-1.png', '/images/project-casaclontarf-2.png', '/images/project-casaclontarf-3.png']
+      images: ['/images/project-casaclontarf-3.png', '/images/project-casaclontarf-2.png', '/images/project-casaclontarf-1.png']
     }, {
       id: 'green-phone-box',
       title: 'The Green Phone Box',
