@@ -59,7 +59,7 @@ const Header = () => {
             Reviews
           </button>
           <button 
-            onClick={() => scrollToSection('contact')}
+            onClick={() => scrollToSection('contact-form')}
             className="text-text-secondary hover:text-text-primary transition-colors"
           >
             Contact
