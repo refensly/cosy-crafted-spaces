@@ -52,7 +52,7 @@ export const imageConfig = {
   },
 
   // Team & Social Proof
-  maker: '/images/maker-profile.jpg',
+  maker: '/images/whatwebuild.jpg',
   testimonial: '/images/client-testimonial.jpg',
 
   // Promise/Feature Icons
