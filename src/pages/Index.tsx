@@ -87,12 +87,6 @@ const Index = () => {
       caption: 'Timber cladding and custom woodwork to complement the patio design',
       images: ['/images/project-rahenypatio-1.png', '/images/project-rahenypatio-2.png', '/images/project-rahenypatio-3.png']
     }, {
-      id: 'treehouse',
-      title: 'Children\'s Treehouse',
-      subtitle: 'Custom playground structure',
-      caption: 'Safe and imaginative play space',
-      images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg']
-    }, {
       id: 'raheny-garage',
       title: 'Raheny Garage',
       subtitle: 'Garage conversion project',
