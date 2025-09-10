@@ -104,12 +104,6 @@ const Index = () => {
       subtitle: 'Shipping container conversion',
       caption: 'Innovative living space solution',
       images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg', 'placeholder4.jpg']
-    }, {
-      id: 'archideo',
-      title: 'Archideo',
-      subtitle: 'Architectural outdoor feature',
-      caption: 'Statement outdoor installation',
-      images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg']
     }]
   }, {
     id: 'custom-pieces',
