@@ -217,7 +217,7 @@ const Index = () => {
     subtitle: "Interior Shelving in Solid Oak",
     caption: "Solid oak interior elements: shelving, wall panels, and ceiling cladding",
     image: '/lovable-uploads/4a4f91cb-5dd1-44e9-b7cd-372112468fc1.png',
-    images: ['/lovable-uploads/4a4f91cb-5dd1-44e9-b7cd-372112468fc1.png', '/lovable-uploads/bbb9e0f0-047a-4dd3-9269-37913f6d3ae3.png', '/lovable-uploads/2bde928f-03af-4cbf-9149-c9a73b4166ba.png']
+    images: ['/lovable-uploads/bbb9e0f0-047a-4dd3-9269-37913f6d3ae3.png', '/lovable-uploads/2bde928f-03af-4cbf-9149-c9a73b4166ba.png', '/lovable-uploads/4a4f91cb-5dd1-44e9-b7cd-372112468fc1.png']
   }];
   const processSteps = [{
     number: "1",
