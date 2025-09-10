@@ -77,21 +77,15 @@ const Index = () => {
     }, {
       id: 'howth-decking',
       title: 'Howth Decking',
-      subtitle: 'Coastal deck installation',
-      caption: 'Weather-resistant decking solution',
+      subtitle: 'Raised composite deck with integrated railing',
+      caption: 'Complete garden transformation featuring a custom-built raised deck with composite boards, timber framework, and integrated railing system',
       images: ['/images/project-howthdecking-1.jpg', '/images/project-howthdecking-2.jpg', '/images/project-howthdecking-3.jpg']
     }, {
       id: 'raheny-patio',
       title: 'Raheny Patio',
-      subtitle: 'Stone patio design',
-      caption: 'Natural stone outdoor entertaining area',
-      images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg']
-    }, {
-      id: 'decking-2024',
-      title: 'Decking 2024',
-      subtitle: 'Modern deck construction',
-      caption: 'Contemporary outdoor platform',
-      images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg', 'placeholder4.jpg']
+      subtitle: 'Custom timber cladding and detailing',
+      caption: 'Timber cladding and custom woodwork to complement the patio design',
+      images: ['/images/project-rahenypatio-1.png', '/images/project-rahenypatio-2.png', '/images/project-rahenypatio-3.png']
     }, {
       id: 'treehouse',
       title: 'Children\'s Treehouse',
