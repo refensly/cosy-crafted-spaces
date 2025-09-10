@@ -79,7 +79,7 @@ const Index = () => {
       title: 'Howth Decking',
       subtitle: 'Coastal deck installation',
       caption: 'Weather-resistant decking solution',
-      images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg']
+      images: ['/images/project-howthdecking-1.jpg', '/images/project-howthdecking-2.jpg', '/images/project-howthdecking-3.jpg']
     }, {
       id: 'raheny-patio',
       title: 'Raheny Patio',
