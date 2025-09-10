@@ -482,31 +482,31 @@ const Index = () => {
         </div>
         
         {/* Project Modal */}
-        {selectedProject && <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fade-in" onClick={handleCloseModal}>
-            <div className="bg-gray-900 rounded-2xl max-w-4xl max-h-[80vh] w-full overflow-hidden shadow-2xl border border-gray-700/50 relative animate-scale-in" onClick={e => e.stopPropagation()}>
+{selectedProject && <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 lg:p-6 bg-black/80 backdrop-blur-md animate-fade-in" onClick={handleCloseModal}>
+            <div className="bg-gray-900 rounded-xl sm:rounded-2xl w-full max-w-[95vw] max-h-[95vh] sm:max-w-4xl sm:max-h-[85vh] lg:max-h-[80vh] overflow-hidden shadow-2xl border border-gray-700/50 relative animate-scale-in flex flex-col" onClick={e => e.stopPropagation()}>
               {/* Close Button */}
-              <button onClick={handleCloseModal} className="absolute top-4 right-4 z-10 w-10 h-10 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center text-white transition-colors">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <button onClick={handleCloseModal} className="absolute top-2 right-2 sm:top-4 sm:right-4 z-10 w-8 h-8 sm:w-10 sm:h-10 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center text-white transition-colors">
+                <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
               
               {/* Modal Content */}
-              <div className="p-8">
-                <h2 className="font-heading font-bold text-white text-3xl mb-2">{selectedProject.title}</h2>
-                <p className="text-gray-300 text-lg mb-8">{selectedProject.caption}</p>
+              <div className="p-4 sm:p-6 lg:p-8 overflow-y-auto flex-1">
+                <h2 className="font-heading font-bold text-white text-xl sm:text-2xl lg:text-3xl mb-1 sm:mb-2 pr-8">{selectedProject.title}</h2>
+                <p className="text-gray-300 text-sm sm:text-base lg:text-lg mb-4 sm:mb-6 lg:mb-8">{selectedProject.caption}</p>
                 
                 {/* Image Carousel */}
                 <div className="relative">
-                  <div className="aspect-video bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl overflow-hidden relative">
-                    <img src={selectedProject.images[currentImageIndex]} alt={`${selectedProject.title} - Image ${currentImageIndex + 1}`} className="w-full h-full object-cover transform scale-110" />
+                  <div className="aspect-video bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg sm:rounded-xl overflow-hidden relative">
+                    <img src={selectedProject.images[currentImageIndex]} alt={`${selectedProject.title} - Image ${currentImageIndex + 1}`} className="w-full h-full object-cover" />
                   </div>
                   
                 </div>
                 
                 {/* Image Thumbnails */}
-                {selectedProject.images.length > 1 && <div className="flex gap-2 mt-4 justify-center items-center overflow-x-auto px-4 py-2 min-h-[50px]">
-                    {selectedProject.images.map((_, index) => <button key={index} onClick={() => setCurrentImageIndex(index)} className={`w-16 h-12 rounded-lg overflow-hidden flex-shrink-0 transition-all ${currentImageIndex === index ? 'ring-2 ring-white/80 opacity-100' : 'opacity-60 hover:opacity-80'}`}>
+                {selectedProject.images.length > 1 && <div className="flex gap-1.5 sm:gap-2 mt-3 sm:mt-4 justify-center items-center overflow-x-auto px-2 sm:px-4 py-2 min-h-[40px] sm:min-h-[50px]">
+                    {selectedProject.images.map((_, index) => <button key={index} onClick={() => setCurrentImageIndex(index)} className={`w-12 h-8 sm:w-16 sm:h-12 rounded-md sm:rounded-lg overflow-hidden flex-shrink-0 transition-all ${currentImageIndex === index ? 'ring-1 sm:ring-2 ring-white/80 opacity-100' : 'opacity-60 hover:opacity-80'}`}>
                         <div className="w-full h-full bg-gradient-to-br from-gray-600 to-gray-700 relative overflow-hidden">
                           <img src={selectedProject.images[index]} alt={`${selectedProject.title} - Thumbnail ${index + 1}`} className="w-full h-full object-cover" />
                         </div>
