@@ -131,7 +131,7 @@ const Header = () => {
           </button>
           <button 
             onClick={() => {
-              scrollToSection('contact');
+              scrollToSection('contact-form');
               setMobileMenuOpen(false);
             }}
             className="block w-full text-left text-text-secondary hover:text-text-primary transition-colors py-2"
