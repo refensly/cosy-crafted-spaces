@@ -100,9 +100,9 @@ const Index = () => {
     projects: [{
       id: 'art-studio',
       title: 'Art Studio',
-      subtitle: 'Custom studio furniture',
-      caption: 'Tailored workspace solutions',
-      images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg']
+      subtitle: 'Timber garden studio with custom detailing',
+      caption: 'Conversion of a garden shed into a creative art studio. Features timber cladding, double doors, and custom detailing',
+      images: ['/images/project-artstudio-1.jpg']
     }]
   }];
   const handleCategoryClick = (categoryId: string) => {
