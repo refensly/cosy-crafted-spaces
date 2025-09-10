@@ -91,7 +91,7 @@ const Index = () => {
       title: 'Raheny Garage',
       subtitle: 'Garage conversion into modern studio space',
       caption: 'Complete garage conversion with full insulation, flooring, and custom joinery. Includes fitted kitchen, integrated storage, fold-out furniture, and a clean modern finish',
-      images: ['/images/project-rahenygarage-1.jpg', '/images/project-rahenygarage-2.jpg', '/images/project-rahenygarage-3.jpg']
+      images: ['/images/project-rahenygarage-1.jpg', '/images/project-rahenygarage-2.JPG', '/images/project-rahenygarage-3.JPG']
     }]
   }, {
     id: 'custom-pieces',
@@ -102,7 +102,7 @@ const Index = () => {
       title: 'Art Studio',
       subtitle: 'Timber garden studio with custom detailing',
       caption: 'Conversion of a garden shed into a creative art studio. Features timber cladding, double doors, and custom detailing',
-      images: ['/images/project-artstudio-1.jpg']
+      images: ['/images/project-artstudio-1.JPG']
     }]
   }];
   const handleCategoryClick = (categoryId: string) => {
