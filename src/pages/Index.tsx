@@ -56,7 +56,7 @@ const Index = () => {
       title: 'The Green Phone Box',
       subtitle: 'Unique themed bar',
       caption: 'Interior and exterior refit with bold color blocking, custom timber shelving, and curated artwork. Outdoor terrace designed around a signature green phone box',
-      images: ['placeholder1.jpg', 'placeholder2.jpg', 'placeholder3.jpg']
+      images: ['/images/project-thegreenphonebox-1.png', '/images/project-thegreenphonebox-2.jpg', '/images/project-thegreenphonebox-3.jpg']
     }]
   }, {
     id: 'outdoor-spaces',
