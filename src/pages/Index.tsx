@@ -41,7 +41,7 @@ const Index = () => {
     description: 'Commercial hospitality spaces',
     projects: [{
       id: 'peggys',
-      title: 'Peggy\'s St Stephens',
+      title: 'Riverside Bar',
       subtitle: 'Traditional pub refurbishment',
       caption: 'Complete redesign featuring a custom wooden bar, new flooring and lighting, and updated finishes',
       images: ['/images/project-riverside-bar-1.png', 'placeholder2.jpg', 'placeholder3.jpg', 'placeholder4.jpg', 'placeholder5.jpg']
