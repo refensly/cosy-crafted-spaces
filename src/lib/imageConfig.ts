@@ -54,6 +54,7 @@ export const imageConfig = {
   // Team & Social Proof
   maker: '/images/whatwebuild.jpg',
   testimonial: '/images/client-testimonial.jpg',
+  tiny: '/images/tiny.png',
 
   // Promise/Feature Icons
   promises: {
