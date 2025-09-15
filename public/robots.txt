@@ -1,6 +1,10 @@
 User-agent: Googlebot
 Allow: /
 
+User-agent: *
+Allow: /
+Sitemap: https://tinyoutdoorspaces.ie/sitemap.xml
+
 User-agent: Bingbot
 Allow: /
 
