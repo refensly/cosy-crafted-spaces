@@ -215,7 +215,7 @@ const Index = () => {
     id: 'findlaters-recent',
     title: "Wood Interior",
     subtitle: "Interior Shelving in Solid Oak",
-    caption: "Solid oak interior elements: shelving, wall panels, and ceiling cladding",
+    caption: "Handcrafted bar interior with a unique solid-wood arch, custom shelving, and natural details",
     image: '/images/wood-interior-1.jpg',
     images: ['/images/wood-interior-1.jpg', '/images/wood-interior-2.jpg', '/images/wood-interior-3.jpg']
   }];
