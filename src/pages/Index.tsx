@@ -437,7 +437,18 @@ const Index = () => {
                       }}>
                             <div className="relative h-48 bg-gradient-to-br from-bg-section-alt-2 to-bg-section-alt overflow-hidden">
                                <ScrollReveal delay={projectIndex * 50}>
-                                 <img src={project.images[0]} alt={`${project.title} - Custom handcrafted woodwork project by Tiny Outdoor Spaces Dublin`} className="w-full h-full object-cover transform scale-110" loading="lazy" />
+                               <img src={project.images[0]} alt={
+                                 project.id === 'peggys' ? 'handcrafted custom bar counter with lighting Dublin Ireland' :
+                                 project.id === 'casa-clontarf' ? 'restaurant custom bar counter Dublin Ireland' :
+                                 project.id === 'green-phone-box' ? 'custom furniture project for cafe Dublin Ireland' :
+                                 project.id === 'thormanby-lawns' ? 'outdoor living space with custom furniture Dublin Ireland' :
+                                 project.id === 'pergola-decking' ? 'outdoor bar counter with stools Dublin Ireland' :
+                                 project.id === 'howth-decking' ? 'handcrafted outdoor furniture set Dublin Ireland' :
+                                 project.id === 'raheny-patio' ? 'custom wood and metal bar Dublin Ireland' :
+                                 project.id === 'raheny-garage' ? 'handcrafted bar furniture details Dublin Ireland' :
+                                 project.id === 'art-studio' ? 'custom oak bar with shelving Dublin Ireland' :
+                                 `${project.title} - Custom handcrafted woodwork project by Tiny Outdoor Spaces Dublin`
+                               } className="w-full h-full object-cover transform scale-110" loading="lazy" />
                                </ScrollReveal>
                               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                             </div>
@@ -473,7 +484,18 @@ const Index = () => {
                 {/* Image Carousel */}
                 <div className="relative">
                    <div className="aspect-video bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg sm:rounded-xl overflow-hidden relative">
-                     <img src={selectedProject.images[currentImageIndex]} alt={`${selectedProject.title} - Detailed view of custom woodwork and craftsmanship by Tiny Outdoor Spaces Dublin - Image ${currentImageIndex + 1} of ${selectedProject.images.length}`} className="w-full h-full object-cover" />
+                     <img src={selectedProject.images[currentImageIndex]} alt={
+                       selectedProject.id === 'peggys' ? 'handcrafted custom bar counter with lighting Dublin Ireland' :
+                       selectedProject.id === 'casa-clontarf' ? 'restaurant custom bar counter Dublin Ireland' :
+                       selectedProject.id === 'green-phone-box' ? 'custom furniture project for cafe Dublin Ireland' :
+                       selectedProject.id === 'thormanby-lawns' ? 'outdoor living space with custom furniture Dublin Ireland' :
+                       selectedProject.id === 'pergola-decking' ? 'outdoor bar counter with stools Dublin Ireland' :
+                       selectedProject.id === 'howth-decking' ? 'handcrafted outdoor furniture set Dublin Ireland' :
+                       selectedProject.id === 'raheny-patio' ? 'custom wood and metal bar Dublin Ireland' :
+                       selectedProject.id === 'raheny-garage' ? 'handcrafted bar furniture details Dublin Ireland' :
+                       selectedProject.id === 'art-studio' ? 'custom oak bar with shelving Dublin Ireland' :
+                       `${selectedProject.title} - Detailed view of custom woodwork and craftsmanship by Tiny Outdoor Spaces Dublin - Image ${currentImageIndex + 1} of ${selectedProject.images.length}`
+                     } className="w-full h-full object-cover" />
                    </div>
                   
                 </div>
@@ -482,7 +504,18 @@ const Index = () => {
                 {selectedProject.images.length > 1 && <div className="flex gap-1.5 sm:gap-2 mt-3 sm:mt-4 justify-center items-center overflow-x-auto px-2 sm:px-4 py-2 min-h-[40px] sm:min-h-[50px]">
                     {selectedProject.images.map((_, index) => <button key={index} onClick={() => setCurrentImageIndex(index)} className={`w-12 h-8 sm:w-16 sm:h-12 rounded-md sm:rounded-lg overflow-hidden flex-shrink-0 transition-all ${currentImageIndex === index ? 'ring-1 sm:ring-2 ring-white/80 opacity-100' : 'opacity-60 hover:opacity-80'}`}>
                         <div className="w-full h-full bg-gradient-to-br from-gray-600 to-gray-700 relative overflow-hidden">
-                           <img src={selectedProject.images[index]} alt={`${selectedProject.title} - Custom furniture and woodwork thumbnail ${index + 1}`} className="w-full h-full object-cover" />
+                           <img src={selectedProject.images[index]} alt={
+                             selectedProject.id === 'peggys' ? 'handcrafted custom bar counter with lighting Dublin Ireland' :
+                             selectedProject.id === 'casa-clontarf' ? 'restaurant custom bar counter Dublin Ireland' :
+                             selectedProject.id === 'green-phone-box' ? 'custom furniture project for cafe Dublin Ireland' :
+                             selectedProject.id === 'thormanby-lawns' ? 'outdoor living space with custom furniture Dublin Ireland' :
+                             selectedProject.id === 'pergola-decking' ? 'outdoor bar counter with stools Dublin Ireland' :
+                             selectedProject.id === 'howth-decking' ? 'handcrafted outdoor furniture set Dublin Ireland' :
+                             selectedProject.id === 'raheny-patio' ? 'custom wood and metal bar Dublin Ireland' :
+                             selectedProject.id === 'raheny-garage' ? 'handcrafted bar furniture details Dublin Ireland' :
+                             selectedProject.id === 'art-studio' ? 'custom oak bar with shelving Dublin Ireland' :
+                             `${selectedProject.title} - Custom furniture and woodwork thumbnail ${index + 1}`
+                           } className="w-full h-full object-cover" />
                          </div>
                       </button>)}
                   </div>}
@@ -610,7 +643,12 @@ const Index = () => {
                 <div className="group cursor-pointer bg-gradient-to-br from-bg-section-alt/60 via-bg-section-alt-2/50 to-bg-section-alt/60 backdrop-blur-sm border border-accent-primary/30 rounded-2xl shadow-xl shadow-accent-primary/30 hover:shadow-2xl hover:shadow-accent-primary/50 hover:border-accent-primary/60 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1 overflow-hidden" onClick={() => handleProjectClick(project)}>
                   <div className="relative overflow-hidden">
                      <ScrollReveal delay={index * 100}>
-                       <img src={project.image} alt={`${project.title} - Bespoke handcrafted furniture and outdoor spaces by Tiny Outdoor Spaces Dublin`} className="w-full h-64 object-cover object-center scale-110 transition-transform duration-500 group-hover:scale-125" loading="lazy" />
+                       <img src={project.image} alt={
+                         project.id === 'summit-inn-recent' ? 'outdoor bar counter with stools Dublin Ireland' :
+                         project.id === 'abbey-tavern-recent' ? 'outdoor living space with custom furniture Dublin Ireland' :
+                         project.id === 'findlaters-recent' ? 'custom oak bar with shelving Dublin Ireland' :
+                         `${project.title} - Bespoke handcrafted furniture and outdoor spaces by Tiny Outdoor Spaces Dublin`
+                       } className="w-full h-64 object-cover object-center scale-110 transition-transform duration-500 group-hover:scale-125" loading="lazy" />
                      </ScrollReveal>
                     <div className="absolute inset-0 bg-gradient-to-t from-bg-main/95 via-bg-main/40 to-transparent opacity-100 transition-opacity duration-300 flex items-end">
                       <div className="max-sm:p-5 p-6 w-full">
