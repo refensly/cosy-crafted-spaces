@@ -53,7 +53,7 @@ const CapabilitiesCarousel = () => {
                 <div className="absolute inset-0">
                   <img 
                     src={capability.image} 
-                    alt={`${capability.title} example`}
+                    alt={`${capability.title} - Custom handcrafted woodwork by Tiny Outdoor Spaces Dublin`}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20"></div>

@@ -276,9 +276,9 @@ const Index = () => {
             <ScrollReveal delay={200}>
               <div className="relative mt-8 lg:mt-0">
                 <div className="relative w-full rounded-xl overflow-hidden shadow-2xl shadow-amber-500/50 border border-amber-200/20">
-                  <ScrollReveal delay={250}>
-                     <img src="/lovable-uploads/e6d5b714-df2a-47c3-aeda-0ae0467cb42b.png" alt="Custom outdoor living space with kitchen and dining area at dusk" className="w-full h-64 md:h-80 lg:h-96 object-cover object-center" loading="lazy" />
-                  </ScrollReveal>
+                   <ScrollReveal delay={250}>
+                      <img src="/lovable-uploads/e6d5b714-df2a-47c3-aeda-0ae0467cb42b.png" alt="Custom outdoor living space with modern kitchen and dining area featuring handcrafted woodwork at dusk - Tiny Outdoor Spaces Dublin" className="w-full h-64 md:h-80 lg:h-96 object-cover object-center" loading="lazy" />
+                   </ScrollReveal>
                   {/* Gradient Overlay */}
                   <div 
                     className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent mx-0 cursor-pointer" 
@@ -322,9 +322,9 @@ const Index = () => {
           <div className="hidden md:grid md:grid-cols-3 gap-16 lg:gap-20 mb-12 md:mb-16 lg:mb-20">
             <ScrollReveal className="text-center">
               <div className="space-y-8">
-                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-accent-primary/20 to-accent-primary/10">
-                  <img src="/images/promise-precision.png" alt="Precision craftsmanship tools and measurements" className="w-full h-full object-cover opacity-80 scale-125" />
-                </div>
+                 <div className="w-32 h-32 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-accent-primary/20 to-accent-primary/10">
+                   <img src="/images/promise-precision.png" alt="Precision woodworking tools and measurements for custom furniture making in Dublin" className="w-full h-full object-cover opacity-80 scale-125" />
+                 </div>
                 <h3 className="font-heading text-text-primary text-2xl font-light">Precision</h3>
                 <p className="text-text-secondary text-base font-light leading-relaxed">
                   Every measurement, every cut, every joint crafted with meticulous attention to detail.
@@ -333,9 +333,9 @@ const Index = () => {
             </ScrollReveal>
             <ScrollReveal className="text-center" delay={100}>
               <div className="space-y-8">
-                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-accent-primary/20 to-accent-primary/10">
-                  <img src="/images/promise-real-spaces.png" alt="Real customer spaces transformed with custom woodwork" className="w-full h-full object-cover opacity-80 scale-125" />
-                </div>
+                 <div className="w-32 h-32 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-accent-primary/20 to-accent-primary/10">
+                   <img src="/images/promise-real-spaces.png" alt="Real customer spaces transformed with bespoke woodwork and custom furniture by Tiny Outdoor Spaces Dublin" className="w-full h-full object-cover opacity-80 scale-125" />
+                 </div>
                 <h3 className="font-heading text-text-primary text-2xl font-light">Real Spaces</h3>
                 <p className="text-text-secondary text-base font-light leading-relaxed">
                   We work in your actual space, ensuring perfect fit and functionality.
@@ -344,9 +344,9 @@ const Index = () => {
             </ScrollReveal>
             <ScrollReveal className="text-center" delay={200}>
               <div className="space-y-8">
-                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-accent-primary/20 to-accent-primary/10">
-                  <img src="/images/promise-unique-results.png" alt="Unique custom woodwork designs showcasing creativity" className="w-full h-full object-cover opacity-80 scale-125" />
-                </div>
+                 <div className="w-32 h-32 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-accent-primary/20 to-accent-primary/10">
+                   <img src="/images/promise-unique-results.png" alt="Unique custom woodwork designs showcasing creative handmade furniture and outdoor spaces in Dublin" className="w-full h-full object-cover opacity-80 scale-125" />
+                 </div>
                 <h3 className="font-heading text-text-primary text-2xl font-light">Unique Results</h3>
                 <p className="text-text-secondary text-base font-light leading-relaxed">
                   No cookie-cutter solutions. Each piece is uniquely designed to match your style.
@@ -436,9 +436,9 @@ const Index = () => {
                         handleProjectClick(project);
                       }}>
                             <div className="relative h-48 bg-gradient-to-br from-bg-section-alt-2 to-bg-section-alt overflow-hidden">
-                              <ScrollReveal delay={projectIndex * 50}>
-                                <img src={project.images[0]} alt={`${project.title} preview`} className="w-full h-full object-cover transform scale-110" loading="lazy" />
-                              </ScrollReveal>
+                               <ScrollReveal delay={projectIndex * 50}>
+                                 <img src={project.images[0]} alt={`${project.title} - Custom handcrafted woodwork project by Tiny Outdoor Spaces Dublin`} className="w-full h-full object-cover transform scale-110" loading="lazy" />
+                               </ScrollReveal>
                               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                             </div>
                             <div className="p-6">
@@ -472,9 +472,9 @@ const Index = () => {
                 
                 {/* Image Carousel */}
                 <div className="relative">
-                  <div className="aspect-video bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg sm:rounded-xl overflow-hidden relative">
-                    <img src={selectedProject.images[currentImageIndex]} alt={`${selectedProject.title} - Image ${currentImageIndex + 1}`} className="w-full h-full object-cover" />
-                  </div>
+                   <div className="aspect-video bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg sm:rounded-xl overflow-hidden relative">
+                     <img src={selectedProject.images[currentImageIndex]} alt={`${selectedProject.title} - Detailed view of custom woodwork and craftsmanship by Tiny Outdoor Spaces Dublin - Image ${currentImageIndex + 1} of ${selectedProject.images.length}`} className="w-full h-full object-cover" />
+                   </div>
                   
                 </div>
                 
@@ -482,8 +482,8 @@ const Index = () => {
                 {selectedProject.images.length > 1 && <div className="flex gap-1.5 sm:gap-2 mt-3 sm:mt-4 justify-center items-center overflow-x-auto px-2 sm:px-4 py-2 min-h-[40px] sm:min-h-[50px]">
                     {selectedProject.images.map((_, index) => <button key={index} onClick={() => setCurrentImageIndex(index)} className={`w-12 h-8 sm:w-16 sm:h-12 rounded-md sm:rounded-lg overflow-hidden flex-shrink-0 transition-all ${currentImageIndex === index ? 'ring-1 sm:ring-2 ring-white/80 opacity-100' : 'opacity-60 hover:opacity-80'}`}>
                         <div className="w-full h-full bg-gradient-to-br from-gray-600 to-gray-700 relative overflow-hidden">
-                          <img src={selectedProject.images[index]} alt={`${selectedProject.title} - Thumbnail ${index + 1}`} className="w-full h-full object-cover" />
-                        </div>
+                           <img src={selectedProject.images[index]} alt={`${selectedProject.title} - Custom furniture and woodwork thumbnail ${index + 1}`} className="w-full h-full object-cover" />
+                         </div>
                       </button>)}
                   </div>}
               </div>
@@ -609,9 +609,9 @@ const Index = () => {
             {projects.map((project, index) => <ScrollReveal key={index} delay={index * 100}>
                 <div className="group cursor-pointer bg-gradient-to-br from-bg-section-alt/60 via-bg-section-alt-2/50 to-bg-section-alt/60 backdrop-blur-sm border border-accent-primary/30 rounded-2xl shadow-xl shadow-accent-primary/30 hover:shadow-2xl hover:shadow-accent-primary/50 hover:border-accent-primary/60 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1 overflow-hidden" onClick={() => handleProjectClick(project)}>
                   <div className="relative overflow-hidden">
-                    <ScrollReveal delay={index * 100}>
-                      <img src={project.image} alt={project.title} className="w-full h-64 object-cover object-center scale-110 transition-transform duration-500 group-hover:scale-125" loading="lazy" />
-                    </ScrollReveal>
+                     <ScrollReveal delay={index * 100}>
+                       <img src={project.image} alt={`${project.title} - Bespoke handcrafted furniture and outdoor spaces by Tiny Outdoor Spaces Dublin`} className="w-full h-64 object-cover object-center scale-110 transition-transform duration-500 group-hover:scale-125" loading="lazy" />
+                     </ScrollReveal>
                     <div className="absolute inset-0 bg-gradient-to-t from-bg-main/95 via-bg-main/40 to-transparent opacity-100 transition-opacity duration-300 flex items-end">
                       <div className="max-sm:p-5 p-6 w-full">
                         <h3 className="font-heading font-bold text-text-primary max-sm:text-lg max-sm:mb-1 mb-2 text-xl">
@@ -705,9 +705,9 @@ const Index = () => {
               <div className="relative max-sm:mt-2">
                 <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60 rounded-xl"></div>
                 <div className="absolute inset-0 border border-accent-primary/30 rounded-xl"></div>
-                <ScrollReveal delay={250}>
-                  <img src={imageConfig.maker} alt="Craftsman working in workshop" className="w-full max-sm:max-h-[300px] h-80 lg:h-96 object-cover rounded-xl" loading="lazy" />
-                </ScrollReveal>
+                 <ScrollReveal delay={250}>
+                   <img src={imageConfig.maker} alt="Professional craftsman and maker working on custom furniture in woodworking workshop - Tiny Outdoor Spaces Dublin" className="w-full max-sm:max-h-[300px] h-80 lg:h-96 object-cover rounded-xl" loading="lazy" />
+                 </ScrollReveal>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl"></div>
               </div>
             </ScrollReveal>
@@ -783,9 +783,9 @@ const Index = () => {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-transparent to-black/30 rounded-xl"></div>
                 <div className="absolute inset-0 border-2 border-accent-primary/40 rounded-xl transform rotate-1 shadow-lg shadow-accent-primary/20"></div>
-                <ScrollReveal delay={100}>
-                  <img src={imageConfig.tiny} alt="Craftsman in workshop" className="relative w-full h-64 md:h-80 lg:h-96 object-cover rounded-xl" loading="lazy" />
-                </ScrollReveal>
+                 <ScrollReveal delay={100}>
+                   <img src={imageConfig.tiny} alt="Tiny Outdoor Spaces craftsman creating bespoke furniture and outdoor living spaces in Dublin workshop" className="relative w-full h-64 md:h-80 lg:h-96 object-cover rounded-xl" loading="lazy" />
+                 </ScrollReveal>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent rounded-xl"></div>
               </div>
             </ScrollReveal>

@@ -29,7 +29,7 @@ const PromiseCarousel = () => {
                 <div className="flex-1 flex items-center justify-center mb-6">
                   <div className="w-40 h-40 rounded-full overflow-hidden bg-accent-primary/10 shadow-2xl shadow-amber-500/50">
                     <div className="w-full h-full rounded-full overflow-hidden">
-                      <img src={promise.image} alt={`${promise.title} craftsmanship example`} className="w-full h-full object-cover scale-150" />
+                      <img src={promise.image} alt={`${promise.title} - Professional woodworking craftsmanship and custom furniture making in Dublin`} className="w-full h-full object-cover scale-150" />
                     </div>
                   </div>
                 </div>
