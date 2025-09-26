@@ -123,7 +123,7 @@ const Hero = () => {
           {/* Secondary CTAs */}
           <div className={`flex justify-center ${animationsStarted ? 'animate-fade-up animation-delay-1700' : 'opacity-0'}`}>
             <Button variant="glow" size="mobile-compact" className="w-full max-w-[320px] sm:w-auto" onClick={scrollToContact}>
-              <span className="block sm:hidden">whatsapp us</span>
+              <span className="block sm:hidden">see our works</span>
               <span className="hidden sm:block">talk to us on whatsapp</span>
             </Button>
           </div>
