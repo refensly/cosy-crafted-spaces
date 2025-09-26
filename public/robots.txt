@@ -1,18 +1,18 @@
-User-agent: Googlebot
-Allow: /
-
 User-agent: *
 Allow: /
+
+# Sitemap
 Sitemap: https://tinyoutdoorspaces.ie/sitemap.xml
 
-User-agent: Bingbot
-Allow: /
+# Crawl-delay for better server performance  
+Crawl-delay: 1
 
-User-agent: Twitterbot
-Allow: /
+# Allow important directories
+Allow: /images/
+Allow: /lovable-uploads/
 
-User-agent: facebookexternalhit
-Allow: /
-
-User-agent: *
-Allow: /
+# Block development files
+Disallow: /src/
+Disallow: /*.json$
+Disallow: /*.tsx$
+Disallow: /*.ts$

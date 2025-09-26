@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://tinyoutdoorspaces.ie/</loc>
-    <lastmod>2025-09-15</lastmod>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://tinyoutdoorspaces.ie/images/project-riverside-bar-1.png</image:loc>
+      <image:caption>Custom handcrafted bar counter with professional lighting in Dublin Ireland</image:caption>
+      <image:title>Riverside Bar - Custom Furniture Dublin</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://tinyoutdoorspaces.ie/lovable-uploads/d365de70-97bc-4772-8043-33306714f0e8.png</image:loc>
+      <image:caption>Outdoor living space with custom furniture Dublin Ireland</image:caption>
+      <image:title>Garden Pavilion - Outdoor Spaces Dublin</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://tinyoutdoorspaces.ie/images/wood-interior-1.jpg</image:loc>
+      <image:caption>Custom oak bar with shelving Dublin Ireland</image:caption>
+      <image:title>Wood Interior Bar - Bespoke Furniture Dublin</image:title>
+    </image:image>
   </url>
 </urlset>

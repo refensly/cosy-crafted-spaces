@@ -261,7 +261,7 @@ const Index = () => {
                 </h2>
                 <p className="text-lg md:text-xl text-text-secondary font-light leading-relaxed mx-0">
                   If you want something nobody else has, we design and build it for you. 
-                  Premium materials, made locally.
+                  Premium materials, made locally in Dublin, Ireland for discerning customers who value quality craftsmanship.
                 </p>
                 <div className="space-y-4 md:space-y-6 mt-8 md:mt-12 mx-0 my-[22px]">
                   {["One-of-a-kind design (never repeated)", "Premium hardwoods & brass", "Built in Ireland, built to last"].map((item, index) => <ScrollReveal key={index} delay={index * 100}>
@@ -734,8 +734,8 @@ const Index = () => {
                 </h2>
                 <div className="w-24 h-0.5 bg-accent-primary mb-8"></div>
                 <p className="max-sm:text-[15px] max-sm:leading-relaxed max-sm:mb-4 text-xl text-text-secondary mb-6 leading-relaxed">
-                  From full pub interiors to outdoor kitchens, from custom bars to one-off furniture — 
-                  we design and craft everything to fit your exact space.
+                  From full pub interiors to outdoor kitchens, from custom bars to one-off furniture pieces — 
+                  we design and craft everything to fit your exact space. Serving Dublin and surrounding areas with premium handcrafted furniture since 2020.
                 </p>
               </div>
             </ScrollReveal>
@@ -779,7 +779,7 @@ const Index = () => {
                 <div className="w-24 h-0.5 bg-accent-primary mb-8"></div>
                 <p className="max-sm:text-[15px] max-sm:leading-relaxed text-xl text-text-secondary leading-relaxed">
                   Yes. Every build starts with your vision. Size, finish, details — everything can be 
-                  tailored for your space.
+                  tailored for your Dublin home or business space. We specialize in maximizing functionality in Ireland's unique architectural styles.
                 </p>
               </div>
             </ScrollReveal>
@@ -834,7 +834,7 @@ const Index = () => {
               <div className="mt-6 lg:mt-0">
                 <h2 className="font-heading font-bold text-text-primary text-2xl md:text-4xl lg:text-5xl font-bold leading-snug mb-4 md:mb-6">About The Maker</h2>
                 <div className="w-16 md:w-24 h-0.5 bg-accent-primary mb-6 md:mb-8"></div>
-                <p className="text-base md:text-xl text-text-secondary mb-6 md:mb-8 leading-relaxed">Crafted from walnut, oak, and brass, each piece is unique and unrepeatable. Defined by precision and distinguished by detail, this work carries the signature of timeless craftsmanship, embodied in the hands of its maker</p>
+                <p className="text-base md:text-xl text-text-secondary mb-6 md:mb-8 leading-relaxed">Crafted from premium walnut, oak, and brass, each piece is unique and unrepeatable. Defined by precision and distinguished by detail, this work carries the signature of timeless Irish craftsmanship, embodied in the hands of its Dublin-based maker.</p>
               </div>
             </ScrollReveal>
           </div>
