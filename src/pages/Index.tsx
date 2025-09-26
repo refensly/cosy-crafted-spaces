@@ -257,7 +257,7 @@ const Index = () => {
             <ScrollReveal>
               <div className="space-y-6 md:space-y-8">
                 <h2 className="font-heading text-text-primary text-3xl md:text-5xl lg:text-6xl font-light tracking-tight leading-tight mx-0">
-                  Not another mass-production look
+                  Why Choose Custom Over Mass Market
                 </h2>
                 <p className="text-lg md:text-xl text-text-secondary font-light leading-relaxed mx-0">
                   If you want something nobody else has, we design and build it for you. 
@@ -634,7 +634,7 @@ const Index = () => {
         <div className="container mx-auto px-[46px]">
           <ScrollReveal>
             <h2 className="font-heading font-bold text-text-primary text-center max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">
-              Recent projects
+              Recent Client Work
             </h2>
             <div className="w-24 h-0.5 bg-accent-primary mx-auto mb-8"></div>
           </ScrollReveal>
@@ -685,7 +685,7 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <h2 className="font-heading font-light text-text-primary text-center text-4xl md:text-6xl mb-16">
-              what our clients say
+              Client Reviews & Testimonials
             </h2>
           </ScrollReveal>
 
@@ -730,7 +730,7 @@ const Index = () => {
             <ScrollReveal>
               <div>
                 <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">
-                  What We Build
+                  Our Capabilities
                 </h2>
                 <div className="w-24 h-0.5 bg-accent-primary mb-8"></div>
                 <p className="max-sm:text-[15px] max-sm:leading-relaxed max-sm:mb-4 text-xl text-text-secondary mb-6 leading-relaxed">
@@ -771,8 +771,11 @@ const Index = () => {
             <ScrollReveal>
               <div className="bg-bg-main rounded-xl max-sm:p-5 p-8">
                 <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">
-                  Can I customize it for myself?
+                  Frequently Asked Questions
                 </h2>
+                <h3 className="font-heading text-text-primary text-xl md:text-2xl mb-4">
+                  Can I customize it for myself?
+                </h3>
                 <div className="w-24 h-0.5 bg-accent-primary mb-8"></div>
                 <p className="max-sm:text-[15px] max-sm:leading-relaxed text-xl text-text-secondary leading-relaxed">
                   Yes. Every build starts with your vision. Size, finish, details — everything can be 
@@ -800,7 +803,7 @@ const Index = () => {
         <div className="container mx-auto px-4 md:px-6">
           <ScrollReveal>
             <h2 className="font-heading font-light text-text-primary text-center text-3xl md:text-4xl lg:text-6xl mb-12 md:mb-16">
-              how we work
+              Our Process
             </h2>
           </ScrollReveal>
           
@@ -829,7 +832,7 @@ const Index = () => {
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <div className="mt-6 lg:mt-0">
-                <h2 className="font-heading font-bold text-text-primary text-2xl md:text-4xl lg:text-5xl font-bold leading-snug mb-4 md:mb-6">The Signature</h2>
+                <h2 className="font-heading font-bold text-text-primary text-2xl md:text-4xl lg:text-5xl font-bold leading-snug mb-4 md:mb-6">About The Maker</h2>
                 <div className="w-16 md:w-24 h-0.5 bg-accent-primary mb-6 md:mb-8"></div>
                 <p className="text-base md:text-xl text-text-secondary mb-6 md:mb-8 leading-relaxed">Crafted from walnut, oak, and brass, each piece is unique and unrepeatable. Defined by precision and distinguished by detail, this work carries the signature of timeless craftsmanship, embodied in the hands of its maker</p>
               </div>
@@ -845,7 +848,7 @@ const Index = () => {
         <div className="container mx-auto px-4 md:px-6">
           <ScrollReveal>
             <div className="max-w-2xl mx-auto text-center px-[28px]">
-              <h2 className="font-heading font-bold text-text-primary text-2xl md:text-4xl lg:text-5xl font-bold leading-snug mb-4 md:mb-6">Ready To Start?</h2>
+              <h2 className="font-heading font-bold text-text-primary text-2xl md:text-4xl lg:text-5xl font-bold leading-snug mb-4 md:mb-6">Get In Touch</h2>
               <div className="w-16 md:w-24 h-0.5 bg-accent-primary mx-auto mb-6 md:mb-8"></div>
               
                 {formSubmitted ? <ScrollReveal delay={100}>
