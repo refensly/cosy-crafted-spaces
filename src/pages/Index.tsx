@@ -280,7 +280,10 @@ const Index = () => {
                      <img src="/lovable-uploads/e6d5b714-df2a-47c3-aeda-0ae0467cb42b.png" alt="Custom outdoor living space with kitchen and dining area at dusk" className="w-full h-64 md:h-80 lg:h-96 object-cover object-center" loading="lazy" />
                   </ScrollReveal>
                   {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent mx-0"></div>
+                  <div 
+                    className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent mx-0 cursor-pointer" 
+                    onClick={() => scrollToSection('work')}
+                  ></div>
                   {/* Card Content Overlay */}
                   <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
                     <div className="space-y-2 md:space-y-3">
