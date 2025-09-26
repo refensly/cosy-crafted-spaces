@@ -1,15 +1,38 @@
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://tinyoutdoorspaces.ie/sitemap.xml
-
-# Crawl-delay for better server performance  
-Crawl-delay: 1
-
-# Allow important directories
+# Enhanced crawling directives
 Allow: /images/
 Allow: /lovable-uploads/
+Allow: /assets/
+Allow: *.css
+Allow: *.js
+
+# Sitemap location
+Sitemap: https://tinyoutdoorspaces.ie/sitemap.xml
+
+# Crawl-delay for respectful crawling  
+Crawl-delay: 1
+
+# Block unnecessary bot traffic to save bandwidth
+User-agent: CCBot
+Disallow: /
+
+User-agent: GPTBot  
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+# Allow important social media bots
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
 
 # Block development files
 Disallow: /src/
