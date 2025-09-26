@@ -14,6 +14,7 @@ import CapabilitiesCarousel from '@/components/CapabilitiesCarousel';
 import AnimatedText from '@/components/AnimatedText';
 import AnimatedReviews from '@/components/AnimatedReviews';
 import ProcessSteps from '@/components/ProcessSteps';
+import BreadcrumbNav from '@/components/BreadcrumbNav';
 import { imageConfig } from '@/lib/imageConfig';
 const Index = () => {
   const {
@@ -237,6 +238,15 @@ const Index = () => {
     description: "Delivered and fitted by us"
   }];
   return <div className="min-h-screen">
+      {/* Breadcrumb Navigation */}
+      <div className="container mx-auto px-6 pt-4">
+        <BreadcrumbNav 
+          items={[
+            { label: "Home", href: "/", isActive: true }
+          ]}
+        />
+      </div>
+      
       <Header />
       
       {/* Mobile menu overlay for main content */}
@@ -762,7 +772,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* New Section: FAQ */}
+      {/* Enhanced FAQ Section */}
       <section className="max-sm:py-6 py-16 lg:py-20" style={{
       background: 'var(--gradient-brown-primary)'
     }}>
@@ -770,17 +780,145 @@ const Index = () => {
           <div className="max-w-4xl mx-auto">
             <ScrollReveal>
               <div className="bg-bg-main rounded-xl max-sm:p-5 p-8">
-                <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-4 mb-6 text-4xl md:text-5xl">
+                <h2 className="font-heading font-bold text-text-primary max-sm:text-[clamp(22px,5vw,28px)] max-sm:font-bold max-sm:leading-snug max-sm:mb-6 mb-8 text-4xl md:text-5xl">
                   Frequently Asked Questions
                 </h2>
-                <h3 className="font-heading text-text-primary text-xl md:text-2xl mb-4">
-                  Can I customize it for myself?
-                </h3>
                 <div className="w-24 h-0.5 bg-accent-primary mb-8"></div>
-                <p className="max-sm:text-[15px] max-sm:leading-relaxed text-xl text-text-secondary leading-relaxed">
-                  Yes. Every build starts with your vision. Size, finish, details — everything can be 
-                  tailored for your Dublin home or business space. We specialize in maximizing functionality in Ireland's unique architectural styles.
-                </p>
+                
+                <div className="grid gap-8">
+                  {/* FAQ Grid */}
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="space-y-6">
+                      <div>
+                        <h3 className="font-heading text-text-primary text-lg md:text-xl mb-3 font-semibold">
+                          Do you create custom furniture for homes in Dublin?
+                        </h3>
+                        <p className="max-sm:text-[14px] max-sm:leading-relaxed text-base text-text-secondary leading-relaxed">
+                          Yes, we specialize in handcrafted custom furniture, bespoke bars, and outdoor living spaces throughout Dublin, Ireland. Every piece is made to order and tailored to your specific space and style preferences.
+                        </p>
+                      </div>
+                      
+                      <div>
+                        <h3 className="font-heading text-text-primary text-lg md:text-xl mb-3 font-semibold">
+                          What areas of Dublin do you serve?
+                        </h3>
+                        <p className="max-sm:text-[14px] max-sm:leading-relaxed text-base text-text-secondary leading-relaxed">
+                          We serve all areas of Dublin including Clontarf, Howth, Raheny, Malahide, Sutton, and surrounding counties including South Dublin, Fingal, Dún Laoghaire-Rathdown, and parts of Kildare, Meath, and Wicklow.
+                        </p>
+                      </div>
+                      
+                      <div>
+                        <h3 className="font-heading text-text-primary text-lg md:text-xl mb-3 font-semibold">
+                          How long does a custom furniture project take?
+                        </h3>
+                        <p className="max-sm:text-[14px] max-sm:leading-relaxed text-base text-text-secondary leading-relaxed">
+                          Project timelines vary based on complexity. Typical custom furniture pieces take 2-4 weeks, while larger projects like garage conversions or complete outdoor spaces can take 4-8 weeks from design approval to completion.
+                        </p>
+                      </div>
+                      
+                      <div>
+                        <h3 className="font-heading text-text-primary text-lg md:text-xl mb-3 font-semibold">
+                          Can you customize furniture for small Dublin apartments?
+                        </h3>
+                        <p className="max-sm:text-[14px] max-sm:leading-relaxed text-base text-text-secondary leading-relaxed">
+                          Absolutely! We specialize in space-efficient, fold-out furniture and custom storage solutions perfect for Dublin's compact living spaces. Every piece is designed to maximize functionality while maintaining beautiful craftsmanship.
+                        </p>
+                      </div>
+                      
+                      <div>
+                        <h3 className="font-heading text-text-primary text-lg md:text-xl mb-3 font-semibold">
+                          What types of wood do you use?
+                        </h3>
+                        <p className="max-sm:text-[14px] max-sm:leading-relaxed text-base text-text-secondary leading-relaxed">
+                          We work with premium hardwoods including oak, walnut, maple, and cherry, as well as sustainable options like bamboo and reclaimed timber. Wood selection depends on your project requirements and aesthetic preferences.
+                        </p>
+                      </div>
+                      
+                      <div>
+                        <h3 className="font-heading text-text-primary text-lg md:text-xl mb-3 font-semibold">
+                          Do you provide design consultation services?
+                        </h3>
+                        <p className="max-sm:text-[14px] max-sm:leading-relaxed text-base text-text-secondary leading-relaxed">
+                          Yes, we offer comprehensive design consultations including space planning, material selection, and 3D renderings to ensure the final piece perfectly fits your vision and space.
+                        </p>
+                      </div>
+                      
+                      <div>
+                        <h3 className="font-heading text-text-primary text-lg md:text-xl mb-3 font-semibold">
+                          What is the cost range for custom furniture?
+                        </h3>
+                        <p className="max-sm:text-[14px] max-sm:leading-relaxed text-base text-text-secondary leading-relaxed">
+                          Small custom pieces start around €500, mid-range furniture €1,500-€3,000, and large projects like bars or garage conversions €5,000-€15,000+. We provide detailed quotes after consultation.
+                        </p>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-6">
+                      <div>
+                        <h3 className="font-heading text-text-primary text-lg md:text-xl mb-3 font-semibold">
+                          Do you offer delivery and installation?
+                        </h3>
+                        <p className="max-sm:text-[14px] max-sm:leading-relaxed text-base text-text-secondary leading-relaxed">
+                          Yes, we provide complete delivery and installation services throughout Dublin and surrounding areas. Our team ensures proper setup and will make any necessary adjustments for perfect fit and finish.
+                        </p>
+                      </div>
+                      
+                      <div>
+                        <h3 className="font-heading text-text-primary text-lg md:text-xl mb-3 font-semibold">
+                          Can you work with existing furniture or spaces?
+                        </h3>
+                        <p className="max-sm:text-[14px] max-sm:leading-relaxed text-base text-text-secondary leading-relaxed">
+                          Absolutely! We can restore, modify, or integrate with existing furniture and spaces. Whether matching existing finishes or adapting pieces to new layouts, we're flexible in our approach.
+                        </p>
+                      </div>
+                      
+                      <div>
+                        <h3 className="font-heading text-text-primary text-lg md:text-xl mb-3 font-semibold">
+                          What warranty do you provide?
+                        </h3>
+                        <p className="max-sm:text-[14px] max-sm:leading-relaxed text-base text-text-secondary leading-relaxed">
+                          We stand behind our craftsmanship with a 2-year warranty on structural elements and 1-year warranty on finishes. We use premium materials and time-tested joinery techniques to ensure longevity.
+                        </p>
+                      </div>
+                      
+                      <div>
+                        <h3 className="font-heading text-text-primary text-lg md:text-xl mb-3 font-semibold">
+                          Do you create weather-resistant outdoor furniture?
+                        </h3>
+                        <p className="max-sm:text-[14px] max-sm:leading-relaxed text-base text-text-secondary leading-relaxed">
+                          Yes, we specialize in outdoor furniture designed for Ireland's climate using weather-resistant woods like teak and cedar, marine-grade finishes, and stainless steel hardware.
+                        </p>
+                      </div>
+                      
+                      <div>
+                        <h3 className="font-heading text-text-primary text-lg md:text-xl mb-3 font-semibold">
+                          Can you help with planning permission?
+                        </h3>
+                        <p className="max-sm:text-[14px] max-sm:leading-relaxed text-base text-text-secondary leading-relaxed">
+                          While we don't handle planning permission directly, we can advise on requirements and work with architects when needed. Most garden pavilions and decking projects fall under permitted development.
+                        </p>
+                      </div>
+                      
+                      <div>
+                        <h3 className="font-heading text-text-primary text-lg md:text-xl mb-3 font-semibold">
+                          Do you use sustainable materials?
+                        </h3>
+                        <p className="max-sm:text-[14px] max-sm:leading-relaxed text-base text-text-secondary leading-relaxed">
+                          Sustainability is important to us. We source FSC-certified timber when possible, offer reclaimed wood options, use low-VOC finishes, and minimize waste through careful planning.
+                        </p>
+                      </div>
+                      
+                      <div>
+                        <h3 className="font-heading text-text-primary text-lg md:text-xl mb-3 font-semibold">
+                          How do I get started with a project?
+                        </h3>
+                        <p className="max-sm:text-[14px] max-sm:leading-relaxed text-base text-text-secondary leading-relaxed">
+                          Simply contact us for an initial consultation. We'll discuss your vision, assess your space, and provide a detailed proposal with timeline and pricing. No obligation!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </ScrollReveal>
           </div>

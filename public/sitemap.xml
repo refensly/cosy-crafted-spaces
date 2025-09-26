@@ -1,24 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://tinyoutdoorspaces.ie/</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2024-12-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    
+    <!-- Featured Portfolio Images -->
     <image:image>
       <image:loc>https://tinyoutdoorspaces.ie/images/project-riverside-bar-1.png</image:loc>
-      <image:caption>Custom handcrafted bar counter with professional lighting in Dublin Ireland</image:caption>
-      <image:title>Riverside Bar - Custom Furniture Dublin</image:title>
+      <image:caption>Custom handcrafted bar counter with professional lighting Clontarf Dublin Ireland</image:caption>
+      <image:title>Riverside Bar - Custom Furniture Dublin Clontarf</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://tinyoutdoorspaces.ie/images/project-riverside-bar-2.png</image:loc>
+      <image:caption>Bespoke bar interior design with custom lighting Dublin Ireland</image:caption>
+      <image:title>Custom Bar Interior - Handcrafted Dublin</image:title>
     </image:image>
     <image:image>
       <image:loc>https://tinyoutdoorspaces.ie/lovable-uploads/d365de70-97bc-4772-8043-33306714f0e8.png</image:loc>
-      <image:caption>Outdoor living space with custom furniture Dublin Ireland</image:caption>
+      <image:caption>Garden pavilion outdoor living space with custom furniture Dublin Ireland</image:caption>
       <image:title>Garden Pavilion - Outdoor Spaces Dublin</image:title>
     </image:image>
     <image:image>
       <image:loc>https://tinyoutdoorspaces.ie/images/wood-interior-1.jpg</image:loc>
-      <image:caption>Custom oak bar with shelving Dublin Ireland</image:caption>
+      <image:caption>Custom oak bar with shelving bespoke furniture Dublin Ireland</image:caption>
       <image:title>Wood Interior Bar - Bespoke Furniture Dublin</image:title>
+    </image:image>
+    
+    <!-- Casa Clontarf Project -->
+    <image:image>
+      <image:loc>https://tinyoutdoorspaces.ie/images/project-casaclontarf-1.png</image:loc>
+      <image:caption>Casa Clontarf Italian restaurant interior timber paneling Dublin</image:caption>
+      <image:title>Casa Clontarf Restaurant - Custom Interior Dublin</image:title>
+    </image:image>
+    
+    <!-- Green Phone Box Project -->
+    <image:image>
+      <image:loc>https://tinyoutdoorspaces.ie/images/project-thegreenphonebox-1.png</image:loc>
+      <image:caption>The Green Phone Box custom themed bar interior Dublin</image:caption>
+      <image:title>Green Phone Box Bar - Unique Custom Design Dublin</image:title>
+    </image:image>
+    
+    <!-- Garage Conversion Projects -->
+    <image:image>
+      <image:loc>https://tinyoutdoorspaces.ie/images/project-rahenygarage-1.jpg</image:loc>
+      <image:caption>Raheny garage conversion custom studio space Dublin</image:caption>
+      <image:title>Garage Conversion Raheny - Studio Space Dublin</image:title>
+    </image:image>
+    
+    <!-- Outdoor Decking Projects -->
+    <image:image>
+      <image:loc>https://tinyoutdoorspaces.ie/images/project-howthdecking-1.jpg</image:loc>
+      <image:caption>Howth composite decking installation raised deck Dublin</image:caption>
+      <image:title>Howth Decking - Custom Outdoor Spaces Dublin</image:title>
     </image:image>
   </url>
 </urlset>

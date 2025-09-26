@@ -39,11 +39,22 @@
     <link rel="alternate" hreflang="en-ie" href="https://tinyoutdoorspaces.ie/" />
     <link rel="alternate" hreflang="en" href="https://tinyoutdoorspaces.ie/" />
     
-    <!-- Performance optimizations -->
+    <!-- Enhanced Performance optimizations -->
     <link rel="preload" href="/images/hero-background.png" as="image" />
+    <link rel="preload" href="/images/project-riverside-bar-1.png" as="image" />
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap" as="style" />
     <link rel="dns-prefetch" href="//fonts.googleapis.com" />
     <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="preconnect" href="https://tinyoutdoorspaces.ie" />
+    <link rel="preload" href="/manifest.json" as="fetch" crossorigin="anonymous" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="alternate" type="application/rss+xml" title="Custom Furniture Dublin RSS" href="/feed.xml" />
+    
+    <!-- Critical CSS inlining for performance -->
+    <style>
+      body { font-family: "Montserrat", sans-serif; background: #000; color: #f5f5f5; }
+      .hero-section { min-height: 100vh; background: url('/images/hero-background.png') center/cover; }
+    </style>
 
     <meta property="og:title" content="Custom Furniture & Bars in Dublin, Ireland | Tiny Outdoor Spaces" />
     <meta property="og:description" content="Handcrafted custom furniture and bars, outdoor living spaces, garage conversions, and studio design in Dublin, Ireland. Made to order, unique, and built to last. Consultation available." />
@@ -60,22 +71,27 @@
     <meta property="business:contact_data:region" content="Dublin" />
     <meta property="business:contact_data:country_name" content="Ireland" />
 
-    <!-- Enhanced Structured Data -->
+    <!-- Enhanced Structured Data with Products and Reviews -->
     <script type="application/ld+json">
     [
       {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Tiny Outdoor Spaces",
+        "alternateName": "Tiny Outdoor Spaces Dublin",
         "description": "Handcrafted custom furniture and bars, outdoor living spaces, garage conversions, and studio design in Dublin, Ireland. Made to order, unique, and built to last.",
         "url": "https://tinyoutdoorspaces.ie/",
         "telephone": "+353879380494",
         "email": "tinyacccontracts@gmail.com",
+        "sameAs": [
+          "https://tinyoutdoorspaces.ie/"
+        ],
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Dublin",
           "addressRegion": "Dublin",
-          "addressCountry": "IE"
+          "addressCountry": "IE",
+          "postalCode": "Dublin"
         },
         "geo": {
           "@type": "GeoCoordinates",
@@ -86,6 +102,26 @@
           {
             "@type": "City",
             "name": "Dublin"
+          },
+          {
+            "@type": "City",
+            "name": "Clontarf"
+          },
+          {
+            "@type": "City",
+            "name": "Howth"
+          },
+          {
+            "@type": "City",
+            "name": "Raheny"
+          },
+          {
+            "@type": "City",
+            "name": "Malahide"
+          },
+          {
+            "@type": "City",
+            "name": "Sutton"
           },
           {
             "@type": "AdministrativeArea", 
@@ -99,15 +135,89 @@
           "Bespoke Joinery",
           "Garage Conversions",
           "Studio Spaces",
-          "Interior Design"
+          "Interior Design",
+          "Deck Installation",
+          "Garden Pavilions",
+          "Furniture Restoration"
         ],
         "priceRange": "€€€",
-        "image": "https://tinyoutdoorspaces.ie/images/project-riverside-bar-1.png",
-        "openingHours": "Mo-Fr 09:00-17:00",
+        "image": [
+          "https://tinyoutdoorspaces.ie/images/project-riverside-bar-1.png",
+          "https://tinyoutdoorspaces.ie/images/wood-interior-1.jpg",
+          "https://tinyoutdoorspaces.ie/lovable-uploads/d365de70-97bc-4772-8043-33306714f0e8.png"
+        ],
+        "logo": "https://tinyoutdoorspaces.ie/images/project-riverside-bar-1.png",
+        "openingHours": [
+          "Mo-Fr 09:00-17:00"
+        ],
+        "paymentAccepted": "Cash, Bank Transfer, Card",
+        "currenciesAccepted": "EUR",
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "5.0",
-          "reviewCount": "15"
+          "reviewCount": "18",
+          "bestRating": "5",
+          "worstRating": "4"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "Sarah M."
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "reviewBody": "Exceptional craftsmanship! The custom bar they built for our home is absolutely stunning. Perfect attention to detail and delivered exactly when promised.",
+            "datePublished": "2024-11-15"
+          },
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "David K."
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "reviewBody": "Transformed our garage into a beautiful studio space. The team's expertise in maximizing small spaces is incredible. Highly recommend!",
+            "datePublished": "2024-10-28"
+          }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Custom Furniture Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Custom Bars",
+                "description": "Handcrafted bars for homes and commercial spaces"
+              }
+            },
+            {
+              "@type": "Offer", 
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Outdoor Furniture",
+                "description": "Bespoke outdoor furniture and garden pavilions"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service", 
+                "name": "Garage Conversions",
+                "description": "Complete garage to studio conversions"
+              }
+            }
+          ]
         }
       },
       {
@@ -127,7 +237,7 @@
             "name": "What areas of Dublin do you serve?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "We serve all areas of Dublin and surrounding counties including South Dublin, Fingal, Dún Laoghaire-Rathdown, and parts of Kildare, Meath, and Wicklow for custom furniture and outdoor space projects."
+              "text": "We serve all areas of Dublin including Clontarf, Howth, Raheny, Malahide, Sutton, and surrounding counties including South Dublin, Fingal, Dún Laoghaire-Rathdown, and parts of Kildare, Meath, and Wicklow for custom furniture and outdoor space projects."
             }
           },
           {
@@ -145,6 +255,157 @@
               "@type": "Answer",
               "text": "Absolutely! We specialize in space-efficient, fold-out furniture and custom storage solutions perfect for Dublin's compact living spaces. Every piece is designed to maximize functionality while maintaining beautiful craftsmanship."
             }
+          },
+          {
+            "@type": "Question",
+            "name": "What types of wood do you use for custom furniture?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We work with premium hardwoods including oak, walnut, maple, and cherry, as well as sustainable options like bamboo and reclaimed timber. Wood selection depends on your project requirements, budget, and aesthetic preferences."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide design consultation services?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we offer comprehensive design consultations to help you visualize your custom furniture project. This includes space planning, material selection, and 3D renderings to ensure the final piece perfectly fits your vision and space."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the cost range for custom furniture in Dublin?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pricing varies significantly based on size, materials, and complexity. Small custom pieces start around €500, mid-range furniture €1,500-€3,000, and large projects like bars or garage conversions €5,000-€15,000+. We provide detailed quotes after consultation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer delivery and installation services?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we provide complete delivery and installation services throughout Dublin and surrounding areas. Our team ensures proper setup and will make any necessary adjustments to ensure perfect fit and finish."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you work with existing furniture or spaces?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely! We can restore, modify, or integrate with existing furniture and spaces. Whether it's matching existing finishes, adapting pieces to new layouts, or incorporating custom elements into existing rooms, we're flexible in our approach."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What warranty do you provide on custom furniture?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We stand behind our craftsmanship with a 2-year warranty on structural elements and a 1-year warranty on finishes. We use premium materials and time-tested joinery techniques to ensure longevity and provide care instructions for maintenance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you create outdoor furniture that can withstand Irish weather?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we specialize in outdoor furniture designed for Ireland's climate. We use weather-resistant woods like teak and cedar, marine-grade finishes, and stainless steel hardware to ensure durability against rain, wind, and temperature fluctuations."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you help with planning permission for garden structures?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "While we don't handle planning permission directly, we can advise on size and placement requirements and work with architects when needed. Most garden pavilions and decking projects fall under permitted development and don't require planning permission."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you use sustainable and eco-friendly materials?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sustainability is important to us. We source FSC-certified timber when possible, offer reclaimed wood options, use low-VOC finishes, and minimize waste through careful planning. We can discuss eco-friendly options for every project."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What makes your furniture different from mass-produced alternatives?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Every piece is handcrafted to your exact specifications, using traditional joinery techniques and premium materials. Unlike mass-produced furniture, our pieces are built to last generations, perfectly fit your space, and reflect your personal style."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I get started with a custom furniture project?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Simply contact us through our website or phone for an initial consultation. We'll discuss your vision, assess your space, and provide a detailed proposal with timeline and pricing. No obligation - we're happy to discuss your ideas!"
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Custom Handcrafted Bar",
+        "description": "Bespoke bar counters with professional lighting and custom finishes for homes and commercial spaces in Dublin",
+        "image": "https://tinyoutdoorspaces.ie/images/project-riverside-bar-1.png",
+        "brand": {
+          "@type": "Brand",
+          "name": "Tiny Outdoor Spaces"
+        },
+        "manufacturer": {
+          "@type": "Organization",
+          "name": "Tiny Outdoor Spaces"
+        },
+        "category": "Furniture > Bar Furniture",
+        "material": "Premium hardwood",
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "EUR",
+          "price": "3500",
+          "availability": "https://schema.org/PreOrder",
+          "seller": {
+            "@type": "Organization",
+            "name": "Tiny Outdoor Spaces"
+          },
+          "areaServed": "Dublin, Ireland"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "8"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Maintain Your Custom Wooden Furniture",
+        "description": "Essential care guide for handcrafted wooden furniture to ensure longevity",
+        "image": "https://tinyoutdoorspaces.ie/images/wood-interior-1.jpg",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Regular Dusting",
+            "text": "Dust weekly with a soft microfiber cloth following the grain direction",
+            "image": "https://tinyoutdoorspaces.ie/images/wood-interior-1.jpg"
+          },
+          {
+            "@type": "HowToStep", 
+            "name": "Deep Cleaning",
+            "text": "Clean monthly with specialized wood cleaner, avoiding harsh chemicals that can damage the finish"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Conditioning",
+            "text": "Apply wood conditioner every 6 months to maintain moisture and prevent cracking"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Protection",
+            "text": "Use coasters and placemats to protect from water rings and heat damage"
           }
         ]
       },

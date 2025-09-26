@@ -1,0 +1,22 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Tiny Outdoor Spaces -- Handcrafted Furniture Maker
+    Site: https://tinyoutdoorspaces.ie
+    Location: Dublin, Ireland
+
+# THANKS
+
+    Customers throughout Dublin and Ireland who trust us with their custom furniture projects
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, JavaScript
+    React, TypeScript, Tailwind CSS
+    Vite Build System
+    Progressive Web App
+    Responsive Design
+    Semantic HTML
+    Accessibility Standards

@@ -1,0 +1,26 @@
+{
+  "name": "Tiny Outdoor Spaces - Custom Furniture Dublin",
+  "short_name": "Tiny Outdoor Spaces",
+  "description": "Handcrafted custom furniture and bars, outdoor living spaces, garage conversions in Dublin, Ireland",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#B8860B",
+  "orientation": "portrait-primary",
+  "categories": ["business", "shopping"],
+  "lang": "en-IE",
+  "icons": [
+    {
+      "src": "/images/tiny.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/tiny.png", 
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
