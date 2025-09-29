@@ -97,7 +97,7 @@ const Hero = () => {
     <div className="relative z-30 min-h-screen flex items-center justify-center px-4 sm:px-6 pt-20 pb-16">
       <div className="text-center max-w-none mx-auto">
         <h1 className={`font-grifter text-text-primary mb-6 sm:mb-8 ${animationsStarted ? 'animate-fade-up animation-delay-500' : 'opacity-0'}`}>
-          <div className={`hero-title ${animationsStarted ? 'animate-fade-up animation-delay-700' : 'opacity-0'}`}>Unique Handmade</div>
+          <div className={`hero-title ${animationsStarted ? 'animate-fade-up animation-delay-700' : 'opacity-0'}`}>Custom Handmade</div>
           <div className={`hero-title ${animationsStarted ? 'animate-fade-up animation-delay-900' : 'opacity-0'}`}>Furniture from Dublin</div>
         </h1>
         <div className={`hero-subtitle text-white mb-8 sm:mb-10 max-w-3xl mx-auto ${animationsStarted ? 'animate-fade-up animation-delay-1100' : 'opacity-0'}`}>
