@@ -288,7 +288,7 @@ const Index = () => {
               <div className="relative mt-8 lg:mt-0">
                 <div className="relative w-full rounded-xl overflow-hidden shadow-2xl shadow-amber-500/50 border border-amber-200/20">
                    <ScrollReveal delay={250}>
-                      <img src="/lovable-uploads/e6d5b714-df2a-47c3-aeda-0ae0467cb42b.png" alt="Custom outdoor living space with modern kitchen and dining area featuring handcrafted woodwork at dusk - Tiny Outdoor Spaces Dublin" className="w-full h-64 md:h-80 lg:h-96 object-cover object-center" loading="lazy" />
+                      <img src="/images/dgfhg.jpg" alt="Beautiful restaurant interior with wooden sculptures, hanging plants and warm ambient lighting - Tiny Outdoor Spaces Dublin" className="w-full h-64 md:h-80 lg:h-96 object-cover object-center" loading="lazy" />
                    </ScrollReveal>
                   {/* Gradient Overlay */}
                   <div 
