@@ -969,7 +969,7 @@ const Index = () => {
               <div className="mt-6 lg:mt-0">
                 <h2 className="font-heading font-bold text-text-primary text-2xl md:text-4xl lg:text-5xl font-bold leading-snug mb-4 md:mb-6">About The Maker</h2>
                 <div className="w-16 md:w-24 h-0.5 bg-accent-primary mb-6 md:mb-8"></div>
-                <p className="text-base md:text-xl text-text-secondary mb-6 md:mb-8 leading-relaxed">Crafted from premium walnut, oak, and brass, each piece is unique and unrepeatable. Defined by precision and distinguished by detail, this work carries the signature of timeless Irish craftsmanship, embodied in the hands of its Dublin-based maker.</p>
+                <p className="text-base md:text-xl text-text-secondary mb-6 md:mb-8 leading-relaxed">Based in Dublin, Tiny specializes in custom furniture and outdoor spaces that are built to last. Whether it's a bespoke home bar, commercial fit-out, or garden transformation, every project gets the same careful attention to detail and craftsmanship. No mass production, no shortcuts - just quality work tailored to your space.</p>
               </div>
             </ScrollReveal>
           </div>
