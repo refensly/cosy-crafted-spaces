@@ -960,7 +960,7 @@ const Index = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-transparent to-black/30 rounded-xl"></div>
                 <div className="absolute inset-0 border-2 border-accent-primary/40 rounded-xl transform rotate-1 shadow-lg shadow-accent-primary/20"></div>
                  <ScrollReveal delay={100}>
-                   <img src={imageConfig.tiny} alt="Tiny Outdoor Spaces craftsman creating bespoke furniture and outdoor living spaces in Dublin workshop" className="relative w-full h-64 md:h-80 lg:h-96 object-cover rounded-xl" loading="lazy" />
+                   <img src="/images/maker-profile.jpg" alt="Professional craftsman and furniture maker from Tiny Outdoor Spaces Dublin standing outdoors" className="relative w-full h-64 md:h-80 lg:h-96 object-cover rounded-xl" loading="lazy" />
                  </ScrollReveal>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent rounded-xl"></div>
               </div>
